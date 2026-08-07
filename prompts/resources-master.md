@@ -230,7 +230,6 @@ resource list.
 | Pedersen — Efficiently Inefficient (Princeton UP) | https://press.princeton.edu/books/hardcover/9780691166193/efficiently-inefficient | textbook |
 | Narang — Inside the Black Box, 3rd ed. (Wiley) | https://www.wiley.com/en-us/Inside+the+Black+Box%3A+A+Simple+Guide+to+Systematic+Investing%2C+3rd+Edition-p-9781119931904 | textbook |
 | Meucci — Risk and Asset Allocation (Springer) | https://link.springer.com/book/10.1007/978-3-540-27904-4 | textbook |
-| Gatheral — Baruch MFE faculty page | https://mfe.baruch.cuny.edu/jgatheral/ | reference |
 | Wilmott — community forum and blogs | https://www.wilmott.com/ | reference |
 
 ## Data
@@ -364,6 +363,9 @@ These were checked and are wrong, dead, or traps. Named here so nobody re-derive
 - **`openbb.co`** — presented a TLS certificate mismatch. Use the GitHub repo as the canonical link, and
   note the "OpenBB Terminal" no longer exists as a product name.
 - **`math.nyu.edu/~gatheral/`** — 403. Gatheral's material now lives at `jgatheral.github.io`.
+- **`mfe.baruch.cuny.edu/jgatheral/`** — serves an incomplete TLS certificate chain, so it fails
+  verification and a reader's browser may warn. The page is only a faculty bio in any case;
+  `jgatheral.github.io` has the actual lecture slides and is clean.
 - **`hastie.su.domains/.../ESLII.pdf`** — 404, as noted above. `hastie.su.domains/CASI/` and the ISLR
   download wrappers do work.
 - **Bruce Hansen's *Econometrics* and *Probability and Statistics for Economists*** — no longer free;

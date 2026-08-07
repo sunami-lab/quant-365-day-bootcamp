@@ -1,0 +1,60 @@
+---
+title: "Day 360 — Placeholder title for day 360"
+subtitle: "Sunday, 1 August 2027 · Week 52 of 52 · Capstone · Study day · 60 min"
+---
+
+::: {.day-nav .kind-study}
+[← Day 359](day-359.qmd) · [All 365 days](../timeline.qmd) · [Day 361 →](day-361.qmd)
+:::
+
+::: {.why}
+Placeholder one-sentence rationale.
+:::
+
+## What you should be able to do tonight
+
+- Placeholder objective one.
+- Placeholder objective two.
+
+## Tasks <span class='task-total'>60 min</span>
+
+::: {.task-list}
+::: {.task}
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+Placeholder project increment.
+:::
+
+## Resources
+
+- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+
+## Deliverable
+
+::: {.deliverable}
+Placeholder deliverable.
+:::
+
+## Checkpoint
+
+::: {.checkpoint}
+Placeholder checkpoint question?
+:::
+
+## Prepare for tomorrow
+
+Ten minutes tonight so Day 361, Monday, 2 August 2027 starts clean. This is what the evening email sends you.
+
+::: {.task-list .prep}
+::: {.task}
+<input type="checkbox" class="task-check"> Placeholder prep item.
+:::
+:::

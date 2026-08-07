@@ -1,0 +1,675 @@
+---
+title: "The 365 days"
+subtitle: "Friday, 7 August 2026 → Friday, 6 August 2027"
+toc-depth: 2
+---
+
+Six study days, then a lighter seventh, fifty-two times over, then the capstone. Every seventh day is a Thursday and is deliberately unallocated. Eleven of those seventh days are milestones instead, where the week's work turns into something you could show someone.
+
+| Phase | Weeks | Days | When |
+|:--|:--|:--|:--|
+| [Markets](#markets) | 1–4 | 1–28 | August 2026 – September 2026 |
+| [Returns and noise](#returns-and-noise) | 5–9 | 29–63 | September 2026 – October 2026 |
+| [Time series](#time-series) | 10–14 | 64–98 | October 2026 – November 2026 |
+| [Portfolios and risk](#portfolios-and-risk) | 15–19 | 99–133 | November 2026 – December 2026 |
+| [The research harness](#the-research-harness) | 20–23 | 134–161 | December 2026 – January 2027 |
+| [Alpha](#alpha) | 24–29 | 162–203 | January 2027 – February 2027 |
+| [Machine learning](#machine-learning) | 30–34 | 204–238 | February 2027 – April 2027 |
+| [Derivatives](#derivatives) | 35–40 | 239–280 | April 2027 – May 2027 |
+| [Microstructure](#microstructure) | 41–44 | 281–308 | May 2027 – June 2027 |
+| [Production](#production) | 45–47 | 309–329 | June 2027 – July 2027 |
+| [The interview](#the-interview) | 48–51 | 330–357 | July 2027 – July 2027 |
+| [Capstone](#capstone) | 52–52 | 358–365 | July 2027 – August 2027 |
+
+::: {.timeline}
+
+## Markets
+
+### Week 1 <span class='week-span'>Fri 7 Aug – Thu 13 Aug</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [1](days/day-001.qmd) | Fri 7 Aug | [Placeholder title for day 1](days/day-001.qmd) |  |
+| [2](days/day-002.qmd) | Sat 8 Aug | [Placeholder title for day 2](days/day-002.qmd) |  |
+| [3](days/day-003.qmd) | Sun 9 Aug | [Placeholder title for day 3](days/day-003.qmd) |  |
+| [4](days/day-004.qmd) | Mon 10 Aug | [Placeholder title for day 4](days/day-004.qmd) |  |
+| [5](days/day-005.qmd) | Tue 11 Aug | [Placeholder title for day 5](days/day-005.qmd) |  |
+| [6](days/day-006.qmd) | Wed 12 Aug | [Placeholder title for day 6](days/day-006.qmd) |  |
+| [7](days/day-007.qmd) | Thu 13 Aug | [Placeholder title for day 7](days/day-007.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 2 <span class='week-span'>Fri 14 Aug – Thu 20 Aug</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [8](days/day-008.qmd) | Fri 14 Aug | [Placeholder title for day 8](days/day-008.qmd) |  |
+| [9](days/day-009.qmd) | Sat 15 Aug | [Placeholder title for day 9](days/day-009.qmd) |  |
+| [10](days/day-010.qmd) | Sun 16 Aug | [Placeholder title for day 10](days/day-010.qmd) |  |
+| [11](days/day-011.qmd) | Mon 17 Aug | [Placeholder title for day 11](days/day-011.qmd) |  |
+| [12](days/day-012.qmd) | Tue 18 Aug | [Placeholder title for day 12](days/day-012.qmd) |  |
+| [13](days/day-013.qmd) | Wed 19 Aug | [Placeholder title for day 13](days/day-013.qmd) |  |
+| [14](days/day-014.qmd) | Thu 20 Aug | [Placeholder title for day 14](days/day-014.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 3 <span class='week-span'>Fri 21 Aug – Thu 27 Aug</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [15](days/day-015.qmd) | Fri 21 Aug | [Placeholder title for day 15](days/day-015.qmd) |  |
+| [16](days/day-016.qmd) | Sat 22 Aug | [Placeholder title for day 16](days/day-016.qmd) |  |
+| [17](days/day-017.qmd) | Sun 23 Aug | [Placeholder title for day 17](days/day-017.qmd) |  |
+| [18](days/day-018.qmd) | Mon 24 Aug | [Placeholder title for day 18](days/day-018.qmd) |  |
+| [19](days/day-019.qmd) | Tue 25 Aug | [Placeholder title for day 19](days/day-019.qmd) |  |
+| [20](days/day-020.qmd) | Wed 26 Aug | [Placeholder title for day 20](days/day-020.qmd) |  |
+| [21](days/day-021.qmd) | Thu 27 Aug | [Placeholder title for day 21](days/day-021.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 4 <span class='week-span'>Fri 28 Aug – Thu 3 Sep</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [22](days/day-022.qmd) | Fri 28 Aug | [Placeholder title for day 22](days/day-022.qmd) |  |
+| [23](days/day-023.qmd) | Sat 29 Aug | [Placeholder title for day 23](days/day-023.qmd) |  |
+| [24](days/day-024.qmd) | Sun 30 Aug | [Placeholder title for day 24](days/day-024.qmd) |  |
+| [25](days/day-025.qmd) | Mon 31 Aug | [Placeholder title for day 25](days/day-025.qmd) |  |
+| [26](days/day-026.qmd) | Tue 1 Sep | [Placeholder title for day 26](days/day-026.qmd) |  |
+| [27](days/day-027.qmd) | Wed 2 Sep | [Placeholder title for day 27](days/day-027.qmd) |  |
+| [28](days/day-028.qmd) | Thu 3 Sep | [Placeholder title for day 28](days/day-028.qmd) | [milestone]{.pill .pill-milestone} |
+
+## Returns and noise
+
+### Week 5 <span class='week-span'>Fri 4 Sep – Thu 10 Sep</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [29](days/day-029.qmd) | Fri 4 Sep | [Placeholder title for day 29](days/day-029.qmd) |  |
+| [30](days/day-030.qmd) | Sat 5 Sep | [Placeholder title for day 30](days/day-030.qmd) |  |
+| [31](days/day-031.qmd) | Sun 6 Sep | [Placeholder title for day 31](days/day-031.qmd) |  |
+| [32](days/day-032.qmd) | Mon 7 Sep | [Placeholder title for day 32](days/day-032.qmd) |  |
+| [33](days/day-033.qmd) | Tue 8 Sep | [Placeholder title for day 33](days/day-033.qmd) |  |
+| [34](days/day-034.qmd) | Wed 9 Sep | [Placeholder title for day 34](days/day-034.qmd) |  |
+| [35](days/day-035.qmd) | Thu 10 Sep | [Placeholder title for day 35](days/day-035.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 6 <span class='week-span'>Fri 11 Sep – Thu 17 Sep</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [36](days/day-036.qmd) | Fri 11 Sep | [Placeholder title for day 36](days/day-036.qmd) |  |
+| [37](days/day-037.qmd) | Sat 12 Sep | [Placeholder title for day 37](days/day-037.qmd) |  |
+| [38](days/day-038.qmd) | Sun 13 Sep | [Placeholder title for day 38](days/day-038.qmd) |  |
+| [39](days/day-039.qmd) | Mon 14 Sep | [Placeholder title for day 39](days/day-039.qmd) |  |
+| [40](days/day-040.qmd) | Tue 15 Sep | [Placeholder title for day 40](days/day-040.qmd) |  |
+| [41](days/day-041.qmd) | Wed 16 Sep | [Placeholder title for day 41](days/day-041.qmd) |  |
+| [42](days/day-042.qmd) | Thu 17 Sep | [Placeholder title for day 42](days/day-042.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 7 <span class='week-span'>Fri 18 Sep – Thu 24 Sep</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [43](days/day-043.qmd) | Fri 18 Sep | [Placeholder title for day 43](days/day-043.qmd) |  |
+| [44](days/day-044.qmd) | Sat 19 Sep | [Placeholder title for day 44](days/day-044.qmd) |  |
+| [45](days/day-045.qmd) | Sun 20 Sep | [Placeholder title for day 45](days/day-045.qmd) |  |
+| [46](days/day-046.qmd) | Mon 21 Sep | [Placeholder title for day 46](days/day-046.qmd) |  |
+| [47](days/day-047.qmd) | Tue 22 Sep | [Placeholder title for day 47](days/day-047.qmd) |  |
+| [48](days/day-048.qmd) | Wed 23 Sep | [Placeholder title for day 48](days/day-048.qmd) |  |
+| [49](days/day-049.qmd) | Thu 24 Sep | [Placeholder title for day 49](days/day-049.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 8 <span class='week-span'>Fri 25 Sep – Thu 1 Oct</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [50](days/day-050.qmd) | Fri 25 Sep | [Placeholder title for day 50](days/day-050.qmd) |  |
+| [51](days/day-051.qmd) | Sat 26 Sep | [Placeholder title for day 51](days/day-051.qmd) |  |
+| [52](days/day-052.qmd) | Sun 27 Sep | [Placeholder title for day 52](days/day-052.qmd) |  |
+| [53](days/day-053.qmd) | Mon 28 Sep | [Placeholder title for day 53](days/day-053.qmd) |  |
+| [54](days/day-054.qmd) | Tue 29 Sep | [Placeholder title for day 54](days/day-054.qmd) |  |
+| [55](days/day-055.qmd) | Wed 30 Sep | [Placeholder title for day 55](days/day-055.qmd) |  |
+| [56](days/day-056.qmd) | Thu 1 Oct | [Placeholder title for day 56](days/day-056.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 9 <span class='week-span'>Fri 2 Oct – Thu 8 Oct</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [57](days/day-057.qmd) | Fri 2 Oct | [Placeholder title for day 57](days/day-057.qmd) |  |
+| [58](days/day-058.qmd) | Sat 3 Oct | [Placeholder title for day 58](days/day-058.qmd) |  |
+| [59](days/day-059.qmd) | Sun 4 Oct | [Placeholder title for day 59](days/day-059.qmd) |  |
+| [60](days/day-060.qmd) | Mon 5 Oct | [Placeholder title for day 60](days/day-060.qmd) |  |
+| [61](days/day-061.qmd) | Tue 6 Oct | [Placeholder title for day 61](days/day-061.qmd) |  |
+| [62](days/day-062.qmd) | Wed 7 Oct | [Placeholder title for day 62](days/day-062.qmd) |  |
+| [63](days/day-063.qmd) | Thu 8 Oct | [Placeholder title for day 63](days/day-063.qmd) | [milestone]{.pill .pill-milestone} |
+
+## Time series
+
+### Week 10 <span class='week-span'>Fri 9 Oct – Thu 15 Oct</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [64](days/day-064.qmd) | Fri 9 Oct | [Placeholder title for day 64](days/day-064.qmd) |  |
+| [65](days/day-065.qmd) | Sat 10 Oct | [Placeholder title for day 65](days/day-065.qmd) |  |
+| [66](days/day-066.qmd) | Sun 11 Oct | [Placeholder title for day 66](days/day-066.qmd) |  |
+| [67](days/day-067.qmd) | Mon 12 Oct | [Placeholder title for day 67](days/day-067.qmd) |  |
+| [68](days/day-068.qmd) | Tue 13 Oct | [Placeholder title for day 68](days/day-068.qmd) |  |
+| [69](days/day-069.qmd) | Wed 14 Oct | [Placeholder title for day 69](days/day-069.qmd) |  |
+| [70](days/day-070.qmd) | Thu 15 Oct | [Placeholder title for day 70](days/day-070.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 11 <span class='week-span'>Fri 16 Oct – Thu 22 Oct</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [71](days/day-071.qmd) | Fri 16 Oct | [Placeholder title for day 71](days/day-071.qmd) |  |
+| [72](days/day-072.qmd) | Sat 17 Oct | [Placeholder title for day 72](days/day-072.qmd) |  |
+| [73](days/day-073.qmd) | Sun 18 Oct | [Placeholder title for day 73](days/day-073.qmd) |  |
+| [74](days/day-074.qmd) | Mon 19 Oct | [Placeholder title for day 74](days/day-074.qmd) |  |
+| [75](days/day-075.qmd) | Tue 20 Oct | [Placeholder title for day 75](days/day-075.qmd) |  |
+| [76](days/day-076.qmd) | Wed 21 Oct | [Placeholder title for day 76](days/day-076.qmd) |  |
+| [77](days/day-077.qmd) | Thu 22 Oct | [Placeholder title for day 77](days/day-077.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 12 <span class='week-span'>Fri 23 Oct – Thu 29 Oct</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [78](days/day-078.qmd) | Fri 23 Oct | [Placeholder title for day 78](days/day-078.qmd) |  |
+| [79](days/day-079.qmd) | Sat 24 Oct | [Placeholder title for day 79](days/day-079.qmd) |  |
+| [80](days/day-080.qmd) | Sun 25 Oct | [Placeholder title for day 80](days/day-080.qmd) |  |
+| [81](days/day-081.qmd) | Mon 26 Oct | [Placeholder title for day 81](days/day-081.qmd) |  |
+| [82](days/day-082.qmd) | Tue 27 Oct | [Placeholder title for day 82](days/day-082.qmd) |  |
+| [83](days/day-083.qmd) | Wed 28 Oct | [Placeholder title for day 83](days/day-083.qmd) |  |
+| [84](days/day-084.qmd) | Thu 29 Oct | [Placeholder title for day 84](days/day-084.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 13 <span class='week-span'>Fri 30 Oct – Thu 5 Nov</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [85](days/day-085.qmd) | Fri 30 Oct | [Placeholder title for day 85](days/day-085.qmd) |  |
+| [86](days/day-086.qmd) | Sat 31 Oct | [Placeholder title for day 86](days/day-086.qmd) |  |
+| [87](days/day-087.qmd) | Sun 1 Nov | [Placeholder title for day 87](days/day-087.qmd) |  |
+| [88](days/day-088.qmd) | Mon 2 Nov | [Placeholder title for day 88](days/day-088.qmd) |  |
+| [89](days/day-089.qmd) | Tue 3 Nov | [Placeholder title for day 89](days/day-089.qmd) |  |
+| [90](days/day-090.qmd) | Wed 4 Nov | [Placeholder title for day 90](days/day-090.qmd) |  |
+| [91](days/day-091.qmd) | Thu 5 Nov | [Placeholder title for day 91](days/day-091.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 14 <span class='week-span'>Fri 6 Nov – Thu 12 Nov</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [92](days/day-092.qmd) | Fri 6 Nov | [Placeholder title for day 92](days/day-092.qmd) |  |
+| [93](days/day-093.qmd) | Sat 7 Nov | [Placeholder title for day 93](days/day-093.qmd) |  |
+| [94](days/day-094.qmd) | Sun 8 Nov | [Placeholder title for day 94](days/day-094.qmd) |  |
+| [95](days/day-095.qmd) | Mon 9 Nov | [Placeholder title for day 95](days/day-095.qmd) |  |
+| [96](days/day-096.qmd) | Tue 10 Nov | [Placeholder title for day 96](days/day-096.qmd) |  |
+| [97](days/day-097.qmd) | Wed 11 Nov | [Placeholder title for day 97](days/day-097.qmd) |  |
+| [98](days/day-098.qmd) | Thu 12 Nov | [Placeholder title for day 98](days/day-098.qmd) | [milestone]{.pill .pill-milestone} |
+
+## Portfolios and risk
+
+### Week 15 <span class='week-span'>Fri 13 Nov – Thu 19 Nov</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [99](days/day-099.qmd) | Fri 13 Nov | [Placeholder title for day 99](days/day-099.qmd) |  |
+| [100](days/day-100.qmd) | Sat 14 Nov | [Placeholder title for day 100](days/day-100.qmd) |  |
+| [101](days/day-101.qmd) | Sun 15 Nov | [Placeholder title for day 101](days/day-101.qmd) |  |
+| [102](days/day-102.qmd) | Mon 16 Nov | [Placeholder title for day 102](days/day-102.qmd) |  |
+| [103](days/day-103.qmd) | Tue 17 Nov | [Placeholder title for day 103](days/day-103.qmd) |  |
+| [104](days/day-104.qmd) | Wed 18 Nov | [Placeholder title for day 104](days/day-104.qmd) |  |
+| [105](days/day-105.qmd) | Thu 19 Nov | [Placeholder title for day 105](days/day-105.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 16 <span class='week-span'>Fri 20 Nov – Thu 26 Nov</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [106](days/day-106.qmd) | Fri 20 Nov | [Placeholder title for day 106](days/day-106.qmd) |  |
+| [107](days/day-107.qmd) | Sat 21 Nov | [Placeholder title for day 107](days/day-107.qmd) |  |
+| [108](days/day-108.qmd) | Sun 22 Nov | [Placeholder title for day 108](days/day-108.qmd) |  |
+| [109](days/day-109.qmd) | Mon 23 Nov | [Placeholder title for day 109](days/day-109.qmd) |  |
+| [110](days/day-110.qmd) | Tue 24 Nov | [Placeholder title for day 110](days/day-110.qmd) |  |
+| [111](days/day-111.qmd) | Wed 25 Nov | [Placeholder title for day 111](days/day-111.qmd) |  |
+| [112](days/day-112.qmd) | Thu 26 Nov | [Placeholder title for day 112](days/day-112.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 17 <span class='week-span'>Fri 27 Nov – Thu 3 Dec</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [113](days/day-113.qmd) | Fri 27 Nov | [Placeholder title for day 113](days/day-113.qmd) |  |
+| [114](days/day-114.qmd) | Sat 28 Nov | [Placeholder title for day 114](days/day-114.qmd) |  |
+| [115](days/day-115.qmd) | Sun 29 Nov | [Placeholder title for day 115](days/day-115.qmd) |  |
+| [116](days/day-116.qmd) | Mon 30 Nov | [Placeholder title for day 116](days/day-116.qmd) |  |
+| [117](days/day-117.qmd) | Tue 1 Dec | [Placeholder title for day 117](days/day-117.qmd) |  |
+| [118](days/day-118.qmd) | Wed 2 Dec | [Placeholder title for day 118](days/day-118.qmd) |  |
+| [119](days/day-119.qmd) | Thu 3 Dec | [Placeholder title for day 119](days/day-119.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 18 <span class='week-span'>Fri 4 Dec – Thu 10 Dec</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [120](days/day-120.qmd) | Fri 4 Dec | [Placeholder title for day 120](days/day-120.qmd) |  |
+| [121](days/day-121.qmd) | Sat 5 Dec | [Placeholder title for day 121](days/day-121.qmd) |  |
+| [122](days/day-122.qmd) | Sun 6 Dec | [Placeholder title for day 122](days/day-122.qmd) |  |
+| [123](days/day-123.qmd) | Mon 7 Dec | [Placeholder title for day 123](days/day-123.qmd) |  |
+| [124](days/day-124.qmd) | Tue 8 Dec | [Placeholder title for day 124](days/day-124.qmd) |  |
+| [125](days/day-125.qmd) | Wed 9 Dec | [Placeholder title for day 125](days/day-125.qmd) |  |
+| [126](days/day-126.qmd) | Thu 10 Dec | [Placeholder title for day 126](days/day-126.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 19 <span class='week-span'>Fri 11 Dec – Thu 17 Dec</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [127](days/day-127.qmd) | Fri 11 Dec | [Placeholder title for day 127](days/day-127.qmd) |  |
+| [128](days/day-128.qmd) | Sat 12 Dec | [Placeholder title for day 128](days/day-128.qmd) |  |
+| [129](days/day-129.qmd) | Sun 13 Dec | [Placeholder title for day 129](days/day-129.qmd) |  |
+| [130](days/day-130.qmd) | Mon 14 Dec | [Placeholder title for day 130](days/day-130.qmd) |  |
+| [131](days/day-131.qmd) | Tue 15 Dec | [Placeholder title for day 131](days/day-131.qmd) |  |
+| [132](days/day-132.qmd) | Wed 16 Dec | [Placeholder title for day 132](days/day-132.qmd) |  |
+| [133](days/day-133.qmd) | Thu 17 Dec | [Placeholder title for day 133](days/day-133.qmd) | [milestone]{.pill .pill-milestone} |
+
+## The research harness
+
+### Week 20 <span class='week-span'>Fri 18 Dec – Thu 24 Dec</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [134](days/day-134.qmd) | Fri 18 Dec | [Placeholder title for day 134](days/day-134.qmd) |  |
+| [135](days/day-135.qmd) | Sat 19 Dec | [Placeholder title for day 135](days/day-135.qmd) |  |
+| [136](days/day-136.qmd) | Sun 20 Dec | [Placeholder title for day 136](days/day-136.qmd) |  |
+| [137](days/day-137.qmd) | Mon 21 Dec | [Placeholder title for day 137](days/day-137.qmd) |  |
+| [138](days/day-138.qmd) | Tue 22 Dec | [Placeholder title for day 138](days/day-138.qmd) |  |
+| [139](days/day-139.qmd) | Wed 23 Dec | [Placeholder title for day 139](days/day-139.qmd) |  |
+| [140](days/day-140.qmd) | Thu 24 Dec | [Placeholder title for day 140](days/day-140.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 21 <span class='week-span'>Fri 25 Dec – Thu 31 Dec</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [141](days/day-141.qmd) | Fri 25 Dec | [Placeholder title for day 141](days/day-141.qmd) |  |
+| [142](days/day-142.qmd) | Sat 26 Dec | [Placeholder title for day 142](days/day-142.qmd) |  |
+| [143](days/day-143.qmd) | Sun 27 Dec | [Placeholder title for day 143](days/day-143.qmd) |  |
+| [144](days/day-144.qmd) | Mon 28 Dec | [Placeholder title for day 144](days/day-144.qmd) |  |
+| [145](days/day-145.qmd) | Tue 29 Dec | [Placeholder title for day 145](days/day-145.qmd) |  |
+| [146](days/day-146.qmd) | Wed 30 Dec | [Placeholder title for day 146](days/day-146.qmd) |  |
+| [147](days/day-147.qmd) | Thu 31 Dec | [Placeholder title for day 147](days/day-147.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 22 <span class='week-span'>Fri 1 Jan – Thu 7 Jan</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [148](days/day-148.qmd) | Fri 1 Jan | [Placeholder title for day 148](days/day-148.qmd) |  |
+| [149](days/day-149.qmd) | Sat 2 Jan | [Placeholder title for day 149](days/day-149.qmd) |  |
+| [150](days/day-150.qmd) | Sun 3 Jan | [Placeholder title for day 150](days/day-150.qmd) |  |
+| [151](days/day-151.qmd) | Mon 4 Jan | [Placeholder title for day 151](days/day-151.qmd) |  |
+| [152](days/day-152.qmd) | Tue 5 Jan | [Placeholder title for day 152](days/day-152.qmd) |  |
+| [153](days/day-153.qmd) | Wed 6 Jan | [Placeholder title for day 153](days/day-153.qmd) |  |
+| [154](days/day-154.qmd) | Thu 7 Jan | [Placeholder title for day 154](days/day-154.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 23 <span class='week-span'>Fri 8 Jan – Thu 14 Jan</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [155](days/day-155.qmd) | Fri 8 Jan | [Placeholder title for day 155](days/day-155.qmd) |  |
+| [156](days/day-156.qmd) | Sat 9 Jan | [Placeholder title for day 156](days/day-156.qmd) |  |
+| [157](days/day-157.qmd) | Sun 10 Jan | [Placeholder title for day 157](days/day-157.qmd) |  |
+| [158](days/day-158.qmd) | Mon 11 Jan | [Placeholder title for day 158](days/day-158.qmd) |  |
+| [159](days/day-159.qmd) | Tue 12 Jan | [Placeholder title for day 159](days/day-159.qmd) |  |
+| [160](days/day-160.qmd) | Wed 13 Jan | [Placeholder title for day 160](days/day-160.qmd) |  |
+| [161](days/day-161.qmd) | Thu 14 Jan | [Placeholder title for day 161](days/day-161.qmd) | [milestone]{.pill .pill-milestone} |
+
+## Alpha
+
+### Week 24 <span class='week-span'>Fri 15 Jan – Thu 21 Jan</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [162](days/day-162.qmd) | Fri 15 Jan | [Placeholder title for day 162](days/day-162.qmd) |  |
+| [163](days/day-163.qmd) | Sat 16 Jan | [Placeholder title for day 163](days/day-163.qmd) |  |
+| [164](days/day-164.qmd) | Sun 17 Jan | [Placeholder title for day 164](days/day-164.qmd) |  |
+| [165](days/day-165.qmd) | Mon 18 Jan | [Placeholder title for day 165](days/day-165.qmd) |  |
+| [166](days/day-166.qmd) | Tue 19 Jan | [Placeholder title for day 166](days/day-166.qmd) |  |
+| [167](days/day-167.qmd) | Wed 20 Jan | [Placeholder title for day 167](days/day-167.qmd) |  |
+| [168](days/day-168.qmd) | Thu 21 Jan | [Placeholder title for day 168](days/day-168.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 25 <span class='week-span'>Fri 22 Jan – Thu 28 Jan</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [169](days/day-169.qmd) | Fri 22 Jan | [Placeholder title for day 169](days/day-169.qmd) |  |
+| [170](days/day-170.qmd) | Sat 23 Jan | [Placeholder title for day 170](days/day-170.qmd) |  |
+| [171](days/day-171.qmd) | Sun 24 Jan | [Placeholder title for day 171](days/day-171.qmd) |  |
+| [172](days/day-172.qmd) | Mon 25 Jan | [Placeholder title for day 172](days/day-172.qmd) |  |
+| [173](days/day-173.qmd) | Tue 26 Jan | [Placeholder title for day 173](days/day-173.qmd) |  |
+| [174](days/day-174.qmd) | Wed 27 Jan | [Placeholder title for day 174](days/day-174.qmd) |  |
+| [175](days/day-175.qmd) | Thu 28 Jan | [Placeholder title for day 175](days/day-175.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 26 <span class='week-span'>Fri 29 Jan – Thu 4 Feb</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [176](days/day-176.qmd) | Fri 29 Jan | [Placeholder title for day 176](days/day-176.qmd) |  |
+| [177](days/day-177.qmd) | Sat 30 Jan | [Placeholder title for day 177](days/day-177.qmd) |  |
+| [178](days/day-178.qmd) | Sun 31 Jan | [Placeholder title for day 178](days/day-178.qmd) |  |
+| [179](days/day-179.qmd) | Mon 1 Feb | [Placeholder title for day 179](days/day-179.qmd) |  |
+| [180](days/day-180.qmd) | Tue 2 Feb | [Placeholder title for day 180](days/day-180.qmd) |  |
+| [181](days/day-181.qmd) | Wed 3 Feb | [Placeholder title for day 181](days/day-181.qmd) |  |
+| [182](days/day-182.qmd) | Thu 4 Feb | [Placeholder title for day 182](days/day-182.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 27 <span class='week-span'>Fri 5 Feb – Thu 11 Feb</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [183](days/day-183.qmd) | Fri 5 Feb | [Placeholder title for day 183](days/day-183.qmd) |  |
+| [184](days/day-184.qmd) | Sat 6 Feb | [Placeholder title for day 184](days/day-184.qmd) |  |
+| [185](days/day-185.qmd) | Sun 7 Feb | [Placeholder title for day 185](days/day-185.qmd) |  |
+| [186](days/day-186.qmd) | Mon 8 Feb | [Placeholder title for day 186](days/day-186.qmd) |  |
+| [187](days/day-187.qmd) | Tue 9 Feb | [Placeholder title for day 187](days/day-187.qmd) |  |
+| [188](days/day-188.qmd) | Wed 10 Feb | [Placeholder title for day 188](days/day-188.qmd) |  |
+| [189](days/day-189.qmd) | Thu 11 Feb | [Placeholder title for day 189](days/day-189.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 28 <span class='week-span'>Fri 12 Feb – Thu 18 Feb</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [190](days/day-190.qmd) | Fri 12 Feb | [Placeholder title for day 190](days/day-190.qmd) |  |
+| [191](days/day-191.qmd) | Sat 13 Feb | [Placeholder title for day 191](days/day-191.qmd) |  |
+| [192](days/day-192.qmd) | Sun 14 Feb | [Placeholder title for day 192](days/day-192.qmd) |  |
+| [193](days/day-193.qmd) | Mon 15 Feb | [Placeholder title for day 193](days/day-193.qmd) |  |
+| [194](days/day-194.qmd) | Tue 16 Feb | [Placeholder title for day 194](days/day-194.qmd) |  |
+| [195](days/day-195.qmd) | Wed 17 Feb | [Placeholder title for day 195](days/day-195.qmd) |  |
+| [196](days/day-196.qmd) | Thu 18 Feb | [Placeholder title for day 196](days/day-196.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 29 <span class='week-span'>Fri 19 Feb – Thu 25 Feb</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [197](days/day-197.qmd) | Fri 19 Feb | [Placeholder title for day 197](days/day-197.qmd) |  |
+| [198](days/day-198.qmd) | Sat 20 Feb | [Placeholder title for day 198](days/day-198.qmd) |  |
+| [199](days/day-199.qmd) | Sun 21 Feb | [Placeholder title for day 199](days/day-199.qmd) |  |
+| [200](days/day-200.qmd) | Mon 22 Feb | [Placeholder title for day 200](days/day-200.qmd) |  |
+| [201](days/day-201.qmd) | Tue 23 Feb | [Placeholder title for day 201](days/day-201.qmd) |  |
+| [202](days/day-202.qmd) | Wed 24 Feb | [Placeholder title for day 202](days/day-202.qmd) |  |
+| [203](days/day-203.qmd) | Thu 25 Feb | [Placeholder title for day 203](days/day-203.qmd) | [milestone]{.pill .pill-milestone} |
+
+## Machine learning
+
+### Week 30 <span class='week-span'>Fri 26 Feb – Thu 4 Mar</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [204](days/day-204.qmd) | Fri 26 Feb | [Placeholder title for day 204](days/day-204.qmd) |  |
+| [205](days/day-205.qmd) | Sat 27 Feb | [Placeholder title for day 205](days/day-205.qmd) |  |
+| [206](days/day-206.qmd) | Sun 28 Feb | [Placeholder title for day 206](days/day-206.qmd) |  |
+| [207](days/day-207.qmd) | Mon 1 Mar | [Placeholder title for day 207](days/day-207.qmd) |  |
+| [208](days/day-208.qmd) | Tue 2 Mar | [Placeholder title for day 208](days/day-208.qmd) |  |
+| [209](days/day-209.qmd) | Wed 3 Mar | [Placeholder title for day 209](days/day-209.qmd) |  |
+| [210](days/day-210.qmd) | Thu 4 Mar | [Placeholder title for day 210](days/day-210.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 31 <span class='week-span'>Fri 5 Mar – Thu 11 Mar</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [211](days/day-211.qmd) | Fri 5 Mar | [Placeholder title for day 211](days/day-211.qmd) |  |
+| [212](days/day-212.qmd) | Sat 6 Mar | [Placeholder title for day 212](days/day-212.qmd) |  |
+| [213](days/day-213.qmd) | Sun 7 Mar | [Placeholder title for day 213](days/day-213.qmd) |  |
+| [214](days/day-214.qmd) | Mon 8 Mar | [Placeholder title for day 214](days/day-214.qmd) |  |
+| [215](days/day-215.qmd) | Tue 9 Mar | [Placeholder title for day 215](days/day-215.qmd) |  |
+| [216](days/day-216.qmd) | Wed 10 Mar | [Placeholder title for day 216](days/day-216.qmd) |  |
+| [217](days/day-217.qmd) | Thu 11 Mar | [Placeholder title for day 217](days/day-217.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 32 <span class='week-span'>Fri 12 Mar – Thu 18 Mar</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [218](days/day-218.qmd) | Fri 12 Mar | [Placeholder title for day 218](days/day-218.qmd) |  |
+| [219](days/day-219.qmd) | Sat 13 Mar | [Placeholder title for day 219](days/day-219.qmd) |  |
+| [220](days/day-220.qmd) | Sun 14 Mar | [Placeholder title for day 220](days/day-220.qmd) |  |
+| [221](days/day-221.qmd) | Mon 15 Mar | [Placeholder title for day 221](days/day-221.qmd) |  |
+| [222](days/day-222.qmd) | Tue 16 Mar | [Placeholder title for day 222](days/day-222.qmd) |  |
+| [223](days/day-223.qmd) | Wed 17 Mar | [Placeholder title for day 223](days/day-223.qmd) |  |
+| [224](days/day-224.qmd) | Thu 18 Mar | [Placeholder title for day 224](days/day-224.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 33 <span class='week-span'>Fri 19 Mar – Thu 25 Mar</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [225](days/day-225.qmd) | Fri 19 Mar | [Placeholder title for day 225](days/day-225.qmd) |  |
+| [226](days/day-226.qmd) | Sat 20 Mar | [Placeholder title for day 226](days/day-226.qmd) |  |
+| [227](days/day-227.qmd) | Sun 21 Mar | [Placeholder title for day 227](days/day-227.qmd) |  |
+| [228](days/day-228.qmd) | Mon 22 Mar | [Placeholder title for day 228](days/day-228.qmd) |  |
+| [229](days/day-229.qmd) | Tue 23 Mar | [Placeholder title for day 229](days/day-229.qmd) |  |
+| [230](days/day-230.qmd) | Wed 24 Mar | [Placeholder title for day 230](days/day-230.qmd) |  |
+| [231](days/day-231.qmd) | Thu 25 Mar | [Placeholder title for day 231](days/day-231.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 34 <span class='week-span'>Fri 26 Mar – Thu 1 Apr</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [232](days/day-232.qmd) | Fri 26 Mar | [Placeholder title for day 232](days/day-232.qmd) |  |
+| [233](days/day-233.qmd) | Sat 27 Mar | [Placeholder title for day 233](days/day-233.qmd) |  |
+| [234](days/day-234.qmd) | Sun 28 Mar | [Placeholder title for day 234](days/day-234.qmd) |  |
+| [235](days/day-235.qmd) | Mon 29 Mar | [Placeholder title for day 235](days/day-235.qmd) |  |
+| [236](days/day-236.qmd) | Tue 30 Mar | [Placeholder title for day 236](days/day-236.qmd) |  |
+| [237](days/day-237.qmd) | Wed 31 Mar | [Placeholder title for day 237](days/day-237.qmd) |  |
+| [238](days/day-238.qmd) | Thu 1 Apr | [Placeholder title for day 238](days/day-238.qmd) | [milestone]{.pill .pill-milestone} |
+
+## Derivatives
+
+### Week 35 <span class='week-span'>Fri 2 Apr – Thu 8 Apr</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [239](days/day-239.qmd) | Fri 2 Apr | [Placeholder title for day 239](days/day-239.qmd) |  |
+| [240](days/day-240.qmd) | Sat 3 Apr | [Placeholder title for day 240](days/day-240.qmd) |  |
+| [241](days/day-241.qmd) | Sun 4 Apr | [Placeholder title for day 241](days/day-241.qmd) |  |
+| [242](days/day-242.qmd) | Mon 5 Apr | [Placeholder title for day 242](days/day-242.qmd) |  |
+| [243](days/day-243.qmd) | Tue 6 Apr | [Placeholder title for day 243](days/day-243.qmd) |  |
+| [244](days/day-244.qmd) | Wed 7 Apr | [Placeholder title for day 244](days/day-244.qmd) |  |
+| [245](days/day-245.qmd) | Thu 8 Apr | [Placeholder title for day 245](days/day-245.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 36 <span class='week-span'>Fri 9 Apr – Thu 15 Apr</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [246](days/day-246.qmd) | Fri 9 Apr | [Placeholder title for day 246](days/day-246.qmd) |  |
+| [247](days/day-247.qmd) | Sat 10 Apr | [Placeholder title for day 247](days/day-247.qmd) |  |
+| [248](days/day-248.qmd) | Sun 11 Apr | [Placeholder title for day 248](days/day-248.qmd) |  |
+| [249](days/day-249.qmd) | Mon 12 Apr | [Placeholder title for day 249](days/day-249.qmd) |  |
+| [250](days/day-250.qmd) | Tue 13 Apr | [Placeholder title for day 250](days/day-250.qmd) |  |
+| [251](days/day-251.qmd) | Wed 14 Apr | [Placeholder title for day 251](days/day-251.qmd) |  |
+| [252](days/day-252.qmd) | Thu 15 Apr | [Placeholder title for day 252](days/day-252.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 37 <span class='week-span'>Fri 16 Apr – Thu 22 Apr</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [253](days/day-253.qmd) | Fri 16 Apr | [Placeholder title for day 253](days/day-253.qmd) |  |
+| [254](days/day-254.qmd) | Sat 17 Apr | [Placeholder title for day 254](days/day-254.qmd) |  |
+| [255](days/day-255.qmd) | Sun 18 Apr | [Placeholder title for day 255](days/day-255.qmd) |  |
+| [256](days/day-256.qmd) | Mon 19 Apr | [Placeholder title for day 256](days/day-256.qmd) |  |
+| [257](days/day-257.qmd) | Tue 20 Apr | [Placeholder title for day 257](days/day-257.qmd) |  |
+| [258](days/day-258.qmd) | Wed 21 Apr | [Placeholder title for day 258](days/day-258.qmd) |  |
+| [259](days/day-259.qmd) | Thu 22 Apr | [Placeholder title for day 259](days/day-259.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 38 <span class='week-span'>Fri 23 Apr – Thu 29 Apr</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [260](days/day-260.qmd) | Fri 23 Apr | [Placeholder title for day 260](days/day-260.qmd) |  |
+| [261](days/day-261.qmd) | Sat 24 Apr | [Placeholder title for day 261](days/day-261.qmd) |  |
+| [262](days/day-262.qmd) | Sun 25 Apr | [Placeholder title for day 262](days/day-262.qmd) |  |
+| [263](days/day-263.qmd) | Mon 26 Apr | [Placeholder title for day 263](days/day-263.qmd) |  |
+| [264](days/day-264.qmd) | Tue 27 Apr | [Placeholder title for day 264](days/day-264.qmd) |  |
+| [265](days/day-265.qmd) | Wed 28 Apr | [Placeholder title for day 265](days/day-265.qmd) |  |
+| [266](days/day-266.qmd) | Thu 29 Apr | [Placeholder title for day 266](days/day-266.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 39 <span class='week-span'>Fri 30 Apr – Thu 6 May</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [267](days/day-267.qmd) | Fri 30 Apr | [Placeholder title for day 267](days/day-267.qmd) |  |
+| [268](days/day-268.qmd) | Sat 1 May | [Placeholder title for day 268](days/day-268.qmd) |  |
+| [269](days/day-269.qmd) | Sun 2 May | [Placeholder title for day 269](days/day-269.qmd) |  |
+| [270](days/day-270.qmd) | Mon 3 May | [Placeholder title for day 270](days/day-270.qmd) |  |
+| [271](days/day-271.qmd) | Tue 4 May | [Placeholder title for day 271](days/day-271.qmd) |  |
+| [272](days/day-272.qmd) | Wed 5 May | [Placeholder title for day 272](days/day-272.qmd) |  |
+| [273](days/day-273.qmd) | Thu 6 May | [Placeholder title for day 273](days/day-273.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 40 <span class='week-span'>Fri 7 May – Thu 13 May</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [274](days/day-274.qmd) | Fri 7 May | [Placeholder title for day 274](days/day-274.qmd) |  |
+| [275](days/day-275.qmd) | Sat 8 May | [Placeholder title for day 275](days/day-275.qmd) |  |
+| [276](days/day-276.qmd) | Sun 9 May | [Placeholder title for day 276](days/day-276.qmd) |  |
+| [277](days/day-277.qmd) | Mon 10 May | [Placeholder title for day 277](days/day-277.qmd) |  |
+| [278](days/day-278.qmd) | Tue 11 May | [Placeholder title for day 278](days/day-278.qmd) |  |
+| [279](days/day-279.qmd) | Wed 12 May | [Placeholder title for day 279](days/day-279.qmd) |  |
+| [280](days/day-280.qmd) | Thu 13 May | [Placeholder title for day 280](days/day-280.qmd) | [milestone]{.pill .pill-milestone} |
+
+## Microstructure
+
+### Week 41 <span class='week-span'>Fri 14 May – Thu 20 May</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [281](days/day-281.qmd) | Fri 14 May | [Placeholder title for day 281](days/day-281.qmd) |  |
+| [282](days/day-282.qmd) | Sat 15 May | [Placeholder title for day 282](days/day-282.qmd) |  |
+| [283](days/day-283.qmd) | Sun 16 May | [Placeholder title for day 283](days/day-283.qmd) |  |
+| [284](days/day-284.qmd) | Mon 17 May | [Placeholder title for day 284](days/day-284.qmd) |  |
+| [285](days/day-285.qmd) | Tue 18 May | [Placeholder title for day 285](days/day-285.qmd) |  |
+| [286](days/day-286.qmd) | Wed 19 May | [Placeholder title for day 286](days/day-286.qmd) |  |
+| [287](days/day-287.qmd) | Thu 20 May | [Placeholder title for day 287](days/day-287.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 42 <span class='week-span'>Fri 21 May – Thu 27 May</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [288](days/day-288.qmd) | Fri 21 May | [Placeholder title for day 288](days/day-288.qmd) |  |
+| [289](days/day-289.qmd) | Sat 22 May | [Placeholder title for day 289](days/day-289.qmd) |  |
+| [290](days/day-290.qmd) | Sun 23 May | [Placeholder title for day 290](days/day-290.qmd) |  |
+| [291](days/day-291.qmd) | Mon 24 May | [Placeholder title for day 291](days/day-291.qmd) |  |
+| [292](days/day-292.qmd) | Tue 25 May | [Placeholder title for day 292](days/day-292.qmd) |  |
+| [293](days/day-293.qmd) | Wed 26 May | [Placeholder title for day 293](days/day-293.qmd) |  |
+| [294](days/day-294.qmd) | Thu 27 May | [Placeholder title for day 294](days/day-294.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 43 <span class='week-span'>Fri 28 May – Thu 3 Jun</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [295](days/day-295.qmd) | Fri 28 May | [Placeholder title for day 295](days/day-295.qmd) |  |
+| [296](days/day-296.qmd) | Sat 29 May | [Placeholder title for day 296](days/day-296.qmd) |  |
+| [297](days/day-297.qmd) | Sun 30 May | [Placeholder title for day 297](days/day-297.qmd) |  |
+| [298](days/day-298.qmd) | Mon 31 May | [Placeholder title for day 298](days/day-298.qmd) |  |
+| [299](days/day-299.qmd) | Tue 1 Jun | [Placeholder title for day 299](days/day-299.qmd) |  |
+| [300](days/day-300.qmd) | Wed 2 Jun | [Placeholder title for day 300](days/day-300.qmd) |  |
+| [301](days/day-301.qmd) | Thu 3 Jun | [Placeholder title for day 301](days/day-301.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 44 <span class='week-span'>Fri 4 Jun – Thu 10 Jun</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [302](days/day-302.qmd) | Fri 4 Jun | [Placeholder title for day 302](days/day-302.qmd) |  |
+| [303](days/day-303.qmd) | Sat 5 Jun | [Placeholder title for day 303](days/day-303.qmd) |  |
+| [304](days/day-304.qmd) | Sun 6 Jun | [Placeholder title for day 304](days/day-304.qmd) |  |
+| [305](days/day-305.qmd) | Mon 7 Jun | [Placeholder title for day 305](days/day-305.qmd) |  |
+| [306](days/day-306.qmd) | Tue 8 Jun | [Placeholder title for day 306](days/day-306.qmd) |  |
+| [307](days/day-307.qmd) | Wed 9 Jun | [Placeholder title for day 307](days/day-307.qmd) |  |
+| [308](days/day-308.qmd) | Thu 10 Jun | [Placeholder title for day 308](days/day-308.qmd) | [milestone]{.pill .pill-milestone} |
+
+## Production
+
+### Week 45 <span class='week-span'>Fri 11 Jun – Thu 17 Jun</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [309](days/day-309.qmd) | Fri 11 Jun | [Placeholder title for day 309](days/day-309.qmd) |  |
+| [310](days/day-310.qmd) | Sat 12 Jun | [Placeholder title for day 310](days/day-310.qmd) |  |
+| [311](days/day-311.qmd) | Sun 13 Jun | [Placeholder title for day 311](days/day-311.qmd) |  |
+| [312](days/day-312.qmd) | Mon 14 Jun | [Placeholder title for day 312](days/day-312.qmd) |  |
+| [313](days/day-313.qmd) | Tue 15 Jun | [Placeholder title for day 313](days/day-313.qmd) |  |
+| [314](days/day-314.qmd) | Wed 16 Jun | [Placeholder title for day 314](days/day-314.qmd) |  |
+| [315](days/day-315.qmd) | Thu 17 Jun | [Placeholder title for day 315](days/day-315.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 46 <span class='week-span'>Fri 18 Jun – Thu 24 Jun</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [316](days/day-316.qmd) | Fri 18 Jun | [Placeholder title for day 316](days/day-316.qmd) |  |
+| [317](days/day-317.qmd) | Sat 19 Jun | [Placeholder title for day 317](days/day-317.qmd) |  |
+| [318](days/day-318.qmd) | Sun 20 Jun | [Placeholder title for day 318](days/day-318.qmd) |  |
+| [319](days/day-319.qmd) | Mon 21 Jun | [Placeholder title for day 319](days/day-319.qmd) |  |
+| [320](days/day-320.qmd) | Tue 22 Jun | [Placeholder title for day 320](days/day-320.qmd) |  |
+| [321](days/day-321.qmd) | Wed 23 Jun | [Placeholder title for day 321](days/day-321.qmd) |  |
+| [322](days/day-322.qmd) | Thu 24 Jun | [Placeholder title for day 322](days/day-322.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 47 <span class='week-span'>Fri 25 Jun – Thu 1 Jul</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [323](days/day-323.qmd) | Fri 25 Jun | [Placeholder title for day 323](days/day-323.qmd) |  |
+| [324](days/day-324.qmd) | Sat 26 Jun | [Placeholder title for day 324](days/day-324.qmd) |  |
+| [325](days/day-325.qmd) | Sun 27 Jun | [Placeholder title for day 325](days/day-325.qmd) |  |
+| [326](days/day-326.qmd) | Mon 28 Jun | [Placeholder title for day 326](days/day-326.qmd) |  |
+| [327](days/day-327.qmd) | Tue 29 Jun | [Placeholder title for day 327](days/day-327.qmd) |  |
+| [328](days/day-328.qmd) | Wed 30 Jun | [Placeholder title for day 328](days/day-328.qmd) |  |
+| [329](days/day-329.qmd) | Thu 1 Jul | [Placeholder title for day 329](days/day-329.qmd) | [milestone]{.pill .pill-milestone} |
+
+## The interview
+
+### Week 48 <span class='week-span'>Fri 2 Jul – Thu 8 Jul</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [330](days/day-330.qmd) | Fri 2 Jul | [Placeholder title for day 330](days/day-330.qmd) |  |
+| [331](days/day-331.qmd) | Sat 3 Jul | [Placeholder title for day 331](days/day-331.qmd) |  |
+| [332](days/day-332.qmd) | Sun 4 Jul | [Placeholder title for day 332](days/day-332.qmd) |  |
+| [333](days/day-333.qmd) | Mon 5 Jul | [Placeholder title for day 333](days/day-333.qmd) |  |
+| [334](days/day-334.qmd) | Tue 6 Jul | [Placeholder title for day 334](days/day-334.qmd) |  |
+| [335](days/day-335.qmd) | Wed 7 Jul | [Placeholder title for day 335](days/day-335.qmd) |  |
+| [336](days/day-336.qmd) | Thu 8 Jul | [Placeholder title for day 336](days/day-336.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 49 <span class='week-span'>Fri 9 Jul – Thu 15 Jul</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [337](days/day-337.qmd) | Fri 9 Jul | [Placeholder title for day 337](days/day-337.qmd) |  |
+| [338](days/day-338.qmd) | Sat 10 Jul | [Placeholder title for day 338](days/day-338.qmd) |  |
+| [339](days/day-339.qmd) | Sun 11 Jul | [Placeholder title for day 339](days/day-339.qmd) |  |
+| [340](days/day-340.qmd) | Mon 12 Jul | [Placeholder title for day 340](days/day-340.qmd) |  |
+| [341](days/day-341.qmd) | Tue 13 Jul | [Placeholder title for day 341](days/day-341.qmd) |  |
+| [342](days/day-342.qmd) | Wed 14 Jul | [Placeholder title for day 342](days/day-342.qmd) |  |
+| [343](days/day-343.qmd) | Thu 15 Jul | [Placeholder title for day 343](days/day-343.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 50 <span class='week-span'>Fri 16 Jul – Thu 22 Jul</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [344](days/day-344.qmd) | Fri 16 Jul | [Placeholder title for day 344](days/day-344.qmd) |  |
+| [345](days/day-345.qmd) | Sat 17 Jul | [Placeholder title for day 345](days/day-345.qmd) |  |
+| [346](days/day-346.qmd) | Sun 18 Jul | [Placeholder title for day 346](days/day-346.qmd) |  |
+| [347](days/day-347.qmd) | Mon 19 Jul | [Placeholder title for day 347](days/day-347.qmd) |  |
+| [348](days/day-348.qmd) | Tue 20 Jul | [Placeholder title for day 348](days/day-348.qmd) |  |
+| [349](days/day-349.qmd) | Wed 21 Jul | [Placeholder title for day 349](days/day-349.qmd) |  |
+| [350](days/day-350.qmd) | Thu 22 Jul | [Placeholder title for day 350](days/day-350.qmd) | [catch-up]{.pill .pill-catchup} |
+
+### Week 51 <span class='week-span'>Fri 23 Jul – Thu 29 Jul</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [351](days/day-351.qmd) | Fri 23 Jul | [Placeholder title for day 351](days/day-351.qmd) |  |
+| [352](days/day-352.qmd) | Sat 24 Jul | [Placeholder title for day 352](days/day-352.qmd) |  |
+| [353](days/day-353.qmd) | Sun 25 Jul | [Placeholder title for day 353](days/day-353.qmd) |  |
+| [354](days/day-354.qmd) | Mon 26 Jul | [Placeholder title for day 354](days/day-354.qmd) |  |
+| [355](days/day-355.qmd) | Tue 27 Jul | [Placeholder title for day 355](days/day-355.qmd) |  |
+| [356](days/day-356.qmd) | Wed 28 Jul | [Placeholder title for day 356](days/day-356.qmd) |  |
+| [357](days/day-357.qmd) | Thu 29 Jul | [Placeholder title for day 357](days/day-357.qmd) | [milestone]{.pill .pill-milestone} |
+
+## Capstone
+
+### Week 52 <span class='week-span'>Fri 30 Jul – Fri 6 Aug</span>
+
+| Day | Date | Focus | |
+|---:|:---|:---|:---|
+| [358](days/day-358.qmd) | Fri 30 Jul | [Placeholder title for day 358](days/day-358.qmd) |  |
+| [359](days/day-359.qmd) | Sat 31 Jul | [Placeholder title for day 359](days/day-359.qmd) |  |
+| [360](days/day-360.qmd) | Sun 1 Aug | [Placeholder title for day 360](days/day-360.qmd) |  |
+| [361](days/day-361.qmd) | Mon 2 Aug | [Placeholder title for day 361](days/day-361.qmd) |  |
+| [362](days/day-362.qmd) | Tue 3 Aug | [Placeholder title for day 362](days/day-362.qmd) |  |
+| [363](days/day-363.qmd) | Wed 4 Aug | [Placeholder title for day 363](days/day-363.qmd) |  |
+| [364](days/day-364.qmd) | Thu 5 Aug | [Placeholder title for day 364](days/day-364.qmd) | [catch-up]{.pill .pill-catchup} |
+| [365](days/day-365.qmd) | Fri 6 Aug | [Placeholder title for day 365](days/day-365.qmd) | [capstone]{.pill .pill-capstone} |
+
+:::

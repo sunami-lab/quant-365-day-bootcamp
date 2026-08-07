@@ -1,0 +1,165 @@
+---
+title: "365-Day Quant Bootcamp"
+subtitle: "From no finance at all to hireable as a buy-side quantitative researcher, and running your own book while you do it. 7 August 2026 – 6 August 2027."
+toc: false
+---
+
+::: {#today-banner}
+:::
+
+## What this is
+
+One year, one hour a day. Three hundred and sixty-five consecutive days, each sized for about sixty
+focused minutes, six of them working and every seventh lighter.
+
+It is built for a specific starting point: you already have PhD-level statistics, instrumental variables,
+massive multiple testing, high-dimensional covariance, and fluent Python. You have no finance. So the
+year does not re-teach probability, and it does not go easy on the parts you have never seen — the plumbing
+of markets, stochastic calculus, cointegration, order books, and the specific ways a backtest lies to you.
+
+The target role is **buy-side quantitative researcher** — statistical arbitrage and machine-learning
+alpha, the kind of seat at Two Sigma, D. E. Shaw, Citadel, a Millennium pod, AQR or Point72. It is the
+track where your existing training transfers hardest. A Mendelian randomization study is instrumental
+variable estimation. A genome-wide scan is the multiple-testing problem that kills most published
+trading strategies. A linkage-disequilibrium matrix is an ill-conditioned covariance matrix. You are not
+starting from zero; you are starting from the wrong vocabulary.
+
+## The bargain this makes
+
+An hour a day is a real constraint, and it buys a real thing: after 365 hours you will have a system that
+trades, a portfolio of work you can show, and the ability to answer a quant interview question without
+bluffing. It does not buy you a shortcut. Nothing here promises returns, and several weeks are spent
+learning why most claimed returns are not real.
+
+## How a day works
+
+Every day page has the same parts, in this order:
+
+| Part | What it's for |
+|:--|:--|
+| **Why today** | One sentence on what this day unlocks. Read it before you start. |
+| **What you should be able to do tonight** | Two or three checkable claims. Not "understand cointegration". |
+| **Tasks** | Two to four items with minute estimates that sum to about an hour. Tick them off; the page remembers. |
+| **Drill** | Every seventh day only. Twenty minutes of interview preparation, all year, so it never becomes a cram. |
+| **The running strategy** | On days that move the one system you are building. Collected on [the strategy page](project.qmd). |
+| **Resources** | Every link the day needs. Nothing to go hunting for. |
+| **Deliverable** | The artifact you should have at the end — a file, a plot, a number, a paragraph. |
+| **Checkpoint** | One question. If you can't answer it without notes, you are not done. |
+| **Prepare for tomorrow** | Ten minutes tonight. This is what the evening email sends you. |
+
+## The twelve phases
+
+::: {.phase-grid}
+::: {.phase-card}
+<span class="phase-days">Weeks 1–4 · Days 1–28</span>
+#### Markets
+Vocabulary and plumbing. What a share, a future, an option and a bond actually oblige you to do. Order
+types, matching, borrow, margin. Then market data, corporate actions, and a point-in-time store you
+built yourself.
+:::
+::: {.phase-card}
+<span class="phase-days">Weeks 5–9 · Days 29–63</span>
+#### Returns and noise
+Log returns, fat tails, volatility clustering. Then the Sharpe ratio as an *estimator*, with a standard
+error — and the multiple-testing correction that decides whether a backtest means anything. This is your
+home turf under different names.
+:::
+::: {.phase-card}
+<span class="phase-days">Weeks 10–14 · Days 64–98</span>
+#### Time series
+Stationarity, unit roots, spurious regression. Cointegration and the error-correction model, which is
+what pairs trading actually is. GARCH and realized volatility. Kalman filters for a hedge ratio that
+moves.
+:::
+::: {.phase-card}
+<span class="phase-days">Weeks 15–19 · Days 99–133</span>
+#### Portfolios and risk
+Markowitz, and why nobody uses it raw. Shrinkage and random matrix theory on a covariance matrix that
+behaves exactly like an LD matrix. Factor models, risk decomposition, and Kelly sizing.
+:::
+::: {.phase-card}
+<span class="phase-days">Weeks 20–23 · Days 134–161</span>
+#### The research harness
+The phase that separates people who backtest from people who research. Point-in-time data, the full
+taxonomy of look-ahead, event-driven architecture, transaction costs, and tests that make leakage
+impossible rather than unlikely.
+:::
+::: {.phase-card}
+<span class="phase-days">Weeks 24–29 · Days 162–203</span>
+#### Alpha
+The core craft. Signal construction, information coefficient, decay, turnover, capacity. Value, momentum,
+quality and carry replicated honestly, including the ones that stopped working. Then combining them.
+:::
+::: {.phase-card}
+<span class="phase-days">Weeks 30–34 · Days 204–238</span>
+#### Machine learning
+Why standard ML breaks on non-IID data with a signal-to-noise ratio two orders of magnitude below
+anything you have worked with. Purged and embargoed cross-validation. Triple-barrier labels. Then an
+honest verdict against the linear baseline.
+:::
+::: {.phase-card}
+<span class="phase-days">Weeks 35–40 · Days 239–280</span>
+#### Derivatives
+The most formal mathematics of the year and the furthest from your training. Brownian motion, Itô's
+lemma, Black-Scholes twice over, the greeks, delta hedging, the volatility surface, and the variance
+risk premium.
+:::
+::: {.phase-card}
+<span class="phase-days">Weeks 41–44 · Days 281–308</span>
+#### Microstructure
+Who was on the other side of the closing price you assumed you traded at. Order books, adverse selection,
+Kyle's lambda, the square-root impact law, and what your strategy's capacity really is.
+:::
+::: {.phase-card}
+<span class="phase-days">Weeks 45–47 · Days 309–329</span>
+#### Production
+SQL and Parquet properly. Enough C++ to read a matching engine and to know why it is fast. Then
+scheduling, logging, monitoring, reconciliation, and a paper account at a real broker.
+:::
+::: {.phase-card}
+<span class="phase-days">Weeks 48–51 · Days 330–357</span>
+#### The interview
+By now the drill thread has run for eleven months, so this is consolidation, not a standing start.
+Probability under a clock, trading games, the research presentation, and the application campaign.
+:::
+::: {.phase-card}
+<span class="phase-days">Week 52 · Days 358–365</span>
+#### Capstone
+The research dossier, the paper-traded track record you did not tamper with, and a written account of
+what you believed in September 2026 that turned out to be wrong.
+:::
+:::
+
+## Six rules that make this work
+
+1. **An hour, every day, beats six hours on Saturday.** The schedule is built around the fact that you
+   have a job. The cost of a missed day is small; the cost of a missed fortnight is the whole thing.
+2. **Produce the deliverable.** Every day names an artifact. A day that leaves nothing on disk did not
+   happen, and eleven months from now the milestone reports are assembled from those artifacts.
+3. **Answer the checkpoint out loud.** Ninety seconds. Recognising a correct explanation feels identical
+   to knowing it, which is exactly why reading the answer is not a test.
+4. **Assume the result is not real until you have tried to kill it.** You already do this. A backtested
+   Sharpe of 2 is a *p*-value from an unreported number of hypotheses, and phases 2 and 5 exist to make
+   that instinct quantitative.
+5. **The drill is not optional.** Twenty minutes every seventh day for a year is fifty sittings. Four
+   weeks of cramming in July 2027 is not a substitute and you will be able to tell.
+6. **Catch-up days are load-bearing.** Every seventh day is deliberately not full. You will fall behind
+   somewhere, and a year-long plan with no slack is a plan you abandon in November. If you are on track,
+   take the day or go deeper — do not pull work forward into it by default.
+
+## The evening email
+
+Every evening you get one email: what tomorrow is, and the two-to-four things worth doing tonight so
+tomorrow starts clean. Download the PDF, clone the repo, start the data pull, open the notebook. Nothing
+in it takes more than ten minutes. It is the same content as the **Prepare for tomorrow** block at the
+bottom of each day page.
+
+## Start here
+
+Tonight: [set up your environment](setup.qmd) — Python, the data stack, accounts, and the work
+repository. About an hour, and it is the difference between day 1 being a study day and day 1 being an
+afternoon of dependency errors.
+
+Then: [Day 1](days/day-001.qmd), or [the full year](timeline.qmd). If you want to know what you are
+aiming at before you start, read [the hiring page](hiring.qmd) first — it is the least comfortable page
+on this site and the most useful one to read early.

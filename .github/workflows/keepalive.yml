@@ -1,0 +1,34 @@
+name: Keepalive
+
+# GitHub disables scheduled workflows in a repository after 60 days without a
+# push. This course runs for 365 days and most of those days you will be
+# committing to your work repository, not this one, so the daily reminder would
+# switch itself off somewhere around October. One commit a month resets that
+# clock.
+#
+# If you would rather not have the commits, delete this file and re-enable the
+# reminder by hand when GitHub emails you about it.
+
+on:
+    schedule:
+        - cron: "13 9 1 * *"
+    workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+    touch:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v5
+
+            - name: Record a heartbeat and push
+              run: |
+                  date -u '+%Y-%m-%dT%H:%M:%SZ keepalive' >> .github/heartbeat.txt
+                  git config user.name "${{ github.actor }}"
+                  git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+                  git add .github/heartbeat.txt
+                  git commit -m "Keepalive: hold the scheduled reminder open"
+                  git push

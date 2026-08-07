@@ -1,0 +1,156 @@
+---
+title: "Setup"
+subtitle: "Day 0 — the evening of 6 August 2026. About an hour, and it is the difference between day 1 being a study day and day 1 being an afternoon of dependency errors."
+---
+
+Nothing here is hard. It is here so that no day in the next year begins with an install.
+
+## The environment
+
+You already have `uv` from the LLM bootcamp. A separate environment, because the two courses pin
+different things and you do not want a PyTorch upgrade to break a backtest in March.
+
+```bash
+uv venv ~/.venvs/quant --python 3.12
+source ~/.venvs/quant/bin/activate
+```
+
+Then the core stack. This is the whole list for weeks 1 through 20; the derivatives and C++ tooling
+arrives when you need it, in phase 8 and phase 10.
+
+```bash
+uv pip install --python ~/.venvs/quant/bin/python \
+  numpy pandas polars pyarrow duckdb scipy statsmodels scikit-learn \
+  matplotlib seaborn jupyterlab \
+  arch linearmodels cvxpy \
+  yfinance pandas-datareader requests \
+  pytest ruff
+```
+
+What each of those is for, so that none of it is cargo cult:
+
+| Package | Why it is in the list |
+|:--|:--|
+| `duckdb` + `pyarrow` | Your data store. SQL directly over Parquet files, no server. It doubles as the place you learn SQL properly in week 45. |
+| `polars` | For anything large or repeated. Keep pandas too — most quant code you will ever read is pandas. |
+| `statsmodels` | Time series, state space and the Kalman filter. `statsmodels.tsa` and `statsmodels.statespace` are weeks 10–14. |
+| `arch` | Kevin Sheppard's package. GARCH, unit-root tests, the bootstrap, and the Reality Check / SPA tests you need in week 8. |
+| `linearmodels` | Also Sheppard's. Panel models, IV/2SLS and Fama-MacBeth regressions. The IV code will look familiar. |
+| `cvxpy` | Convex optimization. Phase 4 writes portfolio constraints by hand rather than calling a black box. |
+| `yfinance` | Free daily bars, good enough to learn on. It is unofficial and personal-use only — week 3 covers what it gets wrong and what replaces it. |
+
+## Accounts
+
+Five minutes each, and every one is free. Do these tonight because two of them take a day to approve.
+
+- **[Alpaca](https://alpaca.markets/)** — free paper trading and a market-data API. This is the broker
+  the running strategy eventually trades against. Sign up now; the account is used from week 3 and
+  seriously from week 47.
+- **[Nasdaq Data Link](https://data.nasdaq.com/)** — free API key, used for some of the reference datasets.
+- **[Kaggle](https://www.kaggle.com/)** — several past competitions (Optiver realized volatility, Jane
+  Street market prediction) released real data that phases 6 and 7 use as a proving ground.
+- **[Numerai](https://numer.ai/)** — a free tournament on obfuscated financial data with real payouts.
+  You will submit to it from phase 7, and it is the one public track record that quant employers
+  actually recognise.
+- **[Interactive Brokers](https://www.interactivebrokers.com/)** — optional and slower to open. Their
+  paper account is the more realistic execution environment if you want it in phase 10.
+
+You do not need a Bloomberg terminal, a paid data subscription, or a broker with real money in it. Not
+this year.
+
+::: {.callout-note appearance="simple"}
+**Check whether UW-Madison licenses WRDS.** If it does, you get CRSP and Compustat — survivorship-free
+US equity history with point-in-time fundamentals, which is the single largest data-quality upgrade
+available to you and costs an institution tens of thousands of dollars a year. Ask the business school
+library. Week 3 assumes free data and tells you what it is missing; if WRDS comes through, that week
+gets much better.
+:::
+
+## Two repositories
+
+Same split that worked for the LLM bootcamp: the plan is one repo, the work is another.
+
+```
+projects/
+├── quant-365-day-bootcamp/    this site, and data/schedule.yml
+└── quant-365-work/            your notebooks, code and reports  ← work here
+```
+
+Create the work repo now, private, and give it this shape:
+
+```
+quant-365-work/
+├── env.sh                  activates ~/.venvs/quant and sets QUANT_DATA
+├── data/                   gitignored — parquet, duckdb files, downloads
+├── notebooks/              one per day, named by day number
+├── qlib/                   the package you actually build: ingest, signals, backtest, exec
+├── reports/                the twelve milestone documents
+└── tests/
+```
+
+Name notebooks by day — `notebooks/day-047-sharpe-standard-error.ipynb` — because on day 203 a milestone
+report needs a result from week 7 and you will not remember which week it was.
+
+**Gitignore the data.** Commit the query, the date range, the universe definition and the seed. Never the
+Parquet files. You already work this way with genotype data; the reasoning is identical and the file
+sizes are smaller.
+
+## What a year of data actually costs you in disk
+
+Plan for this now so week 3 does not surprise you.
+
+| What | Roughly |
+|:--|:--|
+| Daily bars, ~5,000 US equities and ETFs, 20 years | 2–4 GB as Parquet |
+| Minute bars, ~500 names, 5 years | 40–80 GB |
+| One month of full order book for one liquid crypto pair | 20–60 GB |
+| Ken French factor returns, FRED series, everything in phase 2 | under 100 MB |
+
+Phases 1 through 8 fit comfortably in the first row. Only phase 9 needs the third, and only for a few
+symbols and a few days.
+
+## Verify
+
+If this prints a table of returns and a Sharpe ratio, you are ready for day 1.
+
+```python
+import duckdb, yfinance as yf, numpy as np
+
+px = yf.download("SPY", start="2015-01-01", end="2025-01-01", auto_adjust=True)["Close"]
+r = np.log(px / px.shift(1)).dropna()
+
+print(f"{len(r)} daily observations, {r.index[0].date()} to {r.index[-1].date()}")
+print(f"annualised mean  {r.mean() * 252:.3f}")
+print(f"annualised vol   {r.std() * np.sqrt(252):.3f}")
+print(f"Sharpe (rf = 0)  {r.mean() / r.std() * np.sqrt(252):.3f}")
+print(duckdb.sql("select 42 as duckdb_works").fetchall())
+```
+
+Three things about that snippet are wrong or misleading, and you will be able to name all three by day
+50. `auto_adjust=True` is doing something to the price history that week 3 makes you look at. The Sharpe
+ratio has no standard error attached, which week 7 fixes. And `rf = 0` was defensible in 2021 and is not
+now. Leave the code as it is; it is a marker.
+
+## Where the year's reading comes from
+
+Most of the resources are free — MIT OpenCourseWare, QuantEcon, Ken French's data library, arXiv, and
+the free lecture notes from Oxford, Princeton and NYU. Some are not, and the paid ones are concentrated
+in two places:
+
+- **Phase 8 (derivatives)** leans on Shreve and on Hull. Free lecture notes cover most of it, and the
+  day pages name them, but if you buy one book for this year, buy Shreve volume II.
+- **Phase 11 (the interview)** leans on the Green Book and *Heard on the Street*. There is no free
+  substitute of comparable quality, they are cheap, and you will use them for fifty drill sittings.
+
+Everything else has a free path. Where a day depends on a paid book, it names a free alternative in the
+same resource list.
+
+## One honest warning before day 1
+
+You are about to spend 365 hours on a field that is unusually good at producing convincing-looking
+results that are not real. The single most valuable thing you bring is the instinct that a striking
+result is probably a multiple-testing artifact until shown otherwise — you have that instinct because
+genome-wide association studies had their own reckoning with it a decade before you arrived.
+
+Keep it. Phases 2 and 5 exist to make it quantitative, and by phase 6 it will be the thing that
+distinguishes your research from most of what gets published in this field.

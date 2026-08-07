@@ -1,0 +1,39 @@
+name: Publish site
+
+# Dormant by default. GitHub Pages will not serve a private repository on a free
+# organisation plan, so this only runs once you have made one of those two things
+# untrue and then set the repository variable PUBLISH_PAGES to `true`
+# (Settings -> Secrets and variables -> Actions -> Variables).
+#
+# After enabling: Settings -> Pages -> Branch `gh-pages`, folder `/`.
+# Then set site-url in _quarto.yml so open-graph tags and absolute links resolve.
+
+on:
+    push:
+        branches: ["main"]
+    workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+    build-deploy:
+        if: vars.PUBLISH_PAGES == 'true'
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v5
+
+            - name: Set up Quarto
+              uses: quarto-dev/quarto-actions/setup@v2
+
+            - name: Render site
+              run: quarto render
+
+            - name: Publish to gh-pages
+              uses: quarto-dev/quarto-actions/publish@v2
+              with:
+                  target: gh-pages
+                  path: _site
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,54 @@
+---
+title: "Day 149 — Placeholder title for day 149"
+subtitle: "Saturday, 2 January 2027 · Week 22 of 52 · The research harness · Study day · 60 min"
+---
+
+::: {.day-nav .kind-study}
+[← Day 148](day-148.qmd) · [All 365 days](../timeline.qmd) · [Day 150 →](day-150.qmd)
+:::
+
+::: {.why}
+Placeholder one-sentence rationale.
+:::
+
+## What you should be able to do tonight
+
+- Placeholder objective one.
+- Placeholder objective two.
+
+## Tasks <span class='task-total'>60 min</span>
+
+::: {.task-list}
+::: {.task}
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+:::
+:::
+
+## Resources
+
+- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+
+## Deliverable
+
+::: {.deliverable}
+Placeholder deliverable.
+:::
+
+## Checkpoint
+
+::: {.checkpoint}
+Placeholder checkpoint question?
+:::
+
+## Prepare for tomorrow
+
+Ten minutes tonight so Day 150, Sunday, 3 January 2027 starts clean. This is what the evening email sends you.
+
+::: {.task-list .prep}
+::: {.task}
+<input type="checkbox" class="task-check"> Placeholder prep item.
+:::
+:::

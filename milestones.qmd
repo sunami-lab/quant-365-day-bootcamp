@@ -1,0 +1,289 @@
+---
+title: "Milestones"
+subtitle: "Twelve things you will have built by 6 August 2027. Each one is something you would be willing to put in front of a researcher who does this for a living."
+toc-depth: 2
+---
+
+Days pass and leave nothing behind unless you write something down. These twelve are what the year is
+actually for; the other three hundred and fifty-three days feed them.
+
+Each milestone replaces that week's catch-up day. The work happens during the week. The milestone day is
+where it becomes a document — which means if the week went badly, the milestone tells you so, and that
+is the point.
+
+A note on what "good" means here. Every milestone below has a **How you know it's good** line, and in
+almost every case it is a line about honesty rather than performance. A milestone that reports a Sharpe
+of 3.1 and cannot say how many strategies were tried before that one is a worse artifact than one
+reporting 0.6 with a confidence interval. Interviewers at the firms you are targeting can tell the
+difference in about ninety seconds, and so can you.
+
+---
+
+## Milestone 1 — Market map and a point-in-time data store {#m28}
+
+**[Day 28](days/day-028.qmd), Thursday 3 September 2026.** Fed by weeks 1–4.
+
+Two things: a written map of the industry, and working code that stores prices without lying about
+what was knowable when.
+
+**What's in it**
+
+- A one-page map of who pays whom: exchanges, brokers, clearing, market makers, prop shops, pod shops,
+  long-only managers, allocators. For each, where the revenue comes from. This exists so that eleven
+  months from now you can tell which firm you are actually interviewing at.
+- A glossary in your own words of every instrument you met — share, ETF, future, option, bond, forward —
+  written as "what this contract obliges each side to do", not as a definition you copied.
+- A DuckDB or Parquet store of daily bars for a universe you chose and can defend, with splits and
+  dividends handled explicitly, and a documented answer to "what did this series look like on 12 March
+  2019, using only information available on 12 March 2019".
+- The ingestion re-runs from scratch with one command.
+
+**How you know it's good** — you can state what your data source does *not* contain (delisted names?
+restated fundamentals? the actual close or the auction print?) without going to look.
+
+---
+
+## Milestone 2 — Stylized facts and the noise floor {#m63}
+
+**[Day 63](days/day-063.qmd), Thursday 8 October 2026.** Fed by weeks 5–9.
+
+The document you will reread every time a backtest looks good. Half empirical, half simulation.
+
+**What's in it**
+
+- The stylized facts, measured on your own data rather than quoted: the return distribution against a
+  fitted normal, an estimated tail index, the autocorrelation of returns next to the autocorrelation of
+  absolute returns, and the leverage effect.
+- The Sharpe ratio treated as an estimator. Its standard error at your sample length. What serial
+  correlation does to it. How long a track record has to be before a Sharpe of 1 is distinguishable from
+  0 at any confidence you would act on.
+- **The noise floor**: a simulation that answers, for your own research process, how high a backtested
+  Sharpe must be before it is evidence of anything, given the number of specifications you will try.
+  Deflated Sharpe, and the probability of backtest overfitting, computed rather than cited.
+- One paragraph mapping each of the above onto the equivalent problem in genome-wide association
+  studies, because that mapping is the thing you will say in an interview that nobody else says.
+
+**How you know it's good** — it produces a specific number that you are willing to be held to for the
+rest of the year, and you actually apply it in milestone 3.
+
+---
+
+## Milestone 3 — A pairs strategy that survives out of sample {#m98}
+
+**[Day 98](days/day-098.qmd), Thursday 12 November 2026.** Fed by weeks 10–14.
+
+The first end-to-end strategy. Deliberately the most-published, most-degraded idea in the field, so that
+the exercise is about method rather than about finding an edge.
+
+**What's in it**
+
+- The pair selection procedure, stated *before* the results, including how many pairs were screened.
+  That count feeds directly into milestone 2's correction.
+- Cointegration tested properly — Engle-Granger and Johansen, with the difference explained — plus the
+  estimated half-life of mean reversion and the trading rule derived from it rather than tuned onto it.
+- A hedge ratio that is allowed to move, via the Kalman filter from week 14, compared against a static one.
+- Out-of-sample results on a period you did not look at while developing, with costs, and the same
+  procedure run on synthetic independent random walks to show the false-positive rate of your own pipeline.
+
+**How you know it's good** — you can say what would have made you abandon it, and whether that condition
+was met. If the honest answer is "it doesn't work after costs", the milestone is complete and successful.
+
+---
+
+## Milestone 4 — A factor risk model built from scratch {#m133}
+
+**[Day 133](days/day-133.qmd), Thursday 17 December 2026.** Fed by weeks 15–19.
+
+Not a call to a library. The covariance matrix, the factor exposures, and the decomposition, built by you.
+
+**What's in it**
+
+- A covariance matrix over a few hundred names, estimated three ways — sample, Ledoit-Wolf shrunk, and
+  factor-based — with the eigenvalue spectrum plotted against the Marchenko-Pastur bound so it is visible
+  which eigenvalues carry information.
+- Factor exposures for market, size, value and momentum, and a decomposition of one portfolio's risk into
+  factor and idiosyncratic parts.
+- The same portfolio optimized under each covariance estimate, and the out-of-sample realized risk of
+  each, against equal weighting as the benchmark.
+- A position-sizing section: what full Kelly implies, what fraction of it you would actually run, and the
+  drawdown you are accepting by choosing that fraction.
+
+**How you know it's good** — equal weighting appears in the comparison and is not quietly excluded when
+it wins.
+
+---
+
+## Milestone 5 — The research platform {#m161}
+
+**[Day 161](days/day-161.qmd), Thursday 14 January 2027.** Fed by weeks 20–23.
+
+The single most valuable artifact of the year, and the one an interviewer will ask the most questions
+about. Everything after this is built on it.
+
+**What's in it**
+
+- An event-driven backtester that consumes point-in-time data, applies a documented cost model, and
+  produces a standard result object.
+- A transaction cost model with the components separated — spread, impact, borrow, financing — and a
+  chart of net Sharpe against turnover, so the strategy's sensitivity to costs is visible rather than
+  assumed.
+- **A test suite whose job is to make look-ahead impossible rather than unlikely.** At minimum: a test
+  that feeds the engine data with future values deliberately poisoned and asserts the results are
+  unchanged; a test on synthetic data with an analytically known answer; and a null-strategy test whose
+  distribution of outcomes you have characterised.
+- A written list of every lie your backtester still tells, ranked by how much it matters. There will be
+  several. This list is the most impressive part of the document.
+
+**How you know it's good** — someone else could clone it, run one command, and reproduce a result you
+report elsewhere in the year.
+
+---
+
+## Milestone 6 — The alpha book {#m203}
+
+**[Day 203](days/day-203.qmd), Thursday 25 February 2027.** Fed by weeks 24–29.
+
+Five to eight signals, each characterised the way a research desk characterises one.
+
+**What's in it**
+
+- Per signal: the economic reason it might work stated *first*, then information coefficient and its
+  decay profile, information ratio, quantile spread, turnover, and estimated capacity in dollars.
+- The correlation matrix of the signals, and the combination — with the argument for why you combined
+  the way you did rather than the way that scored best.
+- At least one signal that does not work, kept in the book with the diagnosis.
+- Everything run through the milestone-5 platform, with the multiple-testing correction from milestone 2
+  applied to the whole set rather than to each signal in isolation.
+
+**How you know it's good** — the number of specifications you tried is stated on the first page.
+
+---
+
+## Milestone 7 — Machine learning against the linear baseline {#m238}
+
+**[Day 238](days/day-238.qmd), Thursday 1 April 2027.** Fed by weeks 30–34.
+
+The report that decides whether the machine learning earned its complexity. Given your background this
+is the milestone you are most at risk of doing well and concluding too much from.
+
+**What's in it**
+
+- The labelling scheme and why — fixed horizon against triple barrier — and the sample weights that
+  overlapping outcomes force on you.
+- Purged, embargoed cross-validation, with the embargo length justified from the autocorrelation of the
+  labels rather than picked.
+- A regularized linear model as the baseline, taken seriously and tuned as carefully as the gradient
+  boosting. Most published comparisons lose here by not trying.
+- The verdict on the same test set with the same costs, plus a permutation-importance analysis and an
+  honest note on which features are proxies for something you did not intend.
+
+**How you know it's good** — the conclusion is a number with an interval, and you would report it the
+same way if it had come out the other direction.
+
+---
+
+## Milestone 8 — An option pricer and a delta-hedging study {#m280}
+
+**[Day 280](days/day-280.qmd), Thursday 13 May 2027.** Fed by weeks 35–40.
+
+Two artifacts: code that prices, and a simulation that shows what hedging actually earns.
+
+**What's in it**
+
+- A pricer implementing Black-Scholes analytically, a binomial tree, and Monte Carlo with at least one
+  variance-reduction technique — all three agreeing to a stated tolerance, with the convergence of the
+  last two plotted against the first.
+- The greeks, computed analytically and by finite difference, agreeing.
+- **The delta-hedging study**: simulate hedging a short option at some volatility while the underlying
+  realizes another, and decompose the profit and loss. Show that the expected result is the gap between
+  implied and realized variance, and show what discrete rebalancing costs you.
+- A page on the variance risk premium: what it is, what the historical evidence says about its size, and
+  why it is not free money.
+
+**How you know it's good** — you can derive Black-Scholes on a whiteboard by the replication argument,
+without notes, in ten minutes. Test yourself on this rather than assuming.
+
+---
+
+## Milestone 9 — Execution, impact and honest capacity {#m308}
+
+**[Day 308](days/day-308.qmd), Thursday 10 June 2027.** Fed by weeks 41–44.
+
+The milestone that revises every earlier number downward. Expect that and report it plainly.
+
+**What's in it**
+
+- An impact model fitted to real intraday or order-book data, with the square-root form tested rather
+  than assumed, and the fitted coefficient stated with its uncertainty.
+- Your own slippage, measured against arrival price on the paper account, split into spread, impact and
+  timing.
+- The revised capacity of the milestone-6 alpha book once that impact model replaces the flat cost
+  assumption, at several assumed asset levels.
+- One paragraph on which of your strategies dies first as size grows, and why.
+
+**How you know it's good** — it contains at least one earlier result that you now believe was wrong, said
+in those words.
+
+---
+
+## Milestone 10 — The system in production {#m329}
+
+**[Day 329](days/day-329.qmd), Thursday 1 July 2027.** Fed by weeks 45–47.
+
+The strategy running by itself, against a real broker's paper account, without you.
+
+**What's in it**
+
+- Scheduled execution: data pull, signal computation, portfolio construction, order generation, submission,
+  and reconciliation, each logged and each able to fail loudly.
+- Monitoring that catches the failures that matter — stale data, a position that does not match the
+  intended one, a fill far from the expected price, a signal outside its historical range.
+- The reconciliation report: intended portfolio against actual portfolio, daily, with the difference
+  explained.
+- A runbook for the four or five things that will go wrong, written before they do.
+
+**How you know it's good** — it survives a week where you do not touch it, and the log tells you what
+happened without you having to reconstruct it.
+
+---
+
+## Milestone 11 — The interview dossier {#m357}
+
+**[Day 357](days/day-357.qmd), Thursday 29 July 2027.** Fed by weeks 48–51 and by fifty drill sittings.
+
+Everything a hiring process needs from you, assembled and rehearsed.
+
+**What's in it**
+
+- A CV rewritten for this industry, where the genetics work is described in the language of the job you
+  want — instrumental variables, multiple testing, high-dimensional inference — without overclaiming or
+  disowning it.
+- Two-page write-ups of milestones 5, 6 and 8, each readable by someone with ten minutes.
+- The problem log from the drill thread: what you have solved, what you got wrong, and the classes of
+  problem you are still slow on.
+- The five-minute research presentation, rehearsed against a clock and recorded once so you have heard it.
+- The firm list with a reason next to each name, and the outreach actually sent.
+
+**How you know it's good** — you can answer "why are you leaving academia" in three sentences that a
+researcher at the firm would find convincing rather than polite.
+
+---
+
+## Milestone 12 — Capstone {#m365}
+
+**[Day 365](days/day-365.qmd), Friday 6 August 2027.**
+
+Three things.
+
+**The research dossier** pulls the year into one document: the platform, the alpha book, the risk model,
+the execution study, and the recommendation you would give a portfolio manager about which of it is worth
+running and at what size.
+
+**The track record** is whatever the paper account did, reported without adjustment. Months where it lost
+money are in the table. If the live period disagrees with the backtest, that disagreement is the most
+interesting result you have and it goes at the front.
+
+**The retrospective** is the page you will value most in 2029: what you believed in September 2026 that
+turned out to be wrong, what took three times longer than planned, which milestone you would drop, and
+what you would do differently with the next 365 hours. Answer the [self-check](assessment.qmd) out loud
+first — anything you cannot answer is not a failure, it is the reading list for the autumn.

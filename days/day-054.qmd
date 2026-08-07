@@ -1,0 +1,54 @@
+---
+title: "Day 54 — Placeholder title for day 54"
+subtitle: "Tuesday, 29 September 2026 · Week 8 of 52 · Returns and noise · Study day · 60 min"
+---
+
+::: {.day-nav .kind-study}
+[← Day 53](day-053.qmd) · [All 365 days](../timeline.qmd) · [Day 55 →](day-055.qmd)
+:::
+
+::: {.why}
+Placeholder one-sentence rationale.
+:::
+
+## What you should be able to do tonight
+
+- Placeholder objective one.
+- Placeholder objective two.
+
+## Tasks <span class='task-total'>60 min</span>
+
+::: {.task-list}
+::: {.task}
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+:::
+:::
+
+## Resources
+
+- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+
+## Deliverable
+
+::: {.deliverable}
+Placeholder deliverable.
+:::
+
+## Checkpoint
+
+::: {.checkpoint}
+Placeholder checkpoint question?
+:::
+
+## Prepare for tomorrow
+
+Ten minutes tonight so Day 55, Wednesday, 30 September 2026 starts clean. This is what the evening email sends you.
+
+::: {.task-list .prep}
+::: {.task}
+<input type="checkbox" class="task-check"> Placeholder prep item.
+:::
+:::

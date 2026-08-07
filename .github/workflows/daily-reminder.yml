@@ -1,0 +1,53 @@
+name: Daily reminder email
+
+# 22:00 UTC every day: 5 pm in Madison from March to November, 4 pm in winter.
+#
+# The 50-day LLM bootcamp pinned the send to exactly 5 pm local by starting the
+# cron early and sleeping off the difference. That repository is public, where
+# Actions minutes are free. This one is private, where they are metered, and
+# sleeping three hours a day would spend the whole monthly allowance on doing
+# nothing. So it sends whenever the runner starts. GitHub's scheduler runs late
+# under load, which moves the email later in the evening but never skips it.
+
+on:
+    schedule:
+        - cron: "0 22 * * *"
+    workflow_dispatch:
+        inputs:
+            dry_run:
+                description: "Print the email instead of sending it"
+                type: boolean
+                default: false
+            today:
+                description: "Pretend today is this date (YYYY-MM-DD), for testing"
+                type: string
+                default: ""
+
+permissions:
+    contents: read
+
+jobs:
+    send:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v5
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.12"
+
+            - name: Install PyYAML
+              run: pip install --quiet pyyaml
+
+            - name: Send reminder
+              env:
+                  GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+                  GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+                  RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+              run: |
+                  ARGS=""
+                  if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+                  if [ -n "${{ inputs.today }}" ]; then ARGS="$ARGS --today ${{ inputs.today }}"; fi
+                  python scripts/send_reminder.py $ARGS

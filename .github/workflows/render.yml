@@ -1,0 +1,55 @@
+name: Render site
+
+# This repository is private and sunami-lab is on GitHub's free org plan, where
+# Pages cannot serve from a private repo. So the default here is not to deploy
+# anywhere -- it renders the site and attaches _site/ to the run as a downloadable
+# artifact. Actions -> the run -> Artifacts -> quant-365-site. Unzip it and open
+# index.html. Locally, `quarto preview` is nicer and needs none of this.
+#
+# It also re-runs scripts/build.py and fails if the committed generated pages have
+# drifted from data/schedule.yml, which is the mistake this layout invites.
+
+on:
+    push:
+        branches: ["main"]
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+jobs:
+    render:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v5
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.12"
+
+            - name: Install PyYAML
+              run: pip install --quiet pyyaml
+
+            - name: Check generated pages match data/schedule.yml
+              run: |
+                  python3 scripts/build.py
+                  if ! git diff --quiet; then
+                    echo "::error::Generated pages are out of date. Run 'python3 scripts/build.py' and commit the result."
+                    git diff --stat
+                    exit 1
+                  fi
+
+            - name: Set up Quarto
+              uses: quarto-dev/quarto-actions/setup@v2
+
+            - name: Render site
+              run: quarto render
+
+            - name: Upload rendered site
+              uses: actions/upload-artifact@v4
+              with:
+                  name: quant-365-site
+                  path: _site
+                  retention-days: 30

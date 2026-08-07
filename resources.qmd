@@ -1,0 +1,10 @@
+---
+title: "Every resource"
+subtitle: "Every link the year uses, grouped by what it is."
+---
+
+1 distinct resources across the 365 days. The day numbers after each entry tell you where it is used, so an entry used on twelve days is one you will live in.
+
+## Data sources
+
+- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) — days [1](days/day-001.qmd), [2](days/day-002.qmd), [3](days/day-003.qmd), [4](days/day-004.qmd), [5](days/day-005.qmd), [6](days/day-006.qmd), [7](days/day-007.qmd), [8](days/day-008.qmd), [9](days/day-009.qmd), [10](days/day-010.qmd), [11](days/day-011.qmd), [12](days/day-012.qmd) and 353 more

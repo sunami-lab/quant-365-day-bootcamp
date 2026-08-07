@@ -1,0 +1,214 @@
+---
+title: "Self-check"
+subtitle: "The questions that distinguish having read something from having learned it. Answer out loud, without notes."
+toc-depth: 2
+---
+
+Use each phase block on that phase's milestone day. The final list is day 365.
+
+The rule is the same throughout: **say the answer out loud before you look.** Recognising a correct
+explanation is easy and feels identical to knowing it, which is exactly why reading the answer is not a
+test. If the answer takes more than two minutes, you have not compressed it enough to use it in an
+interview.
+
+Questions marked ★ are ones that get asked in buy-side interviews close to this form.
+
+---
+
+## Phase 1 — Markets {#p1}
+
+1. ★ A stock closes at \$100, goes ex-dividend \$2 overnight, and opens at \$98. Your data vendor's
+   "adjusted close" series shows no gap. What exactly did the vendor do to the historical prices, and
+   name one analysis that the adjustment silently breaks.
+2. You are long one E-mini S&P future. Describe every cash flow between today and expiry, including the
+   ones that happen daily. Now do the same for being long \$1 notional of SPY.
+3. Why does an ETF's market price stay close to its net asset value? Name the mechanism and who is paid
+   to run it.
+4. ★ You want to short a stock. Walk through what actually has to happen, who lends the shares, what you
+   pay, and what can force you to close the position at the worst moment.
+5. Futures are in contango. Explain what happens to a long position's return when the contract is rolled,
+   and why "contango means you lose money" is not quite right.
+6. Name three distinct businesses that call themselves "quant" and describe how each one earns its
+   revenue. Which of them is competing with you?
+
+## Phase 2 — Returns and noise {#p2}
+
+1. ★ A strategy returns +50% then −50%. What is the arithmetic mean daily return, the geometric mean, and
+   how much money do you have? Then state the general relationship between the two means and volatility.
+2. Why do we use log returns for time aggregation and simple returns for cross-sectional aggregation?
+   Give the one line of algebra behind each.
+3. ★ You have three years of daily returns and a realized Sharpe ratio of 1.0. Give a standard error for
+   it. Can you reject a true Sharpe of 0?
+4. Returns are close to uncorrelated but absolute returns are strongly autocorrelated. What does each of
+   those two facts rule out, and what do they jointly imply about a model of returns?
+5. ★ You tested 200 strategy variants and the best has a Sharpe of 2.3. What do you now believe about its
+   true Sharpe, and what is the calculation you would show to justify that belief?
+6. State what the deflated Sharpe ratio deflates by, and what it assumes about the strategies you tried
+   that is usually false.
+7. Why is a block bootstrap the right resampling scheme for a return series, and what determines the
+   block length?
+
+## Phase 3 — Time series {#p3}
+
+1. Define stationarity in the weak sense. Give one financial series that is plausibly stationary and one
+   that is clearly not, and say what you do about the second.
+2. ★ Two independent random walks are regressed on each other. Describe what happens to the *t*-statistic
+   and the R², and explain why. What is the fix?
+3. ADF and KPSS have opposite null hypotheses. State both, and say what you conclude when they disagree.
+4. ★ Explain cointegration to someone who knows regression but not time series, in three sentences, and
+   say why it is the thing pairs trading actually relies on.
+5. Given an estimated Ornstein-Uhlenbeck process for a spread, derive the half-life and say how it should
+   set your holding period. What goes wrong when the half-life is longer than your backtest?
+6. What does a GARCH(1,1) actually assert about volatility, and what does the sum of its two coefficients
+   tell you?
+7. ★ What is the Kalman filter doing, in one sentence with no matrices, and why would you use it for a
+   hedge ratio instead of a rolling regression?
+
+## Phase 4 — Portfolios and risk {#p4}
+
+1. ★ Mean-variance optimization is optimal and nobody runs it raw. Explain the contradiction, and say
+   which input the result is most sensitive to.
+2. You estimate a 500×500 covariance matrix from 750 daily observations. What is wrong with it, and what
+   does Marchenko-Pastur tell you about which eigenvalues to trust?
+3. Explain Ledoit-Wolf shrinkage to a geneticist in one sentence, using something they already do.
+4. ★ What is the difference between a risk factor and an alpha factor? Give an example of a factor that
+   changed category over time.
+5. A portfolio has 12% volatility and beta 0.9 to the market. Decompose its risk. What fraction is
+   idiosyncratic, and what did you have to assume?
+6. State the Kelly fraction for a simple bet, then say why practitioners run a fraction of it, in terms
+   of what full Kelly does to the distribution of outcomes rather than to its mean.
+7. ★ VaR at 99% is \$1M. Say precisely what that does and does not claim, and name the loss it is silent
+   about.
+
+## Phase 5 — The research harness {#p5}
+
+1. ★ Name five distinct ways look-ahead bias gets into a backtest, and for each, the test that catches it.
+2. What does "point in time" mean for a fundamental data item, and what does a restatement do to a
+   backtest that ignores it?
+3. Your universe is today's S&P 500 constituents, taken back ten years. Quantify, roughly, what that does
+   to your results and say which direction it biases them.
+4. Vectorized and event-driven backtests give different answers on the same strategy. Give two reasons
+   that is expected and one that means you have a bug.
+5. ★ A strategy has a Sharpe of 2.0 before costs and 0.3 after. What does that tell you about its
+   turnover and its likely capacity, and what is the first thing you would change?
+6. Describe a unit test that makes look-ahead *impossible* rather than merely undetected.
+
+## Phase 6 — Alpha {#p6}
+
+1. ★ Define the information coefficient. Relate it to the information ratio, and state the assumptions in
+   the relationship you just used.
+2. Your signal has an IC of 0.03. Is that good? Answer in terms of breadth and turnover rather than
+   in the abstract.
+3. Why neutralize a signal against sector and market beta before evaluating it, and what are you throwing
+   away when you do?
+4. ★ Momentum and value are negatively correlated. Explain why that makes the combination better than
+   either, quantitatively, and say what would break the argument.
+5. Take one classic anomaly that has decayed since publication. Give the evidence for decay and the two
+   competing explanations for it.
+6. What is the capacity of a signal, how would you estimate it, and why is it not a property of the signal
+   alone?
+7. ★ You have two signals with the same IC and correlation 0.8 between them. How do you weight them, and
+   what happens to that answer as the correlation approaches 1?
+
+## Phase 7 — Machine learning {#p7}
+
+1. ★ Standard *k*-fold cross-validation is wrong on financial data. Give two separate reasons, and describe
+   purging and embargoing as the fixes for each.
+2. What does the triple-barrier method label, and what problem with fixed-horizon labels does it solve?
+3. Overlapping labels break an assumption that most estimators rely on. Which one, and what is the
+   standard correction?
+4. ★ Your gradient boosting model beats ridge regression by 15% in cross-validated R² and loses to it
+   out of sample. Give three explanations and say how you would distinguish them.
+5. Why is feature importance from a tree ensemble misleading here, and what do you compute instead?
+6. You are using a language model on earnings-call transcripts. Name the leak that is specific to
+   pretrained models and does not exist when you build your own features.
+7. ★ What signal-to-noise ratio should you expect on daily equity returns, and how does that change the
+   model class you should reach for?
+
+## Phase 8 — Derivatives {#p8}
+
+1. ★ State Itô's lemma and say, in words, what the extra term is doing that ordinary calculus does not
+   have.
+2. Derive Black-Scholes by replication. You should be able to do this on a whiteboard in ten minutes.
+   Then say where the real-world drift went.
+3. What does "risk-neutral" mean? Common wrong answer: that investors are risk neutral. Say what is
+   actually being claimed.
+4. ★ You are short a straddle and delta hedging continuously. Where does your profit and loss come from?
+   Write it as a relationship between implied and realized volatility.
+5. Gamma and theta have opposite signs for a reason. State it, and say what that implies about a
+   position that is long gamma in a quiet market.
+6. Why does the implied volatility surface slope downward in strike for equity indices, and give two
+   explanations that are not the same explanation restated.
+7. ★ Local volatility and stochastic volatility both fit today's surface. Name something they disagree
+   about, and say which observable would tell them apart.
+8. The variance risk premium is persistently positive. What is the trade, why is it not free money, and
+   what happened to people running it in February 2018?
+
+## Phase 9 — Microstructure {#p9}
+
+1. ★ Explain adverse selection to a market maker's grandmother, then say how the market maker prices it in.
+2. What does Kyle's lambda measure, and what does its magnitude tell you about how much you can trade?
+3. Why is market impact closer to the square root of size than to linear? Give the empirical evidence and
+   one mechanism.
+4. ★ Your backtest assumed fills at the mid. Estimate what that assumption cost you for a strategy trading
+   1% of daily volume, and say which components you are counting.
+5. Describe implementation shortfall, and say what it captures that VWAP slippage does not.
+6. Name three things a high-frequency firm does that you cannot do, and one advantage you have that they
+   do not.
+
+## Phase 10 — Production {#p10}
+
+1. ★ Roughly how long does an L1 cache reference take, a main memory reference, a random SSD read, and a
+   round trip across a data centre? Now say why the answer changes how you would store a tick database.
+2. Your daily pipeline silently produced yesterday's signal today. Which monitor would have caught it,
+   and why is "the job succeeded" not that monitor?
+3. What does reconciliation compare, how often, and what do you do when it disagrees?
+4. Explain to a C++ programmer why your Python is slow, and name the two changes that would help most.
+5. ★ Write, or describe precisely, a SQL query that computes a 20-day rolling mean per symbol from a
+   trades table. Then say why doing it in SQL rather than pandas might be the right call.
+6. Your strategy has been live for six weeks and is underperforming the backtest by 40 basis points a
+   month. List the diagnoses in the order you would test them.
+
+## Phase 11 — The interview {#p11}
+
+1. ★ Two players alternate flipping a fair coin; the first to get heads wins. What is the probability the
+   first player wins? Now they need two heads in a row.
+2. ★ A stick breaks at two uniform random points. Probability the pieces form a triangle. Do it by sample
+   space, not simulation.
+3. ★ You are shown a random variable's realizations one at a time and must stop on the largest. What is
+   the optimal policy and its success probability?
+4. ★ Explain the bias-variance trade-off in ninety seconds, out loud, without the word "trade-off".
+5. ★ I am making a market in the number of gas stations in the United States. Give me a two-sided quote
+   and defend the width.
+6. ★ Why are you leaving academia? Three sentences. A researcher at the firm has to find it convincing,
+   not polite.
+7. ★ Present your genetics research in five minutes to someone who is smart, quantitative, and knows no
+   biology. Which single result do you lead with?
+
+## Phase 12 — The whole year {#final}
+
+The list the year was designed around. Answer without notes.
+
+1. What is the difference between a price and a return, and why does almost every mistake in this field
+   start there?
+2. Where does a systematic strategy's edge come from? Name the three broad sources and give an example of
+   each.
+3. ★ How much evidence does it take to believe a backtest? Give the number from milestone 2 and the
+   reasoning behind it.
+4. Why is transaction cost the thing that decides whether a strategy exists?
+5. What does a factor model buy you that a covariance matrix does not?
+6. ★ When is machine learning the right tool here, and when is it a more expensive way to overfit?
+7. Why does an option's value depend on volatility and not on expected return?
+8. Who is on the other side of your trade, and what do they know that you don't?
+9. What is your strategy's capacity, and what happens at twice that size?
+10. ★ What would make you stop running this strategy tomorrow?
+
+And four you should be able to do, not just say:
+
+- Build a point-in-time backtest of a signal from raw data, with costs, in an afternoon.
+- Derive Black-Scholes by replication on a whiteboard.
+- Take an interview probability question you have not seen, and get to the right answer out loud while
+  someone watches.
+- State, about your own year of work, which result you are least confident in and why.
+
+Anything on this page you cannot answer is not a failure. It is the reading list for the autumn.

@@ -1,0 +1,325 @@
+---
+title: "The running strategy"
+subtitle: "One trading system, built over the whole year. Every day that moves it forward, in order."
+toc-depth: 2
+---
+
+The days that teach and the days that build are the same days. From the first week you are assembling one system — data, signals, portfolio construction, costs, execution, monitoring — and by the capstone it is running on a schedule against a paper account with a track record you did not tamper with. This page is that thread pulled out of the calendar.
+
+73 days move the system forward.
+
+## Markets
+
+**[Day 5](days/day-005.qmd)** · Tue 11 Aug · Placeholder title for day 5
+
+: Placeholder project increment.
+
+**[Day 10](days/day-010.qmd)** · Sun 16 Aug · Placeholder title for day 10
+
+: Placeholder project increment.
+
+**[Day 15](days/day-015.qmd)** · Fri 21 Aug · Placeholder title for day 15
+
+: Placeholder project increment.
+
+**[Day 20](days/day-020.qmd)** · Wed 26 Aug · Placeholder title for day 20
+
+: Placeholder project increment.
+
+**[Day 25](days/day-025.qmd)** · Mon 31 Aug · Placeholder title for day 25
+
+: Placeholder project increment.
+
+## Returns and noise
+
+**[Day 30](days/day-030.qmd)** · Sat 5 Sep · Placeholder title for day 30
+
+: Placeholder project increment.
+
+**[Day 35](days/day-035.qmd)** · Thu 10 Sep · Placeholder title for day 35
+
+: Placeholder project increment.
+
+**[Day 40](days/day-040.qmd)** · Tue 15 Sep · Placeholder title for day 40
+
+: Placeholder project increment.
+
+**[Day 45](days/day-045.qmd)** · Sun 20 Sep · Placeholder title for day 45
+
+: Placeholder project increment.
+
+**[Day 50](days/day-050.qmd)** · Fri 25 Sep · Placeholder title for day 50
+
+: Placeholder project increment.
+
+**[Day 55](days/day-055.qmd)** · Wed 30 Sep · Placeholder title for day 55
+
+: Placeholder project increment.
+
+**[Day 60](days/day-060.qmd)** · Mon 5 Oct · Placeholder title for day 60
+
+: Placeholder project increment.
+
+## Time series
+
+**[Day 65](days/day-065.qmd)** · Sat 10 Oct · Placeholder title for day 65
+
+: Placeholder project increment.
+
+**[Day 70](days/day-070.qmd)** · Thu 15 Oct · Placeholder title for day 70
+
+: Placeholder project increment.
+
+**[Day 75](days/day-075.qmd)** · Tue 20 Oct · Placeholder title for day 75
+
+: Placeholder project increment.
+
+**[Day 80](days/day-080.qmd)** · Sun 25 Oct · Placeholder title for day 80
+
+: Placeholder project increment.
+
+**[Day 85](days/day-085.qmd)** · Fri 30 Oct · Placeholder title for day 85
+
+: Placeholder project increment.
+
+**[Day 90](days/day-090.qmd)** · Wed 4 Nov · Placeholder title for day 90
+
+: Placeholder project increment.
+
+**[Day 95](days/day-095.qmd)** · Mon 9 Nov · Placeholder title for day 95
+
+: Placeholder project increment.
+
+## Portfolios and risk
+
+**[Day 100](days/day-100.qmd)** · Sat 14 Nov · Placeholder title for day 100
+
+: Placeholder project increment.
+
+**[Day 105](days/day-105.qmd)** · Thu 19 Nov · Placeholder title for day 105
+
+: Placeholder project increment.
+
+**[Day 110](days/day-110.qmd)** · Tue 24 Nov · Placeholder title for day 110
+
+: Placeholder project increment.
+
+**[Day 115](days/day-115.qmd)** · Sun 29 Nov · Placeholder title for day 115
+
+: Placeholder project increment.
+
+**[Day 120](days/day-120.qmd)** · Fri 4 Dec · Placeholder title for day 120
+
+: Placeholder project increment.
+
+**[Day 125](days/day-125.qmd)** · Wed 9 Dec · Placeholder title for day 125
+
+: Placeholder project increment.
+
+**[Day 130](days/day-130.qmd)** · Mon 14 Dec · Placeholder title for day 130
+
+: Placeholder project increment.
+
+## The research harness
+
+**[Day 135](days/day-135.qmd)** · Sat 19 Dec · Placeholder title for day 135
+
+: Placeholder project increment.
+
+**[Day 140](days/day-140.qmd)** · Thu 24 Dec · Placeholder title for day 140
+
+: Placeholder project increment.
+
+**[Day 145](days/day-145.qmd)** · Tue 29 Dec · Placeholder title for day 145
+
+: Placeholder project increment.
+
+**[Day 150](days/day-150.qmd)** · Sun 3 Jan · Placeholder title for day 150
+
+: Placeholder project increment.
+
+**[Day 155](days/day-155.qmd)** · Fri 8 Jan · Placeholder title for day 155
+
+: Placeholder project increment.
+
+**[Day 160](days/day-160.qmd)** · Wed 13 Jan · Placeholder title for day 160
+
+: Placeholder project increment.
+
+## Alpha
+
+**[Day 165](days/day-165.qmd)** · Mon 18 Jan · Placeholder title for day 165
+
+: Placeholder project increment.
+
+**[Day 170](days/day-170.qmd)** · Sat 23 Jan · Placeholder title for day 170
+
+: Placeholder project increment.
+
+**[Day 175](days/day-175.qmd)** · Thu 28 Jan · Placeholder title for day 175
+
+: Placeholder project increment.
+
+**[Day 180](days/day-180.qmd)** · Tue 2 Feb · Placeholder title for day 180
+
+: Placeholder project increment.
+
+**[Day 185](days/day-185.qmd)** · Sun 7 Feb · Placeholder title for day 185
+
+: Placeholder project increment.
+
+**[Day 190](days/day-190.qmd)** · Fri 12 Feb · Placeholder title for day 190
+
+: Placeholder project increment.
+
+**[Day 195](days/day-195.qmd)** · Wed 17 Feb · Placeholder title for day 195
+
+: Placeholder project increment.
+
+**[Day 200](days/day-200.qmd)** · Mon 22 Feb · Placeholder title for day 200
+
+: Placeholder project increment.
+
+## Machine learning
+
+**[Day 205](days/day-205.qmd)** · Sat 27 Feb · Placeholder title for day 205
+
+: Placeholder project increment.
+
+**[Day 210](days/day-210.qmd)** · Thu 4 Mar · Placeholder title for day 210
+
+: Placeholder project increment.
+
+**[Day 215](days/day-215.qmd)** · Tue 9 Mar · Placeholder title for day 215
+
+: Placeholder project increment.
+
+**[Day 220](days/day-220.qmd)** · Sun 14 Mar · Placeholder title for day 220
+
+: Placeholder project increment.
+
+**[Day 225](days/day-225.qmd)** · Fri 19 Mar · Placeholder title for day 225
+
+: Placeholder project increment.
+
+**[Day 230](days/day-230.qmd)** · Wed 24 Mar · Placeholder title for day 230
+
+: Placeholder project increment.
+
+**[Day 235](days/day-235.qmd)** · Mon 29 Mar · Placeholder title for day 235
+
+: Placeholder project increment.
+
+## Derivatives
+
+**[Day 240](days/day-240.qmd)** · Sat 3 Apr · Placeholder title for day 240
+
+: Placeholder project increment.
+
+**[Day 245](days/day-245.qmd)** · Thu 8 Apr · Placeholder title for day 245
+
+: Placeholder project increment.
+
+**[Day 250](days/day-250.qmd)** · Tue 13 Apr · Placeholder title for day 250
+
+: Placeholder project increment.
+
+**[Day 255](days/day-255.qmd)** · Sun 18 Apr · Placeholder title for day 255
+
+: Placeholder project increment.
+
+**[Day 260](days/day-260.qmd)** · Fri 23 Apr · Placeholder title for day 260
+
+: Placeholder project increment.
+
+**[Day 265](days/day-265.qmd)** · Wed 28 Apr · Placeholder title for day 265
+
+: Placeholder project increment.
+
+**[Day 270](days/day-270.qmd)** · Mon 3 May · Placeholder title for day 270
+
+: Placeholder project increment.
+
+**[Day 275](days/day-275.qmd)** · Sat 8 May · Placeholder title for day 275
+
+: Placeholder project increment.
+
+**[Day 280](days/day-280.qmd)** · Thu 13 May · Placeholder title for day 280
+
+: Placeholder project increment.
+
+## Microstructure
+
+**[Day 285](days/day-285.qmd)** · Tue 18 May · Placeholder title for day 285
+
+: Placeholder project increment.
+
+**[Day 290](days/day-290.qmd)** · Sun 23 May · Placeholder title for day 290
+
+: Placeholder project increment.
+
+**[Day 295](days/day-295.qmd)** · Fri 28 May · Placeholder title for day 295
+
+: Placeholder project increment.
+
+**[Day 300](days/day-300.qmd)** · Wed 2 Jun · Placeholder title for day 300
+
+: Placeholder project increment.
+
+**[Day 305](days/day-305.qmd)** · Mon 7 Jun · Placeholder title for day 305
+
+: Placeholder project increment.
+
+## Production
+
+**[Day 310](days/day-310.qmd)** · Sat 12 Jun · Placeholder title for day 310
+
+: Placeholder project increment.
+
+**[Day 315](days/day-315.qmd)** · Thu 17 Jun · Placeholder title for day 315
+
+: Placeholder project increment.
+
+**[Day 320](days/day-320.qmd)** · Tue 22 Jun · Placeholder title for day 320
+
+: Placeholder project increment.
+
+**[Day 325](days/day-325.qmd)** · Sun 27 Jun · Placeholder title for day 325
+
+: Placeholder project increment.
+
+## The interview
+
+**[Day 330](days/day-330.qmd)** · Fri 2 Jul · Placeholder title for day 330
+
+: Placeholder project increment.
+
+**[Day 335](days/day-335.qmd)** · Wed 7 Jul · Placeholder title for day 335
+
+: Placeholder project increment.
+
+**[Day 340](days/day-340.qmd)** · Mon 12 Jul · Placeholder title for day 340
+
+: Placeholder project increment.
+
+**[Day 345](days/day-345.qmd)** · Sat 17 Jul · Placeholder title for day 345
+
+: Placeholder project increment.
+
+**[Day 350](days/day-350.qmd)** · Thu 22 Jul · Placeholder title for day 350
+
+: Placeholder project increment.
+
+**[Day 355](days/day-355.qmd)** · Tue 27 Jul · Placeholder title for day 355
+
+: Placeholder project increment.
+
+## Capstone
+
+**[Day 360](days/day-360.qmd)** · Sun 1 Aug · Placeholder title for day 360
+
+: Placeholder project increment.
+
+**[Day 365](days/day-365.qmd)** · Fri 6 Aug · Placeholder title for day 365
+
+: Placeholder project increment.

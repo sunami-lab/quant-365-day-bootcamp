@@ -1,0 +1,298 @@
+---
+title: "Every drill"
+subtitle: "The interview thread, in the order it appears. One sitting a week for a year."
+toc-depth: 2
+---
+
+Interview preparation is not a phase you do at the end. Probability under pressure decays if you touch it once; it sticks if you touch it fifty times. Every seventh day carries a drill, and they accumulate here.
+
+53 drill sittings across the year.
+
+## Markets
+
+**[Day 7](days/day-007.qmd)** · Thu 13 Aug
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 14](days/day-014.qmd)** · Thu 20 Aug
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 21](days/day-021.qmd)** · Thu 27 Aug
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 28](days/day-028.qmd)** · Thu 3 Sep
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## Returns and noise
+
+**[Day 35](days/day-035.qmd)** · Thu 10 Sep
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 42](days/day-042.qmd)** · Thu 17 Sep
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 49](days/day-049.qmd)** · Thu 24 Sep
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 56](days/day-056.qmd)** · Thu 1 Oct
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 63](days/day-063.qmd)** · Thu 8 Oct
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## Time series
+
+**[Day 70](days/day-070.qmd)** · Thu 15 Oct
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 77](days/day-077.qmd)** · Thu 22 Oct
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 84](days/day-084.qmd)** · Thu 29 Oct
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 91](days/day-091.qmd)** · Thu 5 Nov
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 98](days/day-098.qmd)** · Thu 12 Nov
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## Portfolios and risk
+
+**[Day 105](days/day-105.qmd)** · Thu 19 Nov
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 112](days/day-112.qmd)** · Thu 26 Nov
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 119](days/day-119.qmd)** · Thu 3 Dec
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 126](days/day-126.qmd)** · Thu 10 Dec
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 133](days/day-133.qmd)** · Thu 17 Dec
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## The research harness
+
+**[Day 140](days/day-140.qmd)** · Thu 24 Dec
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 147](days/day-147.qmd)** · Thu 31 Dec
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 154](days/day-154.qmd)** · Thu 7 Jan
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 161](days/day-161.qmd)** · Thu 14 Jan
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## Alpha
+
+**[Day 168](days/day-168.qmd)** · Thu 21 Jan
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 175](days/day-175.qmd)** · Thu 28 Jan
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 182](days/day-182.qmd)** · Thu 4 Feb
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 189](days/day-189.qmd)** · Thu 11 Feb
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 196](days/day-196.qmd)** · Thu 18 Feb
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 203](days/day-203.qmd)** · Thu 25 Feb
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## Machine learning
+
+**[Day 210](days/day-210.qmd)** · Thu 4 Mar
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 217](days/day-217.qmd)** · Thu 11 Mar
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 224](days/day-224.qmd)** · Thu 18 Mar
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 231](days/day-231.qmd)** · Thu 25 Mar
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 238](days/day-238.qmd)** · Thu 1 Apr
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## Derivatives
+
+**[Day 245](days/day-245.qmd)** · Thu 8 Apr
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 252](days/day-252.qmd)** · Thu 15 Apr
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 259](days/day-259.qmd)** · Thu 22 Apr
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 266](days/day-266.qmd)** · Thu 29 Apr
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 273](days/day-273.qmd)** · Thu 6 May
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 280](days/day-280.qmd)** · Thu 13 May
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## Microstructure
+
+**[Day 287](days/day-287.qmd)** · Thu 20 May
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 294](days/day-294.qmd)** · Thu 27 May
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 301](days/day-301.qmd)** · Thu 3 Jun
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 308](days/day-308.qmd)** · Thu 10 Jun
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## Production
+
+**[Day 315](days/day-315.qmd)** · Thu 17 Jun
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 322](days/day-322.qmd)** · Thu 24 Jun
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 329](days/day-329.qmd)** · Thu 1 Jul
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## The interview
+
+**[Day 336](days/day-336.qmd)** · Thu 8 Jul
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 343](days/day-343.qmd)** · Thu 15 Jul
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 350](days/day-350.qmd)** · Thu 22 Jul
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 357](days/day-357.qmd)** · Thu 29 Jul
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+## Capstone
+
+**[Day 364](days/day-364.qmd)** · Thu 5 Aug
+
+- Placeholder drill item one.
+- Placeholder drill item two.
+
+**[Day 365](days/day-365.qmd)** · Fri 6 Aug
+
+- Placeholder drill item one.
+- Placeholder drill item two.

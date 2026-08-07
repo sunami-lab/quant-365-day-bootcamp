@@ -1,0 +1,67 @@
+---
+title: "Day 49 — Placeholder title for day 49"
+subtitle: "Thursday, 24 September 2026 · Week 7 of 52 · Returns and noise · Catch-up day · 45 min"
+---
+
+::: {.day-nav .kind-catchup}
+[← Day 48](day-048.qmd) · [All 365 days](../timeline.qmd) · [Day 50 →](day-050.qmd)
+:::
+
+::: {.why}
+Placeholder one-sentence rationale.
+:::
+
+## What you should be able to do tonight
+
+- Placeholder objective one.
+- Placeholder objective two.
+
+## Tasks <span class='task-total'>45 min</span>
+
+::: {.task-list}
+::: {.task}
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+:::
+:::
+
+## Drill <span class='task-total'>interview thread</span>
+
+Spaced repetition, not cramming. Every drill in the year is collected on the [drills page](../drills.qmd).
+
+::: {.task-list .drill}
+::: {.task}
+<input type="checkbox" class="task-check"> Placeholder drill item one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Placeholder drill item two.
+:::
+:::
+
+## Resources
+
+- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+
+## Deliverable
+
+::: {.deliverable}
+Placeholder deliverable.
+:::
+
+## Checkpoint
+
+::: {.checkpoint}
+Placeholder checkpoint question?
+:::
+
+## Prepare for tomorrow
+
+Ten minutes tonight so Day 50, Friday, 25 September 2026 starts clean. This is what the evening email sends you.
+
+::: {.task-list .prep}
+::: {.task}
+<input type="checkbox" class="task-check"> Placeholder prep item.
+:::
+:::

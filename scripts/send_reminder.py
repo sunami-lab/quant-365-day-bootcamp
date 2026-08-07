@@ -1,0 +1,223 @@
+#!/usr/bin/env python3
+"""Send the evening reminder email for tomorrow's bootcamp day.
+
+Reads data/schedule.yml, works out tomorrow's date in the schedule's timezone,
+and emails the prep items from the *preceding* day's record (prep_for_tomorrow on
+day N describes how to get ready for day N+1) along with a preview of tomorrow.
+
+Run by .github/workflows/daily-reminder.yml. To see the email without sending:
+
+    python3 scripts/send_reminder.py --dry-run
+    python3 scripts/send_reminder.py --dry-run --today 2027-03-14
+
+Requires Python 3.9+ (zoneinfo) and PyYAML.
+"""
+
+import argparse
+import html
+import os
+import smtplib
+import sys
+from datetime import date, datetime, timedelta
+from email.message import EmailMessage
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+import yaml
+
+ROOT = Path(__file__).resolve().parent.parent
+SCHEDULE = ROOT / "data" / "schedule.yml"
+
+SMTP_HOST = "smtp.gmail.com"
+SMTP_PORT = 465
+
+
+def as_iso(value):
+    """schedule.yml dates may load as str or datetime.date depending on quoting."""
+    if isinstance(value, (date, datetime)):
+        return value.strftime("%Y-%m-%d")
+    return str(value)
+
+
+def long_date(iso):
+    d = datetime.strptime(iso, "%Y-%m-%d")
+    return f"{d.strftime('%A')}, {d.day} {d.strftime('%B %Y')}"
+
+
+def day_url(day, meta):
+    template = meta.get("day_url_template")
+    return template.format(slug=f"day-{day['day']:03d}") if template else None
+
+
+def total_minutes(day):
+    return sum(t.get("minutes", 0) for t in day.get("tasks", []))
+
+
+def build_html(day, prep, meta, total):
+    """Plain, inline-styled HTML. Gmail strips <style> blocks, so everything is inline."""
+    e = html.escape
+    grey = "color:#6c757d"
+    wrap = ("font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;"
+            "line-height:1.5;color:#212529;max-width:640px")
+    h2 = "font-size:15px;font-weight:700;margin:22px 0 8px 0"
+
+    parts = [f'<div style="{wrap}">']
+    parts.append(
+        f'<p style="{grey};font-size:13px;margin:0 0 14px 0">'
+        f"Day {day['day']} of {total} &middot; {e(long_date(as_iso(day['date'])))} &middot; "
+        f"Week {day['week']}, {e(day['phase'])} &middot; {total_minutes(day)} min</p>"
+    )
+    if day.get("milestone"):
+        parts.append(
+            f'<p style="background:#fbf3dd;border-left:4px solid #b8860b;padding:10px 14px;'
+            f'margin:0 0 14px 0;border-radius:6px"><strong>Milestone.</strong> '
+            f"{e(day['milestone'])}</p>"
+        )
+    parts.append(f'<p style="font-style:italic;margin:0 0 4px 0">{e(day.get("why", ""))}</p>')
+
+    # The part that matters at 5 pm.
+    parts.append(
+        f'<div style="background:#eaf3f0;border-left:4px solid #1f6f5c;'
+        f'padding:12px 16px;margin:20px 0;border-radius:6px">'
+        f'<div style="{h2};margin-top:0">Tonight, about ten minutes</div>'
+        f'<ul style="margin:0;padding-left:20px">'
+    )
+    for item in prep:
+        parts.append(f"<li style='margin:5px 0'>{e(str(item))}</li>")
+    parts.append("</ul></div>")
+
+    parts.append(f'<div style="{h2}">Tomorrow</div><ul style="margin:0;padding-left:20px">')
+    for task in day.get("tasks", []):
+        mins = task.get("minutes")
+        badge = (
+            f"<span style='{grey};font-size:12px;font-weight:600'>{mins} min</span> &nbsp;"
+            if mins else ""
+        )
+        parts.append(f"<li style='margin:6px 0'>{badge}{e(task['text'])}</li>")
+    parts.append("</ul>")
+
+    if day.get("drill"):
+        parts.append(f'<div style="{h2}">Drill</div><ul style="margin:0;padding-left:20px">')
+        for item in day["drill"]:
+            parts.append(f"<li style='margin:5px 0'>{e(str(item))}</li>")
+        parts.append("</ul>")
+
+    if day.get("resources"):
+        parts.append(f'<div style="{h2}">Links you\'ll need</div><ul style="margin:0;padding-left:20px">')
+        for res in day["resources"]:
+            parts.append(
+                f"<li style='margin:5px 0'><a href=\"{e(res['url'])}\">{e(res['label'])}</a></li>"
+            )
+        parts.append("</ul>")
+
+    if day.get("deliverable"):
+        parts.append(f'<div style="{h2}">Deliverable</div><p style="margin:0">{e(day["deliverable"])}</p>')
+
+    url = day_url(day, meta)
+    if url:
+        parts.append(
+            f'<p style="margin:26px 0 0 0"><a href="{e(url)}">Open day {day["day"]}</a></p>'
+        )
+    parts.append("</div>")
+    return "\n".join(parts)
+
+
+def build_text(day, prep, meta, total):
+    lines = [
+        f"Day {day['day']} of {total} - {long_date(as_iso(day['date']))} - "
+        f"Week {day['week']}, {day['phase']} - {total_minutes(day)} min",
+        "",
+    ]
+    if day.get("milestone"):
+        lines += [f"MILESTONE: {day['milestone']}", ""]
+    lines += [day.get("why", ""), "", "TONIGHT, ABOUT TEN MINUTES"]
+    lines += [f"  - {item}" for item in prep]
+    lines += ["", "TOMORROW"]
+    for task in day.get("tasks", []):
+        mins = f"[{task['minutes']} min] " if task.get("minutes") else ""
+        lines.append(f"  - {mins}{task['text']}")
+    if day.get("drill"):
+        lines += ["", "DRILL"]
+        lines += [f"  - {item}" for item in day["drill"]]
+    if day.get("resources"):
+        lines += ["", "LINKS"]
+        lines += [f"  - {r['label']}: {r['url']}" for r in day["resources"]]
+    if day.get("deliverable"):
+        lines += ["", "DELIVERABLE", f"  {day['deliverable']}"]
+    url = day_url(day, meta)
+    if url:
+        lines += ["", url]
+    return "\n".join(lines)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry-run", action="store_true", help="print the email instead of sending it")
+    ap.add_argument("--today", help="override today's date as YYYY-MM-DD, for testing")
+    args = ap.parse_args()
+
+    data = yaml.safe_load(SCHEDULE.read_text(encoding="utf-8"))
+    meta, days = data["meta"], data["days"]
+    total = len(days)
+
+    tz = ZoneInfo(meta.get("timezone", "America/Chicago"))
+    today = (
+        datetime.strptime(args.today, "%Y-%m-%d").date()
+        if args.today
+        else datetime.now(tz).date()
+    )
+    tomorrow_iso = (today + timedelta(days=1)).strftime("%Y-%m-%d")
+
+    by_date = {as_iso(d["date"]): d for d in days}
+    target = by_date.get(tomorrow_iso)
+    if target is None:
+        print(f"No scheduled day for {tomorrow_iso} — not started, paused, or finished. Nothing to send.")
+        return 0
+
+    # Prep comes from day N-1 by day number rather than by yesterday's date: the
+    # schedule can contain a pause, and on the evening before it resumes there is
+    # no record for today. Before day 1 there is no previous day at all.
+    previous = {d["day"]: d for d in days}.get(target["day"] - 1)
+    prep = (previous.get("prep_for_tomorrow") if previous else meta.get("prep_for_day_1")) or []
+    if not prep:
+        prep = ["Nothing to prepare tonight — just show up."]
+
+    subject = f"Day {target['day']} tomorrow — {target['title']}"
+    body_html = build_html(target, prep, meta, total)
+    body_text = build_text(target, prep, meta, total)
+
+    if args.dry_run:
+        print(f"Subject: {subject}")
+        source = f"day {previous['day']}" if previous else "meta.prep_for_day_1"
+        print(f"Would send for {tomorrow_iso}, prep taken from {source}")
+        print("-" * 72)
+        print(body_text)
+        return 0
+
+    sender = (os.environ.get("GMAIL_ADDRESS") or "").strip()
+    # Google displays app passwords as four space-separated groups. The spaces are
+    # presentational; SMTP login fails if they are sent literally.
+    password = "".join((os.environ.get("GMAIL_APP_PASSWORD") or "").split())
+    recipient = (os.environ.get("RECIPIENT_EMAIL") or "").strip() or sender
+
+    if not sender or not password:
+        print("GMAIL_ADDRESS and GMAIL_APP_PASSWORD must be set.", file=sys.stderr)
+        return 1
+
+    msg = EmailMessage()
+    msg["Subject"] = subject
+    msg["From"] = sender
+    msg["To"] = recipient
+    msg.set_content(body_text)
+    msg.add_alternative(body_html, subtype="html")
+
+    with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT) as server:
+        server.login(sender, password)
+        server.send_message(msg)
+
+    print(f"Sent '{subject}' to {recipient}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,5 +1,5 @@
 ---
-title: "Day 205 — Placeholder title for day 205"
+title: "Day 205 — Overlapping labels break the assumption everything rests on"
 subtitle: "Saturday, 27 February 2027 · Week 30 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Saturday, 27 February 2027 · Week 30 of 52 · Machine learning · St
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You already refuse to split relatives across folds of a genetic prediction study; overlapping forward returns are the same dependence structure, and standard cross-validation walks straight into it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State precisely which assumption overlapping labels violate and what it does to a cross-validated performance estimate.
+- Demonstrate the inflation with a synthetic experiment where the true relationship is zero.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build the demonstration: generate features with no relationship at all to forward returns, construct 10-day overlapping labels, and run standard 5-fold cross-validation. The cross-validated R-squared will be positive and it will look significant. Report it, then repeat with non-overlapping labels and show it collapses.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the mechanism out: adjacent observations share most of their label, so a fold boundary places nearly identical observations on both sides, and the model is scored partly on data it trained on. Name the analogous situation in your own field and note that the correction there is the same one you will build tomorrow.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [López de Prado — Advances in Financial Machine Learning, seminar slides](https://www.quantresearch.org/Lectures.htm) [reference]{.res-kind}
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-205-overlap.ipynb showing a positive cross-validated R-squared on pure noise with overlapping labels, and its collapse without them.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Standard k-fold is wrong on financial data. Give two separate reasons and say which one overlapping labels cause.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 206, Sunday, 28 February 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Draw the timeline of a single test fold and mark which training observations touch it, on either side.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The set you would need to remove has two parts and they are removed for different reasons.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Name both before tomorrow tells you.
 :::
 :::

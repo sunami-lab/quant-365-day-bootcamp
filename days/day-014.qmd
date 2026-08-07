@@ -1,6 +1,6 @@
 ---
-title: "Day 14 — Placeholder title for day 14"
-subtitle: "Thursday, 20 August 2026 · Week 2 of 52 · Markets · Catch-up day · 45 min"
+title: "Day 14 — The plumbing, from memory, with the costs attached"
+subtitle: "Thursday, 20 August 2026 · Week 2 of 52 · Markets · Catch-up day · 40 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 20 August 2026 · Week 2 of 52 · Markets · Catch-up day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Week 2 is the week whose details you will actually use in a backtest, so today is retrieval rather than reading. If you are on track, the hour is yours.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Redraw the order book, the four order types and the fee structure without notes.
+- State the three costs of a market-neutral position that never appear in a price series.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>40 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Finish anything outstanding from days 8 to 13. The toy matching engine from day 9 is the piece worth completing if it is unfinished; you use it again in week 41.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} From memory, on one page: draw a five-level book, mark where a market buy for more than the touch size executes, list the four order types, and write the round-trip cost of 1,000 shares of a 50-dollar stock traded aggressively. Then check every number against your notebooks.
 :::
 :::
 
@@ -33,27 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed as before: ten two-digit multiplications, the sevenths, then 12 percent of 425 and 7 divided by 16 as a decimal. Compare the time to day 7 and write both numbers down.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Bayes, in the form interviewers use: a test for a condition present in 1 in 1,000 people has 99 percent sensitivity and 95 percent specificity. Positive test, what is the posterior? Do it in your head with natural frequencies out of 100,000, not with the formula.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Now the version they follow up with: how good would specificity have to be for the posterior to exceed one half? Solve it algebraically, out loud.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The one-page recall sheet for week 2, with every number checked against your notebooks and the misses marked.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Name the three costs a long-short equity position pays that never show up in the price series of either leg.
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +65,12 @@ Ten minutes tonight so Day 15, Friday, 21 August 2026 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download daily OHLCV bars for SPY from 2005 to today, both with `auto_adjust=True` and with `auto_adjust=False`, into two separate files. Tomorrow is about the difference.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Create data/ in the work repo and confirm it is gitignored before anything lands in it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Read the yfinance README section on what the adjustment does. Two minutes.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 261 — Placeholder title for day 261"
+title: "Day 261 — Equity index skew, and two explanations that are not the same"
 subtitle: "Saturday, 24 April 2027 · Week 38 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Saturday, 24 April 2027 · Week 38 of 52 · Derivatives · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The asymmetry you found last night is the most robust feature of any equity option market, and there are two distinct explanations for it that are usually run together.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State two explanations for the index skew that are not restatements of each other, and name an observation that separates them.
+- Report the skew's magnitude and how it varies with maturity on your own data.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Measure it properly: fit the slope of implied volatility against log-moneyness at several maturities, and report how the slope changes with time to expiry. The steepening at short maturities is a feature any model has to reproduce and most do not.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Separate the explanations: the leverage effect says down moves raise volatility, which makes low strikes worth more, and you measured that on day 39. The demand explanation says index puts are bought as insurance by people who do not sell the corresponding calls, so the skew is a supply-demand imbalance. Write down the observation that separates them, which involves whether the skew is present in markets with no such demand imbalance.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Check one implication: if the leverage effect is the cause, single stocks with lower leverage should have flatter skews. Test it on three names with different balance sheets from your EDGAR data.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatheral — The Volatility Surface, Statics and Dynamics (Imperial lecture 1)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-1st-Lecture.pdf) [reference]{.res-kind}
+- [Gatheral — The Volatility Surface (Wiley)](https://www.wiley.com/en-us/The+Volatility+Surface:+A+Practitioner's+Guide-p-9780471792512) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-261-skew.ipynb with skew slope against maturity, and a three-name leverage comparison.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does the equity index implied volatility surface slope downward in strike? Give two explanations that are not the same explanation restated.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 262, Sunday, 25 April 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Plot at-the-money implied volatility against time to expiry for one underlying, using every listed expiry.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare that curve against the GARCH variance term structure you built on day 86.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> They should have the same shape. Note whether they do.
 :::
 :::

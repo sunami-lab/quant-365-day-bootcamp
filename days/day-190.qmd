@@ -1,5 +1,5 @@
 ---
-title: "Day 190 — Placeholder title for day 190"
+title: "Day 190 — Fundamentals at scale, from EDGAR rather than a vendor"
 subtitle: "Friday, 12 February 2027 · Week 28 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,45 +8,46 @@ subtitle: "Friday, 12 February 2027 · Week 28 of 52 · Alpha · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The data is free, complete and point-in-time by construction, and the reason few people use it is that the schema is genuinely awkward, which is a one-day problem rather than a permanent one.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Load a quarter of the financial statement data sets and extract one tag for the full universe with the filing date attached.
+- Say what the ADSH identifier is and why it is what makes the data point-in-time.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build the loader in qlib/ingest_fundamentals.py: parse the submission and numeric files, join on the accession identifier, and produce a long table of company, tag, fiscal period, value, filing date. Write it into the store with the three-date schema from day 137.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Extract one usable series end to end: total assets or shareholders equity for your universe, quarterly, with filing dates, over five years. Check a handful of values against the company's actual filing to confirm you have the right tag and the right sign.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+Fundamental data now comes from EDGAR directly into the store with filing dates attached, so every fundamental signal in the book is point-in-time by construction rather than by a lag applied afterwards.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [SEC Financial Statement Data Sets (quarterly XBRL)](https://www.sec.gov/data-research/sec-markets-data/financial-statement-data-sets) [data]{.res-kind}
+- [SEC EDGAR REST APIs (data.sec.gov)](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/ingest_fundamentals.py loading the SEC data sets into the store, with one tag extracted and spot-checked against real filings.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What is the ADSH accession identifier, and why does having it make a fundamental dataset point-in-time?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +56,12 @@ Ten minutes tonight so Day 191, Saturday, 13 February 2027 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down the accrual definition you would use from balance sheet items, and the one from cash flow items.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> They give different numbers. Note which items each needs.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check that your loader can extract all of those tags.
 :::
 :::

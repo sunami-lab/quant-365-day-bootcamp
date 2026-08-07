@@ -1,6 +1,6 @@
 ---
-title: "Day 78 — Placeholder title for day 78"
-subtitle: "Friday, 23 October 2026 · Week 12 of 52 · Time series · Study day · 60 min"
+title: "Day 78 — Cointegration, and the error correction model"
+subtitle: "Friday, 23 October 2026 · Week 12 of 52 · Time series · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Friday, 23 October 2026 · Week 12 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+This is the structure that pairs trading actually relies on, and it is the one case where regressing one price on another is not the mistake week 11 warned you about.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Explain cointegration in three sentences to someone who knows regression but not time series.
+- Write the error correction representation of a cointegrated pair and say which coefficient is the trade.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read the Avellaneda and Lee statistical arbitrage paper's model section, where the residual spread is treated as a mean-reverting process. Skip the empirical results; you are after the framing.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Run Engle-Granger by hand rather than by function call: regress one log price on the other, take the residual, and run ADF on it with the correct critical values, which are not the standard ones because the residual came from an estimated relationship. Report both pairs.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Write the error correction form: the change in each price regressed on the lagged residual and on lagged changes. The coefficient on the lagged residual is the speed at which the gap closes and the sign tells you which leg does the adjusting, which is the whole trade in one number.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Avellaneda & Lee (2010) — Statistical arbitrage in the US equities market](https://traders.studentorg.berkeley.edu/papers/Statistical%20arbitrage%20in%20the%20US%20equities%20market.pdf) [paper]{.res-kind}
+- [statsmodels — time series analysis (tsa)](https://www.statsmodels.org/stable/tsa.html) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-078-engle-granger.ipynb with the two-stage procedure run by hand and the error correction representation estimated for both pairs.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why do the second-stage ADF critical values differ from the standard ones, and what does the error correction coefficient tell you?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 79, Saturday, 24 October 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Generate 200 pairs of independent random walks and save them. Tomorrow you run your own screen on them.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what fraction you expect to pass a 5 percent cointegration test.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Keep the number; the gap between it and the answer is tomorrow's result.
 :::
 :::

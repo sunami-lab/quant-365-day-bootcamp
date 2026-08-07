@@ -1,6 +1,6 @@
 ---
-title: "Day 114 — Placeholder title for day 114"
-subtitle: "Saturday, 28 November 2026 · Week 17 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 114 — Where the three factors came from, procedurally"
+subtitle: "Saturday, 28 November 2026 · Week 17 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Saturday, 28 November 2026 · Week 17 of 52 · Portfolios and risk ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The construction details decide the numbers, and knowing them is what lets you tell a replication failure from a specification difference when you rebuild these in phase 6.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Describe the size and value factor construction in enough detail to rebuild it: sort, breakpoints, weighting, rebalance date.
+- Report the three-factor time-series regression for your test portfolios, including whether the intercepts are jointly zero.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the construction section of Fama and French 1993 and write the procedure as a numbered recipe. The June rebalance, the NYSE breakpoints and the value weighting inside each bucket are the three details most often got wrong.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Run the time-series regressions on the 25 portfolios and report the alphas with standard errors. Then run the joint test that all 25 intercepts are zero, which is the actual test of the model, and state the conclusion.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the sample dependence: rerun the joint test on the post-2005 subsample and compare. The result will be different and that difference is the subject of day 115.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Fama & French (1993) — Common risk factors in the returns on stocks and bonds](https://www.bauer.uh.edu/rsusmel/phd/Fama-French_JFE93.pdf) [paper]{.res-kind}
+- [Kenneth R. French — Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-114-fama-french.ipynb with the construction recipe written out and a joint test of the 25 intercepts in two samples.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Describe the value factor's construction precisely enough that someone could rebuild it, in four sentences.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 115, Sunday, 29 November 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download the Hou, Xue and Zhang replicating anomalies paper and read the abstract and the summary table caption.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the fraction of published anomalies they say fail to replicate.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare that fraction against what you would expect from the multiple-testing arithmetic you did on day 51.
 :::
 :::

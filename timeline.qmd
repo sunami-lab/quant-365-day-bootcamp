@@ -29,49 +29,49 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [1](days/day-001.qmd) | Fri 7 Aug | [Placeholder title for day 1](days/day-001.qmd) |  |
-| [2](days/day-002.qmd) | Sat 8 Aug | [Placeholder title for day 2](days/day-002.qmd) |  |
-| [3](days/day-003.qmd) | Sun 9 Aug | [Placeholder title for day 3](days/day-003.qmd) |  |
-| [4](days/day-004.qmd) | Mon 10 Aug | [Placeholder title for day 4](days/day-004.qmd) |  |
-| [5](days/day-005.qmd) | Tue 11 Aug | [Placeholder title for day 5](days/day-005.qmd) |  |
-| [6](days/day-006.qmd) | Wed 12 Aug | [Placeholder title for day 6](days/day-006.qmd) |  |
-| [7](days/day-007.qmd) | Thu 13 Aug | [Placeholder title for day 7](days/day-007.qmd) | [catch-up]{.pill .pill-catchup} |
+| [1](days/day-001.qmd) | Fri 7 Aug | [Who pays whom, and for what](days/day-001.qmd) |  |
+| [2](days/day-002.qmd) | Sat 8 Aug | [What a share obliges each side to do](days/day-002.qmd) |  |
+| [3](days/day-003.qmd) | Sun 9 Aug | [The arbitrage that keeps an ETF near its NAV](days/day-003.qmd) |  |
+| [4](days/day-004.qmd) | Mon 10 Aug | [A future settles every night, and that changes everything](days/day-004.qmd) |  |
+| [5](days/day-005.qmd) | Tue 11 Aug | [A put is an obligation you sold, not a bet you made](days/day-005.qmd) |  |
+| [6](days/day-006.qmd) | Wed 12 Aug | [A bond is a schedule, and FX is a relative price](days/day-006.qmd) |  |
+| [7](days/day-007.qmd) | Thu 13 Aug | [Six instruments, from memory, on one page](days/day-007.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 2 <span class='week-span'>Fri 14 Aug – Thu 20 Aug</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [8](days/day-008.qmd) | Fri 14 Aug | [Placeholder title for day 8](days/day-008.qmd) |  |
-| [9](days/day-009.qmd) | Sat 15 Aug | [Placeholder title for day 9](days/day-009.qmd) |  |
-| [10](days/day-010.qmd) | Sun 16 Aug | [Placeholder title for day 10](days/day-010.qmd) |  |
-| [11](days/day-011.qmd) | Mon 17 Aug | [Placeholder title for day 11](days/day-011.qmd) |  |
-| [12](days/day-012.qmd) | Tue 18 Aug | [Placeholder title for day 12](days/day-012.qmd) |  |
-| [13](days/day-013.qmd) | Wed 19 Aug | [Placeholder title for day 13](days/day-013.qmd) |  |
-| [14](days/day-014.qmd) | Thu 20 Aug | [Placeholder title for day 14](days/day-014.qmd) | [catch-up]{.pill .pill-catchup} |
+| [8](days/day-008.qmd) | Fri 14 Aug | [An order is an instruction, and there are only a few](days/day-008.qmd) |  |
+| [9](days/day-009.qmd) | Sat 15 Aug | [Price-time priority, and what happens to your order](days/day-009.qmd) |  |
+| [10](days/day-010.qmd) | Sun 16 Aug | [The close is an auction, and it is the biggest trade of the day](days/day-010.qmd) |  |
+| [11](days/day-011.qmd) | Mon 17 Aug | [Tick size, lot size, and who pays the rebate](days/day-011.qmd) |  |
+| [12](days/day-012.qmd) | Tue 18 Aug | [Shorting is a loan, and the lender can call it](days/day-012.qmd) |  |
+| [13](days/day-013.qmd) | Wed 19 Aug | [Leverage decides when you are forced to sell](days/day-013.qmd) |  |
+| [14](days/day-014.qmd) | Thu 20 Aug | [The plumbing, from memory, with the costs attached](days/day-014.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 3 <span class='week-span'>Fri 21 Aug – Thu 27 Aug</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [15](days/day-015.qmd) | Fri 21 Aug | [Placeholder title for day 15](days/day-015.qmd) |  |
-| [16](days/day-016.qmd) | Sat 22 Aug | [Placeholder title for day 16](days/day-016.qmd) |  |
-| [17](days/day-017.qmd) | Sun 23 Aug | [Placeholder title for day 17](days/day-017.qmd) |  |
-| [18](days/day-018.qmd) | Mon 24 Aug | [Placeholder title for day 18](days/day-018.qmd) |  |
-| [19](days/day-019.qmd) | Tue 25 Aug | [Placeholder title for day 19](days/day-019.qmd) |  |
-| [20](days/day-020.qmd) | Wed 26 Aug | [Placeholder title for day 20](days/day-020.qmd) |  |
-| [21](days/day-021.qmd) | Thu 27 Aug | [Placeholder title for day 21](days/day-021.qmd) | [catch-up]{.pill .pill-catchup} |
+| [15](days/day-015.qmd) | Fri 21 Aug | [What an OHLCV bar throws away](days/day-015.qmd) |  |
+| [16](days/day-016.qmd) | Sat 22 Aug | [The adjusted close is a derived series, not a price](days/day-016.qmd) |  |
+| [17](days/day-017.qmd) | Sun 23 Aug | [Splits, dividends, spinoffs, and the ticker that moved](days/day-017.qmd) |  |
+| [18](days/day-018.qmd) | Mon 24 Aug | [Today's index members, backfilled ten years, is a lie](days/day-018.qmd) |  |
+| [19](days/day-019.qmd) | Tue 25 Aug | [As of when did you know that](days/day-019.qmd) |  |
+| [20](days/day-020.qmd) | Wed 26 Aug | [The store, part one: schema and ingestion](days/day-020.qmd) |  |
+| [21](days/day-021.qmd) | Thu 27 Aug | [The store so far, and what it does not contain](days/day-021.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 4 <span class='week-span'>Fri 28 Aug – Thu 3 Sep</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [22](days/day-022.qmd) | Fri 28 Aug | [Placeholder title for day 22](days/day-022.qmd) |  |
-| [23](days/day-023.qmd) | Sat 29 Aug | [Placeholder title for day 23](days/day-023.qmd) |  |
-| [24](days/day-024.qmd) | Sun 30 Aug | [Placeholder title for day 24](days/day-024.qmd) |  |
-| [25](days/day-025.qmd) | Mon 31 Aug | [Placeholder title for day 25](days/day-025.qmd) |  |
-| [26](days/day-026.qmd) | Tue 1 Sep | [Placeholder title for day 26](days/day-026.qmd) |  |
-| [27](days/day-027.qmd) | Wed 2 Sep | [Placeholder title for day 27](days/day-027.qmd) |  |
-| [28](days/day-028.qmd) | Thu 3 Sep | [Placeholder title for day 28](days/day-028.qmd) | [milestone]{.pill .pill-milestone} |
+| [22](days/day-022.qmd) | Fri 28 Aug | [The store, part two: adjustment as a view, not a column](days/day-022.qmd) |  |
+| [23](days/day-023.qmd) | Sat 29 Aug | [The store, part three: the test that makes as-of true](days/day-023.qmd) |  |
+| [24](days/day-024.qmd) | Sun 30 Aug | [Risk premia: what you get paid for holding](days/day-024.qmd) |  |
+| [25](days/day-025.qmd) | Mon 31 Aug | [Market making is an inventory business](days/day-025.qmd) |  |
+| [26](days/day-026.qmd) | Tue 1 Sep | [Statistical arbitrage is a portfolio of weak bets](days/day-026.qmd) |  |
+| [27](days/day-027.qmd) | Wed 2 Sep | [Fees, capacity, and where one person can compete](days/day-027.qmd) |  |
+| [28](days/day-028.qmd) | Thu 3 Sep | [Milestone: the market map and a store that does not lie](days/day-028.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## Returns and noise
 
@@ -79,61 +79,61 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [29](days/day-029.qmd) | Fri 4 Sep | [Placeholder title for day 29](days/day-029.qmd) |  |
-| [30](days/day-030.qmd) | Sat 5 Sep | [Placeholder title for day 30](days/day-030.qmd) |  |
-| [31](days/day-031.qmd) | Sun 6 Sep | [Placeholder title for day 31](days/day-031.qmd) |  |
-| [32](days/day-032.qmd) | Mon 7 Sep | [Placeholder title for day 32](days/day-032.qmd) |  |
-| [33](days/day-033.qmd) | Tue 8 Sep | [Placeholder title for day 33](days/day-033.qmd) |  |
-| [34](days/day-034.qmd) | Wed 9 Sep | [Placeholder title for day 34](days/day-034.qmd) |  |
-| [35](days/day-035.qmd) | Thu 10 Sep | [Placeholder title for day 35](days/day-035.qmd) | [catch-up]{.pill .pill-catchup} |
+| [29](days/day-029.qmd) | Fri 4 Sep | [Log returns and why the average is a lie](days/day-029.qmd) |  |
+| [30](days/day-030.qmd) | Sat 5 Sep | [Logs add across time, simple returns add across assets](days/day-030.qmd) |  |
+| [31](days/day-031.qmd) | Sun 6 Sep | [Volatility eats return, and you can say how much](days/day-031.qmd) |  |
+| [32](days/day-032.qmd) | Mon 7 Sep | [Daily rebalancing to constant leverage is a trade](days/day-032.qmd) |  |
+| [33](days/day-033.qmd) | Tue 8 Sep | [Return against what: excess, financing and the wrong benchmark](days/day-033.qmd) |  |
+| [34](days/day-034.qmd) | Wed 9 Sep | [The 252 that nobody checks, and the square root of time](days/day-034.qmd) |  |
+| [35](days/day-035.qmd) | Thu 10 Sep | [The week's arithmetic, from memory](days/day-035.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 6 <span class='week-span'>Fri 11 Sep – Thu 17 Sep</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [36](days/day-036.qmd) | Fri 11 Sep | [Placeholder title for day 36](days/day-036.qmd) |  |
-| [37](days/day-037.qmd) | Sat 12 Sep | [Placeholder title for day 37](days/day-037.qmd) |  |
-| [38](days/day-038.qmd) | Sun 13 Sep | [Placeholder title for day 38](days/day-038.qmd) |  |
-| [39](days/day-039.qmd) | Mon 14 Sep | [Placeholder title for day 39](days/day-039.qmd) |  |
-| [40](days/day-040.qmd) | Tue 15 Sep | [Placeholder title for day 40](days/day-040.qmd) |  |
-| [41](days/day-041.qmd) | Wed 16 Sep | [Placeholder title for day 41](days/day-041.qmd) |  |
-| [42](days/day-042.qmd) | Thu 17 Sep | [Placeholder title for day 42](days/day-042.qmd) | [catch-up]{.pill .pill-catchup} |
+| [36](days/day-036.qmd) | Fri 11 Sep | [How far from normal, measured rather than asserted](days/day-036.qmd) |  |
+| [37](days/day-037.qmd) | Sat 12 Sep | [Estimating a tail index, and why yours will move](days/day-037.qmd) |  |
+| [38](days/day-038.qmd) | Sun 13 Sep | [Returns are unpredictable, their sizes are not](days/day-038.qmd) |  |
+| [39](days/day-039.qmd) | Mon 14 Sep | [Down moves raise volatility more than up moves do](days/day-039.qmd) |  |
+| [40](days/day-040.qmd) | Tue 15 Sep | [The tails thin out as you aggregate, but slowly](days/day-040.qmd) |  |
+| [41](days/day-041.qmd) | Wed 16 Sep | [Correlations rise exactly when you need them not to](days/day-041.qmd) |  |
+| [42](days/day-042.qmd) | Thu 17 Sep | [Six stylized facts on one page](days/day-042.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 7 <span class='week-span'>Fri 18 Sep – Thu 24 Sep</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [43](days/day-043.qmd) | Fri 18 Sep | [Placeholder title for day 43](days/day-043.qmd) |  |
-| [44](days/day-044.qmd) | Sat 19 Sep | [Placeholder title for day 44](days/day-044.qmd) |  |
-| [45](days/day-045.qmd) | Sun 20 Sep | [Placeholder title for day 45](days/day-045.qmd) |  |
-| [46](days/day-046.qmd) | Mon 21 Sep | [Placeholder title for day 46](days/day-046.qmd) |  |
-| [47](days/day-047.qmd) | Tue 22 Sep | [Placeholder title for day 47](days/day-047.qmd) |  |
-| [48](days/day-048.qmd) | Wed 23 Sep | [Placeholder title for day 48](days/day-048.qmd) |  |
-| [49](days/day-049.qmd) | Thu 24 Sep | [Placeholder title for day 49](days/day-049.qmd) | [catch-up]{.pill .pill-catchup} |
+| [43](days/day-043.qmd) | Fri 18 Sep | [Three Sharpe ratios from the same returns](days/day-043.qmd) |  |
+| [44](days/day-044.qmd) | Sat 19 Sep | [The standard error of a Sharpe ratio, derived](days/day-044.qmd) |  |
+| [45](days/day-045.qmd) | Sun 20 Sep | [Every performance number gets an interval from now on](days/day-045.qmd) |  |
+| [46](days/day-046.qmd) | Mon 21 Sep | [Serial correlation inflates a Sharpe ratio, and by how much](days/day-046.qmd) |  |
+| [47](days/day-047.qmd) | Tue 22 Sep | [Maximum drawdown is one draw from a wide distribution](days/day-047.qmd) |  |
+| [48](days/day-048.qmd) | Wed 23 Sep | [Sortino, Calmar and the ratios that add nothing](days/day-048.qmd) |  |
+| [49](days/day-049.qmd) | Thu 24 Sep | [The Sharpe ratio as an estimator, from memory](days/day-049.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 8 <span class='week-span'>Fri 25 Sep – Thu 1 Oct</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [50](days/day-050.qmd) | Fri 25 Sep | [Placeholder title for day 50](days/day-050.qmd) |  |
-| [51](days/day-051.qmd) | Sat 26 Sep | [Placeholder title for day 51](days/day-051.qmd) |  |
-| [52](days/day-052.qmd) | Sun 27 Sep | [Placeholder title for day 52](days/day-052.qmd) |  |
-| [53](days/day-053.qmd) | Mon 28 Sep | [Placeholder title for day 53](days/day-053.qmd) |  |
-| [54](days/day-054.qmd) | Tue 29 Sep | [Placeholder title for day 54](days/day-054.qmd) |  |
-| [55](days/day-055.qmd) | Wed 30 Sep | [Placeholder title for day 55](days/day-055.qmd) |  |
-| [56](days/day-056.qmd) | Thu 1 Oct | [Placeholder title for day 56](days/day-056.qmd) | [catch-up]{.pill .pill-catchup} |
+| [50](days/day-050.qmd) | Fri 25 Sep | [Backtest overfitting is a multiple testing problem you already know](days/day-050.qmd) |  |
+| [51](days/day-051.qmd) | Sat 26 Sep | [The best of a thousand nulls, and what it looks like](days/day-051.qmd) |  |
+| [52](days/day-052.qmd) | Sun 27 Sep | [The deflated Sharpe ratio, and what it assumes](days/day-052.qmd) |  |
+| [53](days/day-053.qmd) | Mon 28 Sep | [Implement the correction, and make the count automatic](days/day-053.qmd) |  |
+| [54](days/day-054.qmd) | Tue 29 Sep | [The probability that your best variant is the best by luck](days/day-054.qmd) |  |
+| [55](days/day-055.qmd) | Wed 30 Sep | [White's reality check, and the null that is about the best](days/day-055.qmd) |  |
+| [56](days/day-056.qmd) | Thu 1 Oct | [The three corrections, and when each applies](days/day-056.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 9 <span class='week-span'>Fri 2 Oct – Thu 8 Oct</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [57](days/day-057.qmd) | Fri 2 Oct | [Placeholder title for day 57](days/day-057.qmd) |  |
-| [58](days/day-058.qmd) | Sat 3 Oct | [Placeholder title for day 58](days/day-058.qmd) |  |
-| [59](days/day-059.qmd) | Sun 4 Oct | [Placeholder title for day 59](days/day-059.qmd) |  |
-| [60](days/day-060.qmd) | Mon 5 Oct | [Placeholder title for day 60](days/day-060.qmd) |  |
-| [61](days/day-061.qmd) | Tue 6 Oct | [Placeholder title for day 61](days/day-061.qmd) |  |
-| [62](days/day-062.qmd) | Wed 7 Oct | [Placeholder title for day 62](days/day-062.qmd) |  |
-| [63](days/day-063.qmd) | Thu 8 Oct | [Placeholder title for day 63](days/day-063.qmd) | [milestone]{.pill .pill-milestone} |
+| [57](days/day-057.qmd) | Fri 2 Oct | [The bootstrap breaks on dependent data, visibly](days/day-057.qmd) |  |
+| [58](days/day-058.qmd) | Sat 3 Oct | [Choosing a block length is choosing what you preserve](days/day-058.qmd) |  |
+| [59](days/day-059.qmd) | Sun 4 Oct | [Permuting a strategy: what exactly do you shuffle](days/day-059.qmd) |  |
+| [60](days/day-060.qmd) | Mon 5 Oct | [A simulator whose output passes your own stylized-facts test](days/day-060.qmd) |  |
+| [61](days/day-061.qmd) | Tue 6 Oct | [The noise floor: one number you will be held to](days/day-061.qmd) |  |
+| [62](days/day-062.qmd) | Wed 7 Oct | [Counting your own hypotheses, honestly](days/day-062.qmd) |  |
+| [63](days/day-063.qmd) | Thu 8 Oct | [Milestone: the stylized facts and the noise floor](days/day-063.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## Time series
 
@@ -141,61 +141,61 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [64](days/day-064.qmd) | Fri 9 Oct | [Placeholder title for day 64](days/day-064.qmd) |  |
-| [65](days/day-065.qmd) | Sat 10 Oct | [Placeholder title for day 65](days/day-065.qmd) |  |
-| [66](days/day-066.qmd) | Sun 11 Oct | [Placeholder title for day 66](days/day-066.qmd) |  |
-| [67](days/day-067.qmd) | Mon 12 Oct | [Placeholder title for day 67](days/day-067.qmd) |  |
-| [68](days/day-068.qmd) | Tue 13 Oct | [Placeholder title for day 68](days/day-068.qmd) |  |
-| [69](days/day-069.qmd) | Wed 14 Oct | [Placeholder title for day 69](days/day-069.qmd) |  |
-| [70](days/day-070.qmd) | Thu 15 Oct | [Placeholder title for day 70](days/day-070.qmd) | [catch-up]{.pill .pill-catchup} |
+| [64](days/day-064.qmd) | Fri 9 Oct | [Stationarity, and the three financial series that have it](days/day-064.qmd) |  |
+| [65](days/day-065.qmd) | Sat 10 Oct | [Reading an ACF and a PACF without fitting anything](days/day-065.qmd) |  |
+| [66](days/day-066.qmd) | Sun 11 Oct | [Fitting AR and MA models to things that barely have structure](days/day-066.qmd) |  |
+| [67](days/day-067.qmd) | Mon 12 Oct | [AIC picks a bigger model than BIC, and that is not a bug](days/day-067.qmd) |  |
+| [68](days/day-068.qmd) | Tue 13 Oct | [A trend follower is an AR model with a hard threshold](days/day-068.qmd) |  |
+| [69](days/day-069.qmd) | Wed 14 Oct | [The first strategy meets the noise floor](days/day-069.qmd) |  |
+| [70](days/day-070.qmd) | Thu 15 Oct | [Week 10, closed book](days/day-070.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 11 <span class='week-span'>Fri 16 Oct – Thu 22 Oct</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [71](days/day-071.qmd) | Fri 16 Oct | [Placeholder title for day 71](days/day-071.qmd) |  |
-| [72](days/day-072.qmd) | Sat 17 Oct | [Placeholder title for day 72](days/day-072.qmd) |  |
-| [73](days/day-073.qmd) | Sun 18 Oct | [Placeholder title for day 73](days/day-073.qmd) |  |
-| [74](days/day-074.qmd) | Mon 19 Oct | [Placeholder title for day 74](days/day-074.qmd) |  |
-| [75](days/day-075.qmd) | Tue 20 Oct | [Placeholder title for day 75](days/day-075.qmd) |  |
-| [76](days/day-076.qmd) | Wed 21 Oct | [Placeholder title for day 76](days/day-076.qmd) |  |
-| [77](days/day-077.qmd) | Thu 22 Oct | [Placeholder title for day 77](days/day-077.qmd) | [catch-up]{.pill .pill-catchup} |
+| [71](days/day-071.qmd) | Fri 16 Oct | [Two independent random walks, regressed, look significant](days/day-071.qmd) |  |
+| [72](days/day-072.qmd) | Sat 17 Oct | [ADF and KPSS have opposite nulls, and both can fail](days/day-072.qmd) |  |
+| [73](days/day-073.qmd) | Sun 18 Oct | [HAC standard errors, and the lag choice nobody defends](days/day-073.qmd) |  |
+| [74](days/day-074.qmd) | Mon 19 Oct | [Applying it: the trend follower's t-statistic, corrected](days/day-074.qmd) |  |
+| [75](days/day-075.qmd) | Tue 20 Oct | [Differencing throws away the thing you wanted](days/day-075.qmd) |  |
+| [76](days/day-076.qmd) | Wed 21 Oct | [A structural break looks exactly like a unit root](days/day-076.qmd) |  |
+| [77](days/day-077.qmd) | Thu 22 Oct | [Unit roots and spurious regression, closed book](days/day-077.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 12 <span class='week-span'>Fri 23 Oct – Thu 29 Oct</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [78](days/day-078.qmd) | Fri 23 Oct | [Placeholder title for day 78](days/day-078.qmd) |  |
-| [79](days/day-079.qmd) | Sat 24 Oct | [Placeholder title for day 79](days/day-079.qmd) |  |
-| [80](days/day-080.qmd) | Sun 25 Oct | [Placeholder title for day 80](days/day-080.qmd) |  |
-| [81](days/day-081.qmd) | Mon 26 Oct | [Placeholder title for day 81](days/day-081.qmd) |  |
-| [82](days/day-082.qmd) | Tue 27 Oct | [Placeholder title for day 82](days/day-082.qmd) |  |
-| [83](days/day-083.qmd) | Wed 28 Oct | [Placeholder title for day 83](days/day-083.qmd) |  |
-| [84](days/day-084.qmd) | Thu 29 Oct | [Placeholder title for day 84](days/day-084.qmd) | [catch-up]{.pill .pill-catchup} |
+| [78](days/day-078.qmd) | Fri 23 Oct | [Cointegration, and the error correction model](days/day-078.qmd) |  |
+| [79](days/day-079.qmd) | Sat 24 Oct | [How often your own screen finds a pair that does not exist](days/day-079.qmd) |  |
+| [80](days/day-080.qmd) | Sun 25 Oct | [Johansen tests the whole system at once](days/day-080.qmd) |  |
+| [81](days/day-081.qmd) | Mon 26 Oct | [The pair selection rule, written down before the results](days/day-081.qmd) |  |
+| [82](days/day-082.qmd) | Tue 27 Oct | [The half-life, and thresholds derived from it](days/day-082.qmd) |  |
+| [83](days/day-083.qmd) | Wed 28 Oct | [The pairs backtest, with costs, in sample](days/day-083.qmd) |  |
+| [84](days/day-084.qmd) | Thu 29 Oct | [Cointegration, closed book](days/day-084.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 13 <span class='week-span'>Fri 30 Oct – Thu 5 Nov</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [85](days/day-085.qmd) | Fri 30 Oct | [Placeholder title for day 85](days/day-085.qmd) |  |
-| [86](days/day-086.qmd) | Sat 31 Oct | [Placeholder title for day 86](days/day-086.qmd) |  |
-| [87](days/day-087.qmd) | Sun 1 Nov | [Placeholder title for day 87](days/day-087.qmd) |  |
-| [88](days/day-088.qmd) | Mon 2 Nov | [Placeholder title for day 88](days/day-088.qmd) |  |
-| [89](days/day-089.qmd) | Tue 3 Nov | [Placeholder title for day 89](days/day-089.qmd) |  |
-| [90](days/day-090.qmd) | Wed 4 Nov | [Placeholder title for day 90](days/day-090.qmd) |  |
-| [91](days/day-091.qmd) | Thu 5 Nov | [Placeholder title for day 91](days/day-091.qmd) | [catch-up]{.pill .pill-catchup} |
+| [85](days/day-085.qmd) | Fri 30 Oct | [EWMA is a one-parameter volatility model that is hard to beat](days/day-085.qmd) |  |
+| [86](days/day-086.qmd) | Sat 31 Oct | [What GARCH actually asserts, and what the coefficient sum means](days/day-086.qmd) |  |
+| [87](days/day-087.qmd) | Sun 1 Nov | [Realised volatility, and the estimator that uses the intraday path](days/day-087.qmd) |  |
+| [88](days/day-088.qmd) | Mon 2 Nov | [HAR: three lags beat a fitted GARCH most of the time](days/day-088.qmd) |  |
+| [89](days/day-089.qmd) | Tue 3 Nov | [Evaluating a volatility forecast against the right loss](days/day-089.qmd) |  |
+| [90](days/day-090.qmd) | Wed 4 Nov | [Volatility targeting, and what it does and does not improve](days/day-090.qmd) |  |
+| [91](days/day-091.qmd) | Thu 5 Nov | [Volatility modelling, closed book](days/day-091.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 14 <span class='week-span'>Fri 6 Nov – Thu 12 Nov</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [92](days/day-092.qmd) | Fri 6 Nov | [Placeholder title for day 92](days/day-092.qmd) |  |
-| [93](days/day-093.qmd) | Sat 7 Nov | [Placeholder title for day 93](days/day-093.qmd) |  |
-| [94](days/day-094.qmd) | Sun 8 Nov | [Placeholder title for day 94](days/day-094.qmd) |  |
-| [95](days/day-095.qmd) | Mon 9 Nov | [Placeholder title for day 95](days/day-095.qmd) |  |
-| [96](days/day-096.qmd) | Tue 10 Nov | [Placeholder title for day 96](days/day-096.qmd) |  |
-| [97](days/day-097.qmd) | Wed 11 Nov | [Placeholder title for day 97](days/day-097.qmd) |  |
-| [98](days/day-098.qmd) | Thu 12 Nov | [Placeholder title for day 98](days/day-098.qmd) | [milestone]{.pill .pill-milestone} |
+| [92](days/day-092.qmd) | Fri 6 Nov | [The Kalman filter in one sentence, then in one dimension](days/day-092.qmd) |  |
+| [93](days/day-093.qmd) | Sat 7 Nov | [A hedge ratio that is allowed to move](days/day-093.qmd) |  |
+| [94](days/day-094.qmd) | Sun 8 Nov | [Does the moving hedge ratio actually help, or just fit better](days/day-094.qmd) |  |
+| [95](days/day-095.qmd) | Mon 9 Nov | [Regime switching, and the temptation it represents](days/day-095.qmd) |  |
+| [96](days/day-096.qmd) | Tue 10 Nov | [The out-of-sample run, once, on a period you never looked at](days/day-096.qmd) |  |
+| [97](days/day-097.qmd) | Wed 11 Nov | [Writing down what would have made you stop](days/day-097.qmd) |  |
+| [98](days/day-098.qmd) | Thu 12 Nov | [Milestone: a pairs strategy, and what it survived](days/day-098.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## Portfolios and risk
 
@@ -203,61 +203,61 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [99](days/day-099.qmd) | Fri 13 Nov | [Placeholder title for day 99](days/day-099.qmd) |  |
-| [100](days/day-100.qmd) | Sat 14 Nov | [Placeholder title for day 100](days/day-100.qmd) |  |
-| [101](days/day-101.qmd) | Sun 15 Nov | [Placeholder title for day 101](days/day-101.qmd) |  |
-| [102](days/day-102.qmd) | Mon 16 Nov | [Placeholder title for day 102](days/day-102.qmd) |  |
-| [103](days/day-103.qmd) | Tue 17 Nov | [Placeholder title for day 103](days/day-103.qmd) |  |
-| [104](days/day-104.qmd) | Wed 18 Nov | [Placeholder title for day 104](days/day-104.qmd) |  |
-| [105](days/day-105.qmd) | Thu 19 Nov | [Placeholder title for day 105](days/day-105.qmd) | [catch-up]{.pill .pill-catchup} |
+| [99](days/day-099.qmd) | Fri 13 Nov | [Markowitz is one convex problem and three bad inputs](days/day-099.qmd) |  |
+| [100](days/day-100.qmd) | Sat 14 Nov | [The unconstrained solution wants 400 percent gross exposure](days/day-100.qmd) |  |
+| [101](days/day-101.qmd) | Sun 15 Nov | [How much of the frontier is estimation error](days/day-101.qmd) |  |
+| [102](days/day-102.qmd) | Mon 16 Nov | [Constraints are shrinkage wearing a different hat](days/day-102.qmd) |  |
+| [103](days/day-103.qmd) | Tue 17 Nov | [The three benchmarks that beat you, and when they do not](days/day-103.qmd) |  |
+| [104](days/day-104.qmd) | Wed 18 Nov | [Black-Litterman is a prior on returns, said carefully](days/day-104.qmd) |  |
+| [105](days/day-105.qmd) | Thu 19 Nov | [Week 15, and the number of parameters you are estimating](days/day-105.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 16 <span class='week-span'>Fri 20 Nov – Thu 26 Nov</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [106](days/day-106.qmd) | Fri 20 Nov | [Placeholder title for day 106](days/day-106.qmd) |  |
-| [107](days/day-107.qmd) | Sat 21 Nov | [Placeholder title for day 107](days/day-107.qmd) |  |
-| [108](days/day-108.qmd) | Sun 22 Nov | [Placeholder title for day 108](days/day-108.qmd) |  |
-| [109](days/day-109.qmd) | Mon 23 Nov | [Placeholder title for day 109](days/day-109.qmd) |  |
-| [110](days/day-110.qmd) | Tue 24 Nov | [Placeholder title for day 110](days/day-110.qmd) |  |
-| [111](days/day-111.qmd) | Wed 25 Nov | [Placeholder title for day 111](days/day-111.qmd) |  |
-| [112](days/day-112.qmd) | Thu 26 Nov | [Placeholder title for day 112](days/day-112.qmd) | [catch-up]{.pill .pill-catchup} |
+| [106](days/day-106.qmd) | Fri 20 Nov | [A sample covariance matrix with more assets than days](days/day-106.qmd) |  |
+| [107](days/day-107.qmd) | Sat 21 Nov | [Marchenko-Pastur says which eigenvalues are noise](days/day-107.qmd) |  |
+| [108](days/day-108.qmd) | Sun 22 Nov | [Cleaning a spectrum, and testing whether it helped](days/day-108.qmd) |  |
+| [109](days/day-109.qmd) | Mon 23 Nov | [Ledoit-Wolf, and the same problem in a different field](days/day-109.qmd) |  |
+| [110](days/day-110.qmd) | Tue 24 Nov | [One covariance interface, four estimators behind it](days/day-110.qmd) |  |
+| [111](days/day-111.qmd) | Wed 25 Nov | [A factor covariance is structure instead of shrinkage](days/day-111.qmd) |  |
+| [112](days/day-112.qmd) | Thu 26 Nov | [Covariance in high dimensions, closed book](days/day-112.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 17 <span class='week-span'>Fri 27 Nov – Thu 3 Dec</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [113](days/day-113.qmd) | Fri 27 Nov | [Placeholder title for day 113](days/day-113.qmd) |  |
-| [114](days/day-114.qmd) | Sat 28 Nov | [Placeholder title for day 114](days/day-114.qmd) |  |
-| [115](days/day-115.qmd) | Sun 29 Nov | [Placeholder title for day 115](days/day-115.qmd) |  |
-| [116](days/day-116.qmd) | Mon 30 Nov | [Placeholder title for day 116](days/day-116.qmd) |  |
-| [117](days/day-117.qmd) | Tue 1 Dec | [Placeholder title for day 117](days/day-117.qmd) |  |
-| [118](days/day-118.qmd) | Wed 2 Dec | [Placeholder title for day 118](days/day-118.qmd) |  |
-| [119](days/day-119.qmd) | Thu 3 Dec | [Placeholder title for day 119](days/day-119.qmd) | [catch-up]{.pill .pill-catchup} |
+| [113](days/day-113.qmd) | Fri 27 Nov | [CAPM as a regression, and what beta estimates](days/day-113.qmd) |  |
+| [114](days/day-114.qmd) | Sat 28 Nov | [Where the three factors came from, procedurally](days/day-114.qmd) |  |
+| [115](days/day-115.qmd) | Sun 29 Nov | [Momentum, and the factors that stopped working](days/day-115.qmd) |  |
+| [116](days/day-116.qmd) | Mon 30 Nov | [A risk factor is something you hedge, an alpha factor is not](days/day-116.qmd) |  |
+| [117](days/day-117.qmd) | Tue 1 Dec | [Neutralising a portfolio, and what it costs you](days/day-117.qmd) |  |
+| [118](days/day-118.qmd) | Wed 2 Dec | [Fama-MacBeth, and the standard error it fixes](days/day-118.qmd) |  |
+| [119](days/day-119.qmd) | Thu 3 Dec | [Factor models, closed book](days/day-119.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 18 <span class='week-span'>Fri 4 Dec – Thu 10 Dec</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [120](days/day-120.qmd) | Fri 4 Dec | [Placeholder title for day 120](days/day-120.qmd) |  |
-| [121](days/day-121.qmd) | Sat 5 Dec | [Placeholder title for day 121](days/day-121.qmd) |  |
-| [122](days/day-122.qmd) | Sun 6 Dec | [Placeholder title for day 122](days/day-122.qmd) |  |
-| [123](days/day-123.qmd) | Mon 7 Dec | [Placeholder title for day 123](days/day-123.qmd) |  |
-| [124](days/day-124.qmd) | Tue 8 Dec | [Placeholder title for day 124](days/day-124.qmd) |  |
-| [125](days/day-125.qmd) | Wed 9 Dec | [Placeholder title for day 125](days/day-125.qmd) |  |
-| [126](days/day-126.qmd) | Thu 10 Dec | [Placeholder title for day 126](days/day-126.qmd) | [catch-up]{.pill .pill-catchup} |
+| [120](days/day-120.qmd) | Fri 4 Dec | [Targeting a volatility at the portfolio level](days/day-120.qmd) |  |
+| [121](days/day-121.qmd) | Sat 5 Dec | [VaR says nothing about the day it is wrong](days/day-121.qmd) |  |
+| [122](days/day-122.qmd) | Sun 6 Dec | [Expected shortfall, and the property VaR lacks](days/day-122.qmd) |  |
+| [123](days/day-123.qmd) | Mon 7 Dec | [Backtesting a risk model: coverage and independence](days/day-123.qmd) |  |
+| [124](days/day-124.qmd) | Tue 8 Dec | [Stress testing, when the estimate is the problem](days/day-124.qmd) |  |
+| [125](days/day-125.qmd) | Wed 9 Dec | [The diversification that disappears when you need it](days/day-125.qmd) |  |
+| [126](days/day-126.qmd) | Thu 10 Dec | [Risk measurement, closed book](days/day-126.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 19 <span class='week-span'>Fri 11 Dec – Thu 17 Dec</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [127](days/day-127.qmd) | Fri 11 Dec | [Placeholder title for day 127](days/day-127.qmd) |  |
-| [128](days/day-128.qmd) | Sat 12 Dec | [Placeholder title for day 128](days/day-128.qmd) |  |
-| [129](days/day-129.qmd) | Sun 13 Dec | [Placeholder title for day 129](days/day-129.qmd) |  |
-| [130](days/day-130.qmd) | Mon 14 Dec | [Placeholder title for day 130](days/day-130.qmd) |  |
-| [131](days/day-131.qmd) | Tue 15 Dec | [Placeholder title for day 131](days/day-131.qmd) |  |
-| [132](days/day-132.qmd) | Wed 16 Dec | [Placeholder title for day 132](days/day-132.qmd) |  |
-| [133](days/day-133.qmd) | Thu 17 Dec | [Placeholder title for day 133](days/day-133.qmd) | [milestone]{.pill .pill-milestone} |
+| [127](days/day-127.qmd) | Fri 11 Dec | [Kelly, derived rather than quoted](days/day-127.qmd) |  |
+| [128](days/day-128.qmd) | Sat 12 Dec | [Continuous Kelly is your Sharpe ratio over your volatility](days/day-128.qmd) |  |
+| [129](days/day-129.qmd) | Sun 13 Dec | [Fractional Kelly, and the drawdown you are choosing](days/day-129.qmd) |  |
+| [130](days/day-130.qmd) | Mon 14 Dec | [Risk of ruin, and the constraint that is not statistical](days/day-130.qmd) |  |
+| [131](days/day-131.qmd) | Tue 15 Dec | [Sizing the actual book, with every number defended](days/day-131.qmd) |  |
+| [132](days/day-132.qmd) | Wed 16 Dec | [Did the risk model beat equal weighting, honestly](days/day-132.qmd) |  |
+| [133](days/day-133.qmd) | Thu 17 Dec | [Milestone: a factor risk model built by hand](days/day-133.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## The research harness
 
@@ -265,49 +265,49 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [134](days/day-134.qmd) | Fri 18 Dec | [Placeholder title for day 134](days/day-134.qmd) |  |
-| [135](days/day-135.qmd) | Sat 19 Dec | [Placeholder title for day 135](days/day-135.qmd) |  |
-| [136](days/day-136.qmd) | Sun 20 Dec | [Placeholder title for day 136](days/day-136.qmd) |  |
-| [137](days/day-137.qmd) | Mon 21 Dec | [Placeholder title for day 137](days/day-137.qmd) |  |
-| [138](days/day-138.qmd) | Tue 22 Dec | [Placeholder title for day 138](days/day-138.qmd) |  |
-| [139](days/day-139.qmd) | Wed 23 Dec | [Placeholder title for day 139](days/day-139.qmd) |  |
-| [140](days/day-140.qmd) | Thu 24 Dec | [Placeholder title for day 140](days/day-140.qmd) | [catch-up]{.pill .pill-catchup} |
+| [134](days/day-134.qmd) | Fri 18 Dec | [Eleven ways the future gets into a backtest](days/day-134.qmd) |  |
+| [135](days/day-135.qmd) | Sat 19 Dec | [Two timestamps per row, and the lag between them](days/day-135.qmd) |  |
+| [136](days/day-136.qmd) | Sun 20 Dec | [A universe that only contains what existed at the time](days/day-136.qmd) |  |
+| [137](days/day-137.qmd) | Mon 21 Dec | [Fundamentals are revised, and your backtest read the revision](days/day-137.qmd) |  |
+| [138](days/day-138.qmd) | Tue 22 Dec | [The delisting return your data does not have](days/day-138.qmd) |  |
+| [139](days/day-139.qmd) | Wed 23 Dec | [The rebuild, and the test that guards it](days/day-139.qmd) |  |
+| [140](days/day-140.qmd) | Thu 24 Dec | [What the point-in-time rebuild cost you](days/day-140.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 21 <span class='week-span'>Fri 25 Dec – Thu 31 Dec</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [141](days/day-141.qmd) | Fri 25 Dec | [Placeholder title for day 141](days/day-141.qmd) |  |
-| [142](days/day-142.qmd) | Sat 26 Dec | [Placeholder title for day 142](days/day-142.qmd) |  |
-| [143](days/day-143.qmd) | Sun 27 Dec | [Placeholder title for day 143](days/day-143.qmd) |  |
-| [144](days/day-144.qmd) | Mon 28 Dec | [Placeholder title for day 144](days/day-144.qmd) |  |
-| [145](days/day-145.qmd) | Tue 29 Dec | [Placeholder title for day 145](days/day-145.qmd) |  |
-| [146](days/day-146.qmd) | Wed 30 Dec | [Placeholder title for day 146](days/day-146.qmd) |  |
-| [147](days/day-147.qmd) | Thu 31 Dec | [Placeholder title for day 147](days/day-147.qmd) | [catch-up]{.pill .pill-catchup} |
+| [141](days/day-141.qmd) | Fri 25 Dec | [Vectorized and event-driven lie about different things](days/day-141.qmd) |  |
+| [142](days/day-142.qmd) | Sat 26 Dec | [The event loop, and the order things happen in](days/day-142.qmd) |  |
+| [143](days/day-143.qmd) | Sun 27 Dec | [The fill model is where optimism hides](days/day-143.qmd) |  |
+| [144](days/day-144.qmd) | Mon 28 Dec | [Orders have a lifecycle, and positions are derived](days/day-144.qmd) |  |
+| [145](days/day-145.qmd) | Tue 29 Dec | [One result object, and everything downstream reads it](days/day-145.qmd) |  |
+| [146](days/day-146.qmd) | Wed 30 Dec | [Reading a production engine, and what it does differently](days/day-146.qmd) |  |
+| [147](days/day-147.qmd) | Thu 31 Dec | [The engine, exercised](days/day-147.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 22 <span class='week-span'>Fri 1 Jan – Thu 7 Jan</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [148](days/day-148.qmd) | Fri 1 Jan | [Placeholder title for day 148](days/day-148.qmd) |  |
-| [149](days/day-149.qmd) | Sat 2 Jan | [Placeholder title for day 149](days/day-149.qmd) |  |
-| [150](days/day-150.qmd) | Sun 3 Jan | [Placeholder title for day 150](days/day-150.qmd) |  |
-| [151](days/day-151.qmd) | Mon 4 Jan | [Placeholder title for day 151](days/day-151.qmd) |  |
-| [152](days/day-152.qmd) | Tue 5 Jan | [Placeholder title for day 152](days/day-152.qmd) |  |
-| [153](days/day-153.qmd) | Wed 6 Jan | [Placeholder title for day 153](days/day-153.qmd) |  |
-| [154](days/day-154.qmd) | Thu 7 Jan | [Placeholder title for day 154](days/day-154.qmd) | [catch-up]{.pill .pill-catchup} |
+| [148](days/day-148.qmd) | Fri 1 Jan | [The spread you cross, measured across the liquidity range](days/day-148.qmd) |  |
+| [149](days/day-149.qmd) | Sat 2 Jan | [Impact goes as the square root, not linearly](days/day-149.qmd) |  |
+| [150](days/day-150.qmd) | Sun 3 Jan | [Borrow and financing, the costs with no price print](days/day-150.qmd) |  |
+| [151](days/day-151.qmd) | Mon 4 Jan | [Turnover is the variable that decides everything](days/day-151.qmd) |  |
+| [152](days/day-152.qmd) | Tue 5 Jan | [The chart that decides whether a strategy exists](days/day-152.qmd) |  |
+| [153](days/day-153.qmd) | Wed 6 Jan | [The cost model, with the components separated](days/day-153.qmd) |  |
+| [154](days/day-154.qmd) | Thu 7 Jan | [Costs, closed book](days/day-154.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 23 <span class='week-span'>Fri 8 Jan – Thu 14 Jan</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [155](days/day-155.qmd) | Fri 8 Jan | [Placeholder title for day 155](days/day-155.qmd) |  |
-| [156](days/day-156.qmd) | Sat 9 Jan | [Placeholder title for day 156](days/day-156.qmd) |  |
-| [157](days/day-157.qmd) | Sun 10 Jan | [Placeholder title for day 157](days/day-157.qmd) |  |
-| [158](days/day-158.qmd) | Mon 11 Jan | [Placeholder title for day 158](days/day-158.qmd) |  |
-| [159](days/day-159.qmd) | Tue 12 Jan | [Placeholder title for day 159](days/day-159.qmd) |  |
-| [160](days/day-160.qmd) | Wed 13 Jan | [Placeholder title for day 160](days/day-160.qmd) |  |
-| [161](days/day-161.qmd) | Thu 14 Jan | [Placeholder title for day 161](days/day-161.qmd) | [milestone]{.pill .pill-milestone} |
+| [155](days/day-155.qmd) | Fri 8 Jan | [Poison the future and assert nothing changes](days/day-155.qmd) |  |
+| [156](days/day-156.qmd) | Sat 9 Jan | [Synthetic data whose right answer you already know](days/day-156.qmd) |  |
+| [157](days/day-157.qmd) | Sun 10 Jan | [The null strategy test, and what your engine says about nothing](days/day-157.qmd) |  |
+| [158](days/day-158.qmd) | Mon 11 Jan | [Invariants that must hold for every strategy and every input](days/day-158.qmd) |  |
+| [159](days/day-159.qmd) | Tue 12 Jan | [One command, same number, six months later](days/day-159.qmd) |  |
+| [160](days/day-160.qmd) | Wed 13 Jan | [The list of lies your backtester still tells](days/day-160.qmd) |  |
+| [161](days/day-161.qmd) | Thu 14 Jan | [Milestone: the research platform](days/day-161.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## Alpha
 
@@ -315,73 +315,73 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [162](days/day-162.qmd) | Fri 15 Jan | [Placeholder title for day 162](days/day-162.qmd) |  |
-| [163](days/day-163.qmd) | Sat 16 Jan | [Placeholder title for day 163](days/day-163.qmd) |  |
-| [164](days/day-164.qmd) | Sun 17 Jan | [Placeholder title for day 164](days/day-164.qmd) |  |
-| [165](days/day-165.qmd) | Mon 18 Jan | [Placeholder title for day 165](days/day-165.qmd) |  |
-| [166](days/day-166.qmd) | Tue 19 Jan | [Placeholder title for day 166](days/day-166.qmd) |  |
-| [167](days/day-167.qmd) | Wed 20 Jan | [Placeholder title for day 167](days/day-167.qmd) |  |
-| [168](days/day-168.qmd) | Thu 21 Jan | [Placeholder title for day 168](days/day-168.qmd) | [catch-up]{.pill .pill-catchup} |
+| [162](days/day-162.qmd) | Fri 15 Jan | [A signal is a forecast with a scale you have to choose](days/day-162.qmd) |  |
+| [163](days/day-163.qmd) | Sat 16 Jan | [Cross-sectional and time-series signals bet on different things](days/day-163.qmd) |  |
+| [164](days/day-164.qmd) | Sun 17 Jan | [The transform is part of the bet, not a formatting step](days/day-164.qmd) |  |
+| [165](days/day-165.qmd) | Mon 18 Jan | [Neutralise the signal, not just the portfolio](days/day-165.qmd) |  |
+| [166](days/day-166.qmd) | Tue 19 Jan | [From scores to weights, the map you keep implicit](days/day-166.qmd) |  |
+| [167](days/day-167.qmd) | Wed 20 Jan | [The first three signals, built through the interface](days/day-167.qmd) |  |
+| [168](days/day-168.qmd) | Thu 21 Jan | [Week 24, and three signals that run](days/day-168.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 25 <span class='week-span'>Fri 22 Jan – Thu 28 Jan</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [169](days/day-169.qmd) | Fri 22 Jan | [Placeholder title for day 169](days/day-169.qmd) |  |
-| [170](days/day-170.qmd) | Sat 23 Jan | [Placeholder title for day 170](days/day-170.qmd) |  |
-| [171](days/day-171.qmd) | Sun 24 Jan | [Placeholder title for day 171](days/day-171.qmd) |  |
-| [172](days/day-172.qmd) | Mon 25 Jan | [Placeholder title for day 172](days/day-172.qmd) |  |
-| [173](days/day-173.qmd) | Tue 26 Jan | [Placeholder title for day 173](days/day-173.qmd) |  |
-| [174](days/day-174.qmd) | Wed 27 Jan | [Placeholder title for day 174](days/day-174.qmd) |  |
-| [175](days/day-175.qmd) | Thu 28 Jan | [Placeholder title for day 175](days/day-175.qmd) | [catch-up]{.pill .pill-catchup} |
+| [169](days/day-169.qmd) | Fri 22 Jan | [The information coefficient is a Spearman correlation](days/day-169.qmd) |  |
+| [170](days/day-170.qmd) | Sat 23 Jan | [IC decay tells you the horizon to trade](days/day-170.qmd) |  |
+| [171](days/day-171.qmd) | Sun 24 Jan | [IC times the square root of breadth, and its four lies](days/day-171.qmd) |  |
+| [172](days/day-172.qmd) | Mon 25 Jan | [Quantile spreads, and the monotonicity nobody checks](days/day-172.qmd) |  |
+| [173](days/day-173.qmd) | Tue 26 Jan | [Turnover, capacity, and the size where a signal dies](days/day-173.qmd) |  |
+| [174](days/day-174.qmd) | Wed 27 Jan | [One page per signal, generated rather than written](days/day-174.qmd) |  |
+| [175](days/day-175.qmd) | Thu 28 Jan | [Signal evaluation, closed book](days/day-175.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 26 <span class='week-span'>Fri 29 Jan – Thu 4 Feb</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [176](days/day-176.qmd) | Fri 29 Jan | [Placeholder title for day 176](days/day-176.qmd) |  |
-| [177](days/day-177.qmd) | Sat 30 Jan | [Placeholder title for day 177](days/day-177.qmd) |  |
-| [178](days/day-178.qmd) | Sun 31 Jan | [Placeholder title for day 178](days/day-178.qmd) |  |
-| [179](days/day-179.qmd) | Mon 1 Feb | [Placeholder title for day 179](days/day-179.qmd) |  |
-| [180](days/day-180.qmd) | Tue 2 Feb | [Placeholder title for day 180](days/day-180.qmd) |  |
-| [181](days/day-181.qmd) | Wed 3 Feb | [Placeholder title for day 181](days/day-181.qmd) |  |
-| [182](days/day-182.qmd) | Thu 4 Feb | [Placeholder title for day 182](days/day-182.qmd) | [catch-up]{.pill .pill-catchup} |
+| [176](days/day-176.qmd) | Fri 29 Jan | [Value, replicated with the reporting lag respected](days/day-176.qmd) |  |
+| [177](days/day-177.qmd) | Sat 30 Jan | [Momentum, and the crashes that pay for its Sharpe](days/day-177.qmd) |  |
+| [178](days/day-178.qmd) | Sun 31 Jan | [Quality, and the definition problem underneath it](days/day-178.qmd) |  |
+| [179](days/day-179.qmd) | Mon 1 Feb | [Low volatility wins, and the explanation is a constraint](days/day-179.qmd) |  |
+| [180](days/day-180.qmd) | Tue 2 Feb | [Short-term reversal is real, and mostly a liquidity payment](days/day-180.qmd) |  |
+| [181](days/day-181.qmd) | Wed 3 Feb | [Which of them still work, on your data, after costs](days/day-181.qmd) |  |
+| [182](days/day-182.qmd) | Thu 4 Feb | [The classic signals, closed book](days/day-182.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 27 <span class='week-span'>Fri 5 Feb – Thu 11 Feb</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [183](days/day-183.qmd) | Fri 5 Feb | [Placeholder title for day 183](days/day-183.qmd) |  |
-| [184](days/day-184.qmd) | Sat 6 Feb | [Placeholder title for day 184](days/day-184.qmd) |  |
-| [185](days/day-185.qmd) | Sun 7 Feb | [Placeholder title for day 185](days/day-185.qmd) |  |
-| [186](days/day-186.qmd) | Mon 8 Feb | [Placeholder title for day 186](days/day-186.qmd) |  |
-| [187](days/day-187.qmd) | Tue 9 Feb | [Placeholder title for day 187](days/day-187.qmd) |  |
-| [188](days/day-188.qmd) | Wed 10 Feb | [Placeholder title for day 188](days/day-188.qmd) |  |
-| [189](days/day-189.qmd) | Thu 11 Feb | [Placeholder title for day 189](days/day-189.qmd) | [catch-up]{.pill .pill-catchup} |
+| [183](days/day-183.qmd) | Fri 5 Feb | [A continuous futures series is something you construct](days/day-183.qmd) |  |
+| [184](days/day-184.qmd) | Sat 6 Feb | [Time-series momentum, and where its diversification comes from](days/day-184.qmd) |  |
+| [185](days/day-185.qmd) | Sun 7 Feb | [Carry is one definition applied to four asset classes](days/day-185.qmd) |  |
+| [186](days/day-186.qmd) | Mon 8 Feb | [Seasonality is where you will fool yourself fastest](days/day-186.qmd) |  |
+| [187](days/day-187.qmd) | Tue 9 Feb | [Volatility as a signal, in level and in change](days/day-187.qmd) |  |
+| [188](days/day-188.qmd) | Wed 10 Feb | [Sizing a futures book when the contracts are not comparable](days/day-188.qmd) |  |
+| [189](days/day-189.qmd) | Thu 11 Feb | [Time-series signals, closed book](days/day-189.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 28 <span class='week-span'>Fri 12 Feb – Thu 18 Feb</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [190](days/day-190.qmd) | Fri 12 Feb | [Placeholder title for day 190](days/day-190.qmd) |  |
-| [191](days/day-191.qmd) | Sat 13 Feb | [Placeholder title for day 191](days/day-191.qmd) |  |
-| [192](days/day-192.qmd) | Sun 14 Feb | [Placeholder title for day 192](days/day-192.qmd) |  |
-| [193](days/day-193.qmd) | Mon 15 Feb | [Placeholder title for day 193](days/day-193.qmd) |  |
-| [194](days/day-194.qmd) | Tue 16 Feb | [Placeholder title for day 194](days/day-194.qmd) |  |
-| [195](days/day-195.qmd) | Wed 17 Feb | [Placeholder title for day 195](days/day-195.qmd) |  |
-| [196](days/day-196.qmd) | Thu 18 Feb | [Placeholder title for day 196](days/day-196.qmd) | [catch-up]{.pill .pill-catchup} |
+| [190](days/day-190.qmd) | Fri 12 Feb | [Fundamentals at scale, from EDGAR rather than a vendor](days/day-190.qmd) |  |
+| [191](days/day-191.qmd) | Sat 13 Feb | [Accruals, and a signal that is about accounting rather than price](days/day-191.qmd) |  |
+| [192](days/day-192.qmd) | Sun 14 Feb | [Post-earnings drift, and the event study machinery](days/day-192.qmd) |  |
+| [193](days/day-193.qmd) | Mon 15 Feb | [Counting words in filings gets you further than it should](days/day-193.qmd) |  |
+| [194](days/day-194.qmd) | Tue 16 Feb | [The leak that only exists for pretrained models](days/day-194.qmd) |  |
+| [195](days/day-195.qmd) | Wed 17 Feb | [What data is worth paying for, at your size](days/day-195.qmd) |  |
+| [196](days/day-196.qmd) | Thu 18 Feb | [Data beyond price, closed book](days/day-196.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 29 <span class='week-span'>Fri 19 Feb – Thu 25 Feb</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [197](days/day-197.qmd) | Fri 19 Feb | [Placeholder title for day 197](days/day-197.qmd) |  |
-| [198](days/day-198.qmd) | Sat 20 Feb | [Placeholder title for day 198](days/day-198.qmd) |  |
-| [199](days/day-199.qmd) | Sun 21 Feb | [Placeholder title for day 199](days/day-199.qmd) |  |
-| [200](days/day-200.qmd) | Mon 22 Feb | [Placeholder title for day 200](days/day-200.qmd) |  |
-| [201](days/day-201.qmd) | Tue 23 Feb | [Placeholder title for day 201](days/day-201.qmd) |  |
-| [202](days/day-202.qmd) | Wed 24 Feb | [Placeholder title for day 202](days/day-202.qmd) |  |
-| [203](days/day-203.qmd) | Thu 25 Feb | [Placeholder title for day 203](days/day-203.qmd) | [milestone]{.pill .pill-milestone} |
+| [197](days/day-197.qmd) | Fri 19 Feb | [Your signals are more correlated than you think](days/day-197.qmd) |  |
+| [198](days/day-198.qmd) | Sat 20 Feb | [Orthogonalising, and what the residual actually forecasts](days/day-198.qmd) |  |
+| [199](days/day-199.qmd) | Sun 21 Feb | [Equal weights beat optimised weights more often than not](days/day-199.qmd) |  |
+| [200](days/day-200.qmd) | Mon 22 Feb | [Combining scores and combining portfolios are different trades](days/day-200.qmd) |  |
+| [201](days/day-201.qmd) | Tue 23 Feb | [The combined book, with every constraint applied](days/day-201.qmd) |  |
+| [202](days/day-202.qmd) | Wed 24 Feb | [Counting everything you tried in this phase](days/day-202.qmd) |  |
+| [203](days/day-203.qmd) | Thu 25 Feb | [Milestone: the alpha book](days/day-203.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## Machine learning
 
@@ -389,61 +389,61 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [204](days/day-204.qmd) | Fri 26 Feb | [Placeholder title for day 204](days/day-204.qmd) |  |
-| [205](days/day-205.qmd) | Sat 27 Feb | [Placeholder title for day 205](days/day-205.qmd) |  |
-| [206](days/day-206.qmd) | Sun 28 Feb | [Placeholder title for day 206](days/day-206.qmd) |  |
-| [207](days/day-207.qmd) | Mon 1 Mar | [Placeholder title for day 207](days/day-207.qmd) |  |
-| [208](days/day-208.qmd) | Tue 2 Mar | [Placeholder title for day 208](days/day-208.qmd) |  |
-| [209](days/day-209.qmd) | Wed 3 Mar | [Placeholder title for day 209](days/day-209.qmd) |  |
-| [210](days/day-210.qmd) | Thu 4 Mar | [Placeholder title for day 210](days/day-210.qmd) | [catch-up]{.pill .pill-catchup} |
+| [204](days/day-204.qmd) | Fri 26 Feb | [The signal is two orders of magnitude weaker than you are used to](days/day-204.qmd) |  |
+| [205](days/day-205.qmd) | Sat 27 Feb | [Overlapping labels break the assumption everything rests on](days/day-205.qmd) |  |
+| [206](days/day-206.qmd) | Sun 28 Feb | [Purging and embargoing, and why they are two fixes](days/day-206.qmd) |  |
+| [207](days/day-207.qmd) | Mon 1 Mar | [Walk-forward, and what it costs you in statistical power](days/day-207.qmd) |  |
+| [208](days/day-208.qmd) | Tue 2 Mar | [The relationship you fitted may not be the same one](days/day-208.qmd) |  |
+| [209](days/day-209.qmd) | Wed 3 Mar | [The dataset assembly, and the test that guards it](days/day-209.qmd) |  |
+| [210](days/day-210.qmd) | Thu 4 Mar | [Validation, closed book](days/day-210.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 31 <span class='week-span'>Fri 5 Mar – Thu 11 Mar</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [211](days/day-211.qmd) | Fri 5 Mar | [Placeholder title for day 211](days/day-211.qmd) |  |
-| [212](days/day-212.qmd) | Sat 6 Mar | [Placeholder title for day 212](days/day-212.qmd) |  |
-| [213](days/day-213.qmd) | Sun 7 Mar | [Placeholder title for day 213](days/day-213.qmd) |  |
-| [214](days/day-214.qmd) | Mon 8 Mar | [Placeholder title for day 214](days/day-214.qmd) |  |
-| [215](days/day-215.qmd) | Tue 9 Mar | [Placeholder title for day 215](days/day-215.qmd) |  |
-| [216](days/day-216.qmd) | Wed 10 Mar | [Placeholder title for day 216](days/day-216.qmd) |  |
-| [217](days/day-217.qmd) | Thu 11 Mar | [Placeholder title for day 217](days/day-217.qmd) | [catch-up]{.pill .pill-catchup} |
+| [211](days/day-211.qmd) | Fri 5 Mar | [The label is a modelling decision, not a given](days/day-211.qmd) |  |
+| [212](days/day-212.qmd) | Sat 6 Mar | [The triple barrier labels what a trade would have done](days/day-212.qmd) |  |
+| [213](days/day-213.qmd) | Sun 7 Mar | [Sample uniqueness, and the effective size of your training set](days/day-213.qmd) |  |
+| [214](days/day-214.qmd) | Mon 8 Mar | [Sample weights, and the three things they can encode](days/day-214.qmd) |  |
+| [215](days/day-215.qmd) | Tue 9 Mar | [Meta-labelling separates when to trade from how much](days/day-215.qmd) |  |
+| [216](days/day-216.qmd) | Wed 10 Mar | [Cross-sectional labels, and the demeaning that decides the bet](days/day-216.qmd) |  |
+| [217](days/day-217.qmd) | Thu 11 Mar | [Labelling, closed book](days/day-217.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 32 <span class='week-span'>Fri 12 Mar – Thu 18 Mar</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [218](days/day-218.qmd) | Fri 12 Mar | [Placeholder title for day 218](days/day-218.qmd) |  |
-| [219](days/day-219.qmd) | Sat 13 Mar | [Placeholder title for day 219](days/day-219.qmd) |  |
-| [220](days/day-220.qmd) | Sun 14 Mar | [Placeholder title for day 220](days/day-220.qmd) |  |
-| [221](days/day-221.qmd) | Mon 15 Mar | [Placeholder title for day 221](days/day-221.qmd) |  |
-| [222](days/day-222.qmd) | Tue 16 Mar | [Placeholder title for day 222](days/day-222.qmd) |  |
-| [223](days/day-223.qmd) | Wed 17 Mar | [Placeholder title for day 223](days/day-223.qmd) |  |
-| [224](days/day-224.qmd) | Thu 18 Mar | [Placeholder title for day 224](days/day-224.qmd) | [catch-up]{.pill .pill-catchup} |
+| [218](days/day-218.qmd) | Fri 12 Mar | [The linear baseline, taken as seriously as the rival](days/day-218.qmd) |  |
+| [219](days/day-219.qmd) | Sat 13 Mar | [Reading a regularization path as a feature ranking](days/day-219.qmd) |  |
+| [220](days/day-220.qmd) | Sun 14 Mar | [Gradient boosting, and the interactions it is looking for](days/day-220.qmd) |  |
+| [221](days/day-221.qmd) | Mon 15 Mar | [Bagging helps here for a reason specific to this problem](days/day-221.qmd) |  |
+| [222](days/day-222.qmd) | Tue 16 Mar | [A hyperparameter search is a multiple testing problem](days/day-222.qmd) |  |
+| [223](days/day-223.qmd) | Wed 17 Mar | [Feature importance that survives a permutation test](days/day-223.qmd) |  |
+| [224](days/day-224.qmd) | Thu 18 Mar | [Models, closed book](days/day-224.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 33 <span class='week-span'>Fri 19 Mar – Thu 25 Mar</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [225](days/day-225.qmd) | Fri 19 Mar | [Placeholder title for day 225](days/day-225.qmd) |  |
-| [226](days/day-226.qmd) | Sat 20 Mar | [Placeholder title for day 226](days/day-226.qmd) |  |
-| [227](days/day-227.qmd) | Sun 21 Mar | [Placeholder title for day 227](days/day-227.qmd) |  |
-| [228](days/day-228.qmd) | Mon 22 Mar | [Placeholder title for day 228](days/day-228.qmd) |  |
-| [229](days/day-229.qmd) | Tue 23 Mar | [Placeholder title for day 229](days/day-229.qmd) |  |
-| [230](days/day-230.qmd) | Wed 24 Mar | [Placeholder title for day 230](days/day-230.qmd) |  |
-| [231](days/day-231.qmd) | Thu 25 Mar | [Placeholder title for day 231](days/day-231.qmd) | [catch-up]{.pill .pill-catchup} |
+| [225](days/day-225.qmd) | Fri 19 Mar | [A network on eight features is mostly a way to overfit](days/day-225.qmd) |  |
+| [226](days/day-226.qmd) | Sat 20 Mar | [Sequence models, and the autocorrelation they are looking for](days/day-226.qmd) |  |
+| [227](days/day-227.qmd) | Sun 21 Mar | [Seed variance is larger than the model differences](days/day-227.qmd) |  |
+| [228](days/day-228.qmd) | Mon 22 Mar | [Language models are extractors here, not forecasters](days/day-228.qmd) |  |
+| [229](days/day-229.qmd) | Tue 23 Mar | [What the published deep learning results actually claim](days/day-229.qmd) |  |
+| [230](days/day-230.qmd) | Wed 24 Mar | [An external scoreboard where you cannot fool yourself](days/day-230.qmd) |  |
+| [231](days/day-231.qmd) | Thu 25 Mar | [Neural networks on this data, closed book](days/day-231.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 34 <span class='week-span'>Fri 26 Mar – Thu 1 Apr</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [232](days/day-232.qmd) | Fri 26 Mar | [Placeholder title for day 232](days/day-232.qmd) |  |
-| [233](days/day-233.qmd) | Sat 27 Mar | [Placeholder title for day 233](days/day-233.qmd) |  |
-| [234](days/day-234.qmd) | Sun 28 Mar | [Placeholder title for day 234](days/day-234.qmd) |  |
-| [235](days/day-235.qmd) | Mon 29 Mar | [Placeholder title for day 235](days/day-235.qmd) |  |
-| [236](days/day-236.qmd) | Tue 30 Mar | [Placeholder title for day 236](days/day-236.qmd) |  |
-| [237](days/day-237.qmd) | Wed 31 Mar | [Placeholder title for day 237](days/day-237.qmd) |  |
-| [238](days/day-238.qmd) | Thu 1 Apr | [Placeholder title for day 238](days/day-238.qmd) | [milestone]{.pill .pill-milestone} |
+| [232](days/day-232.qmd) | Fri 26 Mar | [Freezing everything before the comparison](days/day-232.qmd) |  |
+| [233](days/day-233.qmd) | Sat 27 Mar | [The audit, run once](days/day-233.qmd) |  |
+| [234](days/day-234.qmd) | Sun 28 Mar | [Which features are proxies for something you did not intend](days/day-234.qmd) |  |
+| [235](days/day-235.qmd) | Mon 29 Mar | [The model that wins gross and loses net](days/day-235.qmd) |  |
+| [236](days/day-236.qmd) | Tue 30 Mar | [When the flexible model wins, and when it does not](days/day-236.qmd) |  |
+| [237](days/day-237.qmd) | Wed 31 Mar | [Writing a verdict that reads the same either way](days/day-237.qmd) |  |
+| [238](days/day-238.qmd) | Thu 1 Apr | [Milestone: machine learning against the linear baseline](days/day-238.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## Derivatives
 
@@ -451,73 +451,73 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [239](days/day-239.qmd) | Fri 2 Apr | [Placeholder title for day 239](days/day-239.qmd) |  |
-| [240](days/day-240.qmd) | Sat 3 Apr | [Placeholder title for day 240](days/day-240.qmd) |  |
-| [241](days/day-241.qmd) | Sun 4 Apr | [Placeholder title for day 241](days/day-241.qmd) |  |
-| [242](days/day-242.qmd) | Mon 5 Apr | [Placeholder title for day 242](days/day-242.qmd) |  |
-| [243](days/day-243.qmd) | Tue 6 Apr | [Placeholder title for day 243](days/day-243.qmd) |  |
-| [244](days/day-244.qmd) | Wed 7 Apr | [Placeholder title for day 244](days/day-244.qmd) |  |
-| [245](days/day-245.qmd) | Thu 8 Apr | [Placeholder title for day 245](days/day-245.qmd) | [catch-up]{.pill .pill-catchup} |
+| [239](days/day-239.qmd) | Fri 2 Apr | [Brownian motion is a random walk you took a limit of](days/day-239.qmd) |  |
+| [240](days/day-240.qmd) | Sat 3 Apr | [Quadratic variation is the entire difference from calculus](days/day-240.qmd) |  |
+| [241](days/day-241.qmd) | Sun 4 Apr | [The Itô integral, and why the left endpoint is a choice](days/day-241.qmd) |  |
+| [242](days/day-242.qmd) | Mon 5 Apr | [Itô's lemma is a Taylor expansion with one extra term](days/day-242.qmd) |  |
+| [243](days/day-243.qmd) | Tue 6 Apr | [Three SDEs you will meet, and what each one enforces](days/day-243.qmd) |  |
+| [244](days/day-244.qmd) | Wed 7 Apr | [Simulating an SDE, and measuring the discretisation error](days/day-244.qmd) |  |
+| [245](days/day-245.qmd) | Thu 8 Apr | [Stochastic calculus, closed book](days/day-245.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 36 <span class='week-span'>Fri 9 Apr – Thu 15 Apr</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [246](days/day-246.qmd) | Fri 9 Apr | [Placeholder title for day 246](days/day-246.qmd) |  |
-| [247](days/day-247.qmd) | Sat 10 Apr | [Placeholder title for day 247](days/day-247.qmd) |  |
-| [248](days/day-248.qmd) | Sun 11 Apr | [Placeholder title for day 248](days/day-248.qmd) |  |
-| [249](days/day-249.qmd) | Mon 12 Apr | [Placeholder title for day 249](days/day-249.qmd) |  |
-| [250](days/day-250.qmd) | Tue 13 Apr | [Placeholder title for day 250](days/day-250.qmd) |  |
-| [251](days/day-251.qmd) | Wed 14 Apr | [Placeholder title for day 251](days/day-251.qmd) |  |
-| [252](days/day-252.qmd) | Thu 15 Apr | [Placeholder title for day 252](days/day-252.qmd) | [catch-up]{.pill .pill-catchup} |
+| [246](days/day-246.qmd) | Fri 9 Apr | [Geometric Brownian motion, and everything it leaves out](days/day-246.qmd) |  |
+| [247](days/day-247.qmd) | Sat 10 Apr | [Replication, in one step, where the argument is visible](days/day-247.qmd) |  |
+| [248](days/day-248.qmd) | Sun 11 Apr | [The Black-Scholes PDE, from the hedge that removes the risk](days/day-248.qmd) |  |
+| [249](days/day-249.qmd) | Mon 12 Apr | [Risk-neutral is a change of measure, not a claim about people](days/day-249.qmd) |  |
+| [250](days/day-250.qmd) | Tue 13 Apr | [The same formula from an integral, and the two agreeing](days/day-250.qmd) |  |
+| [251](days/day-251.qmd) | Wed 14 Apr | [The pricer, tested against two independent implementations](days/day-251.qmd) |  |
+| [252](days/day-252.qmd) | Thu 15 Apr | [Black-Scholes, closed book](days/day-252.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 37 <span class='week-span'>Fri 16 Apr – Thu 22 Apr</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [253](days/day-253.qmd) | Fri 16 Apr | [Placeholder title for day 253](days/day-253.qmd) |  |
-| [254](days/day-254.qmd) | Sat 17 Apr | [Placeholder title for day 254](days/day-254.qmd) |  |
-| [255](days/day-255.qmd) | Sun 18 Apr | [Placeholder title for day 255](days/day-255.qmd) |  |
-| [256](days/day-256.qmd) | Mon 19 Apr | [Placeholder title for day 256](days/day-256.qmd) |  |
-| [257](days/day-257.qmd) | Tue 20 Apr | [Placeholder title for day 257](days/day-257.qmd) |  |
-| [258](days/day-258.qmd) | Wed 21 Apr | [Placeholder title for day 258](days/day-258.qmd) |  |
-| [259](days/day-259.qmd) | Thu 22 Apr | [Placeholder title for day 259](days/day-259.qmd) | [catch-up]{.pill .pill-catchup} |
+| [253](days/day-253.qmd) | Fri 16 Apr | [The greeks, analytically and by finite difference](days/day-253.qmd) |  |
+| [254](days/day-254.qmd) | Sat 17 Apr | [Delta hedging a short option, ten thousand times](days/day-254.qmd) |  |
+| [255](days/day-255.qmd) | Sun 18 Apr | [The hedged option pays the gap between two variances](days/day-255.qmd) |  |
+| [256](days/day-256.qmd) | Mon 19 Apr | [Gamma and theta are two sides of one equation](days/day-256.qmd) |  |
+| [257](days/day-257.qmd) | Tue 20 Apr | [Discrete hedging error, and the rate it shrinks at](days/day-257.qmd) |  |
+| [258](days/day-258.qmd) | Wed 21 Apr | [Hedging costs money, so you hedge less than you would like](days/day-258.qmd) |  |
+| [259](days/day-259.qmd) | Thu 22 Apr | [The greeks and hedging, closed book](days/day-259.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 38 <span class='week-span'>Fri 23 Apr – Thu 29 Apr</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [260](days/day-260.qmd) | Fri 23 Apr | [Placeholder title for day 260](days/day-260.qmd) |  |
-| [261](days/day-261.qmd) | Sat 24 Apr | [Placeholder title for day 261](days/day-261.qmd) |  |
-| [262](days/day-262.qmd) | Sun 25 Apr | [Placeholder title for day 262](days/day-262.qmd) |  |
-| [263](days/day-263.qmd) | Mon 26 Apr | [Placeholder title for day 263](days/day-263.qmd) |  |
-| [264](days/day-264.qmd) | Tue 27 Apr | [Placeholder title for day 264](days/day-264.qmd) |  |
-| [265](days/day-265.qmd) | Wed 28 Apr | [Placeholder title for day 265](days/day-265.qmd) |  |
-| [266](days/day-266.qmd) | Thu 29 Apr | [Placeholder title for day 266](days/day-266.qmd) | [catch-up]{.pill .pill-catchup} |
+| [260](days/day-260.qmd) | Fri 23 Apr | [The smile is the market disagreeing with your model](days/day-260.qmd) |  |
+| [261](days/day-261.qmd) | Sat 24 Apr | [Equity index skew, and two explanations that are not the same](days/day-261.qmd) |  |
+| [262](days/day-262.qmd) | Sun 25 Apr | [The term structure, and the surface as one object](days/day-262.qmd) |  |
+| [263](days/day-263.qmd) | Mon 26 Apr | [A surface that violates these conditions is a free lunch](days/day-263.qmd) |  |
+| [264](days/day-264.qmd) | Tue 27 Apr | [SVI, and a parameterisation that can be kept arbitrage-free](days/day-264.qmd) |  |
+| [265](days/day-265.qmd) | Wed 28 Apr | [Fitting the surface, weighted by what you can actually trade](days/day-265.qmd) |  |
+| [266](days/day-266.qmd) | Thu 29 Apr | [The volatility surface, closed book](days/day-266.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 39 <span class='week-span'>Fri 30 Apr – Thu 6 May</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [267](days/day-267.qmd) | Fri 30 Apr | [Placeholder title for day 267](days/day-267.qmd) |  |
-| [268](days/day-268.qmd) | Sat 1 May | [Placeholder title for day 268](days/day-268.qmd) |  |
-| [269](days/day-269.qmd) | Sun 2 May | [Placeholder title for day 269](days/day-269.qmd) |  |
-| [270](days/day-270.qmd) | Mon 3 May | [Placeholder title for day 270](days/day-270.qmd) |  |
-| [271](days/day-271.qmd) | Tue 4 May | [Placeholder title for day 271](days/day-271.qmd) |  |
-| [272](days/day-272.qmd) | Wed 5 May | [Placeholder title for day 272](days/day-272.qmd) |  |
-| [273](days/day-273.qmd) | Thu 6 May | [Placeholder title for day 273](days/day-273.qmd) | [catch-up]{.pill .pill-catchup} |
+| [267](days/day-267.qmd) | Fri 30 Apr | [Local volatility fits today's surface exactly, and then what](days/day-267.qmd) |  |
+| [268](days/day-268.qmd) | Sat 1 May | [Heston, and what a second source of randomness buys](days/day-268.qmd) |  |
+| [269](days/day-269.qmd) | Sun 2 May | [Jumps, because a diffusion cannot smile at one week](days/day-269.qmd) |  |
+| [270](days/day-270.qmd) | Mon 3 May | [Monte Carlo, and the variance reduction that pays for itself](days/day-270.qmd) |  |
+| [271](days/day-271.qmd) | Tue 4 May | [Trees, because early exercise breaks the expectation](days/day-271.qmd) |  |
+| [272](days/day-272.qmd) | Wed 5 May | [Two models that fit today and disagree about tomorrow](days/day-272.qmd) |  |
+| [273](days/day-273.qmd) | Thu 6 May | [Beyond Black-Scholes, closed book](days/day-273.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 40 <span class='week-span'>Fri 7 May – Thu 13 May</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [274](days/day-274.qmd) | Fri 7 May | [Placeholder title for day 274](days/day-274.qmd) |  |
-| [275](days/day-275.qmd) | Sat 8 May | [Placeholder title for day 275](days/day-275.qmd) |  |
-| [276](days/day-276.qmd) | Sun 9 May | [Placeholder title for day 276](days/day-276.qmd) |  |
-| [277](days/day-277.qmd) | Mon 10 May | [Placeholder title for day 277](days/day-277.qmd) |  |
-| [278](days/day-278.qmd) | Tue 11 May | [Placeholder title for day 278](days/day-278.qmd) |  |
-| [279](days/day-279.qmd) | Wed 12 May | [Placeholder title for day 279](days/day-279.qmd) |  |
-| [280](days/day-280.qmd) | Thu 13 May | [Placeholder title for day 280](days/day-280.qmd) | [milestone]{.pill .pill-milestone} |
+| [274](days/day-274.qmd) | Fri 7 May | [The variance risk premium, measured on twenty years](days/day-274.qmd) |  |
+| [275](days/day-275.qmd) | Sat 8 May | [A variance swap is a strip of options, exactly](days/day-275.qmd) |  |
+| [276](days/day-276.qmd) | Sun 9 May | [VIX is a variance swap rate wearing volatility units](days/day-276.qmd) |  |
+| [277](days/day-277.qmd) | Mon 10 May | [Which volatility trades have an edge, and what February 2018 did](days/day-277.qmd) |  |
+| [278](days/day-278.qmd) | Tue 11 May | [The variance premium as a signal, evaluated like any other](days/day-278.qmd) |  |
+| [279](days/day-279.qmd) | Wed 12 May | [The pricer and the hedging study, assembled](days/day-279.qmd) |  |
+| [280](days/day-280.qmd) | Thu 13 May | [Milestone: an option pricer and a delta-hedging study](days/day-280.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## Microstructure
 
@@ -525,49 +525,49 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [281](days/day-281.qmd) | Fri 14 May | [Placeholder title for day 281](days/day-281.qmd) |  |
-| [282](days/day-282.qmd) | Sat 15 May | [Placeholder title for day 282](days/day-282.qmd) |  |
-| [283](days/day-283.qmd) | Sun 16 May | [Placeholder title for day 283](days/day-283.qmd) |  |
-| [284](days/day-284.qmd) | Mon 17 May | [Placeholder title for day 284](days/day-284.qmd) |  |
-| [285](days/day-285.qmd) | Tue 18 May | [Placeholder title for day 285](days/day-285.qmd) |  |
-| [286](days/day-286.qmd) | Wed 19 May | [Placeholder title for day 286](days/day-286.qmd) |  |
-| [287](days/day-287.qmd) | Thu 20 May | [Placeholder title for day 287](days/day-287.qmd) | [catch-up]{.pill .pill-catchup} |
+| [281](days/day-281.qmd) | Fri 14 May | [Rebuilding a book from the messages that built it](days/day-281.qmd) |  |
+| [282](days/day-282.qmd) | Sat 15 May | [The shape of the book, and how fast it refills](days/day-282.qmd) |  |
+| [283](days/day-283.qmd) | Sun 16 May | [Queue position, and what it is worth in basis points](days/day-283.qmd) |  |
+| [284](days/day-284.qmd) | Mon 17 May | [The spread splits into what the maker keeps and what they lose](days/day-284.qmd) |  |
+| [285](days/day-285.qmd) | Tue 18 May | [Adverse selection, measured as the drift after your fill](days/day-285.qmd) |  |
+| [286](days/day-286.qmd) | Wed 19 May | [Order flow predicts the next second, and not the next hour](days/day-286.qmd) |  |
+| [287](days/day-287.qmd) | Thu 20 May | [The order book, closed book](days/day-287.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 42 <span class='week-span'>Fri 21 May – Thu 27 May</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [288](days/day-288.qmd) | Fri 21 May | [Placeholder title for day 288](days/day-288.qmd) |  |
-| [289](days/day-289.qmd) | Sat 22 May | [Placeholder title for day 289](days/day-289.qmd) |  |
-| [290](days/day-290.qmd) | Sun 23 May | [Placeholder title for day 290](days/day-290.qmd) |  |
-| [291](days/day-291.qmd) | Mon 24 May | [Placeholder title for day 291](days/day-291.qmd) |  |
-| [292](days/day-292.qmd) | Tue 25 May | [Placeholder title for day 292](days/day-292.qmd) |  |
-| [293](days/day-293.qmd) | Wed 26 May | [Placeholder title for day 293](days/day-293.qmd) |  |
-| [294](days/day-294.qmd) | Thu 27 May | [Placeholder title for day 294](days/day-294.qmd) | [catch-up]{.pill .pill-catchup} |
+| [288](days/day-288.qmd) | Fri 21 May | [Glosten-Milgrom: a spread from information alone](days/day-288.qmd) |  |
+| [289](days/day-289.qmd) | Sat 22 May | [Kyle's lambda, and the equilibrium that produces linearity](days/day-289.qmd) |  |
+| [290](days/day-290.qmd) | Sun 23 May | [Estimating lambda, and the endogeneity that ruins it](days/day-290.qmd) |  |
+| [291](days/day-291.qmd) | Mon 24 May | [Temporary impact comes back, permanent impact does not](days/day-291.qmd) |  |
+| [292](days/day-292.qmd) | Tue 25 May | [The square-root law, tested on your own data](days/day-292.qmd) |  |
+| [293](days/day-293.qmd) | Wed 26 May | [Telling informed flow from uninformed, and the limits of it](days/day-293.qmd) |  |
+| [294](days/day-294.qmd) | Thu 27 May | [The microstructure models, closed book](days/day-294.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 43 <span class='week-span'>Fri 28 May – Thu 3 Jun</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [295](days/day-295.qmd) | Fri 28 May | [Placeholder title for day 295](days/day-295.qmd) |  |
-| [296](days/day-296.qmd) | Sat 29 May | [Placeholder title for day 296](days/day-296.qmd) |  |
-| [297](days/day-297.qmd) | Sun 30 May | [Placeholder title for day 297](days/day-297.qmd) |  |
-| [298](days/day-298.qmd) | Mon 31 May | [Placeholder title for day 298](days/day-298.qmd) |  |
-| [299](days/day-299.qmd) | Tue 1 Jun | [Placeholder title for day 299](days/day-299.qmd) |  |
-| [300](days/day-300.qmd) | Wed 2 Jun | [Placeholder title for day 300](days/day-300.qmd) |  |
-| [301](days/day-301.qmd) | Thu 3 Jun | [Placeholder title for day 301](days/day-301.qmd) | [catch-up]{.pill .pill-catchup} |
+| [295](days/day-295.qmd) | Fri 28 May | [The execution problem, stated as a trade-off you choose](days/day-295.qmd) |  |
+| [296](days/day-296.qmd) | Sat 29 May | [The efficient frontier of execution, and where to sit on it](days/day-296.qmd) |  |
+| [297](days/day-297.qmd) | Sun 30 May | [TWAP, VWAP and participation, and what each one is for](days/day-297.qmd) |  |
+| [298](days/day-298.qmd) | Mon 31 May | [Implementation shortfall counts the trade you missed](days/day-298.qmd) |  |
+| [299](days/day-299.qmd) | Tue 1 Jun | [Measuring your own slippage, against your own decisions](days/day-299.qmd) |  |
+| [300](days/day-300.qmd) | Wed 2 Jun | [Fitting an impact coefficient to a sample of forty fills](days/day-300.qmd) |  |
+| [301](days/day-301.qmd) | Thu 3 Jun | [Execution, closed book](days/day-301.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 44 <span class='week-span'>Fri 4 Jun – Thu 10 Jun</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [302](days/day-302.qmd) | Fri 4 Jun | [Placeholder title for day 302](days/day-302.qmd) |  |
-| [303](days/day-303.qmd) | Sat 5 Jun | [Placeholder title for day 303](days/day-303.qmd) |  |
-| [304](days/day-304.qmd) | Sun 6 Jun | [Placeholder title for day 304](days/day-304.qmd) |  |
-| [305](days/day-305.qmd) | Mon 7 Jun | [Placeholder title for day 305](days/day-305.qmd) |  |
-| [306](days/day-306.qmd) | Tue 8 Jun | [Placeholder title for day 306](days/day-306.qmd) |  |
-| [307](days/day-307.qmd) | Wed 9 Jun | [Placeholder title for day 307](days/day-307.qmd) |  |
-| [308](days/day-308.qmd) | Thu 10 Jun | [Placeholder title for day 308](days/day-308.qmd) | [milestone]{.pill .pill-milestone} |
+| [302](days/day-302.qmd) | Fri 4 Jun | [Capacity, recomputed with a fitted model](days/day-302.qmd) |  |
+| [303](days/day-303.qmd) | Sat 5 Jun | [Which strategy dies first as the money grows](days/day-303.qmd) |  |
+| [304](days/day-304.qmd) | Sun 6 Jun | [The latency hierarchy, in numbers rather than adjectives](days/day-304.qmd) |  |
+| [305](days/day-305.qmd) | Mon 7 Jun | [What high-frequency firms actually do, stated precisely](days/day-305.qmd) |  |
+| [306](days/day-306.qmd) | Tue 8 Jun | [Where a one-person operation actually competes](days/day-306.qmd) |  |
+| [307](days/day-307.qmd) | Wed 9 Jun | [The results this phase revised, and by how much](days/day-307.qmd) |  |
+| [308](days/day-308.qmd) | Thu 10 Jun | [Milestone: execution, impact and honest capacity](days/day-308.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## Production
 
@@ -575,37 +575,37 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [309](days/day-309.qmd) | Fri 11 Jun | [Placeholder title for day 309](days/day-309.qmd) |  |
-| [310](days/day-310.qmd) | Sat 12 Jun | [Placeholder title for day 310](days/day-310.qmd) |  |
-| [311](days/day-311.qmd) | Sun 13 Jun | [Placeholder title for day 311](days/day-311.qmd) |  |
-| [312](days/day-312.qmd) | Mon 14 Jun | [Placeholder title for day 312](days/day-312.qmd) |  |
-| [313](days/day-313.qmd) | Tue 15 Jun | [Placeholder title for day 313](days/day-313.qmd) |  |
-| [314](days/day-314.qmd) | Wed 16 Jun | [Placeholder title for day 314](days/day-314.qmd) |  |
-| [315](days/day-315.qmd) | Thu 17 Jun | [Placeholder title for day 315](days/day-315.qmd) | [catch-up]{.pill .pill-catchup} |
+| [309](days/day-309.qmd) | Fri 11 Jun | [The SQL you keep rewriting in pandas, written once](days/day-309.qmd) |  |
+| [310](days/day-310.qmd) | Sat 12 Jun | [Schema design when every table has a time on it](days/day-310.qmd) |  |
+| [311](days/day-311.qmd) | Sun 13 Jun | [Parquet, partitioning, and only reading what you need](days/day-311.qmd) |  |
+| [312](days/day-312.qmd) | Mon 14 Jun | [Profile first, because your guess was wrong](days/day-312.qmd) |  |
+| [313](days/day-313.qmd) | Tue 15 Jun | [Polars, and being specific about where it wins](days/day-313.qmd) |  |
+| [314](days/day-314.qmd) | Wed 16 Jun | [Numba, for the loops that cannot be vectorised](days/day-314.qmd) |  |
+| [315](days/day-315.qmd) | Thu 17 Jun | [The data layer, closed book](days/day-315.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 46 <span class='week-span'>Fri 18 Jun – Thu 24 Jun</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [316](days/day-316.qmd) | Fri 18 Jun | [Placeholder title for day 316](days/day-316.qmd) |  |
-| [317](days/day-317.qmd) | Sat 19 Jun | [Placeholder title for day 317](days/day-317.qmd) |  |
-| [318](days/day-318.qmd) | Sun 20 Jun | [Placeholder title for day 318](days/day-318.qmd) |  |
-| [319](days/day-319.qmd) | Mon 21 Jun | [Placeholder title for day 319](days/day-319.qmd) |  |
-| [320](days/day-320.qmd) | Tue 22 Jun | [Placeholder title for day 320](days/day-320.qmd) |  |
-| [321](days/day-321.qmd) | Wed 23 Jun | [Placeholder title for day 321](days/day-321.qmd) |  |
-| [322](days/day-322.qmd) | Thu 24 Jun | [Placeholder title for day 322](days/day-322.qmd) | [catch-up]{.pill .pill-catchup} |
+| [316](days/day-316.qmd) | Fri 18 Jun | [Enough C++ to read a codebase without guessing](days/day-316.qmd) |  |
+| [317](days/day-317.qmd) | Sat 19 Jun | [Memory layout, and why one loop is four times faster](days/day-317.qmd) |  |
+| [318](days/day-318.qmd) | Sun 20 Jun | [Containers, their complexity, and their constant factors](days/day-318.qmd) |  |
+| [319](days/day-319.qmd) | Mon 21 Jun | [Reading someone else's matching engine](days/day-319.qmd) |  |
+| [320](days/day-320.qmd) | Tue 22 Jun | [Writing a small order book that works](days/day-320.qmd) |  |
+| [321](days/day-321.qmd) | Wed 23 Jun | [The gap between the two, decomposed](days/day-321.qmd) |  |
+| [322](days/day-322.qmd) | Thu 24 Jun | [C++ literacy, closed book](days/day-322.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 47 <span class='week-span'>Fri 25 Jun – Thu 1 Jul</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [323](days/day-323.qmd) | Fri 25 Jun | [Placeholder title for day 323](days/day-323.qmd) |  |
-| [324](days/day-324.qmd) | Sat 26 Jun | [Placeholder title for day 324](days/day-324.qmd) |  |
-| [325](days/day-325.qmd) | Sun 27 Jun | [Placeholder title for day 325](days/day-325.qmd) |  |
-| [326](days/day-326.qmd) | Mon 28 Jun | [Placeholder title for day 326](days/day-326.qmd) |  |
-| [327](days/day-327.qmd) | Tue 29 Jun | [Placeholder title for day 327](days/day-327.qmd) |  |
-| [328](days/day-328.qmd) | Wed 30 Jun | [Placeholder title for day 328](days/day-328.qmd) |  |
-| [329](days/day-329.qmd) | Thu 1 Jul | [Placeholder title for day 329](days/day-329.qmd) | [milestone]{.pill .pill-milestone} |
+| [323](days/day-323.qmd) | Fri 25 Jun | [The daily run, as a sequence of steps that can each fail](days/day-323.qmd) |  |
+| [324](days/day-324.qmd) | Sat 26 Jun | [Logging for the questions you will ask in March](days/day-324.qmd) |  |
+| [325](days/day-325.qmd) | Sun 27 Jun | [Monitoring the four things that actually break](days/day-325.qmd) |  |
+| [326](days/day-326.qmd) | Mon 28 Jun | [Alerting, and the runbook written before you need it](days/day-326.qmd) |  |
+| [327](days/day-327.qmd) | Tue 29 Jun | [Reconciliation, and explaining every difference](days/day-327.qmd) |  |
+| [328](days/day-328.qmd) | Wed 30 Jun | [The first unattended run, and what it got wrong](days/day-328.qmd) |  |
+| [329](days/day-329.qmd) | Thu 1 Jul | [Milestone: the system in production](days/day-329.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## The interview
 
@@ -613,49 +613,49 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [330](days/day-330.qmd) | Fri 2 Jul | [Placeholder title for day 330](days/day-330.qmd) |  |
-| [331](days/day-331.qmd) | Sat 3 Jul | [Placeholder title for day 331](days/day-331.qmd) |  |
-| [332](days/day-332.qmd) | Sun 4 Jul | [Placeholder title for day 332](days/day-332.qmd) |  |
-| [333](days/day-333.qmd) | Mon 5 Jul | [Placeholder title for day 333](days/day-333.qmd) |  |
-| [334](days/day-334.qmd) | Tue 6 Jul | [Placeholder title for day 334](days/day-334.qmd) |  |
-| [335](days/day-335.qmd) | Wed 7 Jul | [Placeholder title for day 335](days/day-335.qmd) |  |
-| [336](days/day-336.qmd) | Thu 8 Jul | [Placeholder title for day 336](days/day-336.qmd) | [catch-up]{.pill .pill-catchup} |
+| [330](days/day-330.qmd) | Fri 2 Jul | [Your own error log is the syllabus](days/day-330.qmd) |  |
+| [331](days/day-331.qmd) | Sat 3 Jul | [Conditional probability, eight problems, forty minutes](days/day-331.qmd) |  |
+| [332](days/day-332.qmd) | Sun 4 Jul | [Expectation by indicators, symmetry and conditioning](days/day-332.qmd) |  |
+| [333](days/day-333.qmd) | Mon 5 Jul | [Martingales, and the stopping theorem's fine print](days/day-333.qmd) |  |
+| [334](days/day-334.qmd) | Tue 6 Jul | [Random walks, ruin and first passage, under a clock](days/day-334.qmd) |  |
+| [335](days/day-335.qmd) | Wed 7 Jul | [Order statistics, extremes, and the winner's curse](days/day-335.qmd) |  |
+| [336](days/day-336.qmd) | Thu 8 Jul | [The canon, mixed and timed](days/day-336.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 49 <span class='week-span'>Fri 9 Jul – Thu 15 Jul</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [337](days/day-337.qmd) | Fri 9 Jul | [Placeholder title for day 337](days/day-337.qmd) |  |
-| [338](days/day-338.qmd) | Sat 10 Jul | [Placeholder title for day 338](days/day-338.qmd) |  |
-| [339](days/day-339.qmd) | Sun 11 Jul | [Placeholder title for day 339](days/day-339.qmd) |  |
-| [340](days/day-340.qmd) | Mon 12 Jul | [Placeholder title for day 340](days/day-340.qmd) |  |
-| [341](days/day-341.qmd) | Tue 13 Jul | [Placeholder title for day 341](days/day-341.qmd) |  |
-| [342](days/day-342.qmd) | Wed 14 Jul | [Placeholder title for day 342](days/day-342.qmd) |  |
-| [343](days/day-343.qmd) | Thu 15 Jul | [Placeholder title for day 343](days/day-343.qmd) | [catch-up]{.pill .pill-catchup} |
+| [337](days/day-337.qmd) | Fri 9 Jul | [A quote is a decision under two kinds of uncertainty](days/day-337.qmd) |  |
+| [338](days/day-338.qmd) | Sat 10 Jul | [A trading game with real rounds and a scoreboard](days/day-338.qmd) |  |
+| [339](days/day-339.qmd) | Sun 11 Jul | [The fact that they traded is information](days/day-339.qmd) |  |
+| [340](days/day-340.qmd) | Mon 12 Jul | [Expected value under time pressure, and when not to play](days/day-340.qmd) |  |
+| [341](days/day-341.qmd) | Tue 13 Jul | [Arithmetic at speed, trained rather than practised](days/day-341.qmd) |  |
+| [342](days/day-342.qmd) | Wed 14 Jul | [A full session, continuous, with no pausing to think](days/day-342.qmd) |  |
+| [343](days/day-343.qmd) | Thu 15 Jul | [Trading games, closed book](days/day-343.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 50 <span class='week-span'>Fri 16 Jul – Thu 22 Jul</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [344](days/day-344.qmd) | Fri 16 Jul | [Placeholder title for day 344](days/day-344.qmd) |  |
-| [345](days/day-345.qmd) | Sat 17 Jul | [Placeholder title for day 345](days/day-345.qmd) |  |
-| [346](days/day-346.qmd) | Sun 18 Jul | [Placeholder title for day 346](days/day-346.qmd) |  |
-| [347](days/day-347.qmd) | Mon 19 Jul | [Placeholder title for day 347](days/day-347.qmd) |  |
-| [348](days/day-348.qmd) | Tue 20 Jul | [Placeholder title for day 348](days/day-348.qmd) |  |
-| [349](days/day-349.qmd) | Wed 21 Jul | [Placeholder title for day 349](days/day-349.qmd) |  |
-| [350](days/day-350.qmd) | Thu 22 Jul | [Placeholder title for day 350](days/day-350.qmd) | [catch-up]{.pill .pill-catchup} |
+| [344](days/day-344.qmd) | Fri 16 Jul | [The statistics round, where you should be strongest](days/day-344.qmd) |  |
+| [345](days/day-345.qmd) | Sat 17 Jul | [The machine learning round, answered in your own results](days/day-345.qmd) |  |
+| [346](days/day-346.qmd) | Sun 18 Jul | [The coding round, under a clock and out loud](days/day-346.qmd) |  |
+| [347](days/day-347.qmd) | Mon 19 Jul | [The research presentation, cut to what a stranger needs](days/day-347.qmd) |  |
+| [348](days/day-348.qmd) | Tue 20 Jul | [The market intuition questions, answered as a researcher](days/day-348.qmd) |  |
+| [349](days/day-349.qmd) | Wed 21 Jul | [The questions academics answer badly](days/day-349.qmd) |  |
+| [350](days/day-350.qmd) | Thu 22 Jul | [The other rounds, closed book](days/day-350.qmd) | [catch-up]{.pill .pill-catchup} |
 
 ### Week 51 <span class='week-span'>Fri 23 Jul – Thu 29 Jul</span>
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [351](days/day-351.qmd) | Fri 23 Jul | [Placeholder title for day 351](days/day-351.qmd) |  |
-| [352](days/day-352.qmd) | Sat 24 Jul | [Placeholder title for day 352](days/day-352.qmd) |  |
-| [353](days/day-353.qmd) | Sun 25 Jul | [Placeholder title for day 353](days/day-353.qmd) |  |
-| [354](days/day-354.qmd) | Mon 26 Jul | [Placeholder title for day 354](days/day-354.qmd) |  |
-| [355](days/day-355.qmd) | Tue 27 Jul | [Placeholder title for day 355](days/day-355.qmd) |  |
-| [356](days/day-356.qmd) | Wed 28 Jul | [Placeholder title for day 356](days/day-356.qmd) |  |
-| [357](days/day-357.qmd) | Thu 29 Jul | [Placeholder title for day 357](days/day-357.qmd) | [milestone]{.pill .pill-milestone} |
+| [351](days/day-351.qmd) | Fri 23 Jul | [The CV, rewritten without overclaiming or disowning](days/day-351.qmd) |  |
+| [352](days/day-352.qmd) | Sat 24 Jul | [Three write-ups a stranger can read in ten minutes](days/day-352.qmd) |  |
+| [353](days/day-353.qmd) | Sun 25 Jul | [The firm list, with a reason next to each name](days/day-353.qmd) |  |
+| [354](days/day-354.qmd) | Mon 26 Jul | [Outreach that is worth the recipient's two minutes](days/day-354.qmd) |  |
+| [355](days/day-355.qmd) | Tue 27 Jul | [A full mock, with the transitions included](days/day-355.qmd) |  |
+| [356](days/day-356.qmd) | Wed 28 Jul | [How an offer is actually structured and what moves](days/day-356.qmd) |  |
+| [357](days/day-357.qmd) | Thu 29 Jul | [Milestone: the interview dossier](days/day-357.qmd) | [milestone]{.pill .pill-milestone} |
 
 ## Capstone
 
@@ -663,13 +663,13 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 
 | Day | Date | Focus | |
 |---:|:---|:---|:---|
-| [358](days/day-358.qmd) | Fri 30 Jul | [Placeholder title for day 358](days/day-358.qmd) |  |
-| [359](days/day-359.qmd) | Sat 31 Jul | [Placeholder title for day 359](days/day-359.qmd) |  |
-| [360](days/day-360.qmd) | Sun 1 Aug | [Placeholder title for day 360](days/day-360.qmd) |  |
-| [361](days/day-361.qmd) | Mon 2 Aug | [Placeholder title for day 361](days/day-361.qmd) |  |
-| [362](days/day-362.qmd) | Tue 3 Aug | [Placeholder title for day 362](days/day-362.qmd) |  |
-| [363](days/day-363.qmd) | Wed 4 Aug | [Placeholder title for day 363](days/day-363.qmd) |  |
-| [364](days/day-364.qmd) | Thu 5 Aug | [Placeholder title for day 364](days/day-364.qmd) | [catch-up]{.pill .pill-catchup} |
-| [365](days/day-365.qmd) | Fri 6 Aug | [Placeholder title for day 365](days/day-365.qmd) | [capstone]{.pill .pill-capstone} |
+| [358](days/day-358.qmd) | Fri 30 Jul | [The track record, reported without adjustment](days/day-358.qmd) |  |
+| [359](days/day-359.qmd) | Sat 31 Jul | [Where the live period disagreed with the backtest](days/day-359.qmd) |  |
+| [360](days/day-360.qmd) | Sun 1 Aug | [The research dossier, assembled from eleven documents](days/day-360.qmd) |  |
+| [361](days/day-361.qmd) | Mon 2 Aug | [What you would actually run, and at what size](days/day-361.qmd) |  |
+| [362](days/day-362.qmd) | Tue 3 Aug | [What you believed in September that turned out wrong](days/day-362.qmd) |  |
+| [363](days/day-363.qmd) | Wed 4 Aug | [The self-check, answered out loud and scored](days/day-363.qmd) |  |
+| [364](days/day-364.qmd) | Thu 5 Aug | [The last drill, and the trend across fifty-two of them](days/day-364.qmd) | [catch-up]{.pill .pill-catchup} |
+| [365](days/day-365.qmd) | Fri 6 Aug | [Capstone](days/day-365.qmd) | [capstone]{.pill .pill-capstone} |
 
 :::

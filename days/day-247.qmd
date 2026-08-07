@@ -1,6 +1,6 @@
 ---
-title: "Day 247 — Placeholder title for day 247"
-subtitle: "Saturday, 10 April 2027 · Week 36 of 52 · Derivatives · Study day · 60 min"
+title: "Day 247 — Replication, in one step, where the argument is visible"
+subtitle: "Saturday, 10 April 2027 · Week 36 of 52 · Derivatives · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Saturday, 10 April 2027 · Week 36 of 52 · Derivatives · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The two equations you solved last night are the entire Black-Scholes argument, and doing it in one step first means the continuous version is notation rather than a new idea.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Derive the one-step binomial option price from the replicating portfolio, with no probability anywhere in the argument.
+- Say why the real probability of an up move does not appear in the answer, and what does appear instead.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Do the one-step derivation cleanly on paper: the hedge ratio is the ratio of the option payoff spread to the stock price spread, and the price is the cost of the replicating portfolio. Note that you never used the probability of an up move, which is the fact that surprises everyone and is the whole content of risk-neutral pricing.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Extend to n steps and take the limit: implement a binomial tree in qlib/derivatives/tree.py with the standard up and down factors, price a European call, and show it converges to a limit as the number of steps grows. Plot the convergence and note that it oscillates.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Read off the risk-neutral probability from the one-step formula and note that it is the probability that makes the stock's expected return equal the risk-free rate. That observation is tomorrow's subject and it is worth arriving at from the algebra rather than being told.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 15.401 — Finance Theory I (Andrew Lo), video lectures and slides](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/pages/video-lectures-and-slides/) [course]{.res-kind}
+- [MIT 15.450 — Analytics of Finance (Kogan)](https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/derivatives/tree.py with a converging binomial pricer, and the one-step replication derivation written out.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does the real probability of an up move not appear in the option price, and what replaces it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 248, Sunday, 11 April 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down a self-financing portfolio of stock and cash whose value is meant to track an option.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Apply Itô's lemma to the option value as a function of stock price and time.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Set the two expressions equal. You are one line from the PDE and tomorrow finishes it.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 202 — Placeholder title for day 202"
-subtitle: "Wednesday, 24 February 2027 · Week 29 of 52 · Alpha · Study day · 60 min"
+title: "Day 202 — Counting everything you tried in this phase"
+subtitle: "Wednesday, 24 February 2027 · Week 29 of 52 · Alpha · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 24 February 2027 · Week 29 of 52 · Alpha · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Milestone 6 is graded on whether the number of specifications is on the first page, and the count you did last night is the input, so today is where it becomes a corrected verdict.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the total number of specifications tried across the phase and the threshold it implies.
+- Report the combined book's performance against that threshold rather than against zero.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Audit the log across the whole phase and classify the entries: distinct signals, variants within a signal, transform choices, combination schemes, and evaluation horizons. Then estimate the effective number of independent trials, which is smaller than the raw count because the variants are correlated, using the same reasoning as day 51.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Apply the correction to the set: compute the threshold from qlib/noise.py at your effective trial count, and report the combined book's information ratio against it with an interval. Then do the same for each individual signal. Write the verdict paragraph, which should read the same regardless of which way it came out.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the trials that are not in the log: the ones you ran interactively and abandoned, estimated as on day 62. Say whether the gap has narrowed since then.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey & López de Prado (2014) — The Deflated Sharpe Ratio](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf) [paper]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2017) — The Probability of Backtest Overfitting](https://escholarship.org/content/qt4w1110bb/qt4w1110bb.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The trial audit with an effective independent count, and the combined book's corrected verdict written as a paragraph.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+How many specifications did you try in this phase, and what Sharpe does your combined book need to clear as a result?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 203, Thursday, 25 February 2027 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread reports/milestone-06-alpha-book.md and mark what is still notes rather than prose.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Confirm the signal pages regenerate from the result objects.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times; tomorrow is the twenty-ninth sitting.
 :::
 :::

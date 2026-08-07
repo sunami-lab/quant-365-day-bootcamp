@@ -1,5 +1,5 @@
 ---
-title: "Day 246 — Placeholder title for day 246"
+title: "Day 246 — Geometric Brownian motion, and everything it leaves out"
 subtitle: "Friday, 9 April 2027 · Week 36 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Friday, 9 April 2027 · Week 36 of 52 · Derivatives · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The model underneath Black-Scholes, and knowing precisely which of your week 6 measurements it contradicts is what turns the smile in week 38 from a puzzle into an expectation.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the terminal distribution implied by geometric Brownian motion and the three stylized facts it fails.
+- Say which failure the market prices and which it does not.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Compare the model against your own measurements: simulate geometric Brownian motion calibrated to SPY's volatility, and run your week 6 stylized-facts test suite from day 60 on the output. It will fail on tails, on volatility clustering and on the leverage effect, and pass on the autocorrelation of returns.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Say which failure has a price attached: the market quotes options at implied volatilities that vary with strike, which is the failure of the terminal distribution appearing as a price. Volatility clustering and the leverage effect appear in the term structure and the skew respectively, which is the roadmap for week 38.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the model's assumptions as a list you will return to: constant volatility, continuous paths, frictionless trading, constant rates, no dividends unless modelled. Each of the next four weeks relaxes one.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 15.450 — Analytics of Finance (Kogan)](https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/) [course]{.res-kind}
+- [MIT 18.S096 — Topics in Mathematics with Applications in Finance](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-246-gbm.ipynb with your stylized-facts suite run on simulated GBM and the failures tabulated against the assumption each violates.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Name three properties of real returns that geometric Brownian motion does not have, and say which one the option market prices most visibly.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 247, Saturday, 10 April 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Draw a one-step binomial tree: a stock that can go up or down, and a call option on it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Find the portfolio of stock and cash that exactly reproduces the option's payoff in both states.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> It is two equations in two unknowns. Solve it tonight.
 :::
 :::

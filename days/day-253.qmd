@@ -1,5 +1,5 @@
 ---
-title: "Day 253 — Placeholder title for day 253"
+title: "Day 253 — The greeks, analytically and by finite difference"
 subtitle: "Friday, 16 April 2027 · Week 37 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 16 April 2027 · Week 37 of 52 · Derivatives · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Five sensitivities, each with a closed form and each computable numerically, and having both means every one of them is checked rather than trusted.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement delta, gamma, vega, theta and rho analytically and confirm each against a central finite difference.
+- Say what each greek is a sensitivity to and which two are not derivatives with respect to a market variable.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement all five in qlib/derivatives/greeks.py and check each against a central finite difference of your own pricer across a grid of moneyness and maturity. Report the maximum relative discrepancy. The check catches the sign and factor errors that are otherwise invisible until a hedge loses money.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Note what vega and rho are: sensitivities to model parameters rather than to state variables, which means they measure model risk rather than market risk in a strict reading. Then plot delta and gamma against moneyness for three maturities and describe the shapes in words, since you will be asked to sketch them.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [py_vollib — Black-Scholes prices, greeks and implied volatility](https://github.com/vollib/py_vollib) [repo]{.res-kind}
+- [QuantLib-Python documentation](https://quantlib-python-docs.readthedocs.io/en/latest/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/derivatives/greeks.py with five greeks agreeing with finite differences, and delta and gamma plotted against moneyness at three maturities.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Sketch gamma against moneyness for a one-week and a one-year option, and say which is taller and why.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 254, Saturday, 17 April 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Simulate one price path and hedge a short call along it, rebalancing daily to be delta neutral.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Record the final profit and loss.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> One path is not a result. Tomorrow you run ten thousand.
 :::
 :::

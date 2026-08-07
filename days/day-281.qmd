@@ -1,5 +1,5 @@
 ---
-title: "Day 281 — Placeholder title for day 281"
+title: "Day 281 — Rebuilding a book from the messages that built it"
 subtitle: "Friday, 14 May 2027 · Week 41 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 14 May 2027 · Week 41 of 52 · Microstructure · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every backtest you have run assumed a price existed; today you construct one from the individual orders that produced it, and the exercise permanently changes what a quote looks like to you.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Parse an ITCH sample and reconstruct the top of book for one symbol through a full session.
+- Report the number of messages per second and the fraction that are cancellations.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [40 min]{.task-min} Write a parser for the ITCH message types you need: add order, order executed, order cancel, order delete and order replace. Ignore the rest. Feed them into your day 9 toy matching book, which was built for exactly this and has been waiting since week 2.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Report three numbers for one liquid symbol: messages per second at the busiest minute, the fraction of orders that are cancelled before executing, and the median lifetime of an order that gets cancelled. The cancellation fraction is the number that surprises people and it is usually well above 90 percent.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Nasdaq TotalView-ITCH sample days (full order book, free)](https://emi.nasdaq.com/ITCH/Nasdaq%20ITCH/) [data]{.res-kind}
+- [Bouchaud, Bonart, Donier & Gould — Trades, Quotes and Prices (Cambridge)](https://www.cambridge.org/core/books/trades-quotes-and-prices/029A71078EE4C41C0D5D4574211AB1B5) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-281-itch.ipynb with a reconstructed top of book for one symbol and three message statistics reported.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What fraction of orders in your sample were cancelled before trading, and what does that tell you about what a quote represents?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 282, Saturday, 15 May 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> From your reconstructed book, snapshot the ten levels on each side once per second through the session.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot the total depth within 10 basis points of the mid over the day.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the shape around the open and the close.
 :::
 :::

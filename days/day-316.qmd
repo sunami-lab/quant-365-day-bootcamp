@@ -1,5 +1,5 @@
 ---
-title: "Day 316 — Placeholder title for day 316"
+title: "Day 316 — Enough C++ to read a codebase without guessing"
 subtitle: "Friday, 18 June 2027 · Week 46 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 18 June 2027 · Week 46 of 52 · Production · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You will be shown C++ in an interview and you will want to read exchange and engine code, and reading is a far smaller skill than writing, which is what this week targets.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Read a short C++ function and say what is copied, what is referenced and what is moved.
+- State what the compilation model does that Python's does not, and what that buys.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Work through LearnCpp's chapters on fundamental types, references and pointers, and const. The three ideas you need are that objects have declared types known at compile time, that a reference is an alias rather than a pointer, and that const is part of the type.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read and annotate: take twenty lines of real C++ from the LEAN engine or any open source order book, and annotate every line with what is copied and what is referenced. Getting this right is most of what reading C++ requires.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [LearnCpp — free structured C++ course](https://www.learncpp.com/) [course]{.res-kind}
+- [cppreference — C and C++ standard library reference](https://en.cppreference.com/w/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Twenty lines of real C++ annotated line by line with what is copied, referenced and moved.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Given a function signature taking a const reference, say what that guarantees the function will and will not do.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 317, Saturday, 19 June 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write two C++ programs that sum a large array: one over an array of structs, one over a struct of arrays.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Time both.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The difference will be large and tomorrow explains it.
 :::
 :::

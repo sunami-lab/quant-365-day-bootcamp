@@ -1,5 +1,5 @@
 ---
-title: "Day 39 — Placeholder title for day 39"
+title: "Day 39 — Down moves raise volatility more than up moves do"
 subtitle: "Monday, 14 September 2026 · Week 6 of 52 · Returns and noise · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Monday, 14 September 2026 · Week 6 of 52 · Returns and noise · Stu
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The asymmetry you measured last night has two competing explanations that are still argued about, and it is the reason an equity index option surface is skewed rather than smiling.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the size of the leverage effect in your data, as the difference in next-day volatility after down days versus up days of equal magnitude.
+- State the two standard explanations and name an observation that would distinguish them.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Measure it properly: regress next-day absolute return on today's signed return and on today's absolute return jointly. The coefficient on the signed term is the effect. Report it with a standard error, and match up-days against down-days of comparable magnitude so the result is not just a size effect.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Test it across assets: run the same regression on a currency pair and on a commodity ETF. The effect is an equity phenomenon more than a universal one, and finding out where it is absent is more informative than confirming it where it is present.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write two sentences on the competing explanations, the mechanical leverage story and the volatility feedback story, and one line on what observation would separate them.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [statsmodels documentation](https://www.statsmodels.org/stable/index.html) [tool]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-039-leverage-effect.ipynb with the asymmetry coefficient and standard error for three asset classes.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State the leverage effect quantitatively for your data, and name one asset class where you found it absent.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 40, Tuesday, 15 September 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Build 1-day, 5-day, 21-day and 63-day non-overlapping SPY log returns from your daily series and save all four.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute the kurtosis of each and write the four numbers in order.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note whether they go up or down with horizon. Tomorrow explains it.
 :::
 :::

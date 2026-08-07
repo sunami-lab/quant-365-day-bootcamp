@@ -1,5 +1,5 @@
 ---
-title: "Day 278 — Placeholder title for day 278"
+title: "Day 278 — The variance premium as a signal, evaluated like any other"
 subtitle: "Tuesday, 11 May 2027 · Week 40 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Tuesday, 11 May 2027 · Week 40 of 52 · Derivatives · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Five months ago you wrote a specification for this trade and deferred it; today it goes through the same pipeline as every other signal, which is the test of whether the pipeline was general enough.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Evaluate a variance risk premium signal through the standard pipeline and report it against the noise floor.
+- Say what its return distribution looks like and why the Sharpe ratio understates the risk.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build and evaluate it: a time-series signal that is short variance when the implied-realized gap is wide and flat otherwise, sized by your standard rules, with a cost assumption that reflects option spreads rather than equity spreads. Run it through qlib/signals/report.py and generate the page.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Report what the standard metrics miss: the skew and kurtosis of monthly returns, the worst month, and the drawdown distribution from a simulation. Then state plainly that a Sharpe ratio computed on a payoff this asymmetric is not comparable to one from your equity signals, and say what you would report instead.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The variance risk premium signal joins the book, evaluated through the same pipeline as everything else, with an explicit note that its Sharpe ratio is not comparable to the equity signals' because of the payoff asymmetry.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Cboe VIX historical data](https://www.cboe.com/tradable_products/vix/vix_historical_data/) [data]{.res-kind}
+- [Sinclair — Volatility Trading, 2nd ed. (Wiley)](https://www.wiley.com/en-us/Volatility+Trading,+++Website,+2nd+Edition-p-9781118416723) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A variance premium signal page with the standard metrics plus skew, worst month and simulated drawdown distribution.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your variance signal has the best Sharpe in the book. Why does that not make it the best signal in the book?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 279, Wednesday, 12 May 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Check that your three pricing methods still agree and that the hedging simulator runs.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> List what milestone 8 still needs.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> It should be assembly rather than new work.
 :::
 :::

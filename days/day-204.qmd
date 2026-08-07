@@ -1,6 +1,6 @@
 ---
-title: "Day 204 — Placeholder title for day 204"
-subtitle: "Friday, 26 February 2027 · Week 30 of 52 · Machine learning · Study day · 60 min"
+title: "Day 204 — The signal is two orders of magnitude weaker than you are used to"
+subtitle: "Friday, 26 February 2027 · Week 30 of 52 · Machine learning · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Friday, 26 February 2027 · Week 30 of 52 · Machine learning · Stud
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every instinct you have about model capacity, feature count and validation was calibrated on problems where the explainable variance is percent rather than tenths of a percent, and recalibrating that is the whole point of this week.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the out-of-sample R-squared you should expect on daily cross-sectional equity returns, and convert it to an information coefficient.
+- Say how many observations you need to distinguish an R-squared of 0.002 from zero, and compare against your sample.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Convert between the units you will see in papers and the ones you use: an information coefficient of 0.03 corresponds to an R-squared of about 0.0009 in a cross-sectional regression, and both correspond to a specific information ratio at your breadth. Write the three conversions out and check them numerically on one of your existing signals.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read the results section of Gu, Kelly and Xiu and find the out-of-sample R-squared numbers they report. Note the magnitude, note that they are positive and economically meaningful, and note that a model with that R-squared would be discarded immediately in any other field you have worked in.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Compute the sample size question: at your universe size and sample length, what is the standard error of an out-of-sample R-squared of 0.002? Write the number where you will see it every time you are tempted by a model comparison.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gu, Kelly & Xiu (2020) — Empirical Asset Pricing via Machine Learning](https://dachxiu.chicagobooth.edu/download/ML.pdf) [paper]{.res-kind}
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-204-signal-to-noise.ipynb with the IC to R-squared to information ratio conversions verified, and the standard error of a small R-squared at your sample size.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What out-of-sample R-squared should you expect on daily equity returns, and how does that change the model class you reach for?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 205, Saturday, 27 February 2027 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Take a 5-day forward return label and count how many training observations share any overlap with a given one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The number is roughly the horizon in days.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what that does to the effective sample size of a training set of 100,000 rows.
 :::
 :::

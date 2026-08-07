@@ -1,5 +1,5 @@
 ---
-title: "Day 47 — Placeholder title for day 47"
+title: "Day 47 — Maximum drawdown is one draw from a wide distribution"
 subtitle: "Tuesday, 22 September 2026 · Week 7 of 52 · Returns and noise · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Tuesday, 22 September 2026 · Week 7 of 52 · Returns and noise · St
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+It is the statistic clients ask for and the one with the worst sampling properties in common use, and treating it as a parameter rather than as a realisation is the mistake that produces confident nonsense.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Given a Sharpe ratio and a horizon, simulate the distribution of maximum drawdown and report its interquartile range.
+- Say why maximum drawdown grows with sample length even for a strategy whose properties have not changed.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Simulate the distribution: 10,000 paths at a true Sharpe of 1 over three years of daily returns, and plot the histogram of maximum drawdown. Report the median and the 5th and 95th percentiles. The width of that interval is the answer to almost every question anyone asks about a drawdown.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Show the length dependence: repeat at one, three, five and ten years and plot median maximum drawdown against horizon. Then reconcile your five SPY numbers from last night with the pattern.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add `max_drawdown()` and `drawdown_series()` to qlib/stats.py, with a test on a hand-constructed path whose answer you can verify by eye.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [empyrical-reloaded — Sharpe, Sortino, drawdown primitives](https://github.com/stefan-jansen/empyrical-reloaded) [repo]{.res-kind}
+- [QuantStats — standalone HTML tear sheets](https://github.com/ranaroussi/quantstats) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-047-drawdown.ipynb with the simulated drawdown distribution at four horizons, plus drawdown functions in qlib/stats.py.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+A manager with a true Sharpe of 1 shows a 22 percent drawdown over three years. Is that unusual? Give the percentile.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 48, Wednesday, 23 September 2026 starts clean. This i
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute Sortino and Calmar ratios for the same momentum series you used on day 43, alongside its Sharpe.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write the three numbers down and note which one flatters the strategy most.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Read the empyrical-reloaded source for one of the three and check the convention it uses matches yours.
 :::
 :::

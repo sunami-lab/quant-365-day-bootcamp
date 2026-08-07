@@ -1,5 +1,5 @@
 ---
-title: "Day 275 — Placeholder title for day 275"
+title: "Day 275 — A variance swap is a strip of options, exactly"
 subtitle: "Saturday, 8 May 2027 · Week 40 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Saturday, 8 May 2027 · Week 40 of 52 · Derivatives · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The replication is one of the few exact and non-obvious results in derivatives, it explains what VIX is, and it is a standard interview question because the derivation is short.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the static replication of a variance swap as a weighted portfolio of options and give the weighting.
+- Say what the replication assumes and which assumption fails in practice.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Follow the derivation in the Gatheral first Imperial lecture: applying Itô to the log of the price produces realized variance plus a term in the log contract, and the log contract is replicated by a strip of options weighted by the reciprocal of the strike squared. Write it out; it is about half a page.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Implement the replication on your own chain and compare its cost against the fair variance strike implied by VIX-style calculation. The gap is the discretisation error from having finitely many listed strikes, and it is largest exactly when the tails matter, which is the assumption that fails.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatheral — The Volatility Surface, Statics and Dynamics (Imperial lecture 1)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-1st-Lecture.pdf) [reference]{.res-kind}
+- [Gatheral — The Volatility Surface (Wiley)](https://www.wiley.com/en-us/The+Volatility+Surface:+A+Practitioner's+Guide-p-9780471792512) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The variance swap replication derived and implemented on a real chain, with the discretisation error against the theoretical strike reported.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Give the option weighting that replicates a variance swap, and say what breaks the replication in practice.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 276, Sunday, 9 May 2027 starts clean. This is what th
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the Cboe VIX methodology summary and note the two expiries it interpolates between.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then compute VIX yourself from your own chain and compare against the published value.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> If you are within a few tenths of a point, your implementation is right.
 :::
 :::

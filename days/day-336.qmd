@@ -1,6 +1,6 @@
 ---
-title: "Day 336 — Placeholder title for day 336"
-subtitle: "Thursday, 8 July 2027 · Week 48 of 52 · The interview · Catch-up day · 45 min"
+title: "Day 336 — The canon, mixed and timed"
+subtitle: "Thursday, 8 July 2027 · Week 48 of 52 · The interview · Catch-up day · 50 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 8 July 2027 · Week 48 of 52 · The interview · Catch-up d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day. Five sessions of one family each is easier than a mixed set, because in a real interview nobody tells you which technique applies.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Score a mixed set drawn from all five families without knowing which is which.
+- Report whether your weakest category from day 330 has moved.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Finish anything outstanding from days 330 to 335, then run a mixed set: ten problems, thirty minutes, drawn from all five families in random order. The recognition step is what is being tested and it is the step the single-family sessions did not train.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Update the error log and compare the category ranking against day 330. A category that has not moved after a week of work needs a different approach rather than more repetitions.
 :::
 :::
 
@@ -33,27 +33,31 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Timed mixed set, ninth sitting: five problems in fifteen minutes, and this one is on top of today's thirty-minute set, so you are working tired. That is deliberate; the fourth interview of a superday is also tired.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Market making, fifth sitting: I quote you a market on a quantity with a known distribution, and you may trade any size up to a limit. How much do you trade, and how does size depend on your edge? The size answer is Kelly and you have already done that arithmetic on day 128.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Estimation: how many people are airborne over the United States right now? Reason to it, then say which of your assumptions the answer is most sensitive to.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — puzzle archive with solutions](https://www.janestreet.com/puzzles/archive/index.html) [problems]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A scored ten-problem mixed set and an updated error log with the category ranking compared against day 330.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which of your five families is still slowest, and what is different about how you are practising it now?
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +66,12 @@ Ten minutes tonight so Day 337, Friday, 9 July 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down what you think a market maker is optimising when they choose a quote width.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then write what they are optimising when they choose which side to skew.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two different objectives, and tomorrow makes both precise.
 :::
 :::

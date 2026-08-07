@@ -1,5 +1,5 @@
 ---
-title: "Day 240 — Placeholder title for day 240"
+title: "Day 240 — Quadratic variation is the entire difference from calculus"
 subtitle: "Saturday, 3 April 2027 · Week 35 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,45 +8,43 @@ subtitle: "Saturday, 3 April 2027 · Week 35 of 52 · Derivatives · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The six numbers you wrote down last night contain the whole reason stochastic calculus exists, and everything in the next five weeks is a consequence of one of those two columns being non-zero.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what the quadratic variation of Brownian motion over an interval equals, and demonstrate it numerically.
+- Say why a smooth function has zero quadratic variation and what that implies for the chain rule.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Interpret your numbers: the sum of squared increments converges to the length of the interval, and the sum of absolute increments diverges. Repeat both for a smooth function such as a sine wave over the same interval and confirm the squared sum goes to zero there. That contrast is the definition of the problem.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read the section of the CMU stochastic calculus notes on quadratic variation, then write the informal identity that the square of a Brownian increment behaves like the time increment. This is the one line you will use in every derivation for the next month, so write it somewhere permanent.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Check the corollary: the cross-variation of Brownian motion with time, and the quadratic variation of time itself, are both zero. Verify both numerically so that the three rules are facts you have seen rather than a table you memorised.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [CMU — Iyer, Stochastic Calculus for Finance (notes)](https://www.math.cmu.edu/~gautam/sj/teaching/2021-22/944-scalc-finance1/pdfs/notes-tablet.pdf) [reference]{.res-kind}
+- [Oxford — Etheridge, Stochastic Calculus for Finance (lecture notes)](https://www.stats.ox.ac.uk/~etheridg/finmath/index.html) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-240-quadratic-variation.ipynb with quadratic variation converging to the interval length for Brownian motion and to zero for a smooth function.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What is the quadratic variation of Brownian motion over [0,T], and why does an ordinary differentiable function have none?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 241, Sunday, 4 April 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Try to integrate a Brownian path against itself using a Riemann sum, evaluating the integrand at the left endpoint of each interval, and then at the right endpoint.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The two answers differ and the difference does not vanish as the partition refines.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute both and write down the gap.
 :::
 :::

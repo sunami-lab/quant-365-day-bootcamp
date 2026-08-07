@@ -1,6 +1,6 @@
 ---
-title: "Day 123 — Placeholder title for day 123"
-subtitle: "Monday, 7 December 2026 · Week 18 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 123 — Backtesting a risk model: coverage and independence"
+subtitle: "Monday, 7 December 2026 · Week 18 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,49 @@ subtitle: "Monday, 7 December 2026 · Week 18 of 52 · Portfolios and risk · St
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A risk model that is never tested is a number generator, and the two tests that matter check different failures, one of which almost every model fails.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Run an unconditional coverage test on your VaR exceedances and report the p-value.
+- Run an independence test on the same exceedances and say what a rejection tells you about the volatility model behind it.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement both tests: the unconditional coverage likelihood ratio on the exceedance count, and the independence test on whether an exceedance predicts the next one. Run them on your three VaR estimators. The historical simulation version usually passes the first and fails the second.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Diagnose the failure: exceedance clustering means the model is not tracking conditional volatility, which is exactly what filtered historical simulation was built to fix. Confirm that the filtered version passes the independence test where the plain historical one does not.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add the two tests to qlib/risk.py so that any risk model you build later is checkable with one call.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/risk.py can now test a risk model rather than only produce one, with coverage and independence tests that any later model has to pass before its numbers are used for sizing.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
+- [statsmodels documentation](https://www.statsmodels.org/stable/index.html) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Coverage and independence tests in qlib/risk.py, run on three VaR estimators with p-values reported.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your VaR has the right number of exceedances and they cluster in March 2020. Which test caught it, and what is the fix?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +59,12 @@ Ten minutes tonight so Day 124, Tuesday, 8 December 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pick three historical episodes: October 2008, March 2020, and one you choose. Note the dates.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Extract your book's actual or simulated returns over each window.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what you think the worst one did to it, before you look.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 60 — Placeholder title for day 60"
+title: "Day 60 — A simulator whose output passes your own stylized-facts test"
 subtitle: "Monday, 5 October 2026 · Week 9 of 52 · Returns and noise · Study day · 60 min"
 ---
 
@@ -8,45 +8,46 @@ subtitle: "Monday, 5 October 2026 · Week 9 of 52 · Returns and noise · Study 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every null you use for the rest of the year is only as honest as the data-generating process behind it, and a Gaussian random walk fails four of your six criteria.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Generate synthetic return series that reproduce fat tails and volatility clustering to within the tolerances you set on day 42.
+- Say which stylized fact your simulator still fails, and what that means for the results you will use it to test.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build qlib/simulate.py with two generators: a Gaussian random walk, and one with stochastic volatility, where the log variance follows a slow autoregression and the innovations are heavy tailed. Calibrate the second to your own SPY estimates from week 6.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write tests/test_simulate.py asserting the calibrated generator reproduces four of your six stylized facts inside a tolerance you state: kurtosis, absolute-return autocorrelation at lag 1 and lag 20, and the count of four-sigma days. Let the test fail on the leverage effect and the correlation asymmetry, and record in the docstring that it does.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+qlib/simulate.py gives the project a null that is not a straw man. Any strategy result from here can be run against synthetic data with the same tails and clustering as the real thing, which is what makes a false-positive rate measurable rather than assumed.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
+- [Zivot — Introduction to Computational Finance and Financial Econometrics with R](https://bookdown.org/compfinezbook/introcompfinr/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/simulate.py with a calibrated stochastic-volatility generator and tests asserting four stylized facts, with the two failures documented.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your simulator does not reproduce the leverage effect. Name one strategy family whose false positive rate you would therefore be understating.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +56,12 @@ Ten minutes tonight so Day 61, Tuesday, 6 October 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Collect the four numbers the noise floor needs: your realistic trial count for a year, the Sharpe standard error at your typical sample length, the expected maximum null Sharpe at that trial count, and your block length.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write them on one line each.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow turns those four numbers into one.
 :::
 :::

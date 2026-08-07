@@ -1,6 +1,6 @@
 ---
-title: "Day 197 — Placeholder title for day 197"
-subtitle: "Friday, 19 February 2027 · Week 29 of 52 · Alpha · Study day · 60 min"
+title: "Day 197 — Your signals are more correlated than you think"
+subtitle: "Friday, 19 February 2027 · Week 29 of 52 · Alpha · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Friday, 19 February 2027 · Week 29 of 52 · Alpha · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The number you found last night decides how much the book gains from having eight signals rather than three, and it is almost always larger than the economic stories would suggest.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the correlation matrix of your signals' returns and the effective number of independent bets it implies.
+- Say which pairs are correlated for a reason you can name and which are correlated by accident.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Compute the effective number of signals rather than counting them: from the eigenvalues of the signal return correlation matrix, compute the participation ratio, which tells you how many independent signals you effectively have. Compare against the raw count. The gap is what determines the combination's benefit.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Diagnose the pairs: for the three most correlated pairs, work out whether the correlation comes from a shared input, from a shared factor exposure, or from both trading the same names at the same time for different reasons. Then check whether neutralising against your standard exposure set reduces it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the correlation you should compute but cannot yet: correlation of the signals themselves against correlation of their realised returns. They differ and the second is what matters for the portfolio.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Laloux, Cizeau, Bouchaud & Potters (1998) — Noise Dressing of Financial Correlation Matrices](https://arxiv.org/abs/cond-mat/9810255) [paper]{.res-kind}
+- [alphalens-reloaded documentation](https://alphalens.ml4trading.io/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The signal return correlation matrix, the effective number of independent signals, and a diagnosis of the three largest correlations.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You have eight signals and an effective number of four. What does that do to the combined book's expected Sharpe?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 198, Saturday, 20 February 2027 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Take your two most correlated signals and regress one on the other, keeping the residual.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Evaluate the residual as a signal in its own right.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note whether it is better or worse than the original. It could be either.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 228 — Placeholder title for day 228"
+title: "Day 228 — Language models are extractors here, not forecasters"
 subtitle: "Monday, 22 March 2027 · Week 33 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Monday, 22 March 2027 · Week 33 of 52 · Machine learning · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Day 194 named the leak; today draws the line in code, by using a model for a task where the answer is checkable against the document rather than against the future.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Use a language model to extract a structured field from filings and measure its accuracy against a hand-labelled sample.
+- State why extraction accuracy is verifiable in a way that a sentiment score's usefulness is not.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Run the extraction on fifty filings and hand-label twenty of them yourself as ground truth. Report precision and recall against your labels. Twenty hand labels is tedious and it is the only thing that turns the extraction from a plausible pipeline into a measured one.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Build the resulting feature and evaluate it through the standard signal pipeline, with the filing timestamp as the availability date. Then note the residual contamination risk: the extraction is checkable, but if the model is more accurate on companies it saw discussed in training, the feature's coverage is not random. Report accuracy split by company size as a check.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [SEC EDGAR full-text search](https://www.sec.gov/edgar/search/) [data]{.res-kind}
+- [SEC EDGAR REST APIs (data.sec.gov)](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+An extracted structured field with precision and recall against twenty hand labels, plus accuracy split by company size.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why is using a language model to extract a number safer than using it to score sentiment, and what risk remains?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 229, Tuesday, 23 March 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the abstract and conclusions of the Chen, Pelger and Zhu deep learning asset pricing paper.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what they claim their model achieves, in the units they use.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then convert that into an information ratio using day 204's conversions.
 :::
 :::

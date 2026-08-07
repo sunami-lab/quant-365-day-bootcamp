@@ -1,6 +1,6 @@
 ---
-title: "Day 26 — Placeholder title for day 26"
-subtitle: "Tuesday, 1 September 2026 · Week 4 of 52 · Markets · Study day · 60 min"
+title: "Day 26 — Statistical arbitrage is a portfolio of weak bets"
+subtitle: "Tuesday, 1 September 2026 · Week 4 of 52 · Markets · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Tuesday, 1 September 2026 · Week 4 of 52 · Markets · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The seat you are aiming for, described honestly: no individual trade is convincing, and the entire edge is that you have several hundred of them and they are close to independent.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the relationship between a signal's hit rate, the number of independent bets and the resulting information ratio, and say which of the three is easiest to improve.
+- Say what the original pairs trading result was, when it stopped working, and what that pattern predicts about anything you publish.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Read the Gatev, Goetzmann and Rouwenhorst pairs trading paper, sections on the trading rule and the results. Skip the robustness appendices. Note the sample period and the reported excess return.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} The breadth arithmetic, which is the single most useful piece of algebra in this phase: with a per-bet correlation between forecast and outcome of 0.03 and N independent bets a year, the annual information ratio is roughly 0.03 times the square root of N. Solve for the N that gives an information ratio of 1. Then say what happens to that N when your bets are correlated at 0.3 rather than 0.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatev, Goetzmann & Rouwenhorst (1999) — Pairs Trading (NBER w7032)](https://www.nber.org/papers/w7032) [paper]{.res-kind}
+- [Avellaneda & Lee (2010) — Statistical arbitrage in the US equities market](https://traders.studentorg.berkeley.edu/papers/Statistical%20arbitrage%20in%20the%20US%20equities%20market.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The breadth calculation worked out in notebooks/day-026-statarb.ipynb, with the required N reported for independent and for correlated bets.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your signal is right 51 percent of the time. How many independent bets a year do you need before that is a business, and what destroys the calculation?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 27, Wednesday, 2 September 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Skim the AQR research page and find one paper on trend following. Read the abstract only.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look up the management and performance fee of any listed hedge fund vehicle you can find, and write the two numbers down.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down, in one line, what you think your own capacity is in dollars. Tomorrow you will find out how to think about it.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 243 — Placeholder title for day 243"
-subtitle: "Tuesday, 6 April 2027 · Week 35 of 52 · Derivatives · Study day · 60 min"
+title: "Day 243 — Three SDEs you will meet, and what each one enforces"
+subtitle: "Tuesday, 6 April 2027 · Week 35 of 52 · Derivatives · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Tuesday, 6 April 2027 · Week 35 of 52 · Derivatives · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Only a handful of stochastic differential equations appear in practice, each chosen because its drift enforces a property the modelled quantity must have, and knowing which is which is most of what you need.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- For each of the three processes, say what property of the modelled quantity the drift enforces.
+- Solve geometric Brownian motion and the Ornstein-Uhlenbeck process explicitly using Itô's lemma.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Solve both explicitly. Geometric Brownian motion by applying Itô to the log, and Ornstein-Uhlenbeck by applying Itô to an exponentially weighted transformation of the process. Both are one page each and doing them is what makes the notation stop being an obstacle.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Connect each to something you have already measured: geometric Brownian motion enforces positivity, Ornstein-Uhlenbeck enforces mean reversion and is your day 82 spread model, and the square-root diffusion enforces non-negativity of a variance, which is why it appears in stochastic volatility models in week 39.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the stationary distribution of the Ornstein-Uhlenbeck process and check it against the empirical distribution of the spread you fitted in week 12.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Princeton — van Handel, Stochastic Calculus, Filtering and Stochastic Control (notes)](https://web.math.princeton.edu/~rvan/acm217/ACM217.pdf) [reference]{.res-kind}
+- [CMU — Iyer, Stochastic Calculus for Finance (notes)](https://www.math.cmu.edu/~gautam/sj/teaching/2021-22/944-scalc-finance1/pdfs/notes-tablet.pdf) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-243-sdes.ipynb with explicit solutions for two processes and the OU stationary distribution checked against your week 12 spread.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What property does the drift of a square-root diffusion enforce, and why does that matter for a variance process?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 244, Wednesday, 7 April 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down the simplest discretisation of a stochastic differential equation you can think of.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> It is Euler's method with a random increment. Write it for geometric Brownian motion.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then note that you know the exact solution for that one, so you can measure the error.
 :::
 :::

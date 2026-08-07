@@ -1,6 +1,6 @@
 ---
-title: "Day 94 — Placeholder title for day 94"
-subtitle: "Sunday, 8 November 2026 · Week 14 of 52 · Time series · Study day · 60 min"
+title: "Day 94 — Does the moving hedge ratio actually help, or just fit better"
+subtitle: "Sunday, 8 November 2026 · Week 14 of 52 · Time series · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,46 @@ subtitle: "Sunday, 8 November 2026 · Week 14 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A more flexible model always fits better in sample, and the point of the last three weeks of machinery is to have the discipline to find out whether it forecasts better.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the dynamic and static hedge ratio versions on the same out-of-sample period with the same costs.
+- Say what part of any improvement is explained by the higher turnover the dynamic version induces.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Run both versions over the untouched out-of-sample period with identical cost assumptions, and report Sharpe, turnover and net Sharpe for each. Then hold turnover fixed by damping the dynamic hedge ratio's updates and rerun, so that the comparison is not confounded by trading more.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Write the verdict into reports/milestone-03-pairs.md with the numbers, including the case where the added flexibility does not pay. Note the trial count this comparison added to research_log.jsonl.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The dynamic and static hedge ratio versions of the pairs strategy are compared out of sample at matched turnover, so any improvement is attributable to the estimator rather than to trading more.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [statsmodels — state space models and the Kalman filter](https://www.statsmodels.org/stable/statespace.html) [tool]{.res-kind}
+- [Avellaneda & Lee (2010) — Statistical arbitrage in the US equities market](https://traders.studentorg.berkeley.edu/papers/Statistical%20arbitrage%20in%20the%20US%20equities%20market.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A matched-turnover out-of-sample comparison of dynamic against static hedge ratios, written into the milestone report.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+The dynamic version has a higher gross Sharpe and a lower net Sharpe. What happened, and what would you do?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 95, Monday, 9 November 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Plot your pair's spread over the full history and mark by eye where you think the relationship changed.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note how many such points you marked.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow you find out what a formal procedure says, and how much your eye was fitting noise.
 :::
 :::

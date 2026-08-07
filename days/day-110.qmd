@@ -1,5 +1,5 @@
 ---
-title: "Day 110 — Placeholder title for day 110"
+title: "Day 110 — One covariance interface, four estimators behind it"
 subtitle: "Tuesday, 24 November 2026 · Week 16 of 52 · Portfolios and risk · Study day · 60 min"
 ---
 
@@ -8,45 +8,46 @@ subtitle: "Tuesday, 24 November 2026 · Week 16 of 52 · Portfolios and risk · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The estimator choice should be a configuration line rather than a rewrite, because milestone 4 compares four of them and phase 6 will want to change it again.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Return a covariance estimate from one function with the estimator selectable, all guaranteed positive definite.
+- Show the four estimators' predicted-versus-realised risk on the same rolling out-of-sample test.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Write qlib/risk.py with `covariance(returns, method)` supporting sample, clipped, Ledoit-Wolf and single-factor, each returning a positive definite matrix. Add a test asserting positive definiteness and symmetry for every method on every rolling window of your sample.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Produce the comparison figure milestone 4 needs: for each estimator, out-of-sample realised risk of the minimum-variance portfolio against the risk it predicted, with equal weighting marked as the horizontal reference. Save it into reports/milestone-04-risk-model.md.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+qlib/risk.py gives the project one covariance interface with four estimators behind it, tested for positive definiteness on every window. The portfolio construction code no longer knows or cares which estimator is in use.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [scikit-learn — covariance estimation and Ledoit-Wolf shrinkage](https://scikit-learn.org/stable/modules/covariance.html) [reference]{.res-kind}
+- [pytest documentation](https://docs.pytest.org/en/stable/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/risk.py with four tested covariance estimators, and the predicted-against-realised risk figure in the milestone report.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your Ledoit-Wolf estimate fails positive definiteness on one window. What happened, and what does your code do about it?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +56,12 @@ Ten minutes tonight so Day 111, Wednesday, 25 November 2026 starts clean. This i
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Regress your 200 names' daily returns on the market return and keep the residuals.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute the correlation matrix of those residuals and look at its largest off-diagonal entries.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note which pairs they are. They will not be random.
 :::
 :::

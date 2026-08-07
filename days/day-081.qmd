@@ -1,6 +1,6 @@
 ---
-title: "Day 81 — Placeholder title for day 81"
-subtitle: "Monday, 26 October 2026 · Week 12 of 52 · Time series · Study day · 60 min"
+title: "Day 81 — The pair selection rule, written down before the results"
+subtitle: "Monday, 26 October 2026 · Week 12 of 52 · Time series · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,46 @@ subtitle: "Monday, 26 October 2026 · Week 12 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Stating the procedure first is what makes the multiple-testing correction honest, and it is the difference between milestone 3 being research and being a story.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State your selection procedure completely enough that someone else could run it and get your pairs.
+- Report the number of pairs screened and the correction that number implies for the strategy's eventual Sharpe.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement the rule as qlib/signals/pairs.py: a function taking a universe and a formation window and returning the selected pairs with their hedge ratios. No parameters chosen by looking at trading results. Log the screen count to research_log.jsonl automatically.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Run it on the formation period only, which must end before the trading period begins, and record the selected pairs, the screen count and the implied deflated-Sharpe hurdle at that count. Put all three on the first page of reports/milestone-03-pairs.md.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/signals/pairs.py holds the pair selection rule, fixed in code before any trading result exists, with its screen count logged automatically. The hurdle that count implies is on the first page of the milestone rather than in a footnote.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatev, Goetzmann & Rouwenhorst (1999) — Pairs Trading (NBER w7032)](https://www.nber.org/papers/w7032) [paper]{.res-kind}
+- [Avellaneda & Lee (2010) — Statistical arbitrage in the US equities market](https://traders.studentorg.berkeley.edu/papers/Statistical%20arbitrage%20in%20the%20US%20equities%20market.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/signals/pairs.py returning selected pairs and hedge ratios, with the screen count and implied Sharpe hurdle recorded.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+How many pairs did your rule screen, and what Sharpe does the strategy have to clear as a result?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 82, Tuesday, 27 October 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the definition of an Ornstein-Uhlenbeck process and write down its three parameters.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at one of your selected spreads and guess its half-life in trading days.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Keep the guess; tomorrow you estimate it.
 :::
 :::

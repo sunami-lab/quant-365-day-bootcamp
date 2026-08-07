@@ -1,6 +1,6 @@
 ---
-title: "Day 102 — Placeholder title for day 102"
-subtitle: "Monday, 16 November 2026 · Week 15 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 102 — Constraints are shrinkage wearing a different hat"
+subtitle: "Monday, 16 November 2026 · Week 15 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Monday, 16 November 2026 · Week 15 of 52 · Portfolios and risk · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A long-only constraint improves out-of-sample performance for a reason that has nothing to do with anyone's view on shorting, and knowing the reason tells you when it will stop helping.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Explain why a no-short constraint is equivalent to shrinking the covariance matrix in a specific direction.
+- Report the out-of-sample effect of three constraint regimes on your own data and say which you would use.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the section of the Boyd and Vandenberghe convex optimization book on duality as far as complementary slackness, then look at the dual variables your CVXPY solution returns for the binding constraints. The shadow price on a position cap tells you how much the objective wanted to violate it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Demonstrate the equivalence numerically: solve the unconstrained problem with a covariance matrix shrunk toward the identity at several intensities, and find the shrinkage level whose weights most closely match the long-only solution. The correspondence will not be exact and the direction is the point.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the practical conclusion in your notebook: constraints help when the estimation error is large relative to the true dispersion of means, which is a statement you can check rather than a preference.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Boyd & Vandenberghe — Convex Optimization (free book)](https://web.stanford.edu/~boyd/cvxbook/) [textbook]{.res-kind}
+- [Stanford EE364a — Convex Optimization I, lecture slides (Boyd)](https://web.stanford.edu/class/ee364a/lectures.html) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-102-constraints.ipynb with dual variables reported for binding constraints and the shrinkage level that mimics long-only.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does a long-only constraint improve out-of-sample performance, and when would you expect it to stop helping?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 103, Tuesday, 17 November 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Build three benchmark portfolios on your 25 assets: equal weight, inverse volatility, and minimum variance.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute the out-of-sample Sharpe of each over the same window you used for the optimised portfolios.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the four numbers. One of the benchmarks will win.
 :::
 :::

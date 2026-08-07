@@ -1,5 +1,5 @@
 ---
-title: "Day 187 — Placeholder title for day 187"
+title: "Day 187 — Volatility as a signal, in level and in change"
 subtitle: "Tuesday, 9 February 2027 · Week 27 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Tuesday, 9 February 2027 · Week 27 of 52 · Alpha · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The last of the price-based time-series signals, and the one that connects directly to phase 8, because the thing being priced is the same in both places.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the forward return by volatility level and by volatility change, and say why the two differ.
+- Say what a volatility-scaled position rule does that a volatility signal does not.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Evaluate both cross-sectionally and as a time-series rule: volatility level as a signal, volatility change as a signal, and volatility as a position scalar rather than a forecast. The third is not a signal at all, it is a sizing rule, and separating the three is the exercise.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Connect it forward: the variance risk premium is the gap between implied and realised volatility, which is a time-series signal you cannot build until phase 8. Write down what data you would need and what the trade would be, so that week 40 has a specification to test rather than a topic.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Generate the pages for the time-series signals and add them to the book.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Cboe VIX historical data](https://www.cboe.com/tradable_products/vix/vix_historical_data/) [data]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Volatility level and change evaluated as signals, with a written specification for the variance risk premium trade to be tested in week 40.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Volatility level and volatility change give opposite-signed forward returns in your data. Give one explanation for each.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 188, Wednesday, 10 February 2027 starts clean. This i
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the volatility of each of your time-series signals' returns and note how different they are.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Work out what weights would equalise their risk contributions.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not implement it yet.
 :::
 :::

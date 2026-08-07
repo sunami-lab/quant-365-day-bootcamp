@@ -6,293 +6,340 @@ toc-depth: 2
 
 Interview preparation is not a phase you do at the end. Probability under pressure decays if you touch it once; it sticks if you touch it fifty times. Every seventh day carries a drill, and they accumulate here.
 
-53 drill sittings across the year.
+52 drill sittings across the year.
 
 ## Markets
 
 **[Day 7](days/day-007.qmd)** · Thu 13 Aug
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Mental arithmetic baseline, and you will repeat this every drill day for a year, so write the numbers down. Ten two-digit multiplications against a 60-second clock, then 1/7 through 6/7 as decimals from memory, then 15 percent of 340 and 340 divided by 8. Record the time and the error count.
+- Counting, warm-up: how many distinct five-card poker hands contain exactly one pair? Get the number, then check it sums correctly against the total of 2,598,960 hands when you add the other categories from memory.
+- Conditional probability, the version that gets asked: a family has two children, at least one of whom is a boy born on a Tuesday. Probability both are boys? Do it by enumerating the sample space, and then say out loud why the Tuesday changes the answer at all.
 
 **[Day 14](days/day-014.qmd)** · Thu 20 Aug
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed as before: ten two-digit multiplications, the sevenths, then 12 percent of 425 and 7 divided by 16 as a decimal. Compare the time to day 7 and write both numbers down.
+- Bayes, in the form interviewers use: a test for a condition present in 1 in 1,000 people has 99 percent sensitivity and 95 percent specificity. Positive test, what is the posterior? Do it in your head with natural frequencies out of 100,000, not with the formula.
+- Now the version they follow up with: how good would specificity have to be for the posterior to exceed one half? Solve it algebraically, out loud.
 
 **[Day 21](days/day-021.qmd)** · Thu 27 Aug
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed: ten two-digit multiplications, the sevenths, plus 1/12 and 1/16 as decimals. Three data points now. Plot them at the end of the month, not today.
+- Expectation by indicators, which is the trick behind half of the canon: shuffle a deck of 52 cards. What is the expected number of cards in their original position? Get it in one line using linearity, then say why the answer does not depend on the deck size.
+- The follow-up they ask: what is the probability that no card is in its original position, and what number does it approach? You should recognise this one; state the limit and where it comes from.
 
 **[Day 28](days/day-028.qmd)** · Thu 3 Sep
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, fourth sitting: ten two-digit multiplications, the sevenths, then 1/13 to three places and 17 times 23 in your head. Now plot the four times you have recorded. The trend is the point.
+- Symmetry, the argument that replaces a calculation: two players alternate flipping a fair coin, first to get heads wins. Probability the first player wins? Solve it with a one-line symmetry or recursion argument rather than summing the series.
+- The follow-up: same game, but you need two heads in a row to win. Set up the recursion and solve it. Say out loud which states you need and why there are exactly three.
 
 ## Returns and noise
 
 **[Day 35](days/day-035.qmd)** · Thu 10 Sep
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed: ten two-digit multiplications, the sevenths, then 3/8, 5/16 and 1/11 as decimals. Fifth sitting. Compare against the plot you made last night.
+- The urn canon: an urn has 5 red and 7 blue balls; you draw 3 without replacement. Probability all three are the same colour? Do it two ways, by counting and by the multiplication rule, and check they agree.
+- Variance by conditioning: you roll a die, then flip that many coins. What is the expected number of heads and its variance? Use the law of total variance and say out loud which term is which.
 
 **[Day 42](days/day-042.qmd)** · Thu 17 Sep
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, sixth sitting: ten two-digit multiplications, the sevenths, then 2/7 times 3/8 as a decimal without writing anything down.
+- The classic they open with: 100 people board a plane, the first sits at random, everyone after sits in their own seat if free and at random otherwise. Probability the last passenger gets their own seat? Answer by symmetry in under a minute, then justify the symmetry out loud.
+- Conditional expectation, geometric flavour: you flip a fair coin until you see HH. Expected number of flips? Set up the states, solve, then do the same for HT and say out loud why the two answers differ.
 
 **[Day 49](days/day-049.qmd)** · Thu 24 Sep
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, seventh sitting. Ten two-digit multiplications, the sevenths, then 1.05 to the 12th power to two decimal places, approximated in your head.
+- Order statistics, a first look: draw three independent uniforms on the unit interval. What is the expected value of the largest? Of the middle one? Get the general formula for the kth of n and say out loud why the answers are equally spaced.
+- The trading-flavoured version they actually ask: two people each draw a uniform on the unit interval, see only their own, and may swap once if both agree. Should you ever agree to swap? Explain the adverse selection in two sentences.
 
 **[Day 56](days/day-056.qmd)** · Thu 1 Oct
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, eighth sitting: ten two-digit multiplications, the sevenths, and 1/1.05 to four decimal places by long division in your head.
+- The canonical urn-and-information problem: three cards, one red on both sides, one white on both sides, one red and white. You draw one at random and see red. Probability the other side is red? Say the wrong answer out loud first, then the right one, and name the mistake in the wrong one.
+- Expectation with a twist: you roll a fair die repeatedly and stop when you choose. Your payoff is the last roll. What is the optimal stopping rule and its expected value? Then do it for a payoff of the average of all rolls so far.
 
 **[Day 63](days/day-063.qmd)** · Thu 8 Oct
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, ninth sitting. Ten two-digit multiplications, the sevenths, and the square root of 2, 3 and 5 to three decimal places from memory.
+- Symmetry and conditioning combined: a fair coin is flipped 100 times. Given that the first 50 flips contained 30 heads, what is the expected total number of heads? Then, given that the total was 60 heads, what is the expected number in the first 50? Say why the two questions are not the same shape.
+- Two months of drills have accumulated. Write down the three problem types that have been slowest for you so far. That list is the thing you actually track, not any individual answer.
 
 ## Time series
 
 **[Day 70](days/day-070.qmd)** · Thu 15 Oct
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, tenth sitting. Ten two-digit multiplications, the sevenths, and 7 percent compounded for 10 years as a multiple, in your head.
+- The counting problem that separates people: how many ways can you arrange the letters of MISSISSIPPI? Then, what fraction of those arrangements have no two S adjacent? Do the second by placing the non-S letters first.
+- Conditional probability with a trap: you are told one of two coins is fair and the other is two-headed. You pick one, flip it three times, and get three heads. Probability you picked the two-headed coin? Then say what the answer approaches after ten heads and why it never reaches 1.
 
 **[Day 77](days/day-077.qmd)** · Thu 22 Oct
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, eleventh sitting. Ten two-digit multiplications, the sevenths, and 1/64, 1/128 and 1/256 as decimals.
+- Bayes with a base rate that moves: a coin is fair with probability 0.9 and biased to 0.75 heads otherwise. You see 8 heads in 10 flips. Posterior that it is biased? Set it up with likelihood ratios rather than with the full formula.
+- Expectation, geometric: on average, how many times do you have to roll a fair die to see all six faces? Get the answer by decomposing into six waiting times, then say the general formula for n faces and its growth rate.
 
 **[Day 84](days/day-084.qmd)** · Thu 29 Oct
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twelfth sitting. Ten two-digit multiplications, the sevenths, and 13 squared through 19 squared from memory.
+- The interview classic on symmetry and stopping: you flip a fair coin repeatedly. What is the expected number of flips to see HTH? Compare against HHH and say which is longer and why, out loud, without writing the Markov chain.
+- A counting problem with structure: how many distinct paths are there from one corner of an 8 by 8 grid to the opposite corner moving only right and up? Then how many stay weakly below the diagonal? Name the second number.
 
 **[Day 91](days/day-091.qmd)** · Thu 5 Nov
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirteenth sitting. Ten two-digit multiplications, the sevenths, and 2 to the 10th through 2 to the 16th from memory.
+- Variance decomposition under conditioning: a stock's daily return has volatility that is 1 percent on 80 percent of days and 3 percent on the rest. What is the unconditional volatility, and the unconditional kurtosis? The second answer is the mechanism behind week 6.
+- Three months of drills. Write down the three problem types that are still slowest, compare against the list you made on day 63, and note what has moved.
 
 **[Day 98](days/day-098.qmd)** · Thu 12 Nov
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, fourteenth sitting. Ten two-digit multiplications, the sevenths, and 15 percent of 84 and 84 divided by 7 in your head.
+- Random walks start here, and they run for the next thirteen weeks. Gambler's ruin: you start with 10 units, bet one unit per fair coin flip, and stop at 0 or 20. Probability you reach 20? Now do it when the coin pays out with probability 0.49 and say how much the answer moves.
+- Expected duration of the same game, which is the part people forget: how many flips on average before the fair version ends? Derive it from the difference equation rather than quoting the product.
 
 ## Portfolios and risk
 
 **[Day 105](days/day-105.qmd)** · Thu 19 Nov
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, fifteenth sitting. Ten two-digit multiplications, the sevenths, and 1.02 to the 36th power approximated in your head.
+- Random walk, first passage: a symmetric random walk starts at 0. What is the probability it ever reaches plus 5? Now what is the expected time to do so? Say the second answer out loud before you compute it, and notice that it is surprising.
+- Optional stopping, gently: you flip a fair coin and win one unit for heads, lose one for tails. You stop when you are up 1 unit. Is this a winning strategy? Say precisely which assumption of optional stopping fails, and what a broker would call the thing that makes it fail.
 
 **[Day 112](days/day-112.qmd)** · Thu 26 Nov
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, sixteenth sitting. Ten two-digit multiplications, the sevenths, and 1/0.85 and 1/1.15 to three decimals.
+- Martingales and optional stopping: a gambler with 100 units bets one unit on fair coin flips and stops at 0 or 200. Use the martingale property to get the ruin probability in one line, then say which of the optional stopping conditions you relied on.
+- The version with a drift: same game, but the coin pays with probability 0.48. Find the martingale that works here and use it. This one is asked directly and the trick is finding the right exponential.
 
 **[Day 119](days/day-119.qmd)** · Thu 3 Dec
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, seventeenth sitting. Ten two-digit multiplications, the sevenths, and 45 times 45, 35 times 35 and 65 times 65 using the trick for numbers ending in 5.
+- Order statistics under a clock: n independent uniforms on the unit interval. What is the expected value of the maximum, the minimum, and the range? Then the expected gap between the largest and second largest, and what happens to it as n grows.
+- The trading version: 20 traders each independently quote a price drawn from the same distribution, and you trade against the best quote. What is the expected quality of the price you get, and why does that make you cautious rather than pleased?
 
 **[Day 126](days/day-126.qmd)** · Thu 10 Dec
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, eighteenth sitting. Ten two-digit multiplications, the sevenths, and 1/3, 2/9 and 5/6 as decimals plus their reciprocals.
+- Poisson processes: buses arrive as a Poisson process with mean gap 10 minutes. You arrive at a random time. What is your expected wait, and what is the expected length of the gap you land in? Explain the inspection paradox out loud.
+- The follow-up they use to check you understood: what is the expected time since the last bus? Give it without computing anything new.
 
 **[Day 133](days/day-133.qmd)** · Thu 17 Dec
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, nineteenth sitting. Ten two-digit multiplications, the sevenths, and 1.1 to the 7th and 0.9 to the 7th to three decimals.
+- Markov chains under a clock: a frog on a 5-lily-pad cycle jumps left or right with equal probability. Expected time to visit every pad? Then the stationary distribution if the jumps are 2 to 1 in one direction.
+- Expected value game, the kind that opens a trading interview: I roll a fair die and you may pay to see the result and then choose to reroll once, keeping the second. What is the game worth? Now with two rerolls, and say how you would compute it for n.
 
 ## The research harness
 
 **[Day 140](days/day-140.qmd)** · Thu 24 Dec
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twentieth sitting. Ten two-digit multiplications, the sevenths, and 1/7 through 1/13 to three decimals.
+- Random walk maximum: a symmetric random walk runs for 100 steps. What is the expected maximum? Use the reflection principle to get the distribution of the maximum first, and say the argument out loud rather than writing it.
+- Arcsine law, stated as an interview question: over a long fair coin-flipping game, what is the most likely fraction of time spent ahead? Most people say one half. Say the right answer and the shape of the distribution.
 
 **[Day 147](days/day-147.qmd)** · Thu 31 Dec
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twenty-first sitting. Ten two-digit multiplications, the sevenths, and 17 times 18, 23 times 27 and 34 times 36 using the complements trick.
+- Markov chains: a mouse in a 3 by 3 grid of rooms moves to a uniformly chosen adjacent room each minute, starting in a corner. Expected time to reach the centre? Set up the states using symmetry so there are three, not nine.
+- The follow-up: what is the long-run fraction of time spent in the centre? Get it from the stationary distribution and say why it is proportional to the number of doors.
 
 **[Day 154](days/day-154.qmd)** · Thu 7 Jan
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twenty-second sitting. Ten two-digit multiplications, the sevenths, and 250 divided by 7, 400 divided by 13 and 1000 divided by 17 to one decimal.
+- Optional stopping applied to a game: you draw cards one at a time from a shuffled deck and may stop at any point, winning if the next card is red. What is the best strategy and its value? The answer is surprising and the argument is a martingale one.
+- Expected value under a budget: you may pay to roll a die up to three times, keeping the last roll. What is the game worth, and what are the two thresholds in the optimal policy? State both numbers.
 
 **[Day 161](days/day-161.qmd)** · Thu 14 Jan
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twenty-third sitting. Ten two-digit multiplications, the sevenths, and 8 percent of 1,250 plus 12 percent of 3,400 in your head.
+- Random walks and stopping, combined: a symmetric random walk starts at 0 and you stop when you first hit plus 3 or minus 5. Probability of each, expected duration, and then the same for a walk with steps of plus 2 and minus 1 with equal probability.
+- Halfway through the drill thread's second band. Write down the three problem types that are still slowest and compare against your day 91 list.
 
 ## Alpha
 
 **[Day 168](days/day-168.qmd)** · Thu 21 Jan
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twenty-fourth sitting. Ten two-digit multiplications, the sevenths, and 1.5 to the 10th power approximated to two significant figures.
+- Markov chain with an absorbing state: a tennis game is at deuce and each point is won independently with probability p. What is the probability of winning the game from deuce? Derive it, then evaluate at p of 0.55 and note how much the advantage amplifies.
+- The same amplification, asked as a trading question: your edge per trade is 51 to 49. Over a match structure that requires winning by two, what does your edge become? Say what the analogy is to compounding a small per-trade edge.
 
 **[Day 175](days/day-175.qmd)** · Thu 28 Jan
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twenty-fifth sitting. Ten two-digit multiplications, the sevenths, and the square roots of 250, 500 and 1,000 to two decimals.
+- Order statistics with a decision attached: you interview candidates one at a time in random order and must hire on the spot. What policy maximises the chance of hiring the best, and what is that chance? State the threshold rule and the limiting probability.
+- The trading version, which is how it is actually asked: you can trade once against a stream of quotes arriving in random order. When do you take one? Say why the answer is the same problem and what changes if you may take the second best.
 
 **[Day 182](days/day-182.qmd)** · Thu 4 Feb
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twenty-sixth sitting. Ten two-digit multiplications, the sevenths, and 3 percent compounded over 25 years as a multiple.
+- Poisson and Markov combined, the last of this band: orders arrive at a market maker as a Poisson process at 10 per minute, each equally likely to be a buy or a sell. What is the distribution of net inventory after a minute, and its standard deviation? Then the probability inventory exceeds 5 in either direction.
+- Six months of drills. Write down the three problem types still slowest and compare against day 161. From next week the drill moves to statistics, machine learning and coding questions, so this is the last purely probabilistic sitting for a while.
 
 **[Day 189](days/day-189.qmd)** · Thu 11 Feb
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twenty-seventh sitting, and it continues all year. Ten two-digit multiplications and the sevenths.
+- The drill band changes today. Explain the bias-variance decomposition out loud in ninety seconds, then answer the follow-up they always ask: where does the irreducible error go, and why does more data not remove it? Record yourself once and listen to it.
+- Then the version aimed at this field: your model has an out-of-sample R-squared of 0.005 on daily returns. Is it useless? Answer in terms of information ratio rather than in terms of R-squared, and do the arithmetic out loud.
 
 **[Day 196](days/day-196.qmd)** · Thu 18 Feb
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twenty-eighth sitting. Ten two-digit multiplications and the sevenths.
+- Ridge against lasso, out loud in ninety seconds, including what each does to correlated predictors and which one you would pick for a factor model with 60 correlated signals. Then the follow-up: what does elastic net add, and why is it usually the right default here?
+- A coding question of the kind asked in a first round: given a list of trades with timestamps, symbols and quantities, compute the running position per symbol and the maximum absolute position reached. Write it in Python without pandas, in under ten minutes, and then say its complexity.
 
 **[Day 203](days/day-203.qmd)** · Thu 25 Feb
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, twenty-ninth sitting. Ten two-digit multiplications and the sevenths.
+- Cross-validation out loud in ninety seconds: what it estimates, why the estimate is biased, and the two distinct reasons standard k-fold is wrong on financial data. You will build the fixes next week, so today is the explanation rather than the method.
+- Start the research presentation thread, which runs until July. Write the single sentence that states the most interesting result of your genetics work to someone quantitative who knows no biology. One sentence, out loud, timed. You will rewrite it perhaps twenty times over the next five months.
 
 ## Machine learning
 
 **[Day 210](days/day-210.qmd)** · Thu 4 Mar
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirtieth sitting. Ten two-digit multiplications and the sevenths.
+- The cross-validation question as asked, out loud in ninety seconds: why is k-fold wrong on financial data, and what are purging and embargoing? Then the follow-up: does that fix apply to a cross-sectional daily model with a one-day label, and why does the answer surprise people?
+- A SQL problem of first-round difficulty: from a trades table with timestamp, symbol, price and quantity, write a query giving the volume-weighted average price per symbol per day, and then the top three symbols by dollar volume on each day. The second half needs a window function; write it without looking it up.
 
 **[Day 217](days/day-217.qmd)** · Thu 11 Mar
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirty-first sitting. Ten two-digit multiplications and the sevenths.
+- Regularisation out loud in ninety seconds: what ridge does to correlated predictors, what lasso does differently, and what the penalty is actually buying you in terms of bias and variance. Then the question they follow with: how would you choose the penalty when your folds are not independent?
+- A Python problem at second-round difficulty: implement a function that, given a list of (timestamp, price) ticks and a window in seconds, returns the rolling maximum efficiently. The naive version is quadratic; write the linear one with a deque and say why it is linear.
 
 **[Day 224](days/day-224.qmd)** · Thu 18 Mar
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirty-second sitting. Ten two-digit multiplications and the sevenths.
+- The model comparison question, out loud: your boosting model wins in cross-validation and loses out of sample. Give three explanations and say how you would distinguish them. Then say which one you would bet on for daily equity returns and why.
+- Research presentation, second sitting: take the one-sentence result from day 203 and expand it to sixty seconds. No biology vocabulary that a physicist would not know. Time it and note where you exceeded the budget.
 
 **[Day 231](days/day-231.qmd)** · Thu 25 Mar
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirty-third sitting. Ten two-digit multiplications and the sevenths.
+- A statistics question they use to separate people: you fit a model, it looks good, and you want to know whether to believe it. Walk through what you would check, in order, in two minutes. There are at least six checks and the order matters.
+- A Python problem: given two sorted lists of trade timestamps from two venues, find all pairs within 50 milliseconds of each other, in linear time. Write it, then say what changes if the lists are not sorted.
 
 **[Day 238](days/day-238.qmd)** · Thu 1 Apr
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirty-fourth sitting. Ten two-digit multiplications and the sevenths.
+- The whole machine learning round, compressed: bias and variance, regularisation, cross-validation on dependent data, and why more capacity does not help at low signal-to-noise. Four answers, ninety seconds each, out loud, against a clock.
+- Research presentation, third sitting: expand to two minutes, and this time include one number with its uncertainty. Time it. The number with the uncertainty is what makes a quantitative audience trust the rest.
 
 ## Derivatives
 
 **[Day 245](days/day-245.qmd)** · Thu 8 Apr
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirty-fifth sitting. Ten two-digit multiplications and the sevenths.
+- A statistics question asked in exactly this form: you have two estimators of the same quantity, one unbiased with high variance and one biased with low variance. How do you choose? Answer with mean squared error and then say what changes if the estimate feeds a position size rather than a report.
+- A coding question: implement a function that computes the running median of a stream in better than linear time per update. Two heaps is the answer; write it, then say the complexity of insert and of query.
 
 **[Day 252](days/day-252.qmd)** · Thu 15 Apr
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirty-sixth sitting. Ten two-digit multiplications and the sevenths.
+- A modelling question they ask to see how you think: you are given a dataset and asked to predict something with a 55 percent base rate. Walk through what you do in the first thirty minutes, out loud, in two minutes. There is a right ordering and it starts with looking at the data rather than at models.
+- Research presentation, fourth sitting: three minutes now, and add the methods sentence. One sentence on the method, not three. Time it.
 
 **[Day 259](days/day-259.qmd)** · Thu 22 Apr
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirty-seventh sitting. Ten two-digit multiplications and the sevenths.
+- A statistics question with a trap: you run an A/B test, it is not significant, and someone asks whether that means there is no effect. Answer properly in ninety seconds, including what you would report instead of a p-value. This gets asked because most candidates say the wrong thing in the first sentence.
+- A coding problem: given a stream of prices, implement an online estimator of the exponentially weighted mean and variance in one pass with no stored history. Write it, then say what happens numerically if the decay is very close to one.
 
 **[Day 266](days/day-266.qmd)** · Thu 29 Apr
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirty-eighth sitting. Ten two-digit multiplications and the sevenths.
+- A statistics question in the form they use: you have 500 features and 1,000 observations and you want to know which features matter. Walk through your approach in two minutes, out loud. Then answer the follow-up: how would your answer change if the observations were a time series?
+- Research presentation, fifth sitting: four minutes now, with one figure described verbally. Describe the figure in words as if the listener cannot see it, which is a skill worth having for a phone screen.
 
 **[Day 273](days/day-273.qmd)** · Thu 6 May
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Arithmetic, timed, thirty-ninth sitting. Ten two-digit multiplications and the sevenths.
+- The last statistics sitting of this band. You have thirty seconds to say why a model that fits well in sample may be worse than one that fits badly, and ninety seconds to give a concrete example from your own year's work. Use the machine learning audit from day 233.
+- A coding question at the harder end: given a large file of trades that does not fit in memory, compute the median trade size. Say the approach out loud before writing anything; there are at least two reasonable answers and the difference is exactness against memory.
 
 **[Day 280](days/day-280.qmd)** · Thu 13 May
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- The drill band changes today and runs under a clock from here to July. Timed mixed set: five problems in fifteen minutes, drawn from probability, expectation and mental arithmetic, with no warning about which is which. Score yourself out of five and write it down; this number is what you are tracking now.
+- Market making, first sitting: I am making a market in the number of piano tuners in Chicago. Give me a two-sided quote and defend the width. Then I trade with you and you must requote. The requoting is the part candidates get wrong.
+- Estimation: how many options contracts trade on SPY in a day? Get within a factor of three by reasoning, not recall, then check against the Cboe market statistics page.
 
 ## Microstructure
 
 **[Day 287](days/day-287.qmd)** · Thu 20 May
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, second sitting: five problems in fifteen minutes across probability, expectation and arithmetic. Score out of five and compare against day 280.
+- Market making, second sitting: I make a market in the sum of two dice, and you must quote me a two-sided market in the sum before either is rolled. Then I trade with you and one die is revealed. Requote. Say your reasoning out loud at every step, because the reasoning is what is being assessed.
+- The question every academic answers badly, first attempt: why are you leaving academia? Three sentences, out loud, recorded. Listen to it once. You will rewrite this perhaps thirty times before July and the first version is always defensive.
 
 **[Day 294](days/day-294.qmd)** · Thu 27 May
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, third sitting: five problems in fifteen minutes. Score and compare against the last two.
+- A trading game: I flip a coin twenty times and you may buy or sell a contract that pays the number of heads. I quote you 9 at 11. What do you do, and how does your answer change if I quote 9 at 11 after seeing the first five flips and you have not?
+- The million dollar question, first attempt: what would you do with a million dollars? Answer out loud in ninety seconds. The bad answers are a fund's marketing pitch or a personal finance plan; the good answer says something about how you think about risk and time.
 
 **[Day 301](days/day-301.qmd)** · Thu 3 Jun
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, fourth sitting: five problems in fifteen minutes. Score and plot the four scores you have.
+- Market making with inventory: I make a market in a stock and you trade with me three times in the same direction. Each time, requote and say what you are doing to your mid and to your width, and why. This is your day 25 inventory simulation asked verbally.
+- Estimation: what is the daily dollar volume of the US equity market? Reason to it from index market capitalisation and turnover rather than recalling it, then check against any public figure you can find.
 
 **[Day 308](days/day-308.qmd)** · Thu 10 Jun
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, fifth sitting: five problems in fifteen minutes. Score, and plot all five scores. The trend is what matters.
+- Market making under adverse selection: I make a market in a stock and you may trade with me, but you know one piece of information I do not. How should I set my width, and how should you trade to avoid revealing what you know? Argue both sides out loud.
+- Why are you leaving academia, second attempt. Compare against your day 287 recording. The improvement to aim for is fewer words about what is wrong with academia and more about what the work you want is.
 
 ## Production
 
 **[Day 315](days/day-315.qmd)** · Thu 17 Jun
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, sixth sitting: five problems in fifteen minutes. Score and plot.
+- A SQL problem at the harder end: from a positions table with daily snapshots per symbol, write a query that finds, for each symbol, the longest consecutive run of days it was held. Gaps and islands is the pattern; write it with window functions.
+- Research presentation, sixth sitting: five minutes, the full version, timed. Record it. This is the first time you should be at full length and it will be too long.
 
 **[Day 322](days/day-322.qmd)** · Thu 24 Jun
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, seventh sitting: five problems in fifteen minutes. Score and plot.
+- A systems question: you need to store five years of tick data for 500 symbols and query arbitrary time ranges. Describe your storage design in two minutes, out loud, with the latency numbers behind each choice. This is a question with no single right answer and the reasoning is what is scored.
+- Market making, fourth sitting: I quote a market in a quantity you can estimate better than I can. Trade with me, then tell me what you learned from the fact that I was willing to trade at that price.
 
 **[Day 329](days/day-329.qmd)** · Thu 1 Jul
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, eighth sitting: five problems in fifteen minutes. Score and plot all eight.
+- A production question: your strategy has been live six weeks and is underperforming the backtest by 40 basis points a month. List the diagnoses in the order you would test them, out loud, in two minutes. There is a correct ordering and it starts with the cheapest checks.
+- Why are you leaving academia, third attempt, recorded. Compare against days 287 and 308. By now it should be under forty-five seconds and should contain one concrete thing about the work rather than about the institution.
 
 ## The interview
 
 **[Day 336](days/day-336.qmd)** · Thu 8 Jul
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, ninth sitting: five problems in fifteen minutes, and this one is on top of today's thirty-minute set, so you are working tired. That is deliberate; the fourth interview of a superday is also tired.
+- Market making, fifth sitting: I quote you a market on a quantity with a known distribution, and you may trade any size up to a limit. How much do you trade, and how does size depend on your edge? The size answer is Kelly and you have already done that arithmetic on day 128.
+- Estimation: how many people are airborne over the United States right now? Reason to it, then say which of your assumptions the answer is most sensitive to.
 
 **[Day 343](days/day-343.qmd)** · Thu 15 Jul
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, tenth sitting: five problems in fifteen minutes. Score and plot all ten.
+- Market making, sixth sitting, with a twist: I trade with you and then tell you I will trade again in the same direction regardless of your quote. What do you do? The answer is not obvious and saying why out loud is the exercise.
+- The million dollar question, second attempt. Compare against day 294. A good answer says something about the horizon you would run it over and the drawdown you would accept, both of which you computed on day 129.
 
 **[Day 350](days/day-350.qmd)** · Thu 22 Jul
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, eleventh sitting: five problems in fifteen minutes. Score and plot all eleven.
+- A full mock round, first attempt: fifteen minutes of mixed probability, market making and a behavioural question, in one sitting, with no breaks between them. The transitions are what is being practised.
+- Estimation under adversarial follow-up: give a Fermi estimate, then defend it when told it is wrong by a factor of ten. The correct response identifies which assumption would have to be wrong, rather than revising the answer.
 
 **[Day 357](days/day-357.qmd)** · Thu 29 Jul
 
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, twelfth sitting: five problems in fifteen minutes. Score, plot all twelve, and compare against the target you set on day 330.
+- Full mock round, second attempt: fifteen minutes, mixed, cold. Compare against day 350 and note whether the transitions have improved.
+- The academia question, fourth and final rehearsed attempt, recorded. Play days 287, 308, 329 and today in sequence and keep whichever is best rather than the most recent.
 
 ## Capstone
 
 **[Day 364](days/day-364.qmd)** · Thu 5 Aug
 
-- Placeholder drill item one.
-- Placeholder drill item two.
-
-**[Day 365](days/day-365.qmd)** · Fri 6 Aug
-
-- Placeholder drill item one.
-- Placeholder drill item two.
+- Timed mixed set, thirteenth and final scored sitting: five problems in fifteen minutes. Score, and compare against the target you set on day 330.
+- One last full mock: fifteen minutes, mixed, cold, recorded. Compare against day 350 and day 357.
+- Then stop and read the fifty-two drill entries on the drills page in order. It takes ten minutes and it is the clearest record you have of how much ground a year of twenty-minute sittings covers.

@@ -1,5 +1,5 @@
 ---
-title: "Day 320 — Placeholder title for day 320"
+title: "Day 320 — Writing a small order book that works"
 subtitle: "Tuesday, 22 June 2027 · Week 46 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Tuesday, 22 June 2027 · Week 46 of 52 · Production · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Writing a hundred lines that compile and behave correctly is a different and more convincing skill than reading, and it is the artifact that makes the C++ line on your CV defensible.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement an order book in C++ supporting add, cancel and market order execution with price-time priority.
+- Test it against your Python implementation on the same message sequence and get identical results.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [40 min]{.task-min} Write it: the three classes from last night, with the containers you chose, and the three operations. Keep it under two hundred lines and compile with warnings as errors. Getting it to compile is a real part of the exercise and the error messages are where most of the learning is.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Test it against something you trust: replay a slice of your ITCH sample through both your Python book and the C++ one and assert the resulting books match at every step. Identical output on real message sequences is a much stronger test than any unit test you would have written.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [LearnCpp — free structured C++ course](https://www.learncpp.com/) [course]{.res-kind}
+- [C++ Core Guidelines (Stroustrup & Sutter)](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A compiling C++ order book under two hundred lines, verified against the Python implementation on a real ITCH slice.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What does your C++ book do when a cancel arrives for an order that already fully executed?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 321, Wednesday, 23 June 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Time your Python book and your C++ book on the same million-message replay.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write both numbers down.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then guess how much of the gap is the language and how much is the data structure.
 :::
 :::

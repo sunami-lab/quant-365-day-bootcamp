@@ -1,5 +1,5 @@
 ---
-title: "Day 345 — Placeholder title for day 345"
+title: "Day 345 — The machine learning round, answered in your own results"
 subtitle: "Saturday, 17 July 2027 · Week 50 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Saturday, 17 July 2027 · Week 50 of 52 · The interview · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You have a year of measured results on exactly these questions, which means every answer can be a number from your own work rather than a textbook statement, and that is what distinguishes the answer.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Answer ten machine learning questions in ninety seconds each, citing your own measured numbers where you have them.
+- State the audit result from milestone 7 as a two-sentence answer.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Ninety seconds each, recorded, with the rule that where you have your own number you use it. Purging and embargoing, the seed variance result, the effective sample size correction and the audit verdict are all things you measured, and citing them is far stronger than describing the technique.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Prepare the follow-up you will get: an interviewer who hears that boosting did not beat ridge will ask why, and the answer has to be specific rather than a shrug about signal to noise. Write the three-part answer covering the effective sample size, the turnover, and the fact that the interactions were not there.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gu, Kelly & Xiu (2020) — Empirical Asset Pricing via Machine Learning](https://dachxiu.chicagobooth.edu/download/ML.pdf) [paper]{.res-kind}
+- [Stanford CS229 — Machine Learning, main lecture notes (PDF)](https://cs229.stanford.edu/main_notes.pdf) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Ten recorded machine learning answers citing your own measured numbers, plus the prepared three-part follow-up.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Standard k-fold is wrong on financial data. Give two reasons, the fixes, and the number from your own work that shows the fix mattered.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 346, Sunday, 18 July 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Set up a timed coding environment: a blank file, a timer, and no internet.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Pick three problems from your phase 7 and phase 10 drills that you have not solved recently.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow is forty-five minutes of writing code under a clock.
 :::
 :::

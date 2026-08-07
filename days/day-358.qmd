@@ -1,6 +1,6 @@
 ---
-title: "Day 358 — Placeholder title for day 358"
-subtitle: "Friday, 30 July 2027 · Week 52 of 52 · Capstone · Study day · 60 min"
+title: "Day 358 — The track record, reported without adjustment"
+subtitle: "Friday, 30 July 2027 · Week 52 of 52 · Capstone · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,49 @@ subtitle: "Friday, 30 July 2027 · Week 52 of 52 · Capstone · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Four weeks of live paper trading is not enough to conclude anything and it is enough to be honest about, and the reporting standard you set today is the one the whole capstone rests on.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the paper account's performance with every period included and no exclusions.
+- State what a track record of this length can and cannot support, with the standard error attached.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Produce the track record table: monthly returns with no month omitted, cumulative return, realised volatility, maximum drawdown, and turnover. Then attach the Sharpe standard error at this sample length from qlib/stats.py, which will be wide enough that the point estimate carries almost no information, and say so on the same page rather than in a footnote.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Reconcile it against the broker: the account's own statements against your engine's derived positions and cash, using the day 327 reconciliation. Any difference that cannot be explained goes into the report as an unexplained residual rather than being absorbed into a rounding line.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the one-sentence statement of what this record supports, which is that the system runs and produces the positions it intends, rather than that the strategy works.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+The live paper track record is reported with every period included and reconciled against the broker's own statements, with the Sharpe standard error at this sample length stated on the same page as the estimate.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Alpaca — paper trading documentation](https://docs.alpaca.markets/docs/paper-trading) [tool]{.res-kind}
+- [empyrical-reloaded — Sharpe, Sortino, drawdown primitives](https://github.com/stefan-jansen/empyrical-reloaded) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The unadjusted track record table with a broker reconciliation and the Sharpe standard error at this sample length.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your live Sharpe is 1.3 over four weeks. What is its standard error, and what does the record actually support?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +59,12 @@ Ten minutes tonight so Day 359, Saturday, 31 July 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Run the backtest over exactly the live period and put its daily returns next to the live ones.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute the correlation and the difference in mean return.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two numbers, and do not explain them tonight.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 344 — Placeholder title for day 344"
-subtitle: "Friday, 16 July 2027 · Week 50 of 52 · The interview · Study day · 60 min"
+title: "Day 344 — The statistics round, where you should be strongest"
+subtitle: "Friday, 16 July 2027 · Week 50 of 52 · The interview · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Friday, 16 July 2027 · Week 50 of 52 · The interview · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+This is the round your training makes you best at and the one you are most likely to over-answer, because the assessment is compression rather than depth.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Answer ten statistics questions in ninety seconds each, out loud, without exceeding the time.
+- Identify the two answers where you went too deep and rewrite them shorter.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Ninety seconds each, ten questions, recorded. The constraint is the exercise: an answer that takes four minutes reads as a lack of judgement rather than as expertise, however correct it is.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Review the recording for the failure mode that is specific to you: starting from the general case and working toward the answer, rather than answering and then qualifying. Rewrite the two worst offenders in the answer-first form and record them again.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add the one question you will be asked because of your background: how does genome-wide association work and why is the multiple testing problem there the same as in backtesting. Answer it in ninety seconds.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Efron & Hastie — Computer Age Statistical Inference](https://hastie.su.domains/CASI/) [textbook]{.res-kind}
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Ten recorded ninety-second statistics answers, with two rewritten in answer-first form.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Explain the multiple testing problem in a genome-wide scan and in a backtest, in ninety seconds, and say what is different between them.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 345, Saturday, 17 July 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down ten machine learning questions, weighted toward the ones about validation rather than about architectures.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Include the one about why cross-validation fails on financial data.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> File them.
 :::
 :::

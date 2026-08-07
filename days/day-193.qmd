@@ -1,5 +1,5 @@
 ---
-title: "Day 193 — Placeholder title for day 193"
+title: "Day 193 — Counting words in filings gets you further than it should"
 subtitle: "Monday, 15 February 2027 · Week 28 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Monday, 15 February 2027 · Week 28 of 52 · Alpha · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Before any language model, the simplest text features on filings have documented predictive content, and they are the baseline any expensive method has to beat.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Build two simple text features from filings and evaluate them through the standard signal pipeline.
+- Say why a dictionary built for general English gives the wrong sign on financial text.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build two features: the year-over-year change in filing length, and the fraction of words in a negative-sentiment list. Use scikit-learn's CountVectorizer with a finance-specific word list rather than a general one, and note that words like liability and cost are negative in general English and neutral in a balance sheet, which is why the general lists fail here.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Evaluate both through the standard pipeline and generate their pages. Then report the coverage and the lag: a filing is text you can read the moment it appears, so the timing convention here is a filing timestamp rather than a session date, which your store already supports.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [SEC EDGAR full-text search](https://www.sec.gov/edgar/search/) [data]{.res-kind}
+- [scikit-learn documentation](https://scikit-learn.org/stable/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Two text-derived signals evaluated through the standard pipeline, with filing-timestamp lag handling and coverage reported.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does a general-purpose sentiment dictionary give the wrong answer on a 10-K, and what do you use instead?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 194, Tuesday, 16 February 2027 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down the training cutoff date of any language model you might use, and the date range of your backtest.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> If they overlap, write down what that means.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> One paragraph. It is tomorrow's whole subject.
 :::
 :::

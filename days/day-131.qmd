@@ -1,5 +1,5 @@
 ---
-title: "Day 131 — Placeholder title for day 131"
+title: "Day 131 — Sizing the actual book, with every number defended"
 subtitle: "Tuesday, 15 December 2026 · Week 19 of 52 · Portfolios and risk · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Tuesday, 15 December 2026 · Week 19 of 52 · Portfolios and risk · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Five weeks of machinery produce one weight vector today, and the point of the exercise is that every element of it traces back to something you measured rather than chose.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Produce a position vector for your combined book where each input is traceable to a measurement.
+- State which single input the result is most sensitive to, and by how much.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Wire it together in qlib/portfolio.py: covariance from your chosen estimator, neutralisation against the exposures you decided to hedge, volatility targeting to your chosen level, scaled by your Kelly fraction, capped by leverage. Produce the weight vector and the predicted risk decomposition.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Run the sensitivity: perturb each of the five inputs by a plausible amount, one at a time, and report the change in the resulting positions and in predicted risk. Name the input that dominates, which will almost certainly be the expected return estimate rather than anything in the risk model.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The full sizing pipeline runs end to end: covariance, neutralisation, volatility target, Kelly fraction, leverage cap. Phase 6 changes only what feeds it, and phase 10 runs this exact code on a schedule.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [CVXPY — disciplined convex programming](https://www.cvxpy.org/) [tool]{.res-kind}
+- [Riskfolio-Lib](https://riskfolio-lib.readthedocs.io/en/latest/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A position vector produced by the full pipeline, with a one-at-a-time sensitivity report across all five inputs.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which input dominates your position sizes, and what does that say about where to spend your research time?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 132, Wednesday, 16 December 2026 starts clean. This i
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Run the whole pipeline out of sample on the held-out period and record realised risk against predicted risk.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do the same for equal weighting.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two pairs of numbers. Tomorrow decides what they mean.
 :::
 :::

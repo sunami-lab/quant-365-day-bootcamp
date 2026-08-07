@@ -1,6 +1,6 @@
 ---
-title: "Day 77 — Placeholder title for day 77"
-subtitle: "Thursday, 22 October 2026 · Week 11 of 52 · Time series · Catch-up day · 45 min"
+title: "Day 77 — Unit roots and spurious regression, closed book"
+subtitle: "Thursday, 22 October 2026 · Week 11 of 52 · Time series · Catch-up day · 40 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 22 October 2026 · Week 11 of 52 · Time series · Catch-up
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day. Week 11 is four facts and one habit; if the habit of correcting standard errors has taken, this hour is yours.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Reproduce the spurious regression result and its explanation without notes.
+- State both unit root test nulls and the correct conclusion in all four outcome combinations.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>40 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Finish anything outstanding from days 71 to 76. The ADF power curve is the piece most often skipped and the one most worth having, because it is what stops you from over-reading a failure to reject.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} One page, closed book: why the spurious t-statistic diverges, both test nulls with the four-outcome table, what Newey-West estimates, what differencing costs you, and why a structural break fails to reject a unit root. Then check and mark the misses.
 :::
 :::
 
@@ -33,27 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, eleventh sitting. Ten two-digit multiplications, the sevenths, and 1/64, 1/128 and 1/256 as decimals.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Bayes with a base rate that moves: a coin is fair with probability 0.9 and biased to 0.75 heads otherwise. You see 8 heads in 10 flips. Posterior that it is biased? Set it up with likelihood ratios rather than with the full formula.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Expectation, geometric: on average, how many times do you have to roll a fair die to see all six faces? Get the answer by decomposing into six waiting times, then say the general formula for n faces and its growth rate.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The closed-book week 11 sheet with the four-outcome unit root table reproduced from memory.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Explain to someone who knows regression but not time series why two unrelated price series can produce an R-squared of 0.9.
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +65,12 @@ Ten minutes tonight so Day 78, Friday, 23 October 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pull ten years of daily closes for KO and PEP, and for one more pair of your own choosing from the same sector.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot each pair's two log price series on one axis, and plot the difference below it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down which pair looks more promising. You will find out how little that judgement is worth.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 174 — Placeholder title for day 174"
+title: "Day 174 — One page per signal, generated rather than written"
 subtitle: "Wednesday, 27 January 2027 · Week 25 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Wednesday, 27 January 2027 · Week 25 of 52 · Alpha · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Milestone 6 is eight of these side by side, and generating them from the result object means they cannot drift from what the code actually did.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Generate a standard one-page summary per signal directly from its result object.
+- Have the rationale, the trial count and the capacity assumptions on the page rather than in your head.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [40 min]{.task-min} Build the report generator in qlib/signals/report.py: rationale from the docstring, IC and decay curve, quantile returns with monotonicity, information ratio with an interval, turnover, capacity with assumptions, the net-Sharpe-against-cost chart, the trial count from research_log.jsonl, and the position of the result in the null distribution. One page, generated.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Generate all four and read them as a stranger would. Anything that requires you to explain it verbally is missing from the page, and fixing that now is what makes milestone 6 readable in February.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/signals/report.py generates the standard one-page signal summary from the result object. Milestone 6 becomes an assembly of generated pages rather than a document that can disagree with the code.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pyfolio-reloaded — tear sheets](https://github.com/stefan-jansen/pyfolio-reloaded) [repo]{.res-kind}
+- [QuantStats — standalone HTML tear sheets](https://github.com/ranaroussi/quantstats) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/signals/report.py generating a complete one-page summary, with all four current signals rendered.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Hand your momentum page to someone with ten minutes. What would they still have to ask you?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 175, Thursday, 28 January 2027 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the four generated pages and rank the signals by how much you believe them.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what drove the ranking. It should not be the Sharpe ratio.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times.
 :::
 :::

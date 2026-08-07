@@ -1,5 +1,5 @@
 ---
-title: "Day 331 — Placeholder title for day 331"
+title: "Day 331 — Conditional probability, eight problems, forty minutes"
 subtitle: "Saturday, 3 July 2027 · Week 48 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Saturday, 3 July 2027 · Week 48 of 52 · The interview · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The canon is small and the failure is speed rather than knowledge, so from here the sessions are timed and the score is the deliverable.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Solve eight conditional probability problems under a clock and score yourself honestly.
+- For every problem you missed, name the technique you failed to reach for rather than the answer you got wrong.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [40 min]{.task-min} Forty minutes, eight problems, five minutes each, no notes, out loud where you can. Stop at the time limit whether or not you are finished, because running over is the habit that costs you in a real interview.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Review only the misses, and write the technique rather than the solution: natural frequencies instead of Bayes, conditioning on the first step, complementary counting, or drawing the sample space. The technique list is short and it is what transfers.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — puzzle archive with solutions](https://www.janestreet.com/puzzles/archive/index.html) [problems]{.res-kind}
+- [Harvard Stat 110 — Probability (Blitzstein), lecture videos](https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo) [video]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A scored eight-problem session with a technique named for every miss.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You are told at least one of two children is a boy. Probability both are boys, and why is the answer not one half?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 332, Sunday, 4 July 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Choose eight expectation problems, weighted toward the ones your error log says you are slow on.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Include at least two that yield to indicator variables and two that need conditioning.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> File them unsolved.
 :::
 :::

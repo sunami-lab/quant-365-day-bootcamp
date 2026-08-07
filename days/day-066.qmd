@@ -1,6 +1,6 @@
 ---
-title: "Day 66 — Placeholder title for day 66"
-subtitle: "Sunday, 11 October 2026 · Week 10 of 52 · Time series · Study day · 60 min"
+title: "Day 66 — Fitting AR and MA models to things that barely have structure"
+subtitle: "Sunday, 11 October 2026 · Week 10 of 52 · Time series · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Sunday, 11 October 2026 · Week 10 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Daily equity returns have almost no linear predictability, and building the fitting machinery on a series where the answer is close to zero is the honest way to learn what a significant coefficient looks like.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Fit and interpret an ARMA model with statsmodels, including reading the coefficient standard errors correctly.
+- State the magnitude of linear autocorrelation you actually find in daily equity returns, and say whether it is tradeable after a one basis point cost.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the autoregressive and moving average model sections of the ARIMA chapter of Forecasting: Principles and Practice, then fit ARMA(p,q) for p and q up to 2 on SPY daily returns using statsmodels. Report the coefficients with standard errors.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Turn the fitted coefficient into money: if the lag-1 coefficient is rho, the expected return conditional on yesterday is rho times yesterday's return. Compute the average absolute size of that conditional expectation in basis points, and compare it against a one basis point round-trip cost. This calculation is why nobody trades daily equity autocorrelation.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Repeat the fit on the monthly series and note that the sign flips. Write one line on what that could be other than a real effect.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Hyndman & Athanasopoulos — Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/) [textbook]{.res-kind}
+- [statsmodels — time series analysis (tsa)](https://www.statsmodels.org/stable/tsa.html) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-066-arma.ipynb with fitted ARMA coefficients at three frequencies and the conditional expectation expressed in basis points.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your AR(1) coefficient on daily returns is minus 0.03 with a standard error of 0.012. Is that tradeable? Show the arithmetic.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 67, Monday, 12 October 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Fit ARMA models across a grid of p and q up to 4 on one series and record AIC and BIC for each.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note which order each criterion picks. They will differ.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down which one you would trust and why, before tomorrow argues with you.
 :::
 :::

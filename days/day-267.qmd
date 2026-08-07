@@ -1,5 +1,5 @@
 ---
-title: "Day 267 — Placeholder title for day 267"
+title: "Day 267 — Local volatility fits today's surface exactly, and then what"
 subtitle: "Friday, 30 April 2027 · Week 39 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 30 April 2027 · Week 39 of 52 · Derivatives · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+There is exactly one diffusion that reproduces every option price you can see today, which sounds like a complete answer and is not, and knowing why is the point of this week.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what local volatility is and what the Dupire equation recovers from a surface.
+- Say what local volatility predicts about how the smile moves when the spot moves, and whether that prediction is right.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement local volatility from your fitted SVI surface using the Dupire formula, and check that pricing with it reproduces the market prices you calibrated to. That reproduction is guaranteed by construction, so a failure means an implementation error rather than a model failure.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Test the dynamic prediction, which is where it fails: local volatility implies a specific movement of the smile as the spot moves, and that implied movement is empirically too strong. Compare consecutive days of your own surface data against what local volatility predicted, and report the discrepancy.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatheral — The Volatility Surface, Statics and Dynamics (Imperial lecture 1)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-1st-Lecture.pdf) [reference]{.res-kind}
+- [Gatheral — The Volatility Surface (Wiley)](https://www.wiley.com/en-us/The+Volatility+Surface:+A+Practitioner's+Guide-p-9780471792512) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-267-local-vol.ipynb with a local volatility surface recovered and its dynamic prediction tested against consecutive days.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Local volatility fits every price today. What does it get wrong, and how would you detect it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 268, Saturday, 1 May 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down the two-equation system for a stochastic volatility model: one for the price, one for the variance.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Use the square-root diffusion from day 243 for the variance.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> You have just written Heston. Note the parameters.
 :::
 :::

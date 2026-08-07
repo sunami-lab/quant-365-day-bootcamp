@@ -1,6 +1,6 @@
 ---
-title: "Day 221 — Placeholder title for day 221"
-subtitle: "Monday, 15 March 2027 · Week 32 of 52 · Machine learning · Study day · 60 min"
+title: "Day 221 — Bagging helps here for a reason specific to this problem"
+subtitle: "Monday, 15 March 2027 · Week 32 of 52 · Machine learning · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Monday, 15 March 2027 · Week 32 of 52 · Machine learning · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+At a signal-to-noise ratio this low, variance reduction is worth more than bias reduction, which reverses the usual ordering of these two model families and is worth being able to argue.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say why averaging many high-variance models is particularly effective at low signal-to-noise, and check it on your data.
+- Implement bagging with the sample size set by label uniqueness rather than by the row count.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Make the argument quantitative: plot out-of-sample R-squared against the number of trees for both a forest and a boosting ensemble, and report where each saturates. Then compare the variance of predictions across bootstrap-refits for each model family.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Fix the bagging that is wrong by default: standard bootstrap sampling draws as many rows as exist, which massively oversamples given your effective sample size from day 213. Refit with the sample size set to the effective count and report the difference. This is a correction almost nobody makes and it usually helps.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the ensemble that costs nothing: averaging the linear and boosting predictions often beats both, and it is worth measuring before you conclude anything about which family wins.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [scikit-learn documentation](https://scikit-learn.org/stable/) [tool]{.res-kind}
+- [López de Prado — Advances in Financial Machine Learning, seminar slides](https://www.quantresearch.org/Lectures.htm) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-221-bagging.ipynb with saturation curves, uniqueness-corrected bagging, and the simple two-model average measured.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why is variance reduction worth more than bias reduction at an R-squared of 0.002?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 222, Tuesday, 16 March 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Count the hyperparameter combinations you have evaluated so far this week from research_log.jsonl.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare against the effective sample size of your validation data.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The ratio is tomorrow's problem.
 :::
 :::

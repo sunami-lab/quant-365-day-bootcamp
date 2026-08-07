@@ -1,5 +1,5 @@
 ---
-title: "Day 220 — Placeholder title for day 220"
+title: "Day 220 — Gradient boosting, and the interactions it is looking for"
 subtitle: "Sunday, 14 March 2027 · Week 32 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Sunday, 14 March 2027 · Week 32 of 52 · Machine learning · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The default model of the field, and the honest question is not whether it fits better in sample but whether the interactions it finds are real at this signal-to-noise ratio.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Tune a gradient boosting model under the frozen protocol and report its out-of-sample performance with an interval.
+- Say what functional form a tree ensemble can represent that a linear model cannot, and test whether that form is present in your data.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Tune it properly with the purged splitter: depth, learning rate, subsample fraction and the number of rounds chosen by early stopping inside each fold. Report out-of-sample R-squared and information ratio with intervals, next to the linear baseline.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Test for the thing it is supposed to find: add the two-way interactions the tree model implies as explicit features to the linear model and see whether the linear model closes the gap. If it does, the boosting gain is a functional form you can name; if it does not, the gain is either nonlinearity you have not characterised or overfitting.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) [textbook]{.res-kind}
+- [Gu, Kelly & Xiu (2020) — Empirical Asset Pricing via Machine Learning](https://dachxiu.chicagobooth.edu/download/ML.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A tuned boosting model with intervals, plus the interaction test showing whether a linear model with named interactions closes the gap.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your boosting model beats ridge by 15 percent in cross-validated R-squared. Give three explanations and say how you would distinguish them.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 221, Monday, 15 March 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Fit a random forest on the same data and record its out-of-sample R-squared.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note how it compares to boosting and to linear.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down which of the three you expected to win.
 :::
 :::

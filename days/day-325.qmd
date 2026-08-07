@@ -1,5 +1,5 @@
 ---
-title: "Day 325 — Placeholder title for day 325"
+title: "Day 325 — Monitoring the four things that actually break"
 subtitle: "Sunday, 27 June 2027 · Week 47 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,45 +8,46 @@ subtitle: "Sunday, 27 June 2027 · Week 47 of 52 · Production · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Monitoring everything produces alerts you ignore, and the list you wrote last night is short enough that each item can have a real check behind it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement a monitor for each of the four failure modes, with a threshold you can defend.
+- Say what each monitor's false positive rate is and why you chose that threshold.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement the four: data freshness against the exchange calendar, position drift between intended and actual, fill price against the expected price, and signal values against their historical distribution. Each returns a status and a number rather than a boolean, so a near-miss is visible.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Set the thresholds from history rather than by feel: run each monitor over your backtest period and choose a threshold with a false positive rate you would tolerate, stated as alerts per month. A monitor that would have fired forty times last year is one you will disable in February.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+Four monitors with thresholds calibrated against historical data run alongside the daily pipeline, each reporting a number rather than a boolean so that near-misses are visible before they become failures.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [exchange_calendars — 50+ exchange trading calendars](https://github.com/gerrymanoim/exchange_calendars) [repo]{.res-kind}
+- [Alpaca — paper trading documentation](https://docs.alpaca.markets/docs/paper-trading) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Four monitors implemented with thresholds calibrated to a stated alerts-per-month rate.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your position monitor would have fired 40 times last year. What do you do, and what does that tell you about the threshold?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +56,12 @@ Ten minutes tonight so Day 326, Monday, 28 June 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down what you would actually do at 6 am if each of your four monitors fired.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> If the answer for any is unclear, that is the one to write up first.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Four short answers.
 :::
 :::

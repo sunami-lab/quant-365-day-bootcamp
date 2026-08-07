@@ -1,6 +1,6 @@
 ---
-title: "Day 117 — Placeholder title for day 117"
-subtitle: "Tuesday, 1 December 2026 · Week 17 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 117 — Neutralising a portfolio, and what it costs you"
+subtitle: "Tuesday, 1 December 2026 · Week 17 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,49 @@ subtitle: "Tuesday, 1 December 2026 · Week 17 of 52 · Portfolios and risk · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Dollar neutral is not beta neutral and beta neutral is not factor neutral, and last night's plot showed you that your existing strategy is none of the three.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Neutralise a portfolio against a set of factor exposures using a constrained optimisation, and confirm the residual exposures are zero.
+- Report what neutralisation costs in expected return and what it buys in volatility, on your own strategy.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Add `neutralise(weights, exposures)` to qlib/portfolio.py: solve for the closest weight vector subject to zero exposure to a given set of factors, using CVXPY. Assert the resulting exposures are zero to numerical tolerance in a test.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Apply it and report both sides of the trade-off: your pairs strategy neutralised against market beta, then against the four factors, then unneutralised. Report Sharpe, volatility, turnover and the factor loadings for all three. Neutralisation usually cuts return and cuts risk more, and the ratio is what decides it.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the turnover cost: neutralisation adds trading, and that cost belongs in the comparison rather than in a footnote.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/portfolio.py can now neutralise a weight vector against an arbitrary exposure set, with a test asserting the residual exposures are zero. The pairs strategy runs neutralised from here, and the unneutralised version stays as the comparison.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [CVXPY — disciplined convex programming](https://www.cvxpy.org/) [tool]{.res-kind}
+- [Riskfolio-Lib](https://riskfolio-lib.readthedocs.io/en/latest/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A tested neutralisation function in qlib/portfolio.py, and a three-way comparison of your strategy under two neutralisation regimes.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why neutralise a signal before evaluating it, and what specifically are you throwing away when you do?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +59,12 @@ Ten minutes tonight so Day 118, Wednesday, 2 December 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the linearmodels documentation page for Fama-MacBeth regressions and note what the two stages are.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down why the standard errors from a pooled regression would be wrong here.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> You have made this argument before about clustered data.
 :::
 :::

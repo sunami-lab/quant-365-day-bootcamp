@@ -1,6 +1,6 @@
 ---
-title: "Day 70 — Placeholder title for day 70"
-subtitle: "Thursday, 15 October 2026 · Week 10 of 52 · Time series · Catch-up day · 45 min"
+title: "Day 70 — Week 10, closed book"
+subtitle: "Thursday, 15 October 2026 · Week 10 of 52 · Time series · Catch-up day · 35 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 15 October 2026 · Week 10 of 52 · Time series · Catch-up
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day. If the identification figure and the trend evaluation are done, this hour is slack you have earned and should take.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Identify a model order from an ACF and PACF pair with no reference table in front of you.
+- State what your first strategy's evaluation concluded, and the one number that decided it.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>35 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Finish anything outstanding from days 64 to 69. The blind identification exercise from day 65 is the one worth doing if you skipped it; it is the fastest-decaying skill in this week.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Ten more blind identification trials with a fresh seed, then write from memory: the three stationarity conditions, the ACF and PACF signatures of AR and MA, and the difference between what AIC and BIC target.
 :::
 :::
 
@@ -33,33 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, tenth sitting. Ten two-digit multiplications, the sevenths, and 7 percent compounded for 10 years as a multiple, in your head.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> The counting problem that separates people: how many ways can you arrange the letters of MISSISSIPPI? Then, what fraction of those arrangements have no two S adjacent? Do the second by placing the non-S letters first.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> Conditional probability with a trap: you are told one of two coins is fair and the other is two-headed. You pick one, flip it three times, and get three heads. Probability you picked the two-headed coin? Then say what the answer approaches after ten heads and why it never reaches 1.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A second blind identification hit rate, and the closed-book week 10 summary sheet.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Sketch, from memory, the ACF and PACF of an MA(2), and say which of the two you would look at first.
 :::
 
 ## Prepare for tomorrow
@@ -68,6 +65,12 @@ Ten minutes tonight so Day 71, Friday, 16 October 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Simulate two independent random walks of 500 steps each and regress one on the other. Record the t-statistic and the R-squared.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Repeat it ten times with different seeds and write down the ten t-statistics.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not interpret them. Tomorrow is entirely about that list of ten numbers.
 :::
 :::

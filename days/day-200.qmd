@@ -1,5 +1,5 @@
 ---
-title: "Day 200 — Placeholder title for day 200"
+title: "Day 200 — Combining scores and combining portfolios are different trades"
 subtitle: "Monday, 22 February 2027 · Week 29 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,45 +8,43 @@ subtitle: "Monday, 22 February 2027 · Week 29 of 52 · Alpha · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The turnover gap you measured last night is the visible symptom; the underlying difference is that netting happens before costs in one case and after in the other.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Explain why combining at the signal level produces lower turnover than combining portfolios, and quantify it for your book.
+- Say when combining at the portfolio level is nonetheless the right choice.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Quantify the netting: when two signals disagree on a name, combining scores first means you never trade it, while combining portfolios means you buy it in one and sell it in the other and pay both ways unless your execution nets them. Measure the fraction of gross trading that nets out in your book, and the cost difference it implies.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Say when the portfolio-level route wins: when the signals need different constraints, different universes or different rebalance frequencies, which cannot be expressed in a single combined score. Write down which of your signals fall into that category, since the reversal signal probably does.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Implement the hybrid that most desks actually run: combine at the score level within a rebalance frequency group, and at the portfolio level across groups.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Narang — Inside the Black Box, 3rd ed. (Wiley)](https://www.wiley.com/en-us/Inside+the+Black+Box%3A+A+Simple+Guide+to+Systematic+Investing%2C+3rd+Edition-p-9781119931904) [textbook]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The measured netting benefit in cost terms, and a hybrid combination implemented across rebalance-frequency groups.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does combining signals before constructing a portfolio cost less than combining portfolios, and when would you do it the expensive way anyway?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 201, Tuesday, 23 February 2027 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Run the combined book end to end through the engine with your standard costs and constraints, and record the result.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare its Sharpe against the best single signal.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write both numbers down.
 :::
 :::

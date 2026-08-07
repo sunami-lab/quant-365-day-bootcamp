@@ -1,5 +1,5 @@
 ---
-title: "Day 318 — Placeholder title for day 318"
+title: "Day 318 — Containers, their complexity, and their constant factors"
 subtitle: "Sunday, 20 June 2027 · Week 46 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 20 June 2027 · Week 46 of 52 · Production · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Choosing a container by its complexity class alone is how you end up with an asymptotically optimal book that is slower than an array, and knowing why is a standard interview subject.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Choose the right container for an order book's two access patterns and defend each choice.
+- Say when a vector beats a hash map despite worse complexity, and demonstrate it.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Measure the constant factors: time lookups in a vector, a sorted vector with binary search, an unordered map and an ordered map, across sizes from 8 to 100,000 elements. Plot time against size for all four. Below a few hundred elements the linear scan over a contiguous vector usually wins, and that crossover point is the thing to know.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Apply it to the design: an order book has few price levels near the touch and many orders, so the price levels want a sorted contiguous structure and the order lookup wants a hash map. Write the design down with the reasoning attached, since it is exactly the question that gets asked.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [cppreference — C and C++ standard library reference](https://en.cppreference.com/w/) [reference]{.res-kind}
+- [C++ Core Guidelines (Stroustrup & Sutter)](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Lookup timings for four containers across six sizes with the crossover identified, plus a written order book data structure design.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why might a linear scan over a vector beat a hash map lookup, and at roughly what size does that stop being true?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 319, Monday, 21 June 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Find the matching engine or order book component in the LEAN repository or any open source exchange simulator.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Read the main data structures without trying to follow the whole flow.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the two decisions they made that differ from your design.
 :::
 :::

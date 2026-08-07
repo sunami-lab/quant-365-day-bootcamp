@@ -1,5 +1,5 @@
 ---
-title: "Day 171 — Placeholder title for day 171"
+title: "Day 171 — IC times the square root of breadth, and its four lies"
 subtitle: "Sunday, 24 January 2027 · Week 25 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 24 January 2027 · Week 25 of 52 · Alpha · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The fundamental law is the arithmetic every quant interview expects you to produce on demand, and the gap you found last night between it and your measured Sharpe is where its assumptions failed.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the relationship between information ratio, IC and breadth and name the assumptions behind it.
+- Explain the discrepancy between the law's prediction and your engine's measured Sharpe for one signal.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Derive the relationship rather than quoting it: for N independent bets with forecast-outcome correlation IC, the annualised information ratio is approximately IC times the square root of the number of bets per year. Do the derivation and note precisely where independence enters.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Diagnose the gap for your signal, which will come from some combination of four things: the bets are not independent because names are correlated, the transfer coefficient is below one because constraints stop you holding the ideal portfolio, costs are not in the law, and the IC estimate itself is noisy. Estimate the size of each of the four for your signal and check they account for the discrepancy.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Ang — Asset Management: A Systematic Approach to Factor Investing (Oxford)](https://academic.oup.com/book/3342) [textbook]{.res-kind}
+- [Asness, Moskowitz & Pedersen (2013) — Value and Momentum Everywhere](https://w4.stern.nyu.edu/facdir/lpederse/papers/ValMomEverywhere.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-171-fundamental-law.ipynb with the derivation and a four-way decomposition of the gap between predicted and measured performance.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Define the information coefficient, relate it to the information ratio, and state every assumption in the relationship you just used.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 172, Monday, 25 January 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Sort one signal into five quantiles on each date and compute the forward return of each quantile.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot the five average returns as a bar chart.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at whether they increase monotonically. They probably do not.
 :::
 :::

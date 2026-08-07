@@ -1,6 +1,6 @@
 ---
-title: "Day 90 — Placeholder title for day 90"
-subtitle: "Wednesday, 4 November 2026 · Week 13 of 52 · Time series · Study day · 60 min"
+title: "Day 90 — Volatility targeting, and what it does and does not improve"
+subtitle: "Wednesday, 4 November 2026 · Week 13 of 52 · Time series · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,46 @@ subtitle: "Wednesday, 4 November 2026 · Week 13 of 52 · Time series · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+It reliably improves the shape of a return distribution and much less reliably improves the mean, and knowing which is which stops you from crediting it with the wrong thing.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Decompose the change in Sharpe from volatility targeting into the part from stabilised risk and the part from an implicit timing bet.
+- Say what volatility targeting does to maximum drawdown and to the tails, using your own numbers.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Separate the two effects: compare your trend follower targeted with a forecast against the same strategy targeted with a lookahead perfect volatility forecast, and against no targeting. The gap between the first and the second is forecast quality; the gap between the second and the third is the mechanical effect.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Report what actually improved: Sharpe, maximum drawdown, kurtosis of monthly returns, and the volatility of realised volatility, for all three variants. Volatility targeting usually wins on three of those four and only sometimes on the first.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+The trend follower now sizes on a volatility forecast from qlib/vol.py rather than on constant notional, and the improvement is decomposed into the mechanical part and the forecast-quality part rather than claimed as a whole.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [AQR — Research and Insights](https://www.aqr.com/Insights/Research) [reference]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A four-metric comparison of the trend follower under no targeting, forecast targeting and perfect-foresight targeting.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Volatility targeting raised your Sharpe from 0.5 to 0.7. How much of that came from the forecast being good?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +56,12 @@ Ten minutes tonight so Day 91, Thursday, 5 November 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List the four volatility estimators you now have and one line on when you would use each.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the drill times.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Skim the first chapter of the Kalman and Bayesian Filters book tonight; week 14 starts from it.
 :::
 :::

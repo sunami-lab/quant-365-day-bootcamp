@@ -1,5 +1,5 @@
 ---
-title: "Day 27 — Placeholder title for day 27"
+title: "Day 27 — Fees, capacity, and where one person can compete"
 subtitle: "Wednesday, 2 September 2026 · Week 4 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 2 September 2026 · Week 4 of 52 · Markets · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The last day of phase 1, and the one that decides what you spend the other 338 on: some of these businesses are closed to you by capital, some by latency, and one is not closed at all.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Compute what a 2-and-20 fee structure does to an investor's net return at a gross Sharpe of 1, and say what that implies about the gross return a fund must produce.
+- Name the three constraints that decide capacity, and say which one binds first for a strategy trading 500 US large caps daily.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read one AQR research piece on trend following or on the fee-adjusted value of active management, and note the size of the effect the authors claim rather than the direction.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Fee arithmetic: gross return 10 percent, volatility 10 percent, fees 2 percent management and 20 percent of profits. Compute net return, net volatility and net Sharpe. Then find the gross Sharpe needed to deliver a net Sharpe of 1. Do this once and you will never again be impressed by a gross number.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Write the closing section of the market map: for each of the six businesses from day 1, one sentence on whether you can compete with it and what the binding constraint is. Speed for market making, capital for pod shops, and information for event-driven are the three answers you should reach.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [AQR — Research and Insights](https://www.aqr.com/Insights/Research) [reference]{.res-kind}
+- [Narang — Inside the Black Box, 3rd ed. (Wiley)](https://www.wiley.com/en-us/Inside+the+Black+Box%3A+A+Simple+Guide+to+Systematic+Investing%2C+3rd+Edition-p-9781119931904) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The fee calculation and the six-line competitive assessment, both in reports/milestone-01-market-map.md.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+A fund reports 12 percent gross with 10 percent volatility. What does the investor get after 2 and 20, and what gross Sharpe would it take to give them a net Sharpe of 1?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 28, Thursday, 3 September 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread reports/milestone-01-market-map.md end to end and mark the sections that are notes rather than prose. Tomorrow is where they become prose.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Confirm the ingestion still runs from empty and the tests still pass. The milestone claims both.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the drill times from days 7, 14 and 21 so tomorrow's fourth data point means something.
 :::
 :::

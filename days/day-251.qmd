@@ -1,5 +1,5 @@
 ---
-title: "Day 251 — Placeholder title for day 251"
+title: "Day 251 — The pricer, tested against two independent implementations"
 subtitle: "Wednesday, 14 April 2027 · Week 36 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Wednesday, 14 April 2027 · Week 36 of 52 · Derivatives · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A pricer you wrote and only checked against itself is a pricer with an undiscovered sign error, and the libraries exist precisely so you do not have to trust your own algebra.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement a Black-Scholes pricer with dividends and rates handled explicitly, and agree with py_vollib and QuantLib to a stated tolerance.
+- Implement implied volatility by root-finding and state where it fails.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write qlib/derivatives/black_scholes.py with the call and put prices, handling a continuous dividend yield and a rate explicitly rather than defaulting them to zero. Test against py_vollib across a grid of strikes, maturities and volatilities, and assert agreement to a tolerance you state.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Implement implied volatility by Newton's method with a bisection fallback, and find where it fails: deep out-of-the-money options where vega is nearly zero, and prices that violate the no-arbitrage bounds. Handle both explicitly rather than returning a wrong number.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/derivatives/black_scholes.py is the pricing layer for the rest of the phase, tested against an independent implementation and with implied volatility inversion that fails loudly rather than silently.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [py_vollib — Black-Scholes prices, greeks and implied volatility](https://github.com/vollib/py_vollib) [repo]{.res-kind}
+- [QuantLib-Python documentation](https://quantlib-python-docs.readthedocs.io/en/latest/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A tested Black-Scholes pricer agreeing with py_vollib across a parameter grid, plus a robust implied volatility inversion.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Where does Newton's method fail when inverting for implied volatility, and what does your code do about it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 252, Thursday, 15 April 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread your PDE derivation and try to reproduce it from a blank page in ten minutes.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note where you stalled.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times.
 :::
 :::

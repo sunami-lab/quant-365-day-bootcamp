@@ -1,5 +1,5 @@
 ---
-title: "Day 54 — Placeholder title for day 54"
+title: "Day 54 — The probability that your best variant is the best by luck"
 subtitle: "Tuesday, 29 September 2026 · Week 8 of 52 · Returns and noise · Study day · 60 min"
 ---
 
@@ -8,39 +8,39 @@ subtitle: "Tuesday, 29 September 2026 · Week 8 of 52 · Returns and noise · St
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A different question from the deflated Sharpe, and a better one: not whether the result is significant, but how often the selection procedure itself picks a loser.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Describe combinatorially symmetric cross-validation in four steps, and say what it estimates that a train-test split does not.
+- Compute the probability of backtest overfitting for a parameter search of your own and interpret the number.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the probability of backtest overfitting paper, the method section rather than the examples. The idea is to split the performance matrix into all balanced combinations of in-sample and out-of-sample sub-periods and measure how often the in-sample winner underperforms out of sample.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Implement it on a small case: a moving-average crossover on SPY over a grid of 100 parameter pairs, evaluated in 16 sub-periods, then the combinatorial split. Report the probability of backtest overfitting. If it comes out above one half, the search is worse than picking at random, and that is the standard outcome for this particular strategy family.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2017) — The Probability of Backtest Overfitting](https://escholarship.org/content/qt4w1110bb/qt4w1110bb.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-054-pbo.ipynb with a computed probability of backtest overfitting for a 100-point parameter grid.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What does a probability of backtest overfitting of 0.6 tell you about your selection procedure, and what would you change first?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +49,12 @@ Ten minutes tonight so Day 55, Wednesday, 30 September 2026 starts clean. This i
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the abstract of White's Reality Check paper and note what the null hypothesis is. It is not the null you would guess.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at the arch documentation page for the bootstrap module and find the SPA test.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Install arch if it is not already in the environment.
 :::
 :::

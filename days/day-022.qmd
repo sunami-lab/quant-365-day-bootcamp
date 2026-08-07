@@ -1,6 +1,6 @@
 ---
-title: "Day 22 — Placeholder title for day 22"
-subtitle: "Friday, 28 August 2026 · Week 4 of 52 · Markets · Study day · 60 min"
+title: "Day 22 — The store, part two: adjustment as a view, not a column"
+subtitle: "Friday, 28 August 2026 · Week 4 of 52 · Markets · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,46 @@ subtitle: "Friday, 28 August 2026 · Week 4 of 52 · Markets · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Storing adjusted prices bakes today's history into the file and makes yesterday's file disagree with today's; computing the adjustment on read costs microseconds and never lies.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Explain why a stored adjusted-close column is wrong the moment the next dividend is paid.
+- Return a total-return series and a raw price series from the same store with one function and a flag.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Write qlib/store.py's `bars(security, start, end, adjust=True)`: join bar_daily to corporate_action, compute the cumulative adjustment factor from the end of the window backwards, and apply it. Reuse the arithmetic you validated on day 16.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Test it against the reference: your adjusted SPY series against yfinance's `auto_adjust=True`, over 2005-today, and assert the maximum relative difference is under a tolerance you choose and state. When they disagree, the dividend timing convention is the usual culprit.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The store can now return both a raw price series and a total-return series from the same rows, with adjustment computed at read time. That choice is what will let a backtest run in March against the same file you ingested in September without the history having quietly moved.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [DuckDB documentation](https://duckdb.org/docs/current/) [tool]{.res-kind}
+- [PyArrow documentation](https://arrow.apache.org/docs/python/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/store.py with a working `bars()` function and a passing comparison against the vendor's adjusted series to a stated tolerance.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your file was correct on Monday. On Tuesday a stock in it goes ex-dividend. What is now wrong if you stored the adjusted close?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 23, Saturday, 29 August 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Create tests/ in the work repo and check pytest runs on an empty test file.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down, in one sentence, what an as-of test should assert. Tomorrow you implement whatever you wrote.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Pick a date in 2019 and note what you would want your store to return for it if you asked as of that date.
 :::
 :::

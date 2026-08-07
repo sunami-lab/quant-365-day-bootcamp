@@ -1,5 +1,5 @@
 ---
-title: "Day 159 — Placeholder title for day 159"
+title: "Day 159 — One command, same number, six months later"
 subtitle: "Tuesday, 12 January 2027 · Week 23 of 52 · The research harness · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Tuesday, 12 January 2027 · Week 23 of 52 · The research harness · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The reproducibility gap you found last night is the difference between a platform and a collection of notebooks, and it is what milestone 5 is actually graded on.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Reproduce any reported result with one command from a clean checkout.
+- Have every result record the code version, the configuration and the data snapshot that produced it.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build the entry point: a command taking a configuration file and producing a result object, with the git commit, the configuration hash and the store's ingestion cutoff recorded inside the result. Then rerun every milestone number through it and check each matches what you reported.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Fix the gaps you find. The usual ones are a hard-coded date, a parameter that lives in a notebook rather than in the configuration, and a data pull that has since changed. Each one you fix is a claim in milestone 5 that becomes true.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+Every result is reproducible from a configuration file and a commit hash with one command, and each result records the code version and data cutoff that produced it. This is the property that makes the platform worth showing to someone.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Pro Git (Chacon & Straub, free)](https://git-scm.com/book/en/v2) [textbook]{.res-kind}
+- [uv documentation (Astral)](https://docs.astral.sh/uv/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A one-command entry point reproducing every reported milestone number, with provenance recorded inside each result.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Hand someone your repository. What is the single command that reproduces your pairs strategy result, and what would break it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 160, Wednesday, 13 January 2027 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Start the list of lies: every simplification your backtester still makes, unranked, as fast as you can write them.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Aim for at least ten. Do not filter.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow you rank them by how much each one matters.
 :::
 :::

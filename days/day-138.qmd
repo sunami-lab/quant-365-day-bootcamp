@@ -1,6 +1,6 @@
 ---
-title: "Day 138 — Placeholder title for day 138"
-subtitle: "Tuesday, 22 December 2026 · Week 20 of 52 · The research harness · Study day · 60 min"
+title: "Day 138 — The delisting return your data does not have"
+subtitle: "Tuesday, 22 December 2026 · Week 20 of 52 · The research harness · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Tuesday, 22 December 2026 · Week 20 of 52 · The research harness ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Survivorship is usually discussed as missing names, but the sharper problem is the missing final return, which is concentrated exactly in the cases a strategy would have been holding.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what the correct delisting return is for a bankruptcy and for an acquisition, and why omitting it biases a long-short strategy asymmetrically.
+- Bound the size of the bias for your own strategies using a stated assumption about delisting frequency and severity.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Build the bound rather than guess it: assume a delisting rate per year and a mean delisting return, both taken from published figures you cite or from a conservative assumption you state, and compute the annual drag on a long-only portfolio and on the short leg of a long-short portfolio. The two numbers differ in sign, which is the point.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Test the sensitivity of your own results: rerun the pairs strategy with a synthetic penalty applied whenever a name disappears from the universe, at three severities. Report the Sharpe at each. If the strategy dies at a plausible severity, that is a result and it belongs in milestone 5.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the limitation into reports/milestone-05-platform.md as the first entry in the list of lies your backtester tells.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [WRDS — CRSP data vendor page](https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/center-for-research-in-security-prices-crsp/) [data]{.res-kind}
+- [Open Source Asset Pricing — replication code](https://github.com/OpenSourceAP/CrossSection) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A quantified bound on delisting bias for long-only and long-short books, and the strategy's sensitivity at three severities.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does omitting delisting returns bias a long-short strategy in a specific direction rather than adding noise?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 139, Wednesday, 23 December 2026 starts clean. This i
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down the one test that, if it existed and passed, would let you believe your store has no look-ahead.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> It will be a test about what the store returns for an as-of date, not about any particular signal.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Sketch it in three lines of pseudocode.
 :::
 :::

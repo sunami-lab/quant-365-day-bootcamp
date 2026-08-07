@@ -1,5 +1,5 @@
 ---
-title: "Day 268 — Placeholder title for day 268"
+title: "Day 268 — Heston, and what a second source of randomness buys"
 subtitle: "Saturday, 1 May 2027 · Week 39 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Saturday, 1 May 2027 · Week 39 of 52 · Derivatives · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The model you wrote down last night has a semi-closed form, five interpretable parameters, and reproduces both the smile and its dynamics, which is why it is still the default after thirty years.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Name the five Heston parameters and say which feature of the surface each one controls.
+- Calibrate Heston to your fitted surface and report the fit quality against local volatility's exact fit.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Calibrate Heston to your surface with QuantLib, which has the characteristic-function pricer implemented and tested. Report the calibrated parameters and the residuals across strikes and maturities. It will not fit exactly, unlike local volatility, and the pattern of residuals tells you where the model is too rigid.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Map parameters to features: long-run variance sets the level at long maturities, mean reversion speed sets how fast the term structure flattens, volatility of variance sets the curvature, and the correlation between the two Brownian motions sets the skew. Verify each by perturbing one parameter and replotting the surface.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [QuantLib-Python documentation](https://quantlib-python-docs.readthedocs.io/en/latest/) [reference]{.res-kind}
+- [QuantLib Python Cookbook (Ballabio & Balaraman, free)](https://leanpub.com/quantlibpythoncookbook) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A calibrated Heston model with residuals across the surface, plus a parameter-to-feature verification figure.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which Heston parameter controls the skew, and which controls how fast the term structure flattens?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 269, Sunday, 2 May 2027 starts clean. This is what th
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Look at the shortest-maturity slice of your surface and note how steep it is.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then ask what a diffusion model can produce at very short maturities, given that a diffusion's short-horizon distribution is nearly normal.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> There is a contradiction. Tomorrow resolves it.
 :::
 :::

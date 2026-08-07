@@ -1,5 +1,5 @@
 ---
-title: "Day 48 — Placeholder title for day 48"
+title: "Day 48 — Sortino, Calmar and the ratios that add nothing"
 subtitle: "Wednesday, 23 September 2026 · Week 7 of 52 · Returns and noise · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 23 September 2026 · Week 7 of 52 · Returns and noise · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Most alternatives to the Sharpe ratio are the Sharpe ratio with extra sampling error, and knowing which ones carry independent information keeps you from reporting five numbers that say one thing.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what Sortino changes about the denominator and what that costs in estimator precision.
+- Report the correlation across strategies between Sharpe and each alternative, and say which alternative is not nearly redundant.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Test the redundancy empirically: build 200 random long-short signals on your universe, compute Sharpe, Sortino, Calmar and information ratio for each, and report the cross-strategy correlation matrix of the four. Two of them will be above 0.95 with Sharpe.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Compare precision: simulate at a known true Sharpe and compare the sampling standard deviation of Sharpe against Sortino at the same sample size. Downside deviation uses fewer observations, and the cost of that shows up here.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the conclusion into reports/milestone-02-noise-floor.md as a short table: which ratio you will report, which you will not, and why.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [empyrical-reloaded — Sharpe, Sortino, drawdown primitives](https://github.com/stefan-jansen/empyrical-reloaded) [repo]{.res-kind}
+- [QuantStats — standalone HTML tear sheets](https://github.com/ranaroussi/quantstats) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The four-by-four cross-strategy correlation matrix of performance ratios, and your stated reporting policy in the milestone report.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Sortino is higher than Sharpe for nearly every strategy you tested. What does that tell you, and is it a property of the strategies or of the statistic?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 49, Thursday, 24 September 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread your qlib/stats.py and check that every function documents its convention. Anything undocumented is a future argument with yourself.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Run the test suite. Coverage test included.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the drill times so far; tomorrow is the seventh sitting.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 17 — Placeholder title for day 17"
+title: "Day 17 — Splits, dividends, spinoffs, and the ticker that moved"
 subtitle: "Sunday, 23 August 2026 · Week 3 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Sunday, 23 August 2026 · Week 3 of 52 · Markets · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Corporate actions are where the identity of an instrument breaks, and an identifier that changes without warning is the bug that corrupts a universe silently for years.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- For each of split, cash dividend, spinoff and ticker change, say what happens to the price series and what happens to the identifier.
+- Explain why a ticker is not a primary key, and name what is used instead.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Work through your three saved corporate actions in a notebook. For each, plot the raw series across the event, state the adjustment factor, and say whether a naive returns calculation would have produced a spurious return and of what size.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} The identifier problem: write down what happens to a ticker when a company is acquired, when it changes name, and when a different company later takes the freed ticker. Then write the one-line rule your data store will follow, which is that the primary key is an internal integer and the ticker is an attribute with valid-from and valid-to dates.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add the spinoff case to the glossary, since it is the one that most often goes unhandled: the parent's price drops by the value of what was distributed, and the holder received shares rather than cash.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [yfinance](https://github.com/ranaroussi/yfinance) [repo]{.res-kind}
+- [WRDS — CRSP data vendor page](https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/center-for-research-in-security-prices-crsp/) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-017-corporate-actions.ipynb with three annotated event plots and the written identifier rule your store will use.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why is a ticker symbol a bad primary key, and what would you use instead if you had CRSP?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 18, Monday, 24 August 2026 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Get the current S&P 500 constituent list from any free source and save it with today's date in the filename. Tomorrow's exercise depends on it being dated.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Email the Wisconsin School of Business library about WRDS access if you have not yet. It takes five minutes and it is the largest single data upgrade available to you.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down how many companies you think have left the S&P 500 since 2010. You will check tomorrow.
 :::
 :::

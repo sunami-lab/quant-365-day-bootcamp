@@ -1,6 +1,6 @@
 ---
-title: "Day 38 — Placeholder title for day 38"
-subtitle: "Sunday, 13 September 2026 · Week 6 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 38 — Returns are unpredictable, their sizes are not"
+subtitle: "Sunday, 13 September 2026 · Week 6 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Sunday, 13 September 2026 · Week 6 of 52 · Returns and noise · Stu
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Two autocorrelation functions from the same series, one flat and one decaying slowly, and every volatility model in this course exists because of that pair of facts.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what near-zero return autocorrelation rules out, and what strongly positive absolute-return autocorrelation rules out, and say what the two jointly imply about any model of returns.
+- Give the approximate decay behaviour of the absolute-return autocorrelation and say what it rules out about the memory of the process.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Quantify what you plotted last night: report the lag-1 through lag-5 autocorrelation of returns with confidence bands, then the same for absolute returns and for squared returns, out to lag 100. Fit the decay of the absolute-return ACF and say whether it looks geometric or slower.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Show that the two facts are compatible: simulate a series with independent signs and a slowly varying volatility level, and reproduce both autocorrelation functions. Getting this simulation right is the mental model you will use for GARCH in week 13, four weeks before you meet it.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [statsmodels — time series analysis (tsa)](https://www.statsmodels.org/stable/tsa.html) [tool]{.res-kind}
+- [MIT 18.S096 — Topics in Mathematics with Applications in Finance](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-038-clustering.ipynb with the two empirical autocorrelation functions and a simulation that reproduces both.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Returns are uncorrelated but absolute returns are strongly autocorrelated. What does each fact rule out, and what do they jointly imply?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 39, Monday, 14 September 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the correlation between today's SPY return and tomorrow's realised volatility, measured as the absolute return, over your full sample.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do it separately for days when today's return was negative and days when it was positive. Note the two numbers.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not interpret them yet.
 :::
 :::

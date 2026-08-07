@@ -1,5 +1,5 @@
 ---
-title: "Day 254 — Placeholder title for day 254"
+title: "Day 254 — Delta hedging a short option, ten thousand times"
 subtitle: "Saturday, 17 April 2027 · Week 37 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Saturday, 17 April 2027 · Week 37 of 52 · Derivatives · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The single most instructive simulation in derivatives, because the mean and the variance of the outcome each tell you something different and both are surprising the first time.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the distribution of profit from delta hedging a short option when implied and realized volatility are equal.
+- Say what the mean should be and what the spread comes from.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build the simulation in qlib/derivatives/hedge.py: sell a call at an implied volatility, simulate paths at a realized volatility, rebalance delta at a chosen frequency, and accumulate profit and loss including financing on the hedge. Run 10,000 paths with implied equal to realized and report the mean and the standard deviation.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Interpret the two numbers: the mean should be near zero because you sold at fair value, and the spread is entirely discretisation error from hedging at finite frequency. Then vary the rebalancing frequency and show that the spread falls but the mean does not move. That separation is the whole lesson.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Sinclair — Volatility Trading, 2nd ed. (Wiley)](https://www.wiley.com/en-us/Volatility+Trading,+++Website,+2nd+Edition-p-9781118416723) [textbook]{.res-kind}
+- [QuantPy (YouTube channel)](https://www.youtube.com/@QuantPy) [video]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/derivatives/hedge.py with a delta-hedging simulator, and the profit distribution reported across four rebalancing frequencies.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You hedge a short option and implied equals realized. What is your expected profit, and where does the spread around it come from?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 255, Sunday, 18 April 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Rerun today's simulation with implied volatility 5 points above realized.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Record the mean profit.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then guess the formula that predicts it before tomorrow tells you.
 :::
 :::

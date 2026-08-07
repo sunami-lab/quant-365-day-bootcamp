@@ -1,5 +1,5 @@
 ---
-title: "Day 55 — Placeholder title for day 55"
+title: "Day 55 — White's reality check, and the null that is about the best"
 subtitle: "Wednesday, 30 September 2026 · Week 8 of 52 · Returns and noise · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Wednesday, 30 September 2026 · Week 8 of 52 · Returns and noise · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The deflated Sharpe corrects one number; the reality check tests the whole set at once, and the distinction between the two nulls is the part people get wrong.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State White's null hypothesis precisely, and say why it is stronger than testing each strategy separately.
+- Run the reality check and the superior predictive ability test on a set of your own strategies and report both p-values.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read White's Reality Check paper as far as the statement of the null and the bootstrap procedure. The null is that the best strategy in the set has no expected outperformance over the benchmark, which is a joint statement rather than 200 separate ones.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run it with arch: take 50 moving-average variants on SPY, form the loss differentials against a buy-and-hold benchmark, and apply the SPA test from arch.bootstrap. Report the consistent and lower p-values. You are calling a stationary bootstrap you have not built yet, which is next week's work; today the resampling is a black box.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [White (2000) — A Reality Check for Data Snooping](https://users.ssc.wisc.edu/~bhansen/718/White2000.pdf) [paper]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-055-reality-check.ipynb with SPA test p-values for a 50-strategy set against a buy-and-hold benchmark.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State White's null in one sentence, and say why rejecting it is a stronger claim than a single strategy having a significant Sharpe.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 56, Thursday, 1 October 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread your correspondence table from day 50 and add the two rows week 8 taught you that it was missing.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check that research_log.jsonl has lines in it from days 53 to 55. If it does not, the wiring is not working and that is tomorrow's job.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at your recorded arithmetic times; tomorrow is the eighth sitting.
 :::
 :::

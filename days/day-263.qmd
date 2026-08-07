@@ -1,6 +1,6 @@
 ---
-title: "Day 263 — Placeholder title for day 263"
-subtitle: "Monday, 26 April 2027 · Week 38 of 52 · Derivatives · Study day · 60 min"
+title: "Day 263 — A surface that violates these conditions is a free lunch"
+subtitle: "Monday, 26 April 2027 · Week 38 of 52 · Derivatives · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Monday, 26 April 2027 · Week 38 of 52 · Derivatives · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The checks you ran last night are not aesthetic; each violation corresponds to a specific portfolio of options with a guaranteed profit, and being able to name that portfolio is what makes the conditions memorable.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the static no-arbitrage conditions on an option surface and name the trade that each violation permits.
+- Report which conditions your fitted surface violates and whether the cause is arbitrage or bad data.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Work out the trades: monotonicity in strike is a call spread with a negative price, convexity in strike is a butterfly with a negative price, and monotonicity of total variance in maturity is a calendar spread with a negative price. Write each as an explicit position, since that is how it is asked.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Audit your own surface: run all three checks across the whole chain and report the violations. In practice most will be stale quotes on illiquid strikes rather than real arbitrage, so also report the bid-ask spread at each violating point, which usually explains it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add the filter to your pipeline: a surface used for anything downstream must pass the three conditions after filtering, and points that fail are dropped with the reason recorded.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatheral & Jacquier — Arbitrage-free SVI volatility surfaces](https://arxiv.org/abs/1204.0646) [paper]{.res-kind}
+- [Gatheral — The SVI Arbitrage-Free Volatility Surface Parameterization (Imperial lecture 2)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-2nd-Lecture.pdf) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The three no-arbitrage checks implemented with the violating trade named for each, and an audit of your own surface with spreads reported.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your surface is not convex in strike at one point. What trade does that permit, and why is it probably not free money?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 264, Tuesday, 27 April 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the abstract and the parameterisation section of the Gatheral and Jacquier SVI paper.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the five parameters and what each controls.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Sketch what the slice looks like as you vary one of them.
 :::
 :::

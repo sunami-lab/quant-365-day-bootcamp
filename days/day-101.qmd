@@ -1,5 +1,5 @@
 ---
-title: "Day 101 — Placeholder title for day 101"
+title: "Day 101 — How much of the frontier is estimation error"
 subtitle: "Sunday, 15 November 2026 · Week 15 of 52 · Portfolios and risk · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 15 November 2026 · Week 15 of 52 · Portfolios and risk · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The comparison you ran last night is the one that made practitioners abandon raw mean-variance, and running it yourself is more convincing than any paper on the subject.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the out-of-sample volatility and return of an optimised portfolio against equal weighting on your own data.
+- State how many observations per asset you would need before the optimised solution reliably beats equal weighting.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Do the resampling experiment: draw 200 bootstrap samples of your return history, optimise on each, and plot all 200 frontiers on one axis. The width of that band, not the single line you drew on day 99, is the honest picture of what you know about the frontier.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Find the crossover empirically: run the split-sample comparison against equal weighting at estimation windows of 60, 120, 240 and 600 months, for 10 and 25 assets. Report a table of out-of-sample Sharpe for each cell, and read off where optimisation starts winning.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [PyPortfolioOpt](https://pyportfolioopt.readthedocs.io/en/latest/) [tool]{.res-kind}
+- [MIT 18.S096 — Topics in Mathematics with Applications in Finance](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-101-estimation-error.ipynb with 200 resampled frontiers and an out-of-sample Sharpe table against equal weighting.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+How many months of data do you need for 25 assets before mean-variance beats equal weighting out of sample, and what did you assume to get that number?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 102, Monday, 16 November 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Re-solve the tangency portfolio with a long-only constraint and record the gross exposure and the out-of-sample Sharpe.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then with weights capped at 10 percent, and record the same two numbers.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Three configurations now. Tomorrow explains why constraining helped.
 :::
 :::

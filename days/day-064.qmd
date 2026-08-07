@@ -1,5 +1,5 @@
 ---
-title: "Day 64 — Placeholder title for day 64"
+title: "Day 64 — Stationarity, and the three financial series that have it"
 subtitle: "Friday, 9 October 2026 · Week 10 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Friday, 9 October 2026 · Week 10 of 52 · Time series · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Almost every estimator in the next five weeks assumes it, almost no price series has it, and the gap between those two facts is where spurious results come from.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State weak stationarity in three conditions, and say which of the three a price series violates and which a return series might.
+- Name one financial series that is plausibly stationary, one that is clearly not, and one that is arguable, and defend the third.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read the stationarity and differencing section of the ARIMA chapter of Forecasting: Principles and Practice. It is compact and it is the reference you will come back to in week 11.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Test your intuition against the data: for the index level, index log returns, the VIX level, the 10-year yield and a credit spread, compute the mean and variance in the first and second half of the sample and tabulate them. Two of the five will surprise you.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the three-condition definition into your notebook alongside the one financial example you would defend as stationary and the one you would not, with the reason attached rather than the label.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Hyndman & Athanasopoulos — Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/) [textbook]{.res-kind}
+- [statsmodels — time series analysis (tsa)](https://www.statsmodels.org/stable/tsa.html) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-064-stationarity.ipynb with first-half and second-half moments for five financial series and your stationarity verdict on each.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Give the three conditions for weak stationarity, then say which one the VIX satisfies and which one it does not.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 65, Saturday, 10 October 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Plot the autocorrelation and partial autocorrelation functions of an AR(1) series you simulate yourself with a coefficient of 0.7.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do the same for an MA(1) with the same coefficient. Put the four panels on one figure.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at which panel cuts off and which decays. That contrast is tomorrow's whole subject.
 :::
 :::

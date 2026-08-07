@@ -1,5 +1,5 @@
 ---
-title: "Day 99 — Placeholder title for day 99"
+title: "Day 99 — Markowitz is one convex problem and three bad inputs"
 subtitle: "Friday, 13 November 2026 · Week 15 of 52 · Portfolios and risk · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 13 November 2026 · Week 15 of 52 · Portfolios and risk · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The optimization is trivial and the estimation is not, so the fastest way to see the real problem is to solve it correctly first and watch what it does.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Write mean-variance optimization as a convex program and solve it with CVXPY for a given risk aversion.
+- Say which of the two inputs the solution is more sensitive to, and give the reason in terms of how each is estimated.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Read the CVXPY introduction and the portfolio optimization example, then write the problem yourself for the 25 Fama-French portfolios: maximise expected return minus risk aversion times variance, subject to weights summing to one. Trace the frontier by sweeping risk aversion.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Perturb the inputs: add 10 percent noise to the estimated mean vector and re-solve, then do the same for the covariance matrix. Report the average absolute weight change under each perturbation. The asymmetry between the two numbers is the whole of week 15.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [CVXPY — disciplined convex programming](https://www.cvxpy.org/) [tool]{.res-kind}
+- [Boyd & Vandenberghe — Convex Optimization (free book)](https://web.stanford.edu/~boyd/cvxbook/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-099-markowitz.ipynb with a frontier traced by CVXPY and the weight sensitivity to perturbations of each input.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which input is mean-variance optimization more sensitive to, and why does that follow from how the two are estimated?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 100, Saturday, 14 November 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Solve the unconstrained tangency portfolio on your 25 assets and look at the weights.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the largest long weight, the largest short weight, and the sum of absolute weights.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not fix anything. Tomorrow is about that third number.
 :::
 :::

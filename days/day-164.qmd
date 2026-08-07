@@ -1,5 +1,5 @@
 ---
-title: "Day 164 — Placeholder title for day 164"
+title: "Day 164 — The transform is part of the bet, not a formatting step"
 subtitle: "Sunday, 17 January 2027 · Week 24 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 17 January 2027 · Week 24 of 52 · Alpha · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Ranking, z-scoring and winsorizing look like preprocessing and each one changes which positions dominate the portfolio, which means each is a modelling choice you should be able to defend.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what a rank transform assumes about the relationship between signal magnitude and expected return, and when that assumption costs you.
+- Report the effect of three transforms on the same signal's Sharpe, turnover and concentration.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Implement the transforms in qlib/signals/transforms.py: cross-sectional z-score, cross-sectional rank mapped to a normal, and winsorised z-score at a stated quantile. Each declares what it does to units, since the interface from day 162 requires it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run the comparison: one signal, three transforms, reporting Sharpe, turnover, the weight of the largest position, and the fraction of profit coming from the top 5 percent of names. Ranking throws away magnitude, which helps when the tail is noise and hurts when the tail is where the information is, and this table tells you which case you are in.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [alphalens-reloaded — factor IC, quantile returns, turnover](https://github.com/stefan-jansen/alphalens-reloaded) [repo]{.res-kind}
+- [Machine Learning for Trading (Jansen) — code repository](https://github.com/stefan-jansen/machine-learning-for-trading) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Three transforms in qlib/signals/transforms.py, with a four-metric comparison of the same signal under each.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+When does ranking a signal help, and when does it throw away the information you wanted?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 165, Monday, 18 January 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Regress one of your signals cross-sectionally on sector dummies and on market beta, on a single date.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Report the R-squared.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> If it is large, your signal is partly a sector bet. Note the number.
 :::
 :::

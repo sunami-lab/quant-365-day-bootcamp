@@ -1,5 +1,5 @@
 ---
-title: "Day 134 — Placeholder title for day 134"
+title: "Day 134 — Eleven ways the future gets into a backtest"
 subtitle: "Friday, 18 December 2026 · Week 20 of 52 · The research harness · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 18 December 2026 · Week 20 of 52 · The research harness · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Your list from last night is the start of the taxonomy this week completes, and the value of a taxonomy is that it turns a vague worry into a checklist you can test against.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Name at least eight distinct look-ahead mechanisms and, for each, the test that would catch it.
+- Say which two of them your existing pairs backtest is guilty of.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build the taxonomy properly, expanding your list into categories: signal timing, universe construction, data revision, corporate action timing, index membership, delisting returns, parameter selection, benchmark selection, currency conversion timing, and the two that come from your own code rather than the data. Write each with a one-line detection test.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Audit your own pairs backtest against all of them. Be specific about where in the code the violation happens rather than noting the category. At least two will apply and one of them will be the formation window boundary.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [López de Prado — Advances in Financial Machine Learning, seminar slides](https://www.quantresearch.org/Lectures.htm) [reference]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The look-ahead taxonomy in reports/milestone-05-platform.md, with a detection test per entry and your own backtest audited against it.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Name five distinct ways look-ahead gets into a backtest and the test that catches each.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 135, Saturday, 19 December 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> For three data sources you use, find and write down the time of day the data becomes available. For yfinance daily bars, note that you cannot.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the lag you currently apply between a signal being computed and a position being held.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note whether that lag is in the code or in your head.
 :::
 :::

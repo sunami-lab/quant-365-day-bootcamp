@@ -1,5 +1,5 @@
 ---
-title: "Day 225 — Placeholder title for day 225"
+title: "Day 225 — A network on eight features is mostly a way to overfit"
 subtitle: "Friday, 19 March 2027 · Week 33 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Friday, 19 March 2027 · Week 33 of 52 · Machine learning · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You can build these from scratch, so the interesting question is not how but whether, and the parameter count against effective sample size you computed last night is most of the answer.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Fit a small feed-forward model under the frozen protocol and report it against the linear baseline with intervals.
+- State the parameter count at which the model reliably fails on your data, measured rather than assumed.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Fit a small network under the same protocol and nested validation as everything else: a few hidden units, heavy regularisation, early stopping on a purged validation fold. Report out-of-sample R-squared with an interval next to ridge and boosting.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Find the capacity cliff: sweep the hidden layer width from 2 to 256 and plot out-of-sample R-squared against parameter count, with the effective sample size marked on the axis. The shape of that curve is the honest answer to whether capacity pays here, and it is specific to your data rather than to the literature.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Murphy — Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html) [textbook]{.res-kind}
+- [Chen, Pelger & Zhu — Deep Learning in Asset Pricing](https://arxiv.org/abs/1904.00745) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-225-nn.ipynb with a tuned small network against the baselines and a capacity curve with effective sample size marked.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+At what parameter count does your network stop generalising, and how does that compare to your effective sample size?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 226, Saturday, 20 March 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down what a sequence model would have access to on this problem that a cross-sectional model does not.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then say whether you believe that information is predictive, given what week 6 measured.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two paragraphs, no code.
 :::
 :::

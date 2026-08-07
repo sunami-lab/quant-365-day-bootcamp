@@ -1,6 +1,6 @@
 ---
-title: "Day 198 — Placeholder title for day 198"
-subtitle: "Saturday, 20 February 2027 · Week 29 of 52 · Alpha · Study day · 60 min"
+title: "Day 198 — Orthogonalising, and what the residual actually forecasts"
+subtitle: "Saturday, 20 February 2027 · Week 29 of 52 · Alpha · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Saturday, 20 February 2027 · Week 29 of 52 · Alpha · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Removing one signal from another produces a third thing whose economic meaning you have to be able to state, and if you cannot state it you have made an estimation decision rather than a modelling one.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Orthogonalise one signal against another and say what the residual is a forecast of.
+- Say why the order of orthogonalisation matters and what a symmetric alternative would be.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Explore the asymmetry: orthogonalise A against B, then B against A, and evaluate both residuals. The results differ and the difference is not a bug; sequential orthogonalisation assigns shared explanatory power to whichever came first. Report both and note which ordering you would defend.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Implement the symmetric alternative: whitening the signal set so all components are orthogonal without privileging an order, then evaluate the resulting components. Note that the components are combinations rather than signals, so their economic interpretation is weaker, which is the trade you are making.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the decision for the book: orthogonalise where the economics dictate an ordering, otherwise handle correlation in the weighting rather than in the signals.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 18.065 — Matrix Methods in Data Analysis, Signal Processing and ML (Strang)](https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) [course]{.res-kind}
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Both orthogonalisation orderings evaluated plus a whitened component set, with the written policy for the book.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You orthogonalise value against quality. What is the residual a forecast of, and what would the other ordering have given you?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 199, Sunday, 21 February 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Combine your signals three ways: equal weight, weighted by each one's information coefficient, and weighted by an optimisation using the correlation matrix.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Record the three combined Sharpe ratios in sample.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not run them out of sample yet.
 :::
 :::

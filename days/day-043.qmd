@@ -1,6 +1,6 @@
 ---
-title: "Day 43 — Placeholder title for day 43"
-subtitle: "Friday, 18 September 2026 · Week 7 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 43 — Three Sharpe ratios from the same returns"
+subtitle: "Friday, 18 September 2026 · Week 7 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Friday, 18 September 2026 · Week 7 of 52 · Returns and noise · Stu
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Before treating it as an estimator you need to know it is not one quantity but a family, and that most reported values omit the two choices that separate them.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Compute three defensible Sharpe ratios from one return series and explain what each subtracts and how each annualises.
+- Say which convention makes a strategy look best and by how much, in your own data.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Compute, for one strategy-like series such as a 12-month momentum rule on SPY: Sharpe with zero risk-free, Sharpe with the bill rate, and Sharpe computed on monthly rather than daily returns then annualised. Report all three and the spread between the highest and lowest.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Add `sharpe(returns, rf=None, periods=252)` to a new qlib/stats.py, with the convention documented in the docstring and asserted in a test. Every number you report for the rest of the year comes from this function, so the convention is now fixed and written down.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [empyrical-reloaded — Sharpe, Sortino, drawdown primitives](https://github.com/stefan-jansen/empyrical-reloaded) [repo]{.res-kind}
+- [QuantStats — standalone HTML tear sheets](https://github.com/ranaroussi/quantstats) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/stats.py with a documented, tested Sharpe function, plus three conventions computed on one series and the spread between them.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Someone reports a Sharpe of 1.4. What two questions do you ask before believing it is comparable to your 1.1?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 44, Saturday, 19 September 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down the delta method in one line, as you would use it for a ratio of two estimators. You will apply it tomorrow to the ratio of a mean to a standard deviation.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the two sample moments the Sharpe ratio depends on, and their asymptotic covariance under iid normality.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to download. Tomorrow is derivation.
 :::
 :::

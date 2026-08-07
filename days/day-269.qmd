@@ -1,5 +1,5 @@
 ---
-title: "Day 269 — Placeholder title for day 269"
+title: "Day 269 — Jumps, because a diffusion cannot smile at one week"
 subtitle: "Sunday, 2 May 2027 · Week 39 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 2 May 2027 · Week 39 of 52 · Derivatives · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The contradiction you found last night is real: any pure diffusion flattens at short maturities, and the market does not, which is the strongest empirical argument for a discontinuous component.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say why a diffusion's implied smile flattens as maturity goes to zero and why the market's does not.
+- Price an option under a jump-diffusion and show it produces short-dated skew that Heston cannot.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Demonstrate the flattening: price short-dated options under your calibrated Heston at maturities from one year down to one week, and plot the implied skew slope against maturity. It goes to zero. Overlay the market's, which does not.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Add jumps: price under Merton's jump-diffusion, either via QuantLib or by the series representation, and show the short-dated skew survives. Then note the honest limitation, which is that jump parameters are very poorly identified from option prices alone because several combinations fit almost equally well.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [QuantLib-Python documentation](https://quantlib-python-docs.readthedocs.io/en/latest/) [reference]{.res-kind}
+- [Gatheral — Rough Volatility (Imperial lecture 3)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-3rd.pdf) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-269-jumps.ipynb with skew slope against maturity for Heston, a jump-diffusion and the market.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does a pure diffusion model produce no skew at very short maturities, and what fixes it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 270, Monday, 3 May 2027 starts clean. This is what th
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Price a European call by plain Monte Carlo with 100,000 paths and record the estimate and its standard error.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare against the closed form.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down how many paths you would need to halve the standard error.
 :::
 :::

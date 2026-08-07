@@ -1,6 +1,6 @@
 ---
-title: "Day 237 — Placeholder title for day 237"
-subtitle: "Wednesday, 31 March 2027 · Week 34 of 52 · Machine learning · Study day · 60 min"
+title: "Day 237 — Writing a verdict that reads the same either way"
+subtitle: "Wednesday, 31 March 2027 · Week 34 of 52 · Machine learning · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 31 March 2027 · Week 34 of 52 · Machine learning · Stud
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The test of an honest conclusion is whether its form depends on which way the result came out, and last night's exercise is the one that catches it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the phase's conclusion as a number with an interval and a stated comparison.
+- Confirm the conclusion's wording does not depend on the direction of the result.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write the verdict section of reports/milestone-07-ml.md: the comparison, the interval, the seed spread, the turnover, and the conditional analysis with its caveat. Then apply the correction for the phase's trial count from research_log.jsonl to the winning model.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Run the direction test: give the verdict to yourself with the sign flipped and check whether you would have written it the same way. Then write the paragraph on what you would need to see to change your conclusion, which is the section that makes the rest credible.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note what the phase cost: hours spent against the improvement obtained, stated plainly. That ratio is a legitimate part of the conclusion.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2014) — Pseudo-Mathematics and Financial Charlatanism](https://www.davidhbailey.com/dhbpapers/backtest-pseudo.pdf) [paper]{.res-kind}
+- [Harvey, Liu & Zhu (2014) — ...and the Cross-Section of Expected Returns](https://www.nber.org/papers/w20592) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The verdict section written, direction-tested, with the trial-count correction applied and the effort-to-improvement ratio stated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State the phase's conclusion in one sentence with a number and an interval, then say what would change it.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 238, Thursday, 1 April 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread reports/milestone-07-ml.md and mark what is still notes rather than prose.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Confirm the audit reproduces from its committed configuration.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times; tomorrow is the thirty-fourth sitting.
 :::
 :::

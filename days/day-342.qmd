@@ -1,5 +1,5 @@
 ---
-title: "Day 342 — Placeholder title for day 342"
+title: "Day 342 — A full session, continuous, with no pausing to think"
 subtitle: "Wednesday, 14 July 2027 · Week 49 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Wednesday, 14 July 2027 · Week 49 of 52 · The interview · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every previous exercise let you stop, and the round does not, so the last practice of the week removes the pause and finds out what degrades.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Run a continuous 45-minute quoting session and report profit, inventory and adverse selection.
+- Say which part of your decision quality degraded under continuous pressure.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [45 min]{.task-min} Run the full session with no pauses and no reference material, keeping a running commentary out loud. The commentary is the point: an interviewer is listening to how you decide, and doing it while under pressure is the skill that does not transfer from silent practice.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Review the recording rather than only the score: find the point where your reasoning became a heuristic instead of a calculation, and note what triggered it. It is usually an unexpected fill or a run of losses, and knowing your own trigger is worth more than the profit number.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [IMC Prosperity 3 backtester with real round data](https://github.com/jmerle/imc-prosperity-3-backtester) [repo]{.res-kind}
+- [Optiver Ready Trader Go — surviving simulator mirror](https://github.com/keanekwa/Optiver-Ready-Trader-Go) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A recorded 45-minute continuous session with profit, inventory and adverse selection reported, plus the identified degradation point.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+At what point in the session did your reasoning stop being a calculation, and what triggered it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 343, Thursday, 15 July 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Update the error log with everything from the trading week.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your timed mixed-set scores.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to install.
 :::
 :::

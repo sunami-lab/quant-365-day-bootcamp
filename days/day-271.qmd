@@ -1,5 +1,5 @@
 ---
-title: "Day 271 — Placeholder title for day 271"
+title: "Day 271 — Trees, because early exercise breaks the expectation"
 subtitle: "Tuesday, 4 May 2027 · Week 39 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Tuesday, 4 May 2027 · Week 39 of 52 · Derivatives · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+American options are the ones actually listed on single stocks, and the reason a simulation cannot price them directly is worth understanding rather than working around.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Price an American put on a binomial tree and say why the same expectation cannot be evaluated by forward simulation.
+- Report the early exercise premium and identify the region where exercise is optimal.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Implement American exercise on your tree by taking the maximum of continuation and intrinsic value at each node, then price an American and a European put on the same parameters and report the premium. Plot the exercise boundary in spot and time.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Say why simulation struggles: the optimal exercise decision at a node depends on the continuation value, which is a conditional expectation of the future, and a forward simulation does not have it. Then read what the standard fix is, which regresses continuation value on state variables across paths, and note that it is a regression on simulated data with all the overfitting risks you already know about.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Check your tree against QuantLib's American pricer to make sure the exercise logic is right.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [QuantLib-Python documentation](https://quantlib-python-docs.readthedocs.io/en/latest/) [reference]{.res-kind}
+- [FinancePy — rates, FX, equity and credit derivatives](https://github.com/domokane/FinancePy) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+An American put priced on a tree with the exercise boundary plotted, checked against QuantLib.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why can plain forward Monte Carlo not price an American option, and what does the standard fix estimate?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 272, Wednesday, 5 May 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Take your local volatility and Heston calibrations, which fit today's surface about equally well, and price the same exotic under both.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> A forward-starting or barrier option is the right choice.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the price difference. It will be large.
 :::
 :::

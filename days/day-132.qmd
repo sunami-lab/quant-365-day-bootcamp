@@ -1,6 +1,6 @@
 ---
-title: "Day 132 — Placeholder title for day 132"
-subtitle: "Wednesday, 16 December 2026 · Week 19 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 132 — Did the risk model beat equal weighting, honestly"
+subtitle: "Wednesday, 16 December 2026 · Week 19 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 16 December 2026 · Week 19 of 52 · Portfolios and risk �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Milestone 4 is graded on whether equal weighting appears in the comparison and is not quietly dropped when it wins, so today runs the comparison before you write the document.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report out-of-sample realised risk and Sharpe for every covariance estimator against equal weighting on the same period.
+- State the verdict, including the case where the simplest construction wins.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run the full out-of-sample comparison: five constructions including equal weighting, reporting predicted risk, realised risk, the ratio, Sharpe with an interval, turnover and gross exposure. One table.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Interpret it correctly: a risk model earns its place by predicting realised risk accurately, not by producing the highest Sharpe, because the Sharpe comparison is dominated by the expected return estimate you already know is the weak input. Write that distinction into the milestone report and report both.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the trials: count how many portfolio constructions you have now evaluated from research_log.jsonl and state the implied correction for the best one.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [scikit-learn — covariance estimation and Ledoit-Wolf shrinkage](https://scikit-learn.org/stable/modules/covariance.html) [reference]{.res-kind}
+- [skfolio — scikit-learn compatible portfolio optimization](https://skfolio.org/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The five-construction out-of-sample comparison table with predicted and realised risk, Sharpe intervals, turnover and gross exposure.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Equal weighting had the best out-of-sample Sharpe and the worst risk prediction. What do you conclude, and what do you run?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 133, Thursday, 17 December 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread reports/milestone-04-risk-model.md and mark what is still notes rather than prose.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Confirm the test suite is green, including the positive-definiteness and neutralisation tests.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times; tomorrow is the nineteenth sitting.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 25 — Placeholder title for day 25"
+title: "Day 25 — Market making is an inventory business"
 subtitle: "Monday, 31 August 2026 · Week 4 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Monday, 31 August 2026 · Week 4 of 52 · Markets · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The second source of returns, and the one that pays for a service rather than for risk: you are being compensated for standing there, and charged by anyone who knows more than you.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the two costs a market maker's spread has to cover, and say which of the two a fast quote update reduces.
+- Simulate one day of quoting and show how inventory risk moves your quotes even when your view has not changed.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Watch the Copenhagen microstructure lectures on dealer markets and the components of the spread. The decomposition into order-processing, inventory and adverse-selection costs is the framework you use again in week 42.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Simulate: a mid-price random walk, you quote one tick either side, you fill with some probability per side, and your inventory accumulates. Run 1,000 steps. Plot profit and inventory. Then add a rule that skews your quotes against your inventory and show what it does to the variance of the outcome.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Financial Markets Microstructure (Copenhagen, Starkov) — video lectures](https://www.youtube.com/playlist?list=PL4pUs4P_j1Wa2_P1lw44kFWWjKDTGUY7S) [video]{.res-kind}
+- [Financial Markets Microstructure — slides, homework and exams](https://github.com/electronicgore/finmarkets) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-025-market-making.ipynb with a quoting simulation, before and after inventory skewing, and the variance of profit reported for both.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You quote two-sided and get lifted on the offer six times in a row. What do you do to your quotes, and what are you assuming when you do it?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 26, Tuesday, 1 September 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download the Gatev, Goetzmann and Rouwenhorst pairs trading paper from NBER. Read only the abstract tonight.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Pick two pairs you would guess are related and pull their price histories: KO and PEP is the canonical one, and one more of your own choosing.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot the two price series of each pair on one axis. Do not compute anything; just look.
 :::
 :::

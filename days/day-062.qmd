@@ -1,6 +1,6 @@
 ---
-title: "Day 62 — Placeholder title for day 62"
-subtitle: "Wednesday, 7 October 2026 · Week 9 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 62 — Counting your own hypotheses, honestly"
+subtitle: "Wednesday, 7 October 2026 · Week 9 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Wednesday, 7 October 2026 · Week 9 of 52 · Returns and noise · Stu
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The correction is arithmetic; the input is a confession, and the gap between what you logged and what you remember is the most useful number of the phase.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the difference between the trials you logged and the trials you would have reported from memory, and say which is closer to the truth.
+- Describe the specific ways an adaptive search inflates the effective trial count beyond what a grid would give.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Audit yourself: read research_log.jsonl, count runs by strategy family, and compare against your day 49 guess. Then write down the trials that are not in the log at all, the ones you ran interactively and abandoned, and estimate how many there were.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the Harvey, Liu and Zhu paper's introduction and its argument about the effective number of tests in the published factor literature, and note the threshold t-statistic they end up recommending. Then say what the equivalent threshold is for your own work at your own trial count.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Harvey, Liu & Zhu (2014) — ...and the Cross-Section of Expected Returns](https://www.nber.org/papers/w20592) [paper]{.res-kind}
+- [McLean & Pontiff (draft) — Does Academic Research Destroy Stock Return Predictability?](https://www.hec.ca/finance/Fichier/McLean.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A trial-count audit in reports/milestone-02-noise-floor.md: logged, unlogged, estimated total, and the threshold each implies.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+How many hypotheses have you actually tested since day 1, and how confident are you in that number to within a factor of two?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 63, Thursday, 8 October 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread reports/milestone-02-noise-floor.md end to end and mark what is still notes rather than prose.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Run the test suite: the coverage test, the simulator's stylized-facts test, and the store's as-of tests all need to be green for the milestone to claim what it claims.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your recorded arithmetic times so tomorrow's ninth sitting has a target.
 :::
 :::

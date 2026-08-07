@@ -1,6 +1,6 @@
 ---
-title: "Day 329 — Placeholder title for day 329"
-subtitle: "Thursday, 1 July 2027 · Week 47 of 52 · Production · Milestone · 45 min"
+title: "Day 329 — Milestone: the system in production"
+subtitle: "Thursday, 1 July 2027 · Week 47 of 52 · Production · Milestone · 50 min"
 ---
 
 ::: {.day-nav .kind-milestone}
@@ -12,22 +12,22 @@ subtitle: "Thursday, 1 July 2027 · Week 47 of 52 · Production · Milestone · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The strategy running by itself against a real broker's paper account, and the test is whether it survives a week you do not touch it, which starts today rather than ends today.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Have the full pipeline run on a schedule with logging, monitoring, alerting and reconciliation, unattended.
+- Have a runbook covering the failures that will happen, written before they do.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Finish reports/milestone-10-production.md: the scheduled steps with their success conditions, the four monitors with calibrated thresholds, the reconciliation report with its categories, and the runbook. Include the log excerpt from the first failure and how you diagnosed it, since that is the most convincing part.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Set the real test running: commit to not touching the system for the next week and note the date. The milestone's claim is that it survives a week unattended, and you cannot assert that today. Write the date the claim can be checked and put it in the capstone's checklist.
 :::
 :::
 
@@ -37,27 +37,37 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Timed mixed set, eighth sitting: five problems in fifteen minutes. Score and plot all eight.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> A production question: your strategy has been live six weeks and is underperforming the backtest by 40 basis points a month. List the diagnoses in the order you would test them, out loud, in two minutes. There is a correct ordering and it starts with the cheapest checks.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> Why are you leaving academia, third attempt, recorded. Compare against days 287 and 308. By now it should be under forty-five seconds and should contain one concrete thing about the work rather than about the institution.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+Milestone 10 closes the production phase. The book runs on a schedule against a paper account with monitoring, reconciliation and a runbook, and the track record it produces from here is the one the capstone reports without adjustment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Alpaca — paper trading documentation](https://docs.alpaca.markets/docs/paper-trading) [tool]{.res-kind}
+- [Jane Street — puzzles](https://www.janestreet.com/puzzles/) [problems]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/milestone-10-production.md, complete, with the system scheduled and the date recorded on which the unattended-week claim can be checked.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your strategy is underperforming the backtest by 40 basis points a month. List the diagnoses in the order you would test them.
 :::
 
 ## Prepare for tomorrow
@@ -66,6 +76,12 @@ Ten minutes tonight so Day 330, Friday, 2 July 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Collect every probability problem you have got wrong or been slow on since day 7 into one file.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Count them and sort by category.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> That file is the syllabus for the next four weeks, and it is more useful than any book.
 :::
 :::

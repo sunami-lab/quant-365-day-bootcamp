@@ -1,6 +1,6 @@
 ---
-title: "Day 91 — Placeholder title for day 91"
-subtitle: "Thursday, 5 November 2026 · Week 13 of 52 · Time series · Catch-up day · 45 min"
+title: "Day 91 — Volatility modelling, closed book"
+subtitle: "Thursday, 5 November 2026 · Week 13 of 52 · Time series · Catch-up day · 40 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 5 November 2026 · Week 13 of 52 · Time series · Catch-up
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day. Four estimators, two loss functions and one decomposition; if all of that is in qlib/vol.py with tests, take the hour back.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the GARCH(1,1) recursion and the HAR specification from memory.
+- Say which volatility estimator you would use for sizing, which for option pricing, and which for a forecast competition, with a reason for each.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>40 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Finish anything outstanding from days 85 to 90. The Diebold-Mariano comparison is the piece most often left half-finished and the one that turns a plot into a claim.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Closed book, one page: the GARCH recursion, the HAR specification, the two loss functions and what each penalises, and the three-way decomposition of the volatility targeting effect.
 :::
 :::
 
@@ -33,27 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, thirteenth sitting. Ten two-digit multiplications, the sevenths, and 2 to the 10th through 2 to the 16th from memory.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Variance decomposition under conditioning: a stock's daily return has volatility that is 1 percent on 80 percent of days and 3 percent on the rest. What is the unconditional volatility, and the unconditional kurtosis? The second answer is the mechanism behind week 6.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Three months of drills. Write down the three problem types that are still slowest, compare against the list you made on day 63, and note what has moved.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The closed-book week 13 sheet, plus an updated list of your three slowest drill categories.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State the HAR specification and say in one sentence why three lags at different horizons work as well as they do.
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +65,12 @@ Ten minutes tonight so Day 92, Friday, 6 November 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read chapter 1 of Kalman and Bayesian Filters in Python, the g-h filter chapter, and run its first notebook.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down, in one sentence and with no matrices, what the filter is doing.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Keep that sentence; you will refine it all week.
 :::
 :::

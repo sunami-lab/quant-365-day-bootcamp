@@ -1,5 +1,5 @@
 ---
-title: "Day 155 — Placeholder title for day 155"
+title: "Day 155 — Poison the future and assert nothing changes"
 subtitle: "Friday, 8 January 2027 · Week 23 of 52 · The research harness · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Friday, 8 January 2027 · Week 23 of 52 · The research harness · St
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+This is the test that turns a claim about your engine into a fact about it, and it is the one an interviewer will ask you to describe.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement a test that corrupts all data after the decision timestamp and asserts every backtest output is bit-identical.
+- Say what the test would fail to catch, and write a second test for that gap.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Write tests/test_no_lookahead.py: run a strategy over a fixed window, then rerun it with every value after each decision timestamp replaced by noise, and assert the fills, positions and returns are identical. Run it against all your strategies. If any of them fails, the failure is the most valuable result of the week.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Find the gap: the poisoning test catches a strategy reading forward data, but it does not catch a parameter that was chosen by looking at the whole sample, because that choice happened outside the engine. Write the second test as an assertion that the configuration hash used in a run matches one recorded before the evaluation window began.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pytest documentation](https://docs.pytest.org/en/stable/) [tool]{.res-kind}
+- [López de Prado — Advances in Financial Machine Learning, seminar slides](https://www.quantresearch.org/Lectures.htm) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+tests/test_no_lookahead.py passing for every strategy, plus a second test on configuration provenance.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Describe the poisoned-future test, then say precisely what class of look-ahead it cannot detect.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 156, Saturday, 9 January 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Design a synthetic price series where you know the exactly correct strategy return in closed form.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> A deterministic sawtooth with a known amplitude and period is the easiest one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the analytic answer before you code anything.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 364 — Placeholder title for day 364"
-subtitle: "Thursday, 5 August 2027 · Week 52 of 52 · Capstone · Catch-up day · 45 min"
+title: "Day 364 — The last drill, and the trend across fifty-two of them"
+subtitle: "Thursday, 5 August 2027 · Week 52 of 52 · Capstone · Catch-up day · 40 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 5 August 2027 · Week 52 of 52 · Capstone · Catch-up day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day, and the last of the seventh days. If everything is assembled then this hour is yours, and the drill trend across a full year is worth looking at properly rather than in passing.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Plot every drill score and arithmetic time from the whole year and state what improved and what plateaued.
+- Have the capstone materials complete and verified before tomorrow.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>40 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Finish anything outstanding for the capstone. The dossier, the recommendation and the retrospective are the three pieces tomorrow assembles, and they should already be written rather than being written tomorrow.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Plot the whole drill history: arithmetic times from day 7 onward and mixed-set scores from day 280 onward, on two panels. Then write two sentences, one on what improved and one on what plateaued, since the plateau is the more useful observation for what to do in September.
 :::
 :::
 
@@ -33,27 +33,31 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Timed mixed set, thirteenth and final scored sitting: five problems in fifteen minutes. Score, and compare against the target you set on day 330.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> One last full mock: fifteen minutes, mixed, cold, recorded. Compare against day 350 and day 357.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then stop and read the fifty-two drill entries on the drills page in order. It takes ten minutes and it is the clearest record you have of how much ground a year of twenty-minute sittings covers.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — puzzle archive with solutions](https://www.janestreet.com/puzzles/archive/index.html) [problems]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A two-panel plot of the year's drill history with a written note on what improved and what plateaued.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Across fifty-two sittings, what improved most and what did not move at all?
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +66,12 @@ Ten minutes tonight so Day 365, Friday, 6 August 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Have the dossier, the track record, the recommendation and the retrospective open in one place.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Run the test suite once and confirm the system ran this morning.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow is assembly and reading, not writing.
 :::
 :::

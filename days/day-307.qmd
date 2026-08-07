@@ -1,6 +1,6 @@
 ---
-title: "Day 307 — Placeholder title for day 307"
-subtitle: "Wednesday, 9 June 2027 · Week 44 of 52 · Microstructure · Study day · 60 min"
+title: "Day 307 — The results this phase revised, and by how much"
+subtitle: "Wednesday, 9 June 2027 · Week 44 of 52 · Microstructure · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 9 June 2027 · Week 44 of 52 · Microstructure · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Milestone 9 is graded on containing an earlier result you now believe was wrong, said in those words, and today is where you find them rather than tomorrow.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- List every earlier number this phase changed, with the old value, the new value and the cause.
+- Name the one you were most confident in and say what that says about your other confident numbers.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Build the revision table: capacity figures, net Sharpe ratios after the fitted impact model, the reversal signal's viability, and any strategy whose net performance crossed your noise floor in either direction. Old, new, cause, and one line on whether you should have known.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the paragraph the milestone requires: name the result you were most confident in that turned out wrong, say what made you confident, and say what class of your remaining numbers shares that property. That last sentence is the one that makes the document worth reading.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Go back and annotate the earlier milestone documents with the revision rather than editing them silently, so the record shows what you believed and when.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2014) — Pseudo-Mathematics and Financial Charlatanism](https://www.davidhbailey.com/dhbpapers/backtest-pseudo.pdf) [paper]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The revision table with old and new values and causes, plus annotations added to the earlier milestone documents.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which earlier result do you now believe was wrong, and what made you confident in it at the time?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 308, Thursday, 10 June 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Confirm the fitted impact model is wired into every cost path and that no assumed coefficient survives anywhere.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Run the test suite.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your timed mixed-set scores; tomorrow is the fifth sitting.
 :::
 :::

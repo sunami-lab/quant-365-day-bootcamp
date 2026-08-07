@@ -1,5 +1,5 @@
 ---
-title: "Day 136 — Placeholder title for day 136"
+title: "Day 136 — A universe that only contains what existed at the time"
 subtitle: "Sunday, 20 December 2026 · Week 20 of 52 · The research harness · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Sunday, 20 December 2026 · Week 20 of 52 · The research harness · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Day 18 measured what backfilled membership costs; today the store stops doing it, which is the single largest correctness improvement available to the whole year.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Construct a universe as of any past date using only information available then, and defend the rule you used.
+- Report the difference between your new point-in-time universe and today's membership backfilled, at three dates.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement the universe rule in qlib/store.py as `universe(as_of)`: if you have membership data, use it; if not, use a liquidity screen computed from trailing data only, such as the top N by 60-day median dollar volume among securities with a price history ending on or after that date. Either way the rule takes only past data as input.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Quantify the change: for 2010, 2015 and 2020, report the overlap between the point-in-time universe and today's membership backfilled, and the number of names in each that the other lacks. Then rerun your pairs screen on the point-in-time universe and note how the pair list changes.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The store now returns a universe as of a date, built only from information available then. Every signal from here selects from that universe, so the survivorship problem is fixed in one place rather than remembered in twelve.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [WRDS — CRSP data vendor page](https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/center-for-research-in-security-prices-crsp/) [data]{.res-kind}
+- [Open Source Asset Pricing (Chen & Zimmermann)](https://www.openassetpricing.com/data/) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/store.py with a point-in-time universe function, and the overlap against backfilled membership reported at three dates.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your universe is today's S&P 500 taken back ten years. Quantify what that does to your results and say which direction it biases them.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 137, Monday, 21 December 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pull one company's reported quarterly earnings from the SEC financial statement data sets, and find a figure that was later restated.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the original value, the restated value, and the dates of both filings.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> One example is enough. Tomorrow generalises it.
 :::
 :::

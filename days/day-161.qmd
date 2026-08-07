@@ -1,6 +1,6 @@
 ---
-title: "Day 161 — Placeholder title for day 161"
-subtitle: "Thursday, 14 January 2027 · Week 23 of 52 · The research harness · Milestone · 45 min"
+title: "Day 161 — Milestone: the research platform"
+subtitle: "Thursday, 14 January 2027 · Week 23 of 52 · The research harness · Milestone · 50 min"
 ---
 
 ::: {.day-nav .kind-milestone}
@@ -12,22 +12,22 @@ subtitle: "Thursday, 14 January 2027 · Week 23 of 52 · The research harness ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The most valuable artifact of the year and the one an interviewer will ask most about, because it is the part of the work that cannot be faked in a slide.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Have someone able to clone the repository, run one command, and reproduce a result you report elsewhere.
+- Present the list of remaining lies as the strongest section of the document rather than as an apology.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Finish reports/milestone-05-platform.md: the event-driven architecture with the read-decide-order-fill-mark sequence, the cost model with components separated and the net-Sharpe-against-cost chart, the test suite described test by test with what each one catches, and the ranked list of lies with dispositions.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Verify by doing it: clone your own repository into a fresh directory, install from the lockfile, run the one command, and check the number matches. Anything that fails here is a defect the document would otherwise have claimed away.
 :::
 :::
 
@@ -37,27 +37,37 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, twenty-third sitting. Ten two-digit multiplications, the sevenths, and 8 percent of 1,250 plus 12 percent of 3,400 in your head.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Random walks and stopping, combined: a symmetric random walk starts at 0 and you stop when you first hit plus 3 or minus 5. Probability of each, expected duration, and then the same for a walk with steps of plus 2 and minus 1 with equal probability.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> Halfway through the drill thread's second band. Write down the three problem types that are still slowest and compare against your day 91 list.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+Milestone 5 closes the harness. The event loop, the fill model, the cost breakdown, the point-in-time store and the test suite are the platform every signal in phase 6 runs through, unchanged.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pytest documentation](https://docs.pytest.org/en/stable/) [tool]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/milestone-05-platform.md, complete, verified by a clean clone reproducing a reported result with one command.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Describe your test suite in ninety seconds, saying what each test catches and which one you are proudest of.
 :::
 
 ## Prepare for tomorrow
@@ -66,6 +76,12 @@ Ten minutes tonight so Day 162, Friday, 15 January 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down what you think the word signal means, precisely enough to code it. It is harder than it sounds.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> List three quantities you have already built that could be signals.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> One paragraph. Phase 6 starts from your definition and improves it.
 :::
 :::

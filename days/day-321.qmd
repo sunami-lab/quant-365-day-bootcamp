@@ -1,5 +1,5 @@
 ---
-title: "Day 321 — Placeholder title for day 321"
+title: "Day 321 — The gap between the two, decomposed"
 subtitle: "Wednesday, 23 June 2027 · Week 46 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Wednesday, 23 June 2027 · Week 46 of 52 · Production · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Reporting a speedup without decomposing it is how people conclude that C++ is fast when what they measured was that dictionaries are slow, and separating the two is worth an hour.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Decompose the Python-to-C++ speedup into interpreter overhead and data structure difference.
+- Say what you would do to close most of the gap without leaving Python, and measure it.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Isolate the causes: write a third version in Python using the same data structures as your C++ book, and a fourth using numba on the hot loop. Time all four on the same replay. The four numbers separate the language from the layout, which is the honest decomposition.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Draw the conclusion for your own work: with your latencies from day 304, decide whether any part of your production stack needs C++ at all. The answer is almost certainly no, and being able to say that with measurements behind it is a better interview answer than claiming to be a C++ programmer.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Numba documentation](https://numba.readthedocs.io/en/stable/) [tool]{.res-kind}
+- [Cython documentation](https://cython.readthedocs.io/en/latest/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Four implementations timed on the same replay with the speedup decomposed between language and data structure.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Explain to a C++ programmer why your Python is slow, and name the two changes that would help most.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 322, Thursday, 24 June 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write one paragraph on what you can now honestly claim about C++ on a CV.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> It should be about reading and reasoning rather than about writing production systems.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your timed mixed-set scores.
 :::
 :::

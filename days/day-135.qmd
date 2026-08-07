@@ -1,6 +1,6 @@
 ---
-title: "Day 135 — Placeholder title for day 135"
-subtitle: "Saturday, 19 December 2026 · Week 20 of 52 · The research harness · Study day · 60 min"
+title: "Day 135 — Two timestamps per row, and the lag between them"
+subtitle: "Saturday, 19 December 2026 · Week 20 of 52 · The research harness · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,43 @@ subtitle: "Saturday, 19 December 2026 · Week 20 of 52 · The research harness �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The store already carries an ingestion time, but the signal path does not use it, and a lag convention that lives in your head is one you will violate the first time you write a new signal.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State your lag convention explicitly: what is known at what time, and when a position computed from it can first be held.
+- Show what a one-day error in that convention does to your pairs strategy's Sharpe.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write the convention down as a table: for each data source, the timestamp of the observation, the timestamp of availability, and the first session in which a position derived from it can be held. Then encode it as a per-source lag in the store rather than as a shift in each notebook.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Measure the sensitivity: run your pairs strategy with the correct lag, with no lag, and with two days of lag. Report the three Sharpe ratios. The no-lag version will look substantially better, and the size of that gap is a measure of how much of your result is timing rather than signal.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add an assertion to the signal path: any position series must be derivable from data whose availability timestamp precedes the session it is held in, checked rather than intended.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [DuckDB documentation](https://duckdb.org/docs/current/) [tool]{.res-kind}
+- [exchange_calendars — 50+ exchange trading calendars](https://github.com/gerrymanoim/exchange_calendars) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A per-source lag table encoded in the store, and three Sharpe ratios showing the strategy's sensitivity to the convention.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your signal uses the close and your backtest holds from that close. What is wrong, and how much was it worth?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 136, Sunday, 20 December 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Find one source of historical index membership, free or through WRDS, and write down what it costs and what it covers.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> If there is none available to you, note that as a constraint rather than working around it silently.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> List the ways you could approximate a point-in-time universe without membership data. There are two reasonable ones.
 :::
 :::

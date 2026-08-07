@@ -1,6 +1,6 @@
 ---
-title: "Day 195 — Placeholder title for day 195"
-subtitle: "Wednesday, 17 February 2027 · Week 28 of 52 · Alpha · Study day · 60 min"
+title: "Day 195 — What data is worth paying for, at your size"
+subtitle: "Wednesday, 17 February 2027 · Week 28 of 52 · Alpha · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,44 @@ subtitle: "Wednesday, 17 February 2027 · Week 28 of 52 · Alpha · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The calculation you did last night is the one that decides your data budget for the next decade, and it depends on your capital rather than on how good the data is.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Compute the break-even information ratio improvement that would justify a given data cost at a given account size.
+- Name the two datasets that would most improve your own research, and say whether either is worth buying.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Do the arithmetic properly: a dataset costing a fixed amount a year, at a portfolio size and a volatility target, requires a specific improvement in annual return to pay for itself, which translates into a required improvement in information ratio. Tabulate it across three account sizes and note where the answer flips.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Apply it to your own case: rank the data you do not have by expected value, which for you is probably survivorship-free equity history first, then point-in-time analyst estimates, then intraday. Then check the free or institutional route for each, since WRDS and the open factor datasets cover more of the first two than most people realise.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the conclusion into the milestone: what you use, what you would buy at what size, and what you would never buy.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Databento — pricing and free credits](https://www.databento.com/pricing) [data]{.res-kind}
+- [Global Factor Data (Jensen, Kelly & Pedersen)](https://jkpfactors.com/) [data]{.res-kind}
+- [Open Source Asset Pricing (Chen & Zimmermann)](https://www.openassetpricing.com/data/) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A break-even table for data cost against account size, and a ranked list of the datasets that would most improve your research.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+At your realistic account size, what annual data spend can you justify, and what would you spend it on first?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +54,12 @@ Ten minutes tonight so Day 196, Thursday, 18 February 2027 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write out, out loud and timed, the difference between ridge and lasso and when you would use each. Ninety seconds.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then the same for why cross-validation overestimates performance when the folds are not independent.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow's drill uses both.
 :::
 :::

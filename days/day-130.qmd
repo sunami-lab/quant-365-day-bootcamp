@@ -1,6 +1,6 @@
 ---
-title: "Day 130 — Placeholder title for day 130"
-subtitle: "Monday, 14 December 2026 · Week 19 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 130 — Risk of ruin, and the constraint that is not statistical"
+subtitle: "Monday, 14 December 2026 · Week 19 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,49 @@ subtitle: "Monday, 14 December 2026 · Week 19 of 52 · Portfolios and risk · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Ruin is not the 99th percentile of a return distribution, it is an absorbing state, and the difference matters because leverage and margin can put you there before the statistics do.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Compute the probability of hitting a ruin threshold before a target, and connect it to the gambler's ruin result you drilled in week 16.
+- Say what a margin call does to the calculation, and why it makes the barrier higher than the one you chose.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Do the calculation both ways and reconcile them: the diffusion approximation for hitting a lower barrier before an upper one, and the direct simulation of your strategy's returns. Report both for your chosen leverage.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Add the mechanical barrier from day 13: at your leverage and your broker's maintenance margin, compute the loss that triggers a call. That level is a hard barrier well above zero, and the ruin probability that matters is the probability of touching it, not of losing everything.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add `risk_of_ruin()` to qlib/portfolio.py taking leverage, maintenance margin and return parameters, with the barrier computed rather than passed in.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+The book's sizing now respects a hard barrier derived from maintenance margin rather than a soft statistical threshold, and qlib/portfolio.py computes the ruin probability from leverage and margin directly.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
+- [MIT 15.070J — Advanced Stochastic Processes, lecture notes](https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/pages/lecture-notes/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A risk of ruin function in qlib/portfolio.py, with the margin-implied barrier computed and the probability reported at your chosen leverage.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+At 2 to 1 leverage with 25 percent maintenance margin, what loss triggers a call, and what is the probability of touching it in a year?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +59,12 @@ Ten minutes tonight so Day 131, Tuesday, 15 December 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Collect the four sizing inputs: your Sharpe with its interval, your covariance estimator's out-of-sample calibration, your chosen Kelly fraction, and your leverage cap.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write them on one line each.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow they become one set of positions.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 100 — Placeholder title for day 100"
-subtitle: "Saturday, 14 November 2026 · Week 15 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 100 — The unconstrained solution wants 400 percent gross exposure"
+subtitle: "Saturday, 14 November 2026 · Week 15 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,43 @@ subtitle: "Saturday, 14 November 2026 · Week 15 of 52 · Portfolios and risk ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The numbers you wrote down last night are not a bug in your code, and understanding exactly what produces them tells you what every practical fix is doing.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Explain why the optimizer takes extreme offsetting positions in assets with similar risk profiles.
+- Relate the size of those positions to the condition number of the covariance matrix, with your own numbers.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Connect the two facts: compute the eigenvalues of your covariance matrix, take the ratio of largest to smallest, and then compute the gross exposure of the tangency portfolio. Repeat with 10, 25 and 50 assets on the same sample length and plot both quantities against the number of assets.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Show the mechanism directly: take two assets with 0.98 correlation and similar volatility, give one a slightly higher estimated mean, and solve. The optimizer goes long one and short the other in enormous size because it believes the difference in means is real and the difference in risk is nearly zero. Write down the weights.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write one paragraph connecting this to the linkage disequilibrium case: a near-singular estimated covariance inverted and multiplied by a noisy vector produces the same instability in both fields, and the fixes are the same family.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 18.065 — Matrix Methods in Data Analysis, Signal Processing and ML (Strang)](https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) [course]{.res-kind}
+- [CVXPY — disciplined convex programming](https://www.cvxpy.org/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-100-instability.ipynb with condition number and gross exposure plotted against universe size, plus the two-asset demonstration.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does the optimizer take a huge long-short position in two nearly identical assets, and what does that have to do with the smallest eigenvalue?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 101, Sunday, 15 November 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Split your monthly sample in half. Optimise on the first half and record the realised out-of-sample volatility and return in the second.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do the same for an equal-weighted portfolio.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the two pairs of numbers. Do not compare them yet.
 :::
 :::

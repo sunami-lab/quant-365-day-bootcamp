@@ -1,5 +1,5 @@
 ---
-title: "Day 71 — Placeholder title for day 71"
+title: "Day 71 — Two independent random walks, regressed, look significant"
 subtitle: "Friday, 16 October 2026 · Week 11 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Friday, 16 October 2026 · Week 11 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The ten t-statistics you wrote down last night are the single most important cautionary result in applied time series, and you generated them yourself rather than reading about them.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Explain why the t-statistic in a spurious regression diverges rather than converging, in terms of what happens to the residual.
+- Say what fraction of independent random walk pairs reject at 5 percent, and what the fix is.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Scale up last night's experiment to 1,000 replications and plot the distribution of the t-statistic. Report the rejection rate at the nominal 5 percent level. It will be somewhere around three quarters rather than one twentieth.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Diagnose it: plot the residuals from one of those regressions and their autocorrelation function. The residual is itself a random walk, so the standard error formula is estimating the wrong quantity, and the divergence follows from that rather than from anything mysterious.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Show the fix and its cost: rerun the regression on first differences and confirm the rejection rate returns to nominal. Then note what differencing destroyed, which is any long-run relationship there might have been, and which week 12 exists to recover.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Hyndman & Athanasopoulos — Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/) [textbook]{.res-kind}
+- [Greene — Econometric Analysis, free appendices and data](https://pages.stern.nyu.edu/~wgreene/Text/econometricanalysis.htm) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-071-spurious.ipynb with the t-statistic distribution over 1,000 independent random walk pairs and the measured rejection rate.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Describe what happens to the t-statistic and the R-squared when two independent random walks are regressed on each other, and say why.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 72, Saturday, 17 October 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Run the augmented Dickey-Fuller test from statsmodels on a price level, on its first difference, and on one of your simulated random walks.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the three p-values and, for each, write out what the null hypothesis being tested actually is.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Most people get the direction of the ADF null backwards on first contact. Check yours against the documentation.
 :::
 :::

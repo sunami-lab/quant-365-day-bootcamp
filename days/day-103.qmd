@@ -1,6 +1,6 @@
 ---
-title: "Day 103 — Placeholder title for day 103"
-subtitle: "Tuesday, 17 November 2026 · Week 15 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 103 — The three benchmarks that beat you, and when they do not"
+subtitle: "Tuesday, 17 November 2026 · Week 15 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,49 @@ subtitle: "Tuesday, 17 November 2026 · Week 15 of 52 · Portfolios and risk · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Equal weighting is not a straw man, it is the thing your risk model has to justify itself against, and milestone 4 will not accept a comparison that quietly leaves it out.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what implicit bet equal weighting, inverse volatility and minimum variance each make, in terms of expected returns.
+- State the condition under which minimum variance beats equal weighting, and check it on your data.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Work out what each benchmark assumes: equal weighting is optimal when expected returns and risks are identical, inverse volatility when Sharpe ratios are equal and correlations are equal, minimum variance when expected returns are equal. Write each one as the mean vector that would make it optimal.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run the horse race properly with rolling out-of-sample windows: five portfolios including two optimised versions, reporting Sharpe, turnover and gross exposure. Then repeat on 50 and 100 assets to show how the ranking changes with dimension.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add `equal_weight`, `inverse_vol` and `min_variance` to a new qlib/portfolio.py so the benchmarks are one call and there is no excuse for omitting them later.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/portfolio.py starts with the three benchmark constructions. Every portfolio result for the rest of the year is reported next to them, which is the rule milestone 4 is graded on.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [PyPortfolioOpt](https://pyportfolioopt.readthedocs.io/en/latest/) [tool]{.res-kind}
+- [skfolio — scikit-learn compatible portfolio optimization](https://skfolio.org/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/portfolio.py with three benchmark constructors, and a five-portfolio horse race at three universe sizes.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What mean vector would make inverse-volatility weighting optimal, and how plausible is it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +59,12 @@ Ten minutes tonight so Day 104, Wednesday, 18 November 2026 starts clean. This i
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download the Black and Litterman 1992 paper and read the first three pages.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what problem they say they are solving. It is not the one most summaries claim.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note what your current optimiser would do if you gave it a mean vector you were only slightly confident in.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 88 — Placeholder title for day 88"
+title: "Day 88 — HAR: three lags beat a fitted GARCH most of the time"
 subtitle: "Monday, 2 November 2026 · Week 13 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Monday, 2 November 2026 · Week 13 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A linear regression on daily, weekly and monthly realised variance outperforms most of the GARCH family out of sample, which is worth knowing before you spend a week on maximum likelihood.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the HAR specification and the economic story behind its three horizons.
+- Report the out-of-sample comparison between HAR, GARCH and EWMA under a loss function you chose in advance.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Fit HAR on log realised variance and compare it out of sample against your GARCH and EWMA forecasts at the one-day and five-day horizons, under both mean squared error and QLIKE. Choose the loss before you look at the results and say why.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Run the Diebold-Mariano comparison on the forecast loss differentials rather than eyeballing the numbers, using a Newey-West standard error for the mean differential. This is week 11's tool doing real work.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
+- [statsmodels documentation](https://www.statsmodels.org/stable/index.html) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-088-har.ipynb with a three-model forecast comparison under two losses and a Diebold-Mariano test on the differentials.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+HAR beats GARCH out of sample on your data. Give two reasons that could be true and one way it could be an artifact of your evaluation.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 89, Tuesday, 3 November 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down what a good volatility forecast is for. There are at least three uses and they want different loss functions.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> For each use, name the loss function you would evaluate under.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Ten minutes on paper, no code.
 :::
 :::

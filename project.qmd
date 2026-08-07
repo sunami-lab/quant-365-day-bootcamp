@@ -6,320 +6,360 @@ toc-depth: 2
 
 The days that teach and the days that build are the same days. From the first week you are assembling one system — data, signals, portfolio construction, costs, execution, monitoring — and by the capstone it is running on a schedule against a paper account with a track record you did not tamper with. This page is that thread pulled out of the calendar.
 
-73 days move the system forward.
+83 days move the system forward.
 
 ## Markets
 
-**[Day 5](days/day-005.qmd)** · Tue 11 Aug · Placeholder title for day 5
+**[Day 20](days/day-020.qmd)** · Wed 26 Aug · The store, part one: schema and ingestion
 
-: Placeholder project increment.
+: The data store begins. qlib/store.py defines the schema and qlib/ingest.py fills it; every table carries both the date a fact refers to and the date you learned it, which is the constraint that makes point-in-time queries possible later rather than retrofitted.
 
-**[Day 10](days/day-010.qmd)** · Sun 16 Aug · Placeholder title for day 10
+**[Day 22](days/day-022.qmd)** · Fri 28 Aug · The store, part two: adjustment as a view, not a column
 
-: Placeholder project increment.
+: The store can now return both a raw price series and a total-return series from the same rows, with adjustment computed at read time. That choice is what will let a backtest run in March against the same file you ingested in September without the history having quietly moved.
 
-**[Day 15](days/day-015.qmd)** · Fri 21 Aug · Placeholder title for day 15
+**[Day 23](days/day-023.qmd)** · Sat 29 Aug · The store, part three: the test that makes as-of true
 
-: Placeholder project increment.
+: The as-of semantics are now enforced by two tests rather than by intention. This is the first instance of the pattern that week 23 generalises: leakage is prevented by construction and asserted by a test, never by remembering to be careful.
 
-**[Day 20](days/day-020.qmd)** · Wed 26 Aug · Placeholder title for day 20
+**[Day 28](days/day-028.qmd)** · Thu 3 Sep · Milestone: the market map and a store that does not lie
 
-: Placeholder project increment.
-
-**[Day 25](days/day-025.qmd)** · Mon 31 Aug · Placeholder title for day 25
-
-: Placeholder project increment.
+: Milestone 1 closes phase 1 with a working point-in-time daily store and a written account of what it cannot do. Every backtest for the rest of the year reads from qlib/store.py, and the limitations section is the list you check whenever a result looks better than it should.
 
 ## Returns and noise
 
-**[Day 30](days/day-030.qmd)** · Sat 5 Sep · Placeholder title for day 30
+**[Day 45](days/day-045.qmd)** · Sun 20 Sep · Every performance number gets an interval from now on
 
-: Placeholder project increment.
+: The performance layer now reports intervals by default and has a coverage test behind them. From here, any strategy result in this course that appears without an interval is a bug rather than a style choice.
 
-**[Day 35](days/day-035.qmd)** · Thu 10 Sep · Placeholder title for day 35
+**[Day 53](days/day-053.qmd)** · Mon 28 Sep · Implement the correction, and make the count automatic
 
-: Placeholder project increment.
+: The research log begins. Every strategy evaluation from today writes a line to research_log.jsonl, so the number of trials behind any later result is a fact you can count rather than a number you have to recall.
 
-**[Day 40](days/day-040.qmd)** · Tue 15 Sep · Placeholder title for day 40
+**[Day 60](days/day-060.qmd)** · Mon 5 Oct · A simulator whose output passes your own stylized-facts test
 
-: Placeholder project increment.
+: qlib/simulate.py gives the project a null that is not a straw man. Any strategy result from here can be run against synthetic data with the same tails and clustering as the real thing, which is what makes a false-positive rate measurable rather than assumed.
 
-**[Day 45](days/day-045.qmd)** · Sun 20 Sep · Placeholder title for day 45
+**[Day 61](days/day-061.qmd)** · Tue 6 Oct · The noise floor: one number you will be held to
 
-: Placeholder project increment.
+: qlib/noise.py fixes the evidence threshold for the whole year. Every later milestone reports its results against this number, which was computed before any of those results existed, and that ordering is what makes it a threshold rather than a rationalisation.
 
-**[Day 50](days/day-050.qmd)** · Fri 25 Sep · Placeholder title for day 50
+**[Day 63](days/day-063.qmd)** · Thu 8 Oct · Milestone: the stylized facts and the noise floor
 
-: Placeholder project increment.
-
-**[Day 55](days/day-055.qmd)** · Wed 30 Sep · Placeholder title for day 55
-
-: Placeholder project increment.
-
-**[Day 60](days/day-060.qmd)** · Mon 5 Oct · Placeholder title for day 60
-
-: Placeholder project increment.
+: Milestone 2 sets the evidence bar for everything that follows. qlib/stats.py, qlib/simulate.py and qlib/noise.py are now the three modules that every later strategy result passes through before it is allowed to be called a result.
 
 ## Time series
 
-**[Day 65](days/day-065.qmd)** · Sat 10 Oct · Placeholder title for day 65
+**[Day 69](days/day-069.qmd)** · Wed 14 Oct · The first strategy meets the noise floor
 
-: Placeholder project increment.
+: The first strategy in the book: a 12-month time-series momentum rule, evaluated against the noise floor from milestone 2 rather than against zero. The evaluation path it runs through is the one every later signal uses, so getting it right once is worth the hour.
 
-**[Day 70](days/day-070.qmd)** · Thu 15 Oct · Placeholder title for day 70
+**[Day 81](days/day-081.qmd)** · Mon 26 Oct · The pair selection rule, written down before the results
 
-: Placeholder project increment.
+: qlib/signals/pairs.py holds the pair selection rule, fixed in code before any trading result exists, with its screen count logged automatically. The hurdle that count implies is on the first page of the milestone rather than in a footnote.
 
-**[Day 75](days/day-075.qmd)** · Tue 20 Oct · Placeholder title for day 75
+**[Day 82](days/day-082.qmd)** · Tue 27 Oct · The half-life, and thresholds derived from it
 
-: Placeholder project increment.
+: The pairs rule takes its holding period and its thresholds from the fitted mean-reversion dynamics, and the parameter surface around that point is reported rather than hidden. Every point on the surface is a logged trial, which keeps the trial count honest.
 
-**[Day 80](days/day-080.qmd)** · Sun 25 Oct · Placeholder title for day 80
+**[Day 83](days/day-083.qmd)** · Wed 28 Oct · The pairs backtest, with costs, in sample
 
-: Placeholder project increment.
+: The pairs strategy runs end to end with costs and produces a net Sharpe alongside a break-even cost curve. That curve becomes the standard chart for every strategy in the alpha book, because it says more than the headline number does.
 
-**[Day 85](days/day-085.qmd)** · Fri 30 Oct · Placeholder title for day 85
+**[Day 90](days/day-090.qmd)** · Wed 4 Nov · Volatility targeting, and what it does and does not improve
 
-: Placeholder project increment.
+: The trend follower now sizes on a volatility forecast from qlib/vol.py rather than on constant notional, and the improvement is decomposed into the mechanical part and the forecast-quality part rather than claimed as a whole.
 
-**[Day 90](days/day-090.qmd)** · Wed 4 Nov · Placeholder title for day 90
+**[Day 93](days/day-093.qmd)** · Sat 7 Nov · A hedge ratio that is allowed to move
 
-: Placeholder project increment.
+: The pairs strategy gains a dynamic hedge ratio estimated by maximum likelihood rather than a window length chosen by hand. The static version stays in the code as the comparison the milestone reports against.
 
-**[Day 95](days/day-095.qmd)** · Mon 9 Nov · Placeholder title for day 95
+**[Day 94](days/day-094.qmd)** · Sun 8 Nov · Does the moving hedge ratio actually help, or just fit better
 
-: Placeholder project increment.
+: The dynamic and static hedge ratio versions of the pairs strategy are compared out of sample at matched turnover, so any improvement is attributable to the estimator rather than to trading more.
+
+**[Day 96](days/day-096.qmd)** · Tue 10 Nov · The out-of-sample run, once, on a period you never looked at
+
+: The pairs strategy is frozen in a committed configuration file and run once out of sample, with its result placed against the distribution the same procedure produces on synthetic data containing no relationships at all.
+
+**[Day 98](days/day-098.qmd)** · Thu 12 Nov · Milestone: a pairs strategy, and what it survived
+
+: Milestone 3 closes phase 3 with a complete strategy: selection rule, derived thresholds, dynamic hedging, one out-of-sample run, and a false positive rate measured on synthetic data. Whatever its Sharpe, the pipeline it exercised is the one phase 5 rebuilds properly.
 
 ## Portfolios and risk
 
-**[Day 100](days/day-100.qmd)** · Sat 14 Nov · Placeholder title for day 100
+**[Day 103](days/day-103.qmd)** · Tue 17 Nov · The three benchmarks that beat you, and when they do not
 
-: Placeholder project increment.
+: qlib/portfolio.py starts with the three benchmark constructions. Every portfolio result for the rest of the year is reported next to them, which is the rule milestone 4 is graded on.
 
-**[Day 105](days/day-105.qmd)** · Thu 19 Nov · Placeholder title for day 105
+**[Day 110](days/day-110.qmd)** · Tue 24 Nov · One covariance interface, four estimators behind it
 
-: Placeholder project increment.
+: qlib/risk.py gives the project one covariance interface with four estimators behind it, tested for positive definiteness on every window. The portfolio construction code no longer knows or cares which estimator is in use.
 
-**[Day 110](days/day-110.qmd)** · Tue 24 Nov · Placeholder title for day 110
+**[Day 117](days/day-117.qmd)** · Tue 1 Dec · Neutralising a portfolio, and what it costs you
 
-: Placeholder project increment.
+: qlib/portfolio.py can now neutralise a weight vector against an arbitrary exposure set, with a test asserting the residual exposures are zero. The pairs strategy runs neutralised from here, and the unneutralised version stays as the comparison.
 
-**[Day 115](days/day-115.qmd)** · Sun 29 Nov · Placeholder title for day 115
+**[Day 120](days/day-120.qmd)** · Fri 4 Dec · Targeting a volatility at the portfolio level
 
-: Placeholder project increment.
+: The book is sized to a volatility target computed from the risk model's forecast rather than from trailing realised volatility, with an explicit leverage cap and the added turnover reported.
 
-**[Day 120](days/day-120.qmd)** · Fri 4 Dec · Placeholder title for day 120
+**[Day 123](days/day-123.qmd)** · Mon 7 Dec · Backtesting a risk model: coverage and independence
 
-: Placeholder project increment.
+: qlib/risk.py can now test a risk model rather than only produce one, with coverage and independence tests that any later model has to pass before its numbers are used for sizing.
 
-**[Day 125](days/day-125.qmd)** · Wed 9 Dec · Placeholder title for day 125
+**[Day 130](days/day-130.qmd)** · Mon 14 Dec · Risk of ruin, and the constraint that is not statistical
 
-: Placeholder project increment.
+: The book's sizing now respects a hard barrier derived from maintenance margin rather than a soft statistical threshold, and qlib/portfolio.py computes the ruin probability from leverage and margin directly.
 
-**[Day 130](days/day-130.qmd)** · Mon 14 Dec · Placeholder title for day 130
+**[Day 131](days/day-131.qmd)** · Tue 15 Dec · Sizing the actual book, with every number defended
 
-: Placeholder project increment.
+: The full sizing pipeline runs end to end: covariance, neutralisation, volatility target, Kelly fraction, leverage cap. Phase 6 changes only what feeds it, and phase 10 runs this exact code on a schedule.
+
+**[Day 133](days/day-133.qmd)** · Thu 17 Dec · Milestone: a factor risk model built by hand
+
+: Milestone 4 closes the portfolio phase. qlib/risk.py and qlib/portfolio.py now hold the covariance estimators, the neutralisation, the volatility target and the sizing rule, and every signal built in phase 6 flows through them unchanged.
 
 ## The research harness
 
-**[Day 135](days/day-135.qmd)** · Sat 19 Dec · Placeholder title for day 135
+**[Day 136](days/day-136.qmd)** · Sun 20 Dec · A universe that only contains what existed at the time
 
-: Placeholder project increment.
+: The store now returns a universe as of a date, built only from information available then. Every signal from here selects from that universe, so the survivorship problem is fixed in one place rather than remembered in twelve.
 
-**[Day 140](days/day-140.qmd)** · Thu 24 Dec · Placeholder title for day 140
+**[Day 139](days/day-139.qmd)** · Wed 23 Dec · The rebuild, and the test that guards it
 
-: Placeholder project increment.
+: The store's read interface now requires an as-of date on every path and enforces per-source availability lags, with three tests that fail if a future value becomes visible. This is the foundation the event-driven engine is built on next week.
 
-**[Day 145](days/day-145.qmd)** · Tue 29 Dec · Placeholder title for day 145
+**[Day 142](days/day-142.qmd)** · Sat 26 Dec · The event loop, and the order things happen in
 
-: Placeholder project increment.
+: qlib/backtest/engine.py is the event loop the rest of the year runs on. The strategy sees an as-of view rather than the store, so look-ahead is prevented by the interface rather than by care.
 
-**[Day 150](days/day-150.qmd)** · Sun 3 Jan · Placeholder title for day 150
+**[Day 143](days/day-143.qmd)** · Sun 27 Dec · The fill model is where optimism hides
 
-: Placeholder project increment.
+: The engine has a pluggable fill model with three conventions and partial fills, so the price a backtest assumes is a stated configuration rather than a hidden default.
 
-**[Day 155](days/day-155.qmd)** · Fri 8 Jan · Placeholder title for day 155
+**[Day 144](days/day-144.qmd)** · Mon 28 Dec · Orders have a lifecycle, and positions are derived
 
-: Placeholder project increment.
+: Fills are the primary record and everything else is derived from them, written to fills.parquet. The accounting identity is asserted at every session, which is the invariant phase 10 reconciles the live account against.
 
-**[Day 160](days/day-160.qmd)** · Wed 13 Jan · Placeholder title for day 160
+**[Day 145](days/day-145.qmd)** · Tue 29 Dec · One result object, and everything downstream reads it
 
-: Placeholder project increment.
+: Every backtest now returns one serialisable result object carrying its own configuration and code version, and the tearsheet is built from that object alone. Reproducing a figure from March in July becomes a file read rather than a rerun.
+
+**[Day 153](days/day-153.qmd)** · Wed 6 Jan · The cost model, with the components separated
+
+: Costs are recorded per fill and per component in fills.parquet, so the strategy's cost can be attributed rather than only totalled. Phase 9 replaces the impact component with a fitted one and nothing else changes.
+
+**[Day 157](days/day-157.qmd)** · Sun 10 Jan · The null strategy test, and what your engine says about nothing
+
+: The null-strategy distribution is now a characterised property of the engine and a standing test. Phase 6 evaluates every signal against this distribution rather than against zero.
+
+**[Day 159](days/day-159.qmd)** · Tue 12 Jan · One command, same number, six months later
+
+: Every result is reproducible from a configuration file and a commit hash with one command, and each result records the code version and data cutoff that produced it. This is the property that makes the platform worth showing to someone.
+
+**[Day 161](days/day-161.qmd)** · Thu 14 Jan · Milestone: the research platform
+
+: Milestone 5 closes the harness. The event loop, the fill model, the cost breakdown, the point-in-time store and the test suite are the platform every signal in phase 6 runs through, unchanged.
 
 ## Alpha
 
-**[Day 165](days/day-165.qmd)** · Mon 18 Jan · Placeholder title for day 165
+**[Day 162](days/day-162.qmd)** · Fri 15 Jan · A signal is a forecast with a scale you have to choose
 
-: Placeholder project increment.
+: qlib/signals/base.py defines the signal interface for the whole alpha book: as-of date in, one score per security out, units declared. The two existing strategies become signals, which separates the forecast from the sizing for the first time.
 
-**[Day 170](days/day-170.qmd)** · Sat 23 Jan · Placeholder title for day 170
+**[Day 165](days/day-165.qmd)** · Mon 18 Jan · Neutralise the signal, not just the portfolio
 
-: Placeholder project increment.
+: Signals are neutralised at the signal level against a standard exposure set declared once for the whole book, with the variance removed reported per signal so the cost of neutralising is visible.
 
-**[Day 175](days/day-175.qmd)** · Thu 28 Jan · Placeholder title for day 175
+**[Day 167](days/day-167.qmd)** · Wed 20 Jan · The first three signals, built through the interface
 
-: Placeholder project increment.
+: Three signals are in the book, each implemented through the same interface and run through the same pipeline. Adding the fourth is now a file rather than a project, which is the property the alpha book needs.
 
-**[Day 180](days/day-180.qmd)** · Tue 2 Feb · Placeholder title for day 180
+**[Day 169](days/day-169.qmd)** · Fri 22 Jan · The information coefficient is a Spearman correlation
 
-: Placeholder project increment.
+: qlib/signals/evaluate.py computes the information coefficient with a dependence-aware standard error and a null distribution from random signals, so every signal in the book is reported against a measured null rather than against zero.
 
-**[Day 185](days/day-185.qmd)** · Sun 7 Feb · Placeholder title for day 185
+**[Day 174](days/day-174.qmd)** · Wed 27 Jan · One page per signal, generated rather than written
 
-: Placeholder project increment.
+: qlib/signals/report.py generates the standard one-page signal summary from the result object. Milestone 6 becomes an assembly of generated pages rather than a document that can disagree with the code.
 
-**[Day 190](days/day-190.qmd)** · Fri 12 Feb · Placeholder title for day 190
+**[Day 176](days/day-176.qmd)** · Fri 29 Jan · Value, replicated with the reporting lag respected
 
-: Placeholder project increment.
+: Value joins the book as the first fundamental signal, built on the point-in-time filing schema, with the cost of getting the lag wrong measured rather than assumed.
 
-**[Day 195](days/day-195.qmd)** · Wed 17 Feb · Placeholder title for day 195
+**[Day 177](days/day-177.qmd)** · Sat 30 Jan · Momentum, and the crashes that pay for its Sharpe
 
-: Placeholder project increment.
+: Momentum is in the book with its conditional crash behaviour measured and its rolling beta documented, so the sizing decision in week 29 has the tail behaviour in front of it rather than only the volatility.
 
-**[Day 200](days/day-200.qmd)** · Mon 22 Feb · Placeholder title for day 200
+**[Day 178](days/day-178.qmd)** · Sun 31 Jan · Quality, and the definition problem underneath it
 
-: Placeholder project increment.
+: Six quality specifications are evaluated identically and all six are logged, so the best one is reported with the correction its selection implies rather than as a discovery.
+
+**[Day 179](days/day-179.qmd)** · Mon 1 Feb · Low volatility wins, and the explanation is a constraint
+
+: Low volatility and betting against beta are both in the book, with the leverage required by the beta-neutral construction reported explicitly, since that leverage is both the mechanism of the return and the constraint on running it.
+
+**[Day 180](days/day-180.qmd)** · Tue 2 Feb · Short-term reversal is real, and mostly a liquidity payment
+
+: Short-term reversal and size join the book. Reversal is the book's clearest case of a signal that is real gross and dead net, and it stays in the book for exactly that reason.
+
+**[Day 184](days/day-184.qmd)** · Sat 6 Feb · Time-series momentum, and where its diversification comes from
+
+: The trend follower becomes a portfolio of trend rules across instruments and lookbacks, combined rather than selected, with the correlation structure that justifies the combination measured rather than assumed.
+
+**[Day 185](days/day-185.qmd)** · Sun 7 Feb · Carry is one definition applied to four asset classes
+
+: A carry signal built from term structure joins the book, evaluated on the same footing as everything else, with its correlation to trend measured so the combination in week 29 has a real input.
+
+**[Day 190](days/day-190.qmd)** · Fri 12 Feb · Fundamentals at scale, from EDGAR rather than a vendor
+
+: Fundamental data now comes from EDGAR directly into the store with filing dates attached, so every fundamental signal in the book is point-in-time by construction rather than by a lag applied afterwards.
+
+**[Day 201](days/day-201.qmd)** · Tue 23 Feb · The combined book, with every constraint applied
+
+: The combined alpha book runs through the whole pipeline end to end and produces one result object, with each signal's marginal contribution computed by leave-one-out rather than by standalone performance.
+
+**[Day 203](days/day-203.qmd)** · Thu 25 Feb · Milestone: the alpha book
+
+: Milestone 6 closes the alpha phase. The book holds eight characterised signals, a measured correlation structure, a defended combination and a corrected verdict, and phase 7 asks whether a nonlinear model can beat it.
 
 ## Machine learning
 
-**[Day 205](days/day-205.qmd)** · Sat 27 Feb · Placeholder title for day 205
+**[Day 206](days/day-206.qmd)** · Sun 28 Feb · Purging and embargoing, and why they are two fixes
 
-: Placeholder project increment.
+: qlib/ml/cv.py provides a purged and embargoed splitter with the scikit-learn interface, so every model search in the phase uses it by default and the noise experiment from day 205 is a standing test that it works.
 
-**[Day 210](days/day-210.qmd)** · Thu 4 Mar · Placeholder title for day 210
+**[Day 209](days/day-209.qmd)** · Wed 3 Mar · The dataset assembly, and the test that guards it
 
-: Placeholder project increment.
+: qlib/ml/dataset.py assembles the feature matrix through the store's as-of interface with a test that no feature value postdates its row. The poisoned-future test now covers the model path as well as the engine.
 
-**[Day 215](days/day-215.qmd)** · Tue 9 Mar · Placeholder title for day 215
+**[Day 212](days/day-212.qmd)** · Sat 6 Mar · The triple barrier labels what a trade would have done
 
-: Placeholder project increment.
+: qlib/ml/labels.py implements volatility-scaled triple-barrier labelling with the outcome distribution reported, so the label reflects what a position with a stop and a target would have experienced.
 
-**[Day 220](days/day-220.qmd)** · Sun 14 Mar · Placeholder title for day 220
+**[Day 216](days/day-216.qmd)** · Wed 10 Mar · Cross-sectional labels, and the demeaning that decides the bet
 
-: Placeholder project increment.
+: The modelling protocol is frozen in a committed configuration file before any model is fitted: label, horizon, weights, validation scheme and metric. Week 34's audit compares models under it without any of them having chosen it.
 
-**[Day 225](days/day-225.qmd)** · Fri 19 Mar · Placeholder title for day 225
+**[Day 218](days/day-218.qmd)** · Fri 12 Mar · The linear baseline, taken as seriously as the rival
 
-: Placeholder project increment.
+: The linear baseline is fitted and tuned under the frozen protocol with nested penalty selection, and its interval is the bar every later model in the phase is measured against.
 
-**[Day 230](days/day-230.qmd)** · Wed 24 Mar · Placeholder title for day 230
+**[Day 230](days/day-230.qmd)** · Wed 24 Mar · An external scoreboard where you cannot fool yourself
 
-: Placeholder project increment.
+: A model is submitted to Numerai, which gives the year an external, live-scored track record on data where no look-ahead is available to you, alongside the internal results you produced and evaluated yourself.
 
-**[Day 235](days/day-235.qmd)** · Mon 29 Mar · Placeholder title for day 235
+**[Day 233](days/day-233.qmd)** · Sat 27 Mar · The audit, run once
 
-: Placeholder project increment.
+: The audit runs once on the frozen protocol and produces the phase's headline comparison, with every pairwise difference tested against the seed spread rather than read off a leaderboard.
+
+**[Day 238](days/day-238.qmd)** · Thu 1 Apr · Milestone: machine learning against the linear baseline
+
+: Milestone 7 closes the machine learning phase. The ML layer either joins the book with a stated marginal contribution or does not join it, and either outcome is recorded with the interval that produced the decision.
 
 ## Derivatives
 
-**[Day 240](days/day-240.qmd)** · Sat 3 Apr · Placeholder title for day 240
+**[Day 251](days/day-251.qmd)** · Wed 14 Apr · The pricer, tested against two independent implementations
 
-: Placeholder project increment.
+: qlib/derivatives/black_scholes.py is the pricing layer for the rest of the phase, tested against an independent implementation and with implied volatility inversion that fails loudly rather than silently.
 
-**[Day 245](days/day-245.qmd)** · Thu 8 Apr · Placeholder title for day 245
+**[Day 278](days/day-278.qmd)** · Tue 11 May · The variance premium as a signal, evaluated like any other
 
-: Placeholder project increment.
+: The variance risk premium signal joins the book, evaluated through the same pipeline as everything else, with an explicit note that its Sharpe ratio is not comparable to the equity signals' because of the payoff asymmetry.
 
-**[Day 250](days/day-250.qmd)** · Tue 13 Apr · Placeholder title for day 250
+**[Day 280](days/day-280.qmd)** · Thu 13 May · Milestone: an option pricer and a delta-hedging study
 
-: Placeholder project increment.
-
-**[Day 255](days/day-255.qmd)** · Sun 18 Apr · Placeholder title for day 255
-
-: Placeholder project increment.
-
-**[Day 260](days/day-260.qmd)** · Fri 23 Apr · Placeholder title for day 260
-
-: Placeholder project increment.
-
-**[Day 265](days/day-265.qmd)** · Wed 28 Apr · Placeholder title for day 265
-
-: Placeholder project increment.
-
-**[Day 270](days/day-270.qmd)** · Mon 3 May · Placeholder title for day 270
-
-: Placeholder project increment.
-
-**[Day 275](days/day-275.qmd)** · Sat 8 May · Placeholder title for day 275
-
-: Placeholder project increment.
-
-**[Day 280](days/day-280.qmd)** · Thu 13 May · Placeholder title for day 280
-
-: Placeholder project increment.
+: Milestone 8 closes the derivatives phase. qlib/derivatives holds a tested pricer, greeks, a hedging simulator and a surface fitter, and the variance risk premium signal is in the book with its asymmetry documented.
 
 ## Microstructure
 
-**[Day 285](days/day-285.qmd)** · Tue 18 May · Placeholder title for day 285
+**[Day 292](days/day-292.qmd)** · Tue 25 May · The square-root law, tested on your own data
 
-: Placeholder project increment.
+: The impact exponent and coefficient in qlib/costs.py are replaced by values fitted to real data with a stated uncertainty, which retires the largest assumption in every cost and capacity number reported since week 22.
 
-**[Day 290](days/day-290.qmd)** · Sun 23 May · Placeholder title for day 290
+**[Day 296](days/day-296.qmd)** · Sat 29 May · The efficient frontier of execution, and where to sit on it
 
-: Placeholder project increment.
+: qlib/exec/schedule.py generates an execution trajectory from an order, a horizon and a stated risk aversion, using the fitted impact model rather than the linear assumption in the original paper.
 
-**[Day 295](days/day-295.qmd)** · Fri 28 May · Placeholder title for day 295
+**[Day 298](days/day-298.qmd)** · Mon 31 May · Implementation shortfall counts the trade you missed
 
-: Placeholder project increment.
+: qlib/exec/shortfall.py measures implementation shortfall with opportunity cost included and its components reconciling to the total, which becomes the standard execution metric for the paper account in phase 10.
 
-**[Day 300](days/day-300.qmd)** · Wed 2 Jun · Placeholder title for day 300
+**[Day 299](days/day-299.qmd)** · Tue 1 Jun · Measuring your own slippage, against your own decisions
 
-: Placeholder project increment.
+: The engine records decision, submission and fill timestamps with the prevailing mid at each, so implementation shortfall is measurable on the paper account from today rather than reconstructed later.
 
-**[Day 305](days/day-305.qmd)** · Mon 7 Jun · Placeholder title for day 305
+**[Day 302](days/day-302.qmd)** · Fri 4 Jun · Capacity, recomputed with a fitted model
 
-: Placeholder project increment.
+: Every capacity figure in the alpha book is recomputed from the fitted impact model, and the combined book's capacity accounts for signals competing for the same liquidity rather than being the sum of the parts.
+
+**[Day 303](days/day-303.qmd)** · Sat 5 Jun · Which strategy dies first as the money grows
+
+: The book is re-optimised at ten and a hundred times current size with size-dependent costs, showing how the composition changes as capacity binds rather than only how performance falls.
+
+**[Day 308](days/day-308.qmd)** · Thu 10 Jun · Milestone: execution, impact and honest capacity
+
+: Milestone 9 closes the microstructure phase. The cost model's impact term is now fitted rather than assumed, every capacity figure has been revised, and the engine records what it needs to measure the live account's shortfall in phase 10.
 
 ## Production
 
-**[Day 310](days/day-310.qmd)** · Sat 12 Jun · Placeholder title for day 310
+**[Day 323](days/day-323.qmd)** · Fri 25 Jun · The daily run, as a sequence of steps that can each fail
 
-: Placeholder project increment.
+: qlib/run/daily.py is the production entry point: seven ordered steps, each with an explicit success condition, and three checks for the failures that do not raise exceptions.
 
-**[Day 315](days/day-315.qmd)** · Thu 17 Jun · Placeholder title for day 315
+**[Day 324](days/day-324.qmd)** · Sat 26 Jun · Logging for the questions you will ask in March
 
-: Placeholder project increment.
+: The production run emits structured JSON logs with run identifiers, per-step timings and the numbers behind each decision, so any day's positions can be reconstructed from the log without rerunning the pipeline.
 
-**[Day 320](days/day-320.qmd)** · Tue 22 Jun · Placeholder title for day 320
+**[Day 325](days/day-325.qmd)** · Sun 27 Jun · Monitoring the four things that actually break
 
-: Placeholder project increment.
+: Four monitors with thresholds calibrated against historical data run alongside the daily pipeline, each reporting a number rather than a boolean so that near-misses are visible before they become failures.
 
-**[Day 325](days/day-325.qmd)** · Sun 27 Jun · Placeholder title for day 325
+**[Day 326](days/day-326.qmd)** · Mon 28 Jun · Alerting, and the runbook written before you need it
 
-: Placeholder project increment.
+: Alerts are routed by severity and every one has a runbook entry with ranked causes, diagnostic commands and a safe action, written before the first real incident rather than after it.
+
+**[Day 327](days/day-327.qmd)** · Tue 29 Jun · Reconciliation, and explaining every difference
+
+: Daily reconciliation compares intended against actual positions and cash with every difference attributed to a named cause, and an unexplained residual raises an alert rather than being absorbed.
+
+**[Day 328](days/day-328.qmd)** · Wed 30 Jun · The first unattended run, and what it got wrong
+
+: The pipeline runs unattended on a schedule, and the first failure is diagnosed from logs alone and fixed, with the failure category recorded in the runbook.
+
+**[Day 329](days/day-329.qmd)** · Thu 1 Jul · Milestone: the system in production
+
+: Milestone 10 closes the production phase. The book runs on a schedule against a paper account with monitoring, reconciliation and a runbook, and the track record it produces from here is the one the capstone reports without adjustment.
 
 ## The interview
 
-**[Day 330](days/day-330.qmd)** · Fri 2 Jul · Placeholder title for day 330
+**[Day 352](days/day-352.qmd)** · Sat 24 Jul · Three write-ups a stranger can read in ten minutes
 
-: Placeholder project increment.
+: The three write-ups are the form in which the year's work actually gets read: result first, one figure, interval, specification count, and the most serious limitation, each in two pages.
 
-**[Day 335](days/day-335.qmd)** · Wed 7 Jul · Placeholder title for day 335
+**[Day 357](days/day-357.qmd)** · Thu 29 Jul · Milestone: the interview dossier
 
-: Placeholder project increment.
-
-**[Day 340](days/day-340.qmd)** · Mon 12 Jul · Placeholder title for day 340
-
-: Placeholder project increment.
-
-**[Day 345](days/day-345.qmd)** · Sat 17 Jul · Placeholder title for day 345
-
-: Placeholder project increment.
-
-**[Day 350](days/day-350.qmd)** · Thu 22 Jul · Placeholder title for day 350
-
-: Placeholder project increment.
-
-**[Day 355](days/day-355.qmd)** · Tue 27 Jul · Placeholder title for day 355
-
-: Placeholder project increment.
+: Milestone 11 assembles the year's work into the form a hiring process consumes: three two-page write-ups drawn from the milestones, a CV that describes the genetics work in the language of the job, and a firm list with outreach already sent.
 
 ## Capstone
 
-**[Day 360](days/day-360.qmd)** · Sun 1 Aug · Placeholder title for day 360
+**[Day 358](days/day-358.qmd)** · Fri 30 Jul · The track record, reported without adjustment
 
-: Placeholder project increment.
+: The live paper track record is reported with every period included and reconciled against the broker's own statements, with the Sharpe standard error at this sample length stated on the same page as the estimate.
 
-**[Day 365](days/day-365.qmd)** · Fri 6 Aug · Placeholder title for day 365
+**[Day 359](days/day-359.qmd)** · Sat 31 Jul · Where the live period disagreed with the backtest
 
-: Placeholder project increment.
+: The live-against-backtest difference is decomposed into execution, universe and signal components that sum to the total, which is the first empirical test of the ranked list of lies from milestone 5.
+
+**[Day 360](days/day-360.qmd)** · Sun 1 Aug · The research dossier, assembled from eleven documents
+
+: The research dossier pulls the year into one document with every claim traced to a milestone and a configuration, verified by reproducing three claims at random from a clean checkout.
+
+**[Day 361](days/day-361.qmd)** · Mon 2 Aug · What you would actually run, and at what size
+
+: The dossier gains a recommendation section: which components to run, at what capital and Kelly fraction, with the expected interval and accepted drawdown, and an explicit list of what is excluded and why.
+
+**[Day 365](days/day-365.qmd)** · Fri 6 Aug · Capstone
+
+: The system that started as an empty DuckDB file on day 20 now ingests, forecasts, sizes, executes, reconciles and reports on a schedule, with a track record it did not tamper with and a written account of everything it still gets wrong.

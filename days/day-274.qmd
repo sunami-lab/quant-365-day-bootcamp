@@ -1,5 +1,5 @@
 ---
-title: "Day 274 — Placeholder title for day 274"
+title: "Day 274 — The variance risk premium, measured on twenty years"
 subtitle: "Friday, 7 May 2027 · Week 40 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 7 May 2027 · Week 40 of 52 · Derivatives · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The gap you computed last night is one of the largest and most persistent premia in any market, and this week decides whether that makes it a trade or a warning.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the average gap between implied and subsequent realized variance and its distribution over twenty years.
+- Say why the premium is compensation rather than mispricing, and what it is compensation for.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Measure it properly in variance rather than volatility: compute implied variance from VIX and realized variance from subsequent daily returns over matching 30-day windows, and report the mean difference, its distribution, and the fraction of months where realized exceeded implied. The mean is positive and the tail is where the losses live.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Say what it pays for: the buyer of variance is buying a payoff that is large exactly when everything else they own is falling, so the premium is an insurance price. Then check that story on your data by reporting the correlation between the variance premium's payoff and equity market returns in the worst months.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Cboe VIX historical data](https://www.cboe.com/tradable_products/vix/vix_historical_data/) [data]{.res-kind}
+- [Sinclair — Volatility Trading, 2nd ed. (Wiley)](https://www.wiley.com/en-us/Volatility+Trading,+++Website,+2nd+Edition-p-9781118416723) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-274-vrp.ipynb with the implied-realized variance gap over twenty years and its conditional payoff in market drawdowns.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+The variance risk premium is persistently positive. What is it compensation for, and when does the compensation get paid back?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 275, Saturday, 8 May 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read enough about variance swaps to write down what the payoff is: realized variance minus a strike, times a notional.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then note that it has no optionality in the payoff at all.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Ask yourself how a linear payoff in variance can be hedged with options, and leave the question open.
 :::
 :::

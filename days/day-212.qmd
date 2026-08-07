@@ -1,5 +1,5 @@
 ---
-title: "Day 212 — Placeholder title for day 212"
+title: "Day 212 — The triple barrier labels what a trade would have done"
 subtitle: "Saturday, 6 March 2027 · Week 31 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Saturday, 6 March 2027 · Week 31 of 52 · Machine learning · Study 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+It replaces a fixed-horizon return with the outcome of an actual position with a stop and a target, which makes the label match the thing you would have experienced.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement triple-barrier labelling with barriers set from a volatility estimate rather than from fixed percentages.
+- Report the label distribution and say what it tells you about the barrier widths you chose.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement it in qlib/ml/labels.py: for each observation, walk forward until the price crosses an upper barrier, a lower barrier, or the time limit, and record which. Set the barriers as multiples of the forecast volatility so they scale with the regime rather than being fixed percentages.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Check the labels before modelling on them: report the fraction hitting each barrier. If almost everything hits the time limit the barriers are too wide to matter, and if almost nothing does they are too tight and you are labelling noise. Tune the multiples so all three outcomes are populated, and log that this tuning is itself a specification choice.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/ml/labels.py implements volatility-scaled triple-barrier labelling with the outcome distribution reported, so the label reflects what a position with a stop and a target would have experienced.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [López de Prado — Advances in Financial Machine Learning, seminar slides](https://www.quantresearch.org/Lectures.htm) [reference]{.res-kind}
+- [Machine Learning for Trading (Jansen) — code repository](https://github.com/stefan-jansen/machine-learning-for-trading) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/ml/labels.py with triple-barrier labelling and the outcome distribution reported across three barrier settings.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What does the triple barrier method label, and what problem with fixed-horizon labels does it solve?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 213, Sunday, 7 March 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> For each triple-barrier label, count how many other labels overlap its time window.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot the distribution of that count.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> That number has a name and it is tomorrow's subject.
 :::
 :::

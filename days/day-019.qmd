@@ -1,5 +1,5 @@
 ---
-title: "Day 19 — Placeholder title for day 19"
+title: "Day 19 — As of when did you know that"
 subtitle: "Tuesday, 25 August 2026 · Week 3 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,39 +8,44 @@ subtitle: "Tuesday, 25 August 2026 · Week 3 of 52 · Markets · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Point-in-time is not a data-cleaning nicety; it is the difference between a research result and a result you obtained by reading tomorrow's newspaper, and it is the design constraint for everything you build from day 20.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the difference between an observation date and an effective date, and give a series where they differ by months.
+- Write the as-of query in SQL: given a fact table with both dates, return what was knowable on an arbitrary date.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Look at your two ALFRED vintages properly. Tabulate, for one quarter of GDP, the first published value and the value as it stands now, and the gap in months between the quarter ending and the first print. Then say what a backtest that used the current series would have known in advance.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the as-of query as SQL against a two-date fact table: select the latest row per entity where observation_date is less than or equal to the as-of date. Get it right for the case where a fact is revised twice, and for the case where a fact is deleted.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the design decision into reports/milestone-01-market-map.md: every table in your store carries the date the fact refers to and the date you learned it, and no query is allowed to omit the second.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [fredapi — Python client with ALFRED vintages](https://github.com/mortada/fredapi) [repo]{.res-kind}
+- [FRED API documentation (St. Louis Fed)](https://fred.stlouisfed.org/docs/api/fred/) [data]{.res-kind}
+- [DuckDB documentation](https://duckdb.org/docs/current/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A working as-of SQL query in notebooks/day-019-point-in-time.ipynb, correct under revision and deletion, plus the two-vintage GDP table.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What did the world know about Q1 GDP on 15 May, and what does your current FRED download say it was?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +54,12 @@ Ten minutes tonight so Day 20, Wednesday, 26 August 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Create qlib/ in the work repo with an empty __init__.py, and qlib/ingest.py and qlib/store.py as empty files. Tomorrow you fill them.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Decide your universe and write it in one line in the repo README: the current S&P 500 plus around 40 liquid ETFs, daily, from 2005. It is a compromised universe and day 18 told you exactly how; you are building the machinery first and fixing the universe in week 20.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Install duckdb and pyarrow into the quant environment if you have not already.
 :::
 :::

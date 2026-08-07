@@ -1,5 +1,5 @@
 ---
-title: "Day 326 — Placeholder title for day 326"
+title: "Day 326 — Alerting, and the runbook written before you need it"
 subtitle: "Monday, 28 June 2027 · Week 47 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Monday, 28 June 2027 · Week 47 of 52 · Production · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+An alert with no documented response is an interruption rather than a control, and the runbook is worth writing now because the moment you need it is the moment you cannot think clearly.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Route alerts to somewhere you will see them, with a severity that distinguishes act-now from read-later.
+- Write a runbook entry for each monitor: symptom, likely causes in order, diagnostic commands, and the safe action.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Wire the alerting: email or push for the two severities that need it, with a daily digest for the rest. Test each path by triggering it deliberately, since an untested alert path is the standard way a monitor fails silently.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Write the runbook: one page per monitor with the symptom, the likely causes ranked, the exact commands to run to diagnose, and the safe action, which is usually to flatten or to hold rather than to guess. Include the decision rule for when to stop the system entirely.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+Alerts are routed by severity and every one has a runbook entry with ranked causes, diagnostic commands and a safe action, written before the first real incident rather than after it.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Alpaca — paper trading documentation](https://docs.alpaca.markets/docs/paper-trading) [tool]{.res-kind}
+- [Docker — get started](https://docs.docker.com/get-started/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Tested alert routing plus a runbook with one page per monitor including a stop-the-system decision rule.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your fill-price monitor fires at 9:35 am. Read your own runbook and say what you do in the next five minutes.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 327, Tuesday, 29 June 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compare your intended portfolio from yesterday's run against what the broker says you actually hold.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> They will differ. Write down every difference.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not fix anything; tomorrow is about explaining them.
 :::
 :::

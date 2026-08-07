@@ -1,5 +1,5 @@
 ---
-title: "Day 337 — Placeholder title for day 337"
+title: "Day 337 — A quote is a decision under two kinds of uncertainty"
 subtitle: "Friday, 9 July 2027 · Week 49 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 9 July 2027 · Week 49 of 52 · The interview · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Trading games are the round where academics do worst, and the reason is that they are treated as puzzles rather than as decisions with an explicit objective.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what a quote width is trading off and what a skew is expressing, in one sentence each.
+- Quote and requote on three exercises, saying the reasoning out loud each time.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the two objectives precisely: width trades the probability of trading against the expected loss to someone better informed, and skew expresses your inventory and your view about the fair value. Then note the third thing a width does, which is to protect against your own estimate being wrong, and which is the one candidates forget.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Practise three exercises out loud, quoting a two-sided market on a quantity, being traded with, and requoting. Say the reasoning at each step. Recording yourself once is worth more than doing six silently, because the assessment in a real interview is of the reasoning rather than of the number.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Financial Markets Microstructure (Copenhagen, Starkov) — video lectures](https://www.youtube.com/playlist?list=PL4pUs4P_j1Wa2_P1lw44kFWWjKDTGUY7S) [video]{.res-kind}
+- [Jane Street — puzzles](https://www.janestreet.com/puzzles/) [problems]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The two objectives written precisely, plus a recording of three quote-and-requote exercises with reasoning spoken.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+I lift your offer twice in a row. What do you do to your quote, and what are you assuming when you do it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 338, Saturday, 10 July 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Clone the IMC Prosperity backtester and get it running on one of the included rounds.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not write a strategy yet; just get the harness working.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Twenty minutes maximum.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 4 — Placeholder title for day 4"
-subtitle: "Monday, 10 August 2026 · Week 1 of 52 · Markets · Study day · 60 min"
+title: "Day 4 — A future settles every night, and that changes everything"
+subtitle: "Monday, 10 August 2026 · Week 1 of 52 · Markets · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Monday, 10 August 2026 · Week 1 of 52 · Markets · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Daily mark-to-market is the difference between a futures position and every other leveraged position you will ever hold, and it is where the roll, the margin call and the funding cost all come from.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- List every cash flow between buying one E-mini S&P future and its expiry, including the ones that happen daily.
+- Given a contango curve, say what the roll does to a long position's return and why it is not the same as losing money.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Watch the forwards and futures lecture from MIT 15.401. It covers the contract, margin, and the cost-of-carry relation in one sitting, which is exactly today's scope.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} On paper: you buy one E-mini S&P at 5,000 with the multiplier of 50 dollars per index point. The index closes at 4,960, then 5,020, then 5,010, then expires at 4,990. Write the variation margin cash flow on each of the four nights, and the total. Check that the total equals the multiplier times the change in index level.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 15.401 — Finance Theory I (Andrew Lo), video lectures and slides](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/pages/video-lectures-and-slides/) [course]{.res-kind}
+- [exchange_calendars — 50+ exchange trading calendars](https://github.com/gerrymanoim/exchange_calendars) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A four-line variation margin table in notebooks/day-004-futures.ipynb whose total reconciles to the multiplier times the index change.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Name every cash flow of a long E-mini position from trade to expiry, then do the same for 250,000 dollars of SPY. Which one has a funding cost you can see?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 5, Tuesday, 11 August 2026 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Fetch https://cdn.cboe.com/api/global/delayed_quotes/options/AAPL.json and save it. It is one HTTP request and it gives you a full delayed option chain with greeks.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at the JSON structure for five minutes and find where strike, expiry, bid, ask and delta live. Do not try to interpret the greeks yet.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Draw, on paper, what you think the payoff at expiry of a bought call looks like. You will check it tomorrow.
 :::
 :::

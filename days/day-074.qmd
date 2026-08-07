@@ -1,5 +1,5 @@
 ---
-title: "Day 74 — Placeholder title for day 74"
+title: "Day 74 — Applying it: the trend follower's t-statistic, corrected"
 subtitle: "Monday, 19 October 2026 · Week 11 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Monday, 19 October 2026 · Week 11 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Yesterday was the tool; today it changes a number you have already reported, which is the pattern for how this course expects you to treat every earlier result.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report your trend follower's mean return with a correctly specified standard error and say how much the correction moved it.
+- Say which of the strategy's reported statistics are affected by residual dependence and which are not.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Recompute the trend follower's inference: mean monthly return with Newey-West standard errors, Sharpe with the autocorrelation-corrected annualisation from day 46, and the block bootstrap interval. Put all three next to the naive versions in one table.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Update the strategy section of reports/milestone-03-pairs.md with the corrected numbers, and write one sentence saying which earlier number in that document is now superseded. Doing this in week 11 makes it a habit rather than an event.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add `newey_west_tstat()` to qlib/stats.py so the correction is one call rather than a decision, with a test against statsmodels on a known series.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [statsmodels documentation](https://www.statsmodels.org/stable/index.html) [tool]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/stats.py with a tested Newey-West t-statistic, and the corrected strategy table in the milestone report replacing the naive one.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which of Sharpe, mean return t-statistic and maximum drawdown are affected by return autocorrelation, and in which direction?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 75, Tuesday, 20 October 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Plot the level of a yield spread, an ETF pair ratio, and the VIX over ten years, all on separate panels.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> For each, run ADF and note the p-value.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> One of the three will fail to reject despite looking obviously mean reverting. That case is tomorrow's.
 :::
 :::

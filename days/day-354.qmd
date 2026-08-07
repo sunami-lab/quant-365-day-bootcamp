@@ -1,5 +1,5 @@
 ---
-title: "Day 354 — Placeholder title for day 354"
+title: "Day 354 — Outreach that is worth the recipient's two minutes"
 subtitle: "Monday, 26 July 2027 · Week 51 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Monday, 26 July 2027 · Week 51 of 52 · The interview · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A referral changes the outcome more than any other single factor, and the only way to get one is a message specific enough that answering it is easy.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Write and send three outreach messages, each referencing something specific the recipient did.
+- State what you are asking for, which is a conversation rather than a job.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write three messages, each under 150 words: who you are in one sentence, the specific thing of theirs you read and one real question about it, what you have built this year in one clause, and a clear small ask. The question about their work is what makes it a message rather than a request.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Send them, and set up the follow-up discipline: a tracker with the date sent, the ask, and a follow-up date two weeks out. Then write the two-sentence follow-up now, while you are not disappointed, because writing it later is harder.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Draft the version for people you do not know at all, which is a different message: shorter, with a link to one write-up rather than an attachment, and a smaller ask.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — Signals and Threads podcast](https://signalsandthreads.com/) [reference]{.res-kind}
+- [Two Sigma — Insights](https://www.twosigma.com/insights/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Three outreach messages sent, a tracker with follow-up dates, and a pre-written follow-up.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What are you actually asking for in an outreach message, and why is asking for a job the wrong ask?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 355, Tuesday, 27 July 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Arrange a mock interview for tomorrow with a real person if you can, and a full self-run version if you cannot.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Send them three probability problems and one behavioural question in advance so they do not have to prepare.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Block ninety minutes.
 :::
 :::

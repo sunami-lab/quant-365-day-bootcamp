@@ -1,6 +1,6 @@
 ---
-title: "Day 273 — Placeholder title for day 273"
-subtitle: "Thursday, 6 May 2027 · Week 39 of 52 · Derivatives · Catch-up day · 45 min"
+title: "Day 273 — Beyond Black-Scholes, closed book"
+subtitle: "Thursday, 6 May 2027 · Week 39 of 52 · Derivatives · Catch-up day · 35 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 6 May 2027 · Week 39 of 52 · Derivatives · Catch-up day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day, and the last before the phase turns from pricing to trading. Four model families, each fixing one failure of the previous, and the ordering is the thing to have.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what each model family fixes and what it does not, from memory.
+- Say what calibration quality on vanillas does and does not tell you.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>35 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Finish anything outstanding from days 267 to 272. The Monte Carlo module with variance reduction is the piece milestone 8 requires, so it should be producing convergence plots.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Blank page: local volatility and what it fixes, stochastic volatility and what it adds, jumps and the short-maturity argument, and the sentence about calibration not pinning down dynamics. Then one line on what rough volatility claims.
 :::
 :::
 
@@ -33,27 +33,31 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, thirty-ninth sitting. Ten two-digit multiplications and the sevenths.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> The last statistics sitting of this band. You have thirty seconds to say why a model that fits well in sample may be worse than one that fits badly, and ninety seconds to give a concrete example from your own year's work. Use the machine learning audit from day 233.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> A coding question at the harder end: given a large file of trades that does not fit in memory, compute the median trade size. Say the approach out loud before writing anything; there are at least two reasonable answers and the difference is exactness against memory.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatheral — Rough Volatility (Imperial lecture 3)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-3rd.pdf) [reference]{.res-kind}
+- [Stanford CS229 — Machine Learning, main lecture notes (PDF)](https://cs229.stanford.edu/main_notes.pdf) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The closed-book week 39 page with the four model families and what each fixes.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Name what each of local volatility, stochastic volatility and jumps fixes, and what each still gets wrong.
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +66,12 @@ Ten minutes tonight so Day 274, Friday, 7 May 2027 starts clean. This is what th
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download the Cboe VIX historical data and compute the mean of the VIX minus the subsequent realized volatility over the same horizon.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do it over twenty years and report the average gap in volatility points.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The sign is the interesting part.
 :::
 :::

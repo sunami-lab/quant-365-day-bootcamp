@@ -1,6 +1,6 @@
 ---
-title: "Day 210 — Placeholder title for day 210"
-subtitle: "Thursday, 4 March 2027 · Week 30 of 52 · Machine learning · Catch-up day · 45 min"
+title: "Day 210 — Validation, closed book"
+subtitle: "Thursday, 4 March 2027 · Week 30 of 52 · Machine learning · Catch-up day · 35 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 4 March 2027 · Week 30 of 52 · Machine learning · Catch-
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day. Week 30 built the apparatus that makes everything after it interpretable, and being able to explain it out loud is worth more than any model you will fit.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Explain purging and embargoing out loud in ninety seconds, including why both are needed.
+- State the expected out-of-sample R-squared on daily equity returns and its information ratio equivalent.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>35 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Finish anything outstanding from days 204 to 209. The feature matrix and its guard test are the pieces that matter; everything for the next four weeks reads from them.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Closed book: the two reasons standard cross-validation fails here, purging against embargoing, what walk-forward estimates that cross-validation does not, and the IC to R-squared conversion with a worked number.
 :::
 :::
 
@@ -33,33 +33,31 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, thirtieth sitting. Ten two-digit multiplications and the sevenths.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> The cross-validation question as asked, out loud in ninety seconds: why is k-fold wrong on financial data, and what are purging and embargoing? Then the follow-up: does that fix apply to a cross-sectional daily model with a one-day label, and why does the answer surprise people?
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> A SQL problem of first-round difficulty: from a trades table with timestamp, symbol, price and quantity, write a query giving the volume-weighted average price per symbol per day, and then the top three symbols by dollar volume on each day. The second half needs a window function; write it without looking it up.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [PostgreSQL Exercises — graded, in-browser](https://pgexercises.com/) [problems]{.res-kind}
+- [Modern SQL (Winand) — window functions, CTEs](https://modern-sql.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The closed-book week 30 page, plus your SQL solution checked against a real query on your own store.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Explain purging and embargoing in ninety seconds and say which one a one-day label still needs.
 :::
 
 ## Prepare for tomorrow
@@ -68,6 +66,12 @@ Ten minutes tonight so Day 211, Friday, 5 March 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Take one feature and build three labels from it: the 5-day forward return, its sign, and its quintile within the cross-section.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Fit the same model to each and note that the three are not the same problem.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write one line on which one you would want to predict and why.
 :::
 :::

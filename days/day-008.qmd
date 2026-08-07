@@ -1,6 +1,6 @@
 ---
-title: "Day 8 — Placeholder title for day 8"
-subtitle: "Friday, 14 August 2026 · Week 2 of 52 · Markets · Study day · 60 min"
+title: "Day 8 — An order is an instruction, and there are only a few"
+subtitle: "Friday, 14 August 2026 · Week 2 of 52 · Markets · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Friday, 14 August 2026 · Week 2 of 52 · Markets · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every backtest you write for the next eleven months assumes an order type, usually without saying so, and today is where you learn what you would be assuming.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State exactly what a limit order, a market order, a stop order and a stop-limit order instruct the exchange to do, in the exchange's terms rather than the broker's marketing.
+- Say which of those four can execute at a price you did not choose, and which can fail to execute at all.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [40 min]{.task-min} Watch lectures 1 and 2 of the Copenhagen Financial Markets Microstructure playlist, following along in the matching slides from the finmarkets repository. This is the cleanest free treatment of the book and the order types.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Write the four order types into the glossary as instructions, in the form: if the book looks like this, do that. Then add the two failure modes: the limit order that never fills, and the stop that fills 3 percent below where you set it.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Financial Markets Microstructure (Copenhagen, Starkov) — video lectures](https://www.youtube.com/playlist?list=PL4pUs4P_j1Wa2_P1lw44kFWWjKDTGUY7S) [video]{.res-kind}
+- [Financial Markets Microstructure — slides, homework and exams](https://github.com/electronicgore/finmarkets) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Four order-type entries in the glossary, each written as an instruction to a matching engine, each with its failure mode.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You place a market order to buy 10,000 shares of a stock quoted 20.00 bid, 20.02 offered with 300 shares showing. What price do you get?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 9, Saturday, 15 August 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Open the Nasdaq TotalView-ITCH sample directory and note the file sizes. You are not downloading one yet; you are calibrating what a day of real order flow weighs.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Draw a limit order book on paper from the quotes on any free level-1 feed you can see, five levels each side, and leave it beside your desk.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Watch lecture 3 of the microstructure playlist tonight if you have twenty minutes; tomorrow starts from it.
 :::
 :::

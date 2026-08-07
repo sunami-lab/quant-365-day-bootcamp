@@ -1,6 +1,6 @@
 ---
-title: "Day 50 — Placeholder title for day 50"
-subtitle: "Friday, 25 September 2026 · Week 8 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 50 — Backtest overfitting is a multiple testing problem you already know"
+subtitle: "Friday, 25 September 2026 · Week 8 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,40 @@ subtitle: "Friday, 25 September 2026 · Week 8 of 52 · Returns and noise · Stu
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+This week is your home turf under a different name, so the only new content is the finance-specific machinery and the fact that in this field the number of tests is almost never reported.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the correspondence between a genome-wide scan and a backtest search, term by term, including what plays the role of linkage disequilibrium between tests.
+- Say why a Bonferroni correction is the wrong instrument here even though the logic is right.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Read Bailey, Borwein, Lopez de Prado and Zhu on pseudo-mathematics and financial charlatanism, in full. It is short, polemical and correct, and it is the clearest statement of the problem that exists.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Write the correspondence table in reports/milestone-02-noise-floor.md: variant tried against variant tested, effect size against Sharpe ratio, discovery threshold against required Sharpe, correlated tests against correlated strategy variants, winner's curse against the inflation of the best backtest, replication against out-of-sample. One row each, and one row for what has no analogue.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2014) — Pseudo-Mathematics and Financial Charlatanism](https://www.davidhbailey.com/dhbpapers/backtest-pseudo.pdf) [paper]{.res-kind}
+- [Harvey, Liu & Zhu (2014) — ...and the Cross-Section of Expected Returns](https://www.nber.org/papers/w20592) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The correspondence table in the milestone report, with a row for the piece of the analogy that does not carry over.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Give the genome-wide analogue of trying 200 parameter settings on the same price series, and say which correction you would reach for in each field.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 51, Saturday, 26 September 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Simulate 1,000 strategies with true Sharpe zero, three years of daily returns each, and save the 1,000 realised Sharpe ratios.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Read the 95th percentile and the maximum off the sample. Write both numbers down.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not adjust anything yet. Tomorrow is about what those two numbers mean.
 :::
 :::

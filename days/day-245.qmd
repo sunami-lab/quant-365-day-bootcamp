@@ -1,6 +1,6 @@
 ---
-title: "Day 245 — Placeholder title for day 245"
-subtitle: "Thursday, 8 April 2027 · Week 35 of 52 · Derivatives · Catch-up day · 45 min"
+title: "Day 245 — Stochastic calculus, closed book"
+subtitle: "Thursday, 8 April 2027 · Week 35 of 52 · Derivatives · Catch-up day · 35 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 8 April 2027 · Week 35 of 52 · Derivatives · Catch-up da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day. Week 35 is four objects and one lemma, and if the lemma comes out of a blank page then the rest of the phase is a series of applications.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Derive Itô's lemma from a blank page in under five minutes.
+- State the quadratic variation identity and the three consequences that follow from it.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>35 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Finish anything outstanding from days 239 to 244. The explicit Ornstein-Uhlenbeck solution is the one worth completing, because week 39's stochastic volatility models are built from it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Blank page, timed: the quadratic variation identity, the derivation of Itô's lemma, and the solution of geometric Brownian motion. Then check. If the lemma took more than five minutes, do it again tomorrow morning before starting week 36.
 :::
 :::
 
@@ -33,33 +33,31 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, thirty-fifth sitting. Ten two-digit multiplications and the sevenths.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> A statistics question asked in exactly this form: you have two estimators of the same quantity, one unbiased with high variance and one biased with low variance. How do you choose? Answer with mean squared error and then say what changes if the estimate feeds a position size rather than a report.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> A coding question: implement a function that computes the running median of a stream in better than linear time per update. Two heaps is the answer; write it, then say the complexity of insert and of query.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Oxford — Etheridge, Stochastic Calculus for Finance (lecture notes)](https://www.stats.ox.ac.uk/~etheridg/finmath/index.html) [course]{.res-kind}
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A blank-page derivation of Itô's lemma, timed, plus the running median implementation.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Derive Itô's lemma out loud in three minutes, saying what each step uses.
 :::
 
 ## Prepare for tomorrow
@@ -68,6 +66,12 @@ Ten minutes tonight so Day 246, Friday, 9 April 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down geometric Brownian motion's solution and the distribution of the terminal price it implies.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then list three properties of real return series from week 6 that this distribution does not have.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Three is easy. There are more.
 :::
 :::

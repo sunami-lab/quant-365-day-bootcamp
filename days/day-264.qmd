@@ -1,5 +1,5 @@
 ---
-title: "Day 264 — Placeholder title for day 264"
+title: "Day 264 — SVI, and a parameterisation that can be kept arbitrage-free"
 subtitle: "Tuesday, 27 April 2027 · Week 38 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Tuesday, 27 April 2027 · Week 38 of 52 · Derivatives · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Interpolating a surface freely creates arbitrages; SVI restricts the shape so that a checkable parameter condition rules them out, which is a much better design than fixing violations afterwards.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the SVI parameterisation of a total variance slice and say what each parameter controls.
+- State the condition on the parameters that guarantees no butterfly arbitrage within a slice.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Read the Gatheral and Jacquier paper's parameterisation and arbitrage sections and the second Imperial lecture, which covers the same material with pictures. The raw parameterisation has five parameters controlling level, slope on each wing, curvature and the position of the minimum, and the mapping from parameters to shape is the thing to internalise.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Implement the slice in qlib/derivatives/svi.py and reproduce the shape sensitivity: plot slices as you vary each parameter one at a time. Then implement the butterfly condition as a function returning whether a parameter set is admissible.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatheral & Jacquier — Arbitrage-free SVI volatility surfaces](https://arxiv.org/abs/1204.0646) [paper]{.res-kind}
+- [Gatheral — The SVI Arbitrage-Free Volatility Surface Parameterization (Imperial lecture 2)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-2nd-Lecture.pdf) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/derivatives/svi.py with the slice parameterisation, a one-at-a-time parameter sensitivity figure, and an admissibility check.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Name the five SVI parameters and say which one controls the skew and which the curvature.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 265, Wednesday, 28 April 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Set up the least-squares problem for fitting one SVI slice to your cleaned quotes.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Decide what you are weighting by: vega, spread, or nothing.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The choice matters and you should be able to say why before you fit.
 :::
 :::

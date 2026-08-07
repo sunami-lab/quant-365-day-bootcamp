@@ -1,5 +1,5 @@
 ---
-title: "Day 352 — Placeholder title for day 352"
+title: "Day 352 — Three write-ups a stranger can read in ten minutes"
 subtitle: "Saturday, 24 July 2027 · Week 51 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Saturday, 24 July 2027 · Week 51 of 52 · The interview · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Nobody reads a forty-page report, and the two-page version is a different document rather than a shorter one, which is why it takes a day rather than an hour.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Produce two-page versions of three milestones, each readable in ten minutes by someone who has not seen the rest.
+- Have each open with the result and the caveat rather than with the method.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Write the two-page version of the platform, the alpha book and the option pricer: what it is, one figure, the result with its interval, the specification count where relevant, and the limitation you consider most serious. Method goes in a short section rather than at the front.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Test them: give one to someone outside the field and ask what they think it claims. Where they get it wrong, the document is wrong rather than the reader. If nobody is available, leave it for a day and reread it cold, which catches perhaps half of what a reader would.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The three write-ups are the form in which the year's work actually gets read: result first, one figure, interval, specification count, and the most serious limitation, each in two pages.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — tech blog](https://blog.janestreet.com/) [reference]{.res-kind}
+- [Man Group — Man Insights](https://www.man.com/insights) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Two-page versions of three milestones, each tested on a reader or reread cold.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Hand someone your platform write-up. What do they think it claims after ten minutes, and is that what you meant?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 353, Sunday, 25 July 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List every firm you can name that hires buy-side quantitative researchers. Aim for thirty.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not filter or rank yet.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note which ones you know something specific about, which will be few.
 :::
 :::

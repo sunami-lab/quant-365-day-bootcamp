@@ -1,6 +1,6 @@
 ---
-title: "Day 356 — Placeholder title for day 356"
-subtitle: "Wednesday, 28 July 2027 · Week 51 of 52 · The interview · Study day · 60 min"
+title: "Day 356 — How an offer is actually structured and what moves"
+subtitle: "Wednesday, 28 July 2027 · Week 51 of 52 · The interview · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 28 July 2027 · Week 51 of 52 · The interview · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The components are not equally negotiable and the leverage comes from having a second process running, which is a scheduling decision made months earlier rather than a negotiating tactic.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the components of a quantitative research offer and which are negotiable.
+- State what creates leverage and what you would do with an exploding offer.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write out the structure: base, sign-on, guaranteed first-year bonus, discretionary bonus, deferred compensation and its vesting, and any non-compete. The sign-on and the guarantee move most easily, the base moves within a band, and the deferral schedule is usually firm. The non-compete is the term that most affects your next five years and the one candidates ignore.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Plan the timing: leverage comes from parallel processes finishing near each other, which means starting applications in a batch rather than sequentially. Write your target application window and the sequencing, and note what you would say to an exploding offer, which is a specific sentence rather than a strategy.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the two-sentence version of what you would accept and what you would decline, so the decision is made before the pressure rather than during it.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — tech blog](https://blog.janestreet.com/) [reference]{.res-kind}
+- [Two Sigma — Insights](https://www.twosigma.com/insights/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A written offer structure with negotiability marked, an application sequencing plan, and your pre-decided acceptance criteria.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which parts of an offer are negotiable, what creates the leverage, and what do you say to an exploding one?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 357, Thursday, 29 July 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Assemble everything milestone 11 needs into one folder and check nothing is missing.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Reread the CV and the three write-ups once more.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your timed mixed-set scores; tomorrow is the twelfth sitting.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 152 — Placeholder title for day 152"
-subtitle: "Tuesday, 5 January 2027 · Week 22 of 52 · The research harness · Study day · 60 min"
+title: "Day 152 — The chart that decides whether a strategy exists"
+subtitle: "Tuesday, 5 January 2027 · Week 22 of 52 · The research harness · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Tuesday, 5 January 2027 · Week 22 of 52 · The research harness · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+One figure carries more information about a strategy than its Sharpe ratio does, and from today every strategy in this course ships with it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Produce net Sharpe against round-trip cost for every strategy you have, with your own estimated cost marked.
+- Say which strategy dies first as costs rise and why that ordering was predictable from turnover alone.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Build the figure as a reusable function taking a result object and a cost range: net Sharpe against round-trip cost, with a vertical line at your estimated cost and a horizontal line at your noise floor. The intersection of those two lines is the region where a strategy is worth running, and drawing it makes that explicit.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Run it for both strategies plus three variants at different rebalance frequencies, on one axis. Then write the ordering and the explanation into reports/milestone-05-platform.md.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the confound: slower rebalancing cuts turnover and also degrades the signal, so the curves are not comparable at a fixed gross Sharpe. Say so on the figure caption rather than in a footnote.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pyfolio-reloaded — tear sheets](https://github.com/stefan-jansen/pyfolio-reloaded) [repo]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The net-Sharpe-against-cost figure for five strategy variants, with your cost estimate and noise floor both drawn on it.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which of your strategies survives to the highest round-trip cost, and was that predictable from its turnover?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 153, Wednesday, 6 January 2027 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List the cost components you now model, and for each write whether it is measured, estimated or assumed.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Three of them will be assumed.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Those three are what phase 9 fixes, and the milestone needs to say so.
 :::
 :::

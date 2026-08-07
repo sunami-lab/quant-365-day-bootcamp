@@ -1,5 +1,5 @@
 ---
-title: "Day 95 — Placeholder title for day 95"
+title: "Day 95 — Regime switching, and the temptation it represents"
 subtitle: "Monday, 9 November 2026 · Week 14 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Monday, 9 November 2026 · Week 14 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every strategy that stopped working looks like a regime change afterwards, and a model that can declare regimes will always find them, so the discipline is in the out-of-sample test rather than in the fit.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Fit a two-state Markov switching model and interpret the transition matrix in terms of expected regime duration.
+- Say what a regime model can and cannot do in real time, and why the smoothed state probabilities are not usable for trading.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Fit a two-state Markov switching model to your spread or to index returns with statsmodels, and report the transition matrix, the implied expected duration of each state, and the state-conditional parameters.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Make the distinction that matters: plot the smoothed state probabilities against the filtered ones. The smoothed series uses future data and looks convincing; the filtered series is what you would have had. Then run a changepoint detection on the same series with ruptures and compare where the two methods put the breaks.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [statsmodels — state space models and the Kalman filter](https://www.statsmodels.org/stable/statespace.html) [tool]{.res-kind}
+- [ruptures — changepoint detection](https://centre-borelli.github.io/ruptures-docs/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-095-regimes.ipynb with a fitted two-state model, its transition matrix, and filtered against smoothed probabilities plotted together.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why can you not trade on smoothed regime probabilities, and how much worse is the filtered version at calling a turn?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 96, Tuesday, 10 November 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Assemble the pieces milestone 3 needs and list what is missing. It should be short by now.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Confirm the out-of-sample period has still not been used for any selection decision.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> If it has, say so in the report tomorrow rather than quietly using a different window.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 230 — Placeholder title for day 230"
+title: "Day 230 — An external scoreboard where you cannot fool yourself"
 subtitle: "Wednesday, 24 March 2027 · Week 33 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,45 +8,46 @@ subtitle: "Wednesday, 24 March 2027 · Week 33 of 52 · Machine learning · Stud
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every result in this phase is one you produced and evaluated; a live external tournament with a held-out future removes that degree of freedom entirely, and it is the one public track record this industry recognises.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Submit a model to Numerai and understand what its scoring metric measures.
+- Say what the obfuscated features and era structure prevent, and what they do not.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Fit one of your existing model configurations on the Numerai training data and submit. The features are obfuscated, so you cannot bring any prior about what they mean, which removes the leakage channel that comes from knowing which period a feature was constructed in.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read the documentation on the scoring metric and note that it is a correlation with era-wise neutralisation, which is the same construct as your information coefficient with cross-sectional neutralisation. Then note what obfuscation does not prevent, which is overfitting to the training eras, and check whether the era structure lets you build the purged splitter you already have.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+A model is submitted to Numerai, which gives the year an external, live-scored track record on data where no look-ahead is available to you, alongside the internal results you produced and evaluated yourself.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Numerai — dataset](https://numer.ai/data) [data]{.res-kind}
+- [Numerai — documentation](https://docs.numer.ai/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A submitted Numerai model with the scoring metric understood and mapped onto your own IC definition.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What does Numerai's obfuscation prevent, and what failure mode does it leave completely untouched?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +56,12 @@ Ten minutes tonight so Day 231, Thursday, 25 March 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write out, out loud, the difference between what your cross-validated number and your walk-forward number mean. Ninety seconds.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to install.
 :::
 :::

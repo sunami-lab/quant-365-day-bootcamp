@@ -1,6 +1,6 @@
 ---
-title: "Day 36 — Placeholder title for day 36"
-subtitle: "Friday, 11 September 2026 · Week 6 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 36 — How far from normal, measured rather than asserted"
+subtitle: "Friday, 11 September 2026 · Week 6 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Friday, 11 September 2026 · Week 6 of 52 · Returns and noise · Stu
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Everybody says returns have fat tails, almost nobody says how fat, and the difference between those two states is whether you can size a position.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the standardised size of the largest daily move in your sample and say what probability a normal model assigns to it.
+- Say why the sample kurtosis is a bad estimator for this and name what you would report instead.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Measure: for each of your three series, report the sample skewness and kurtosis, the largest standardised move, the number of moves beyond four standard deviations, and the number a normal model predicts over the same sample length. Put the two counts side by side.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Show the estimator problem: bootstrap the sample kurtosis of SPY returns and plot its distribution. Then compute kurtosis on the first and second half of the sample separately. The instability you see is why practitioners report quantile ratios and tail counts rather than a fourth moment.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Sheppard — Python for Econometrics (notes)](https://bashtage.github.io/kevinsheppard.com/teaching/python/notes/) [textbook]{.res-kind}
+- [Zivot — Introduction to Computational Finance and Financial Econometrics with R](https://bookdown.org/compfinezbook/introcompfinr/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-036-fat-tails.ipynb with observed versus normal-implied counts beyond four sigma for three series, plus the bootstrapped kurtosis distribution.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+How many four-sigma days should a normal model produce in twenty years of daily data, and how many does SPY actually have?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 37, Saturday, 12 September 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Sort the absolute values of SPY daily returns and plot the largest 5 percent on log-log axes, rank against magnitude.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at whether the plot is straight. That straightness is what tomorrow estimates a slope for.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what you think the slope means before you are told.
 :::
 :::

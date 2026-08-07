@@ -1,6 +1,6 @@
 ---
-title: "Day 1 — Placeholder title for day 1"
-subtitle: "Friday, 7 August 2026 · Week 1 of 52 · Markets · Study day · 60 min"
+title: "Day 1 — Who pays whom, and for what"
+subtitle: "Friday, 7 August 2026 · Week 1 of 52 · Markets · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Friday, 7 August 2026 · Week 1 of 52 · Markets · Study day · 60 m
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You cannot yet tell a market maker from a pod shop from an allocator, and that distinction is what decides which firms you write to in eleven months.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Name six distinct businesses that operate in markets and, for each, say in one sentence where the revenue comes from.
+- Say which of the six you are competing with as one person with a laptop, and which you are not.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the free introduction chapter of Pedersen's Efficiently Inefficient, all of it, in one sitting. It is the best short account of what each kind of firm does that exists outside a paywall.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Open reports/milestone-01-market-map.md in the work repo and draw the map: exchange, broker, clearing house, market maker, prop shop, multi-manager pod, long-only manager, allocator. Put an arrow for every payment and label it with what is being bought.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Pedersen — Efficiently Inefficient, free introduction chapter](http://assets.press.princeton.edu/chapters/i10441.pdf) [reference]{.res-kind}
+- [Pedersen — Efficiently Inefficient (Princeton UP)](https://press.princeton.edu/books/hardcover/9780691166193/efficiently-inefficient) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/milestone-01-market-map.md, started, with a first-pass diagram and at least six labelled payment arrows.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Where does a market maker's revenue come from, and what is the risk it is being paid to carry?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 2, Saturday, 8 August 2026 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Activate the quant environment and run `python -c "import yfinance, duckdb; print('ok')"`. Fix it tonight if it fails, not tomorrow morning.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Download AAPL daily bars from 2019-01-01 to today with yfinance and save them to data/scratch/aapl_raw.parquet. Use `auto_adjust=False` this time.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Skim the yfinance README so you know which arguments exist before you need them.
 :::
 :::

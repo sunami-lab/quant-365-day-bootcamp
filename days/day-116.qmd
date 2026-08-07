@@ -1,6 +1,6 @@
 ---
-title: "Day 116 — Placeholder title for day 116"
-subtitle: "Monday, 30 November 2026 · Week 17 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 116 — A risk factor is something you hedge, an alpha factor is not"
+subtitle: "Monday, 30 November 2026 · Week 17 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Monday, 30 November 2026 · Week 17 of 52 · Portfolios and risk · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The distinction is the organising idea of the next two phases, it is not a property of the data, and getting it wrong means either hedging away your edge or holding a risk you are not paid for.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the operational difference between a risk factor and an alpha factor in terms of what you do with the exposure.
+- Give one example of a factor that changed category over time and say what moved it.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Work the classification through: for each of market, size, value, momentum, low volatility, and your own pairs spread, say whether you would neutralise the exposure or take it, and what evidence would make you switch. The answer depends on whether you are paid for the exposure and on whether your signal is correlated with it by accident.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Demonstrate the accidental exposure: regress your pairs strategy's returns on the four factors and report the loadings with standard errors. Any significant loading is a risk you are running without having decided to.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the classification and the evidence rule into reports/milestone-04-risk-model.md.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Ang — Asset Management: A Systematic Approach to Factor Investing (Oxford)](https://academic.oup.com/book/3342) [textbook]{.res-kind}
+- [AQR — Research and Insights](https://www.aqr.com/Insights/Research) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Factor loadings of your pairs strategy with standard errors, plus the written classification rule in the milestone report.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What is the difference between a risk factor and an alpha factor, and name one that moved between the two categories?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 117, Tuesday, 1 December 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Take your pairs strategy's daily positions and compute its net market beta on each day.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot that series. It should be near zero and it will not be.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the largest absolute value it reaches.
 :::
 :::

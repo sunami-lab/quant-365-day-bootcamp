@@ -1,5 +1,5 @@
 ---
-title: "Day 142 — Placeholder title for day 142"
+title: "Day 142 — The event loop, and the order things happen in"
 subtitle: "Saturday, 26 December 2026 · Week 21 of 52 · The research harness · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Saturday, 26 December 2026 · Week 21 of 52 · The research harness �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The sequence you sketched last night is the whole design; everything else in the engine is bookkeeping, and a wrong sequence is a leak that no test outside the engine will find.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement a session-level event loop where the sequence of read, decide, order, fill and mark is fixed and explicit.
+- Show that the engine cannot compute a signal from data timestamped after the decision point, by construction rather than by convention.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [40 min]{.task-min} Write qlib/backtest/engine.py: for each session, present the strategy with a read-only view of the store as of the decision timestamp, collect orders, pass them to a fill model, apply fills to a portfolio, then mark to market at the close. The strategy never receives the store itself, only the as-of view, which is what makes the leak impossible rather than unlikely.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Port the trend follower to it and reconcile against the vectorised version on a period where the two should agree. Any difference is either an assumption you now represent correctly or a bug, and separating those two is the exercise.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/backtest/engine.py is the event loop the rest of the year runs on. The strategy sees an as-of view rather than the store, so look-ahead is prevented by the interface rather than by care.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [backtesting.py — small readable event-driven backtester](https://kernc.github.io/backtesting.py/) [tool]{.res-kind}
+- [NautilusTrader documentation](https://nautilustrader.io/docs/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A working session-level event loop with the trend follower ported to it and reconciled against the vectorised version.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+In your engine, what object does a strategy receive, and why does its type make look-ahead impossible?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 143, Sunday, 27 December 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down what price your backtests have been assuming for fills, and what the alternatives are.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> For a market-on-close order, name three prices you could plausibly use and say which is most honest.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> One paragraph, no code.
 :::
 :::

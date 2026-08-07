@@ -1,5 +1,5 @@
 ---
-title: "Day 93 — Placeholder title for day 93"
+title: "Day 93 — A hedge ratio that is allowed to move"
 subtitle: "Saturday, 7 November 2026 · Week 14 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Saturday, 7 November 2026 · Week 14 of 52 · Time series · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The static regression slope from week 12 assumes the relationship between two names is constant for ten years, which is a strong claim you have not tested and probably do not believe.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Express a time-varying hedge ratio as a state space model and say what the two variance parameters control.
+- Show the dynamic hedge ratio against the rolling-window regression estimate on the same pair, and say which is smoother and why.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement the local level model for the hedge ratio: the state is the slope, it follows a random walk, and the observation is one log price regressed on the other. Use statsmodels statespace so the likelihood is available, and estimate the two variances by maximum likelihood rather than choosing them.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Compare three estimates of the same hedge ratio on one plot: full-sample regression, 60-day rolling regression, and the filtered state. Then say what the ratio of the two estimated variances corresponds to, which is an effective lookback window.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The pairs strategy gains a dynamic hedge ratio estimated by maximum likelihood rather than a window length chosen by hand. The static version stays in the code as the comparison the milestone reports against.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [statsmodels — state space models and the Kalman filter](https://www.statsmodels.org/stable/statespace.html) [tool]{.res-kind}
+- [Kalman and Bayesian Filters in Python (Labbe)](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-093-dynamic-hedge.ipynb with three hedge ratio estimates on one plot and the maximum likelihood variance ratio reported.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why would you use a Kalman filter for a hedge ratio rather than a rolling regression? Give an answer that is about the estimator, not about smoothness.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 94, Sunday, 8 November 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Run your pairs backtest with the dynamic hedge ratio and record the Sharpe next to the static version.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the change in turnover as well as the change in Sharpe.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not conclude anything yet; the comparison needs the out-of-sample period.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 292 — Placeholder title for day 292"
+title: "Day 292 — The square-root law, tested on your own data"
 subtitle: "Tuesday, 25 May 2027 · Week 42 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Tuesday, 25 May 2027 · Week 42 of 52 · Microstructure · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You assumed an exponent of one half on day 149 and have been carrying that assumption through every capacity estimate since; today it becomes a measurement with an uncertainty.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Estimate the impact exponent from your own data with a confidence interval.
+- Say what a linear model would have predicted differently at ten times your typical size.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Fit it properly: regress log impact on log participation with the volatility scaling from the Toth paper included, and report the exponent with a standard error. Then check robustness across symbols, across days and across participation ranges, since a single pooled estimate can be driven by one liquid name.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Compare the implications: at your fitted exponent against an exponent of one, compute the cost of a trade at one percent, five percent and twenty percent of daily volume. The divergence at large size is the reason the exponent matters more than the coefficient.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The impact exponent and coefficient in qlib/costs.py are replaced by values fitted to real data with a stated uncertainty, which retires the largest assumption in every cost and capacity number reported since week 22.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Tóth et al. (2011) — Anomalous price impact and the critical nature of liquidity](https://arxiv.org/abs/1105.1694) [paper]{.res-kind}
+- [Amihud (2002) — Illiquidity and stock returns](https://www.cis.upenn.edu/~mkearns/finread/amihud.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A fitted impact exponent with a confidence interval and robustness across symbols, wired into qlib/costs.py.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why is impact closer to the square root of size than to linear? Give your fitted exponent, its interval, and one mechanism.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 293, Wednesday, 26 May 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Rerun the cost and capacity numbers for your alpha book with the fitted impact model in place of the assumed one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare against what milestone 6 reported.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the two sets of numbers. Milestone 9 needs both.
 :::
 :::

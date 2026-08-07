@@ -1,6 +1,6 @@
 ---
-title: "Day 69 — Placeholder title for day 69"
-subtitle: "Wednesday, 14 October 2026 · Week 10 of 52 · Time series · Study day · 60 min"
+title: "Day 69 — The first strategy meets the noise floor"
+subtitle: "Wednesday, 14 October 2026 · Week 10 of 52 · Time series · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,46 @@ subtitle: "Wednesday, 14 October 2026 · Week 10 of 52 · Time series · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Everything since day 50 was preparation for this hour, which is the first time you take a result you would like to be real and put it against a threshold you set before you had it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the trend follower's Sharpe with an interval, its permutation p-value, and its position relative to your noise floor.
+- State the verdict in a form that would read the same if it had come out the other way.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Run the full evaluation: Sharpe with interval from qlib.stats, block bootstrap interval at your chosen block length, permutation test against the block-preserving null, and the same strategy run on 500 synthetic paths from qlib.simulate to get the false positive rate of the procedure itself.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Write the verdict paragraph into reports/milestone-03-pairs.md. Include the number of variants tried, taken from research_log.jsonl and not from memory, and the deflated Sharpe at that count. If the strategy fails, that paragraph is finished work and not a setback.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The first strategy in the book: a 12-month time-series momentum rule, evaluated against the noise floor from milestone 2 rather than against zero. The evaluation path it runs through is the one every later signal uses, so getting it right once is worth the hour.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey & López de Prado (2014) — The Deflated Sharpe Ratio](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf) [paper]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A written verdict on the trend follower in reports/milestone-03-pairs.md, with Sharpe, interval, permutation p-value, trial count and deflated Sharpe.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your trend follower has a Sharpe of 0.55 against a noise floor of 0.7. What do you do, and what would you have to see to change your mind?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 70, Thursday, 15 October 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread days 64 to 69 and mark anything you could not redo without notes.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the drill times you have recorded; tomorrow is the tenth sitting and the first with a visible trend.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to download.
 :::
 :::

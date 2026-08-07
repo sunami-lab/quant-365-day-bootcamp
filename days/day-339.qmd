@@ -1,5 +1,5 @@
 ---
-title: "Day 339 — Placeholder title for day 339"
+title: "Day 339 — The fact that they traded is information"
 subtitle: "Sunday, 11 July 2027 · Week 49 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 11 July 2027 · Week 49 of 52 · The interview · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The difference you measured last night is Glosten-Milgrom appearing in your own strategy, and being able to state that connection is a strong answer in a trading interview.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement a fair-value update conditional on trade direction and report its effect on profit.
+- State the update as a Bayesian one and say what its strength should depend on.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Formalise the rule: the size of the fair value update given a trade is a Bayesian posterior shift, and it should be larger when the fraction of informed flow is higher and when the trade was large relative to displayed size. Implement both dependencies and measure each separately.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Find the failure mode: an update rule that is too strong lets an adversary walk your quote by trading repeatedly in one direction with no information at all. Test that attack against your own strategy and report how much it costs you, then tune the update strength to a level that survives it.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Glosten & Milgrom (1983 working paper) — Bid, Ask and Transaction Prices in a Specialist Market](https://www.kellogg.northwestern.edu/research/math/papers/570.pdf) [paper]{.res-kind}
+- [IMC Prosperity 3 backtester with real round data](https://github.com/jmerle/imc-prosperity-3-backtester) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A Bayesian fair-value update with two dependencies measured, and the walk-the-quote attack tested against it.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+How much should your fair value move when someone lifts your offer, and what does that depend on?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 340, Monday, 12 July 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down five expected value questions you would expect in a trading round, each answerable in under two minutes.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Include at least one where the answer is that you should not play.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow you answer them against a clock.
 :::
 :::

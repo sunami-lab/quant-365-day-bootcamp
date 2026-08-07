@@ -1,5 +1,5 @@
 ---
-title: "Day 334 — Placeholder title for day 334"
+title: "Day 334 — Random walks, ruin and first passage, under a clock"
 subtitle: "Tuesday, 6 July 2027 · Week 48 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Tuesday, 6 July 2027 · Week 48 of 52 · The interview · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The most heavily asked family in trading interviews because a random walk is the simplest model of a price, and the questions test whether you can set up a difference equation quickly.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Solve six random walk problems under a clock, setting up the recursion within the first minute.
+- State the reflection principle and use it to get the distribution of the maximum.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [40 min]{.task-min} Forty minutes, six problems. For each, the setup is a difference equation with boundary conditions, and the discipline is to write it down before attempting to solve. Most failures here are setup failures rather than algebra failures.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Do the reflection principle properly once: every path that exceeds a level and ends below it maps to a path that ends above the reflected level, which gives the distribution of the maximum in one line. Then use it for the expected maximum over n steps and check numerically.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
+- [Jane Street — puzzle archive with solutions](https://www.janestreet.com/puzzles/archive/index.html) [problems]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A scored six-problem session, plus the reflection principle applied to the distribution of the maximum and checked numerically.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+A symmetric random walk starts at 0. Give the probability it reaches plus 10 before minus 5, and the expected time to stop.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 335, Wednesday, 7 July 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Choose six order statistics and extreme value problems.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Include the interview classic about hiring the best candidate and one about the expected range of n uniforms.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> File them unsolved.
 :::
 :::

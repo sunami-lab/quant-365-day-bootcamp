@@ -1,5 +1,5 @@
 ---
-title: "Day 2 — Placeholder title for day 2"
+title: "Day 2 — What a share obliges each side to do"
 subtitle: "Saturday, 8 August 2026 · Week 1 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Saturday, 8 August 2026 · Week 1 of 52 · Markets · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A price series is the shadow of a legal contract, and every data problem in week 3 comes from the contract, not from the data vendor.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what a common share entitles you to and what it obliges you to, in four clauses, without using the word investment.
+- Point at the 2020 Apple split in a raw price series and say why the price fell 75 percent on a day nobody lost money.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Watch the equity valuation lecture from MIT 15.401 (Lo) up to the point where dividend discounting starts. Stop there; discounting is day 6. You want the definition of the claim, not the model of its value.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Plot data/scratch/aapl_raw.parquet close prices over 2019-2021. Find the 31 August 2020 four-for-one split, and print the raw close on 28 and 31 August. Write the two numbers in your notebook with the ratio between them.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write four clauses in reports/milestone-01-market-map.md under a Glossary heading: what a share obliges the company to do, what it obliges you to do, what it entitles you to, and what happens in bankruptcy.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 15.401 — Finance Theory I (Andrew Lo), video lectures and slides](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/pages/video-lectures-and-slides/) [course]{.res-kind}
+- [yfinance](https://github.com/ranaroussi/yfinance) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-002-share-contract.ipynb with the split plot, plus the four-clause glossary entry for a share.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+A company pays a dividend of 2 dollars on a 100 dollar stock. What happens to the share price at the open, and who is worse off?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 3, Sunday, 9 August 2026 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download SPY, VOO and IVV daily bars from 2015 to today into data/scratch/. Three ETFs on the same index; tomorrow asks why their prices differ.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Open the SPDR S&P 500 ETF fact sheet from the issuer's site and find the line that reports the fund's expense ratio.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note in your notebook what you currently think keeps an ETF's price near the value of what it holds. You will check that guess tomorrow.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 118 — Placeholder title for day 118"
-subtitle: "Wednesday, 2 December 2026 · Week 17 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 118 — Fama-MacBeth, and the standard error it fixes"
+subtitle: "Wednesday, 2 December 2026 · Week 17 of 52 · Portfolios and risk · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Wednesday, 2 December 2026 · Week 17 of 52 · Portfolios and risk ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The cross-sectional regression run period by period is the standard way risk premia get estimated in this field, and its whole point is a dependence structure you already correct for elsewhere.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Describe the two stages of Fama-MacBeth and say precisely which source of dependence the procedure handles.
+- Report a risk premium estimate with Fama-MacBeth standard errors and compare against the naive pooled version.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run it both ways on the 25 portfolios with linearmodels: a pooled panel regression of returns on exposures, and the Fama-MacBeth two-stage procedure. Report the same coefficient with both standard errors and state the ratio between them.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Say what the correction is doing: the cross-sectional residuals are correlated within a period because everything moves with the market, so pooling treats correlated observations as independent. Write the one-sentence version, then add the Shanken correction note, which accounts for the betas themselves being estimated.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [linearmodels — panel, IV/2SLS and Fama-MacBeth (Sheppard)](https://bashtage.github.io/linearmodels/) [tool]{.res-kind}
+- [Fama & French (1993) — Common risk factors in the returns on stocks and bonds](https://www.bauer.uh.edu/rsusmel/phd/Fama-French_JFE93.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-118-fama-macbeth.ipynb with the same risk premium estimated two ways and the standard error ratio reported.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What dependence does Fama-MacBeth correct for, and what does the Shanken correction add on top?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 119, Thursday, 3 December 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List the factor models you have now fitted and what each was used for.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times; tomorrow is the seventeenth sitting.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to install.
 :::
 :::

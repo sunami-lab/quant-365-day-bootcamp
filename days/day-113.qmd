@@ -1,6 +1,6 @@
 ---
-title: "Day 113 — Placeholder title for day 113"
-subtitle: "Friday, 27 November 2026 · Week 17 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 113 — CAPM as a regression, and what beta estimates"
+subtitle: "Friday, 27 November 2026 · Week 17 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Friday, 27 November 2026 · Week 17 of 52 · Portfolios and risk · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The model is wrong and the regression is still the workhorse of every risk decomposition you will run, so the useful skill is knowing what the coefficient means when the model behind it fails.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what beta is estimating, what the intercept is testing, and what the residual variance becomes in a risk model.
+- Report the cross-sectional relationship between beta and average return in your own sample, and say whether it matches the theory.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run the two-pass test on the 25 Fama-French portfolios: estimate betas in the first pass, then regress average returns on betas in the cross section. Report the slope and compare it against the theoretical prediction, which is the market risk premium. It will be too flat.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read the Frazzini and Pedersen Betting Against Beta draft's introduction and its explanation for the flat security market line. Note the mechanism they propose, which is a funding constraint rather than a mispricing.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write down the practical consequence: a flat empirical relationship between beta and return means beta is a risk exposure worth neutralising rather than a return source worth taking.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Frazzini & Pedersen — Betting Against Beta (draft)](https://w4.stern.nyu.edu/facdir/lpederse/papers/BettingAgainstBeta.pdf) [paper]{.res-kind}
+- [Kenneth R. French — Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-113-capm.ipynb with a two-pass cross-sectional test and the estimated security market line slope against theory.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your cross-sectional slope on beta is near zero. State two explanations and say which one Frazzini and Pedersen argue for.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 114, Saturday, 28 November 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download the Fama and French 1993 paper and read the section describing how the size and value portfolios are constructed.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the exact sorting procedure: the breakpoints, the rebalancing date, and the weighting.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> You will rebuild it in week 26, so the detail matters.
 :::
 :::

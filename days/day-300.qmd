@@ -1,6 +1,6 @@
 ---
-title: "Day 300 — Placeholder title for day 300"
-subtitle: "Wednesday, 2 June 2027 · Week 43 of 52 · Microstructure · Study day · 60 min"
+title: "Day 300 — Fitting an impact coefficient to a sample of forty fills"
+subtitle: "Wednesday, 2 June 2027 · Week 43 of 52 · Microstructure · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,43 @@ subtitle: "Wednesday, 2 June 2027 · Week 43 of 52 · Microstructure · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You now have real fills and far too few of them, which makes this the right day to be precise about what a small sample can support rather than to fit a model anyway.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Estimate the impact coefficient from your own fills with an honest confidence interval.
+- State what sample size you would need for the estimate to be useful, and what you will do until then.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Fit what you can: regress measured slippage on participation with the volatility scaling, using your own fills, and report the coefficient with its interval. The interval will be wide enough to include zero and also to include twice the published value, which is the correct conclusion from forty observations.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Compute the requirement: given the residual variance you observe, how many fills would you need for a 20 percent relative standard error on the coefficient? Then state the interim policy, which is to use the coefficient fitted to the ITCH sample in week 42 and to report your own estimate alongside it as it accumulates.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Set up the accumulation: a standing job that appends every new fill to the estimation dataset, so that by the capstone you have a real number rather than a plan to get one.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Tóth et al. (2011) — Anomalous price impact and the critical nature of liquidity](https://arxiv.org/abs/1105.1694) [paper]{.res-kind}
+- [Alpaca — paper trading documentation](https://docs.alpaca.markets/docs/paper-trading) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+An impact coefficient from your own fills with an interval, the required sample size computed, and a standing accumulation job.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your own impact estimate has an interval spanning zero to twice the published value. What do you use, and what do you report?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 301, Thursday, 3 June 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List the four execution measurements you now have and one line each on what they are for.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your timed mixed-set scores.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to install.
 :::
 :::

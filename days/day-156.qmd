@@ -1,5 +1,5 @@
 ---
-title: "Day 156 — Placeholder title for day 156"
+title: "Day 156 — Synthetic data whose right answer you already know"
 subtitle: "Saturday, 9 January 2027 · Week 23 of 52 · The research harness · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Saturday, 9 January 2027 · Week 23 of 52 · The research harness · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Testing an engine against real data can only tell you it produces a number; testing it against a case with a closed-form answer tells you the number is right.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Construct at least two synthetic cases with analytically known strategy returns and assert the engine reproduces them.
+- Say what each case tests that the other does not.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build three cases in tests/: a constant-drift series where a fully invested strategy's return is exact, a deterministic sawtooth where a perfect mean-reversion rule's gross return is exact, and a case with a known cost so the net return is exact. Assert each to tight tolerance.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Make the cost case sharp: with a known turnover and a fixed cost per trade, the annual cost is arithmetic, so assert the engine's reported cost against the hand computation. This catches double-counting of the spread, which is the most common cost bug and one that flatters the strategy.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pytest documentation](https://docs.pytest.org/en/stable/) [tool]{.res-kind}
+- [backtesting.py — small readable event-driven backtester](https://kernc.github.io/backtesting.py/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Three synthetic test cases with analytic answers, all passing to a stated tolerance.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which of your synthetic tests would catch a spread charged twice, and how tight is the tolerance you set?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 157, Sunday, 10 January 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Generate 200 random position series with the same turnover as your pairs strategy but no relationship to returns.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Run them through the engine and save the Sharpe of each.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not look at the distribution yet.
 :::
 :::

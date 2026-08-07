@@ -1,5 +1,5 @@
 ---
-title: "Day 18 — Placeholder title for day 18"
+title: "Day 18 — Today's index members, backfilled ten years, is a lie"
 subtitle: "Monday, 24 August 2026 · Week 3 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Monday, 24 August 2026 · Week 3 of 52 · Markets · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+This is ascertainment bias with a ticker attached: you already know exactly why conditioning on survival distorts an estimate, so the only new content is how large the distortion is here.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Quantify, roughly, what backfilling today's index membership does to a backtested return, and say which direction it biases it.
+- Name three distinct selection problems in a US equity universe and say which of them your free data source cannot fix.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Measure it on what you have: build an equal-weighted portfolio of today's S&P 500 members over 2010-today from your data, and compare its return to SPY's over the same window. The gap is not all survivorship, but it is mostly survivorship plus the weighting scheme, and separating the two is the exercise.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Write the three selection problems into reports/milestone-01-market-map.md: survivorship of delisted names, backfilled membership of index constituents, and the vendor's own coverage decision about what counts as a listed security. For each, name the fix and say whether you have access to it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Check whether UW-Madison's WRDS subscription covers you. If it does, CRSP solves the first two of those three problems and the rest of the year gets materially better.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [WRDS — CRSP data vendor page](https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/center-for-research-in-security-prices-crsp/) [data]{.res-kind}
+- [UW-Madison — business databases and WRDS access](https://www.library.wisc.edu/business/research-help/business-databases/finance-and-investing/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A measured survivorship gap in notebooks/day-018-survivorship.ipynb, with the confound from equal weighting separated out and stated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Give the genetics analogue of backfilling index membership, then say which one of the two is easier to fix and why.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 19, Tuesday, 25 August 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pull one FRED series through the ALFRED vintage interface using fredapi, for any real-time series such as GDP, and save two vintages of it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at the two vintages side by side for two minutes. The difference is tomorrow's whole subject.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the date on which you think today's GDP figure for two quarters ago was first published.
 :::
 :::

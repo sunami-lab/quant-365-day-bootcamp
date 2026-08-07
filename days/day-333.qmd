@@ -1,5 +1,5 @@
 ---
-title: "Day 333 — Placeholder title for day 333"
+title: "Day 333 — Martingales, and the stopping theorem's fine print"
 subtitle: "Monday, 5 July 2027 · Week 48 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Monday, 5 July 2027 · Week 48 of 52 · The interview · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The technique that turns a hard calculation into a one-line answer, and the one where the conditions matter because the classic doubling strategy violates exactly one of them.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Solve six martingale problems under a clock, identifying the martingale before computing anything.
+- State the optional stopping conditions and say which one a doubling strategy violates.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [40 min]{.task-min} Forty minutes, six problems. The hard part is finding the martingale, so for each one write down the candidate before proceeding. For a biased walk the martingale is an exponential of the position, and recognising that once is worth more than solving three problems.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Work the doubling strategy carefully: it appears to guarantee a profit, and it fails because the stopping time is not bounded and the wealth is not, which is a violation of the boundedness condition. Say it out loud in the form an interviewer wants, which names the condition and then names the real-world thing that enforces it.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Durrett — Probability: Theory and Examples (author's free 5th ed. draft)](https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf) [textbook]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A scored six-problem session with the martingale identified in writing before each solution.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Doubling after every loss appears to guarantee a profit. Name the optional stopping condition it violates and what enforces that condition in reality.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 334, Tuesday, 6 July 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Choose six random walk problems: ruin probabilities, expected durations, first passage, and the reflection principle.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Include one about the maximum of the walk.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> File them unsolved.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 280 — Placeholder title for day 280"
-subtitle: "Thursday, 13 May 2027 · Week 40 of 52 · Derivatives · Milestone · 45 min"
+title: "Day 280 — Milestone: an option pricer and a delta-hedging study"
+subtitle: "Thursday, 13 May 2027 · Week 40 of 52 · Derivatives · Milestone · 50 min"
 ---
 
 ::: {.day-nav .kind-milestone}
@@ -12,22 +12,22 @@ subtitle: "Thursday, 13 May 2027 · Week 40 of 52 · Derivatives · Milestone ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The milestone is graded on a whiteboard derivation you either can or cannot do, so the assembly matters less today than testing yourself on the thing that is actually being asked.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Derive Black-Scholes by replication, without notes, in under ten minutes.
+- Show the delta-hedging profit decomposed into the implied-realized variance gap and discrete rebalancing cost.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Finish reports/milestone-08-options.md: three agreeing pricers with convergence, greeks checked analytically and numerically, the hedging study with its decomposition, and the variance risk premium page.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Test the claim the milestone rests on rather than assuming it: whiteboard, timer, no notes, derive Black-Scholes by replication. Record the time and what you had to look up afterwards. If it took more than ten minutes, schedule three more attempts over the next fortnight rather than moving on.
 :::
 :::
 
@@ -37,33 +37,37 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> The drill band changes today and runs under a clock from here to July. Timed mixed set: five problems in fifteen minutes, drawn from probability, expectation and mental arithmetic, with no warning about which is which. Score yourself out of five and write it down; this number is what you are tracking now.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Market making, first sitting: I am making a market in the number of piano tuners in Chicago. Give me a two-sided quote and defend the width. Then I trade with you and you must requote. The requoting is the part candidates get wrong.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Estimation: how many options contracts trade on SPY in a day? Get within a factor of three by reasoning, not recall, then check against the Cboe market statistics page.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+Milestone 8 closes the derivatives phase. qlib/derivatives holds a tested pricer, greeks, a hedging simulator and a surface fitter, and the variance risk premium signal is in the book with its asymmetry documented.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Cboe options market statistics](https://www.cboe.com/us/options/market_statistics/historical_data/) [data]{.res-kind}
+- [Jane Street — puzzles](https://www.janestreet.com/puzzles/) [problems]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/milestone-08-options.md, complete, plus a timed whiteboard derivation of Black-Scholes with the time recorded.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Derive Black-Scholes by replication on a whiteboard in ten minutes without notes, then say where the real-world drift went.
 :::
 
 ## Prepare for tomorrow
@@ -72,6 +76,12 @@ Ten minutes tonight so Day 281, Friday, 14 May 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download one sample day of Nasdaq TotalView-ITCH data. Check the file size before you start and make sure you have the disk.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not try to parse it tonight.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Read the first page of the ITCH specification so the message types are not new tomorrow.
 :::
 :::

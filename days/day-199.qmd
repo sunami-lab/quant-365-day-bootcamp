@@ -1,5 +1,5 @@
 ---
-title: "Day 199 — Placeholder title for day 199"
+title: "Day 199 — Equal weights beat optimised weights more often than not"
 subtitle: "Sunday, 21 February 2027 · Week 29 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 21 February 2027 · Week 29 of 52 · Alpha · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The same estimation-error argument from week 15 applies to combining signals, with the additional problem that signal information coefficients are estimated even more noisily than asset means.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the out-of-sample performance of three combination schemes and say which won.
+- State the condition under which optimised signal weights beat equal weights, and check it on your data.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Run the comparison out of sample rather than in: fit weights on the first part of the sample and evaluate on the rest, for equal weighting, IC weighting and mean-variance weighting on the signal returns. Report all three with intervals, and repeat at three estimation window lengths.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Say when optimising wins: when the dispersion in true information coefficients across signals is large relative to their estimation error. Estimate both quantities for your own book and state which regime you are in. This is the same calculation as day 101 with signals in place of assets.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Harvey, Liu & Zhu (2014) — ...and the Cross-Section of Expected Returns](https://www.nber.org/papers/w20592) [paper]{.res-kind}
+- [skfolio — scikit-learn compatible portfolio optimization](https://skfolio.org/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Three combination schemes compared out of sample at three window lengths, with the dispersion-versus-error condition evaluated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You have two signals with the same IC and correlation 0.8. How do you weight them, and what happens as the correlation approaches 1?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 200, Monday, 22 February 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Combine your signals into one score, build a portfolio from it, and record its turnover.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then build a portfolio per signal, combine the portfolios, and record that turnover.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The two numbers will differ, and tomorrow explains why.
 :::
 :::

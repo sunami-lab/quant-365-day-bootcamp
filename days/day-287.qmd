@@ -1,6 +1,6 @@
 ---
-title: "Day 287 — Placeholder title for day 287"
-subtitle: "Thursday, 20 May 2027 · Week 41 of 52 · Microstructure · Catch-up day · 45 min"
+title: "Day 287 — The order book, closed book"
+subtitle: "Thursday, 20 May 2027 · Week 41 of 52 · Microstructure · Catch-up day · 35 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 20 May 2027 · Week 41 of 52 · Microstructure · Catch-up 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day. Week 41 replaced several beliefs about what a price is, and the measurements are worth recalling as numbers rather than as concepts.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State your measured cancellation fraction, resiliency half-life, spread decomposition and post-trade drift, from memory.
+- Explain why order flow predicts at one second and not at one hour.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>35 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Finish anything outstanding from days 281 to 286. The ITCH parser is worth having working, because week 43 measures your own execution against the same data structure.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Closed book: the four measured numbers with their units, the spread decomposition identity, and the adverse selection explanation in three sentences.
 :::
 :::
 
@@ -33,27 +33,31 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Timed mixed set, second sitting: five problems in fifteen minutes across probability, expectation and arithmetic. Score out of five and compare against day 280.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Market making, second sitting: I make a market in the sum of two dice, and you must quote me a two-sided market in the sum before either is rolled. Then I trade with you and one die is revealed. Requote. Say your reasoning out loud at every step, because the reasoning is what is being assessed.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The question every academic answers badly, first attempt: why are you leaving academia? Three sentences, out loud, recorded. Listen to it once. You will rewrite this perhaps thirty times before July and the first version is always defensive.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — puzzles](https://www.janestreet.com/puzzles/) [problems]{.res-kind}
+- [Financial Markets Microstructure (Copenhagen, Starkov) — video lectures](https://www.youtube.com/playlist?list=PL4pUs4P_j1Wa2_P1lw44kFWWjKDTGUY7S) [video]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The closed-book week 41 page with four measured numbers, plus a recording of your first answer to the academia question.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State your measured spread decomposition for one symbol and say who received each component.
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +66,12 @@ Ten minutes tonight so Day 288, Friday, 21 May 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the setup of the Glosten and Milgrom working paper: the informed trader, the uninformed trader and the competitive market maker.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what the market maker knows and does not know.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Three lines. The model is simpler than it looks.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 291 — Placeholder title for day 291"
+title: "Day 291 — Temporary impact comes back, permanent impact does not"
 subtitle: "Monday, 24 May 2027 · Week 42 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Monday, 24 May 2027 · Week 42 of 52 · Microstructure · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The split you estimated last night is what decides whether trading slowly helps, and it is the parameter that separates a soluble execution problem from an insoluble one.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Separate temporary from permanent impact empirically and report the fraction that decays.
+- Say what each component costs you and which one splitting an order can avoid.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Fit the decay: for large trades, model the impact path as a permanent level plus a temporary component decaying at some rate, and estimate both from your data. Report the permanent fraction and the decay half-life. Both feed directly into tomorrow's execution problem.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Draw the consequence: permanent impact is a cost you pay regardless of how you trade, because it is the market learning from you, while temporary impact is avoidable by trading slower. That asymmetry is the whole reason execution scheduling exists and it is worth stating in one sentence.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Almgren & Chriss (2000) — Optimal Execution of Portfolio Transactions](https://www.smallake.kr/wp-content/uploads/2016/03/optliq.pdf) [paper]{.res-kind}
+- [Bouchaud, Bonart, Donier & Gould — Trades, Quotes and Prices (Cambridge)](https://www.cambridge.org/core/books/trades-quotes-and-prices/029A71078EE4C41C0D5D4574211AB1B5) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-291-impact-decay.ipynb with permanent and temporary impact separated and the decay half-life estimated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which component of impact can you avoid by trading more slowly, and which do you pay regardless?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 292, Tuesday, 25 May 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Group trades in your sample by size relative to daily volume and compute the average impact in each bucket.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot impact against participation on log-log axes.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Fit a slope and write it down before tomorrow tells you what to expect.
 :::
 :::

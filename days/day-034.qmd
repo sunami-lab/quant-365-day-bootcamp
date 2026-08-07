@@ -1,5 +1,5 @@
 ---
-title: "Day 34 — Placeholder title for day 34"
+title: "Day 34 — The 252 that nobody checks, and the square root of time"
 subtitle: "Wednesday, 9 September 2026 · Week 5 of 52 · Returns and noise · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 9 September 2026 · Week 5 of 52 · Returns and noise · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Annualisation looks like a unit conversion and is actually two assumptions, one about the calendar and one about independence, and week 7 is going to abuse the second one badly.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the two assumptions behind multiplying a daily volatility by the square root of 252, and say which one is empirically false.
+- Quantify the error in an annualised volatility from using 252 when the true session count was 250 or 253.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Derive the scaling rule properly: for independent increments the variance of a sum is the sum of variances, so volatility scales with the square root of the horizon. Then write down what happens to that rule when the increments are correlated with lag-one autocorrelation rho, and get the correction factor.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Measure the calendar error with your ten session counts: annualise SPY's daily volatility using each year's true count and using 252, and report the maximum discrepancy in volatility points. It is small. Do it anyway, so that you know it is small and stop worrying about it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Now measure the assumption that is not small: estimate the lag-one autocorrelation of SPY daily returns and of a small-cap name, and apply your correction factor to each annualised volatility. Report the corrected and uncorrected numbers.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [exchange_calendars — 50+ exchange trading calendars](https://github.com/gerrymanoim/exchange_calendars) [repo]{.res-kind}
+- [Sheppard — Python for Econometrics (notes)](https://bashtage.github.io/kevinsheppard.com/teaching/python/notes/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-034-annualisation.ipynb with the correction factor derived and applied to two series, calendar error reported separately.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which of the two assumptions behind square-root-of-time annualisation is false for daily equity returns, and in which direction does ignoring it bias your annualised volatility?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 35, Thursday, 10 September 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread your five notebooks from days 29 to 34 and mark the results you could not reproduce from memory.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Have the timer ready; this is the fifth arithmetic sitting and the first one where the trend should be visible.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot the four recorded arithmetic times from days 7, 14, 21 and 28 on one axis tonight. Two minutes.
 :::
 :::

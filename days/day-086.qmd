@@ -1,6 +1,6 @@
 ---
-title: "Day 86 — Placeholder title for day 86"
-subtitle: "Saturday, 31 October 2026 · Week 13 of 52 · Time series · Study day · 60 min"
+title: "Day 86 — What GARCH actually asserts, and what the coefficient sum means"
+subtitle: "Saturday, 31 October 2026 · Week 13 of 52 · Time series · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Saturday, 31 October 2026 · Week 13 of 52 · Time series · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+It is the most cited model in the field and the most often fitted without anyone stating the claim it makes, which is a specific and testable statement about the persistence of variance.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what a GARCH(1,1) asserts about tomorrow's variance in one sentence, and what the sum of its two coefficients implies about the long-run variance.
+- Say what happens to the model when that sum reaches one, and whether your fit is close to it.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the recursion out and interpret each term: a constant, a reaction to the last squared shock, and a persistence of the last variance. Then derive the unconditional variance implied by the fit, and say what it means when the coefficient sum exceeds one.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Fit GARCH(1,1), GJR-GARCH and EGARCH with arch on the same series, and report the coefficient estimates, the log-likelihoods and the asymmetry term where present. The asymmetry term is week 6's leverage effect appearing in a model, so check that its sign matches what you measured on day 39.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Compute the implied volatility term structure from your GARCH fit: forecast variance at horizons of 1, 5, 22 and 66 days and plot the path back toward the unconditional level.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
+- [Sheppard — Python for Econometrics (notes)](https://bashtage.github.io/kevinsheppard.com/teaching/python/notes/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-086-garch.ipynb with three fitted models, their coefficients, and the mean-reverting variance forecast path.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your GARCH(1,1) has alpha 0.09 and beta 0.89. State what the model asserts and what the sum tells you about how long a shock persists.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 87, Sunday, 1 November 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> If you have any intraday data, compute a daily realised variance as the sum of squared 5-minute returns for a month of sessions. If you do not, note that as the constraint it is.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare that series against the squared daily return for the same days.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at how much less noisy one of them is.
 :::
 :::

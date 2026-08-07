@@ -1,5 +1,5 @@
 ---
-title: "Day 20 — Placeholder title for day 20"
+title: "Day 20 — The store, part one: schema and ingestion"
 subtitle: "Wednesday, 26 August 2026 · Week 3 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,45 +8,47 @@ subtitle: "Wednesday, 26 August 2026 · Week 3 of 52 · Markets · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Everything for the next eleven months reads from this, so the schema decisions today are the ones you will live with, and the two-date rule from yesterday is the one that matters most.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Justify each column in your bars table, including the two date columns, to someone who thinks one date is enough.
+- Re-run the ingestion from an empty directory with one command and get an identical file.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write qlib/store.py: a DuckDB database with three tables. `security` with an internal integer id, ticker, valid_from, valid_to. `bar_daily` with security_id, session_date, open, high, low, close, volume, and ingested_at. `corporate_action` with security_id, effective_date, action_type, factor, and ingested_at. Create them with explicit types and a primary key on each.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write qlib/ingest.py: pull daily unadjusted bars for your universe via yfinance, map tickers to security ids, and insert. Make it idempotent, so running it twice does not double the rows. Use a session calendar from exchange_calendars to assert you have no bars on non-trading days.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+The data store begins. qlib/store.py defines the schema and qlib/ingest.py fills it; every table carries both the date a fact refers to and the date you learned it, which is the constraint that makes point-in-time queries possible later rather than retrofitted.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [DuckDB documentation](https://duckdb.org/docs/current/) [tool]{.res-kind}
+- [exchange_calendars — 50+ exchange trading calendars](https://github.com/gerrymanoim/exchange_calendars) [repo]{.res-kind}
+- [yfinance](https://github.com/ranaroussi/yfinance) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+data/prices.duckdb, populated with unadjusted daily bars for your universe, created by one command from an empty directory.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does bar_daily need an ingested_at column when a daily bar is never revised? Answer in terms of what you will want to know in March.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +57,12 @@ Ten minutes tonight so Day 21, Thursday, 27 August 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Run the ingestion once more from scratch and time it. Write the number down; it is the number you will complain about in week 20.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Count the rows and the distinct securities in your store, and check both against what you expected.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at the arithmetic drill numbers from days 7 and 14 so you know what you are trying to beat tomorrow.
 :::
 :::

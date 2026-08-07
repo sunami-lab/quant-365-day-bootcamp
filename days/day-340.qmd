@@ -1,5 +1,5 @@
 ---
-title: "Day 340 — Placeholder title for day 340"
+title: "Day 340 — Expected value under time pressure, and when not to play"
 subtitle: "Monday, 12 July 2027 · Week 49 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Monday, 12 July 2027 · Week 49 of 52 · The interview · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Trading rounds test whether you compute an expectation quickly and whether you notice when the expectation is negative, and the second failure is the one that ends interviews.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Answer eight expected value questions in twenty minutes, including at least one you should decline.
+- State the two-part answer format: the number, and the assumption it rests on.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Twenty minutes, eight questions, out loud. Use the two-part format every time: the expected value, then the one assumption that would change it. Interviewers ask about the assumption, so volunteering it saves a round trip and shows you know where the answer is fragile.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Then the harder skill: for each question, say what you would pay and what you would sell at, which is a width around the expectation rather than the expectation itself. That conversion from an estimate to a two-sided market is the actual job and it is what the round is testing.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — puzzles](https://www.janestreet.com/puzzles/) [problems]{.res-kind}
+- [Jane Street — puzzle archive with solutions](https://www.janestreet.com/puzzles/archive/index.html) [problems]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Eight timed expected value answers in the two-part format, each converted into a two-sided market.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+I offer you a game with an expected value of plus two dollars and a variance of a thousand. Do you play, and how much?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 341, Tuesday, 13 July 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Look back at your arithmetic drill times from days 7 through 329.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot all of them. There should be a clear trend and then a plateau.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note where the plateau started.
 :::
 :::

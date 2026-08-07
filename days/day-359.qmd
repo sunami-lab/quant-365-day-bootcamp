@@ -1,5 +1,5 @@
 ---
-title: "Day 359 — Placeholder title for day 359"
+title: "Day 359 — Where the live period disagreed with the backtest"
 subtitle: "Saturday, 31 July 2027 · Week 52 of 52 · Capstone · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Saturday, 31 July 2027 · Week 52 of 52 · Capstone · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+If the two disagree, that disagreement is the most interesting result of the year and it goes at the front of the capstone, because it is the only genuinely out-of-sample evidence you have.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Decompose the difference between live and backtested returns into signal, execution and universe components.
+- Say which component was largest and whether you would have predicted it.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Decompose it properly rather than attributing it to noise: run the backtest with the live period's actual fills substituted for its modelled fills, which isolates execution, then with the live universe substituted, which isolates selection. What remains is signal difference plus noise, and the three parts should sum to the total.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Check the prediction: your milestone 5 list of lies ranked what would matter most, and this decomposition is the first real test of that ranking. Report whether the largest component was where you predicted, and update the list either way.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The live-against-backtest difference is decomposed into execution, universe and signal components that sum to the total, which is the first empirical test of the ranked list of lies from milestone 5.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Alpaca — paper trading documentation](https://docs.alpaca.markets/docs/paper-trading) [tool]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A three-way decomposition of the live-backtest difference with the components reconciling to the total.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your live returns are 30 basis points a month below the backtest. Which component was it, and did your milestone 5 ranking predict that?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 360, Sunday, 1 August 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List the eleven milestone documents and, for each, the one sentence you would keep if you could keep only one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Eleven sentences.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> That list is the skeleton of tomorrow's dossier.
 :::
 :::

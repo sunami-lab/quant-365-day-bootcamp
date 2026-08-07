@@ -1,6 +1,6 @@
 ---
-title: "Day 133 — Placeholder title for day 133"
-subtitle: "Thursday, 17 December 2026 · Week 19 of 52 · Portfolios and risk · Milestone · 45 min"
+title: "Day 133 — Milestone: a factor risk model built by hand"
+subtitle: "Thursday, 17 December 2026 · Week 19 of 52 · Portfolios and risk · Milestone · 50 min"
 ---
 
 ::: {.day-nav .kind-milestone}
@@ -12,22 +12,22 @@ subtitle: "Thursday, 17 December 2026 · Week 19 of 52 · Portfolios and risk ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Four covariance estimators, a factor decomposition and a sizing decision, all built rather than called, and the document is graded on whether the simplest benchmark is still in the table.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Show the eigenvalue spectrum against the Marchenko-Pastur bound so it is visible which eigenvalues carry information.
+- State what full Kelly implies, what fraction you will run, and the drawdown you are accepting.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Finish reports/milestone-04-risk-model.md: the four covariance estimates with the spectrum plotted against the theoretical bound, factor exposures and a risk decomposition of one portfolio into factor and idiosyncratic parts, the out-of-sample comparison with equal weighting present, and the sizing section with the Kelly fraction and its implied drawdown.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Verify the claims: regenerate every number from committed code, rerun the test suite, and check that the risk decomposition's parts sum to the total. That last check catches the single most common arithmetic error in this kind of report.
 :::
 :::
 
@@ -37,27 +37,37 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, nineteenth sitting. Ten two-digit multiplications, the sevenths, and 1.1 to the 7th and 0.9 to the 7th to three decimals.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Markov chains under a clock: a frog on a 5-lily-pad cycle jumps left or right with equal probability. Expected time to visit every pad? Then the stationary distribution if the jumps are 2 to 1 in one direction.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> Expected value game, the kind that opens a trading interview: I roll a fair die and you may pay to see the result and then choose to reroll once, keeping the second. What is the game worth? Now with two rerolls, and say how you would compute it for n.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+Milestone 4 closes the portfolio phase. qlib/risk.py and qlib/portfolio.py now hold the covariance estimators, the neutralisation, the volatility target and the sizing rule, and every signal built in phase 6 flows through them unchanged.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Laloux, Cizeau, Bouchaud & Potters (1998) — Noise Dressing of Financial Correlation Matrices](https://arxiv.org/abs/cond-mat/9810255) [paper]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/milestone-04-risk-model.md, complete, with equal weighting present in every comparison and the risk decomposition reconciling to the total.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which covariance estimator predicted realised risk best, by how much, and did equal weighting beat any of them on Sharpe?
 :::
 
 ## Prepare for tomorrow
@@ -66,6 +76,12 @@ Ten minutes tonight so Day 134, Friday, 18 December 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List every place your current backtest could be using information it would not have had. Aim for at least six.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not fix any of them tonight.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> That list is the agenda for the next four weeks.
 :::
 :::

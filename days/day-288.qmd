@@ -1,5 +1,5 @@
 ---
-title: "Day 288 — Placeholder title for day 288"
+title: "Day 288 — Glosten-Milgrom: a spread from information alone"
 subtitle: "Friday, 21 May 2027 · Week 42 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 21 May 2027 · Week 42 of 52 · Microstructure · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A model with no inventory, no fees and no processing costs still produces a bid-ask spread, which is the cleanest possible demonstration that the spread is a statistical quantity.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Derive the bid and ask as conditional expectations given the direction of the incoming order.
+- Say what happens to the spread as the fraction of informed traders rises, and what happens in the limit.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Derive it: with a binary asset value, a known fraction of informed traders and a competitive market maker who breaks even, the ask is the expected value given a buy and the bid is the expected value given a sell. Both are Bayesian updates, which is a calculation you can do in your sleep, and the whole model is those two updates.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Explore the mechanism: plot the spread against the informed fraction and show it diverges as that fraction approaches one, which is a market that closes. Then simulate the sequential trading and show the price converging to the true value, which is the model's other result and the reason it is called price discovery.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Glosten & Milgrom (1983 working paper) — Bid, Ask and Transaction Prices in a Specialist Market](https://www.kellogg.northwestern.edu/research/math/papers/570.pdf) [paper]{.res-kind}
+- [Financial Markets Microstructure — slides, homework and exams](https://github.com/electronicgore/finmarkets) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-288-glosten-milgrom.ipynb with the bid and ask derived as Bayesian updates and price convergence simulated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+In Glosten-Milgrom, what happens to the spread as everyone becomes informed, and what does that mean physically?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 289, Saturday, 22 May 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the setup of Kyle 1985: one informed trader who chooses a quantity, noise traders, and a market maker who sees only the total.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note that the informed trader now chooses how much to trade rather than trading a fixed size.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> That single change is what makes the model interesting.
 :::
 :::

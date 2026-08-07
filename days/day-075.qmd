@@ -1,5 +1,5 @@
 ---
-title: "Day 75 — Placeholder title for day 75"
+title: "Day 75 — Differencing throws away the thing you wanted"
 subtitle: "Tuesday, 20 October 2026 · Week 11 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,45 +8,43 @@ subtitle: "Tuesday, 20 October 2026 · Week 11 of 52 · Time series · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The standard fix for a unit root removes the level information, and for a spread that is exactly the information the trade lives on, which is the gap week 12 fills.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what differencing does to a series' long-run relationship, and give one example where the differenced series is useless for the decision you need to make.
+- State the practical consequence of a near-unit-root series being differenced when it should not have been.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Demonstrate the loss: take your mean-reverting spread, difference it, and try to build a trading rule from the differenced series alone. Then build the same rule from the level. Report both Sharpe ratios. The differenced version cannot see the level, so it cannot know when the spread is wide.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Read the section of the Forecasting: Principles and Practice ARIMA chapter on differencing and over-differencing, and write down the ACF signature of an over-differenced series so that you can recognise it later.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the setup for next week in one paragraph: two series that are individually non-stationary, whose difference is stationary, is a structure that neither differencing nor levels regression handles correctly.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Hyndman & Athanasopoulos — Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/) [textbook]{.res-kind}
+- [statsmodels — time series analysis (tsa)](https://www.statsmodels.org/stable/tsa.html) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-075-differencing.ipynb comparing a level-based and a difference-based rule on the same spread, with both Sharpe ratios reported.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What does an over-differenced series' autocorrelation function look like, and what is the cost of over-differencing in a trading context?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 76, Wednesday, 21 October 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Simulate a stationary AR(1) with a single mean shift halfway through the sample, and plot it next to a genuine random walk.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at the two panels and decide which is which by eye. Write your call down.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Install ruptures into the quant environment if it is not there already.
 :::
 :::

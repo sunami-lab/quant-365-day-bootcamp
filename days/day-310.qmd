@@ -1,5 +1,5 @@
 ---
-title: "Day 310 — Placeholder title for day 310"
+title: "Day 310 — Schema design when every table has a time on it"
 subtitle: "Saturday, 12 June 2027 · Week 45 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Saturday, 12 June 2027 · Week 45 of 52 · Production · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Your store grew by accretion and the queries you now run are not the ones it was designed for, which is normal and worth one day of correction before phase 11 depends on it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the three schema decisions that matter for a time series store and justify yours.
+- Report the query time improvement from the change you make.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Audit your own schema against three questions: is the sort order aligned with the most common query predicate, are the types as narrow as they can be, and is anything stored that could be derived. Then make the single highest-value change and measure the query time before and after.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Handle the two-timestamp design properly: your tables carry an observation time and an availability time, and the as-of query filters on both. Check whether the physical layout supports that filter efficiently or whether every as-of query scans the whole table. Fix it if not.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [DuckDB documentation](https://duckdb.org/docs/current/) [tool]{.res-kind}
+- [PostgreSQL tutorial (official)](https://www.postgresql.org/docs/current/tutorial.html) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A schema audit against three questions, one change made, and the query time improvement measured.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What sort order does your bar table use, and why is it the right one for the query you run most?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 311, Sunday, 13 June 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write your daily bars to Parquet partitioned by year, and again unpartitioned.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Run a query for a single year against both and time it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the file sizes as well as the times.
 :::
 :::

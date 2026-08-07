@@ -1,5 +1,5 @@
 ---
-title: "Day 283 — Placeholder title for day 283"
+title: "Day 283 — Queue position, and what it is worth in basis points"
 subtitle: "Sunday, 16 May 2027 · Week 41 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 16 May 2027 · Week 41 of 52 · Microstructure · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Week 2 told you queue position matters; today you measure what it is worth, which is the number that decides whether a passive strategy is viable for you at all.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the fill probability of a passive order as a function of the size ahead of it in the queue.
+- Convert that into the expected cost difference between a passive and an aggressive order, in basis points.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Estimate the fill curve: across many resting orders in your sample, report the probability of executing within a fixed horizon as a function of queue position, controlling roughly for the time of day. The curve will fall steeply, which is why queue position is the asset high-frequency firms compete for.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Turn it into money: an aggressive order pays the spread with certainty, a passive order saves the spread with the fill probability you measured and otherwise misses the trade. Compute the expected cost of each for a specific position in the queue, and find the queue position at which they are equal.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bouchaud, Bonart, Donier & Gould — Trades, Quotes and Prices (Cambridge)](https://www.cambridge.org/core/books/trades-quotes-and-prices/029A71078EE4C41C0D5D4574211AB1B5) [textbook]{.res-kind}
+- [Financial Markets Microstructure (Copenhagen, Starkov) — video lectures](https://www.youtube.com/playlist?list=PL4pUs4P_j1Wa2_P1lw44kFWWjKDTGUY7S) [video]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-283-queue.ipynb with a fill probability curve against queue position and the break-even position between passive and aggressive.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You are 5,000 shares back in the queue. What is your fill probability, and is a passive order still worth placing?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 284, Monday, 17 May 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the effective spread on every trade in your sample: twice the signed difference between the trade price and the prevailing mid.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then compute the realized spread using the mid five minutes later.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The gap between the two averages is tomorrow's whole subject.
 :::
 :::

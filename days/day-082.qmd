@@ -1,5 +1,5 @@
 ---
-title: "Day 82 — Placeholder title for day 82"
+title: "Day 82 — The half-life, and thresholds derived from it"
 subtitle: "Tuesday, 27 October 2026 · Week 12 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,49 @@ subtitle: "Tuesday, 27 October 2026 · Week 12 of 52 · Time series · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The trading rule should fall out of the estimated dynamics rather than out of a parameter sweep, and this is the one case this year where that is genuinely possible.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Estimate a spread's mean reversion speed, convert it to a half-life in days, and attach a standard error to it.
+- Derive entry and exit thresholds from the fitted stationary distribution, and report the parameter surface around them rather than the peak.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Derive the link rather than quoting it: regressing the spread change on its lagged level gives a coefficient that maps to the Ornstein-Uhlenbeck reversion speed, and the half-life is the log of two over that speed. Estimate it with a standard error for every selected pair, and exclude any pair whose half-life exceeds a fifth of the formation window, because that estimate is not identified.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Set the thresholds from the model: the fitted stationary standard deviation gives the natural scale, so entry at two of those and exit at zero is derived rather than chosen. Implement it in qlib/signals/pairs.py.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Map the surface anyway and report it: entry from 1.0 to 3.0, exit from minus 0.5 to 1.0, Sharpe plotted as a surface with your derived point marked. A flat surface means the rule is robust; a sharp peak elsewhere is the thing to distrust. Every point logs to research_log.jsonl.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+The pairs rule takes its holding period and its thresholds from the fitted mean-reversion dynamics, and the parameter surface around that point is reported rather than hidden. Every point on the surface is a logged trial, which keeps the trial count honest.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Avellaneda & Lee (2010) — Statistical arbitrage in the US equities market](https://traders.studentorg.berkeley.edu/papers/Statistical%20arbitrage%20in%20the%20US%20equities%20market.pdf) [paper]{.res-kind}
+- [Carr & López de Prado (2014) — Determining Optimal Trading Rules without Backtesting](https://arxiv.org/abs/1408.1159) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Half-life estimates with standard errors per pair, an exclusion rule for the unidentified ones, and the Sharpe surface with the derived point marked.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Given an estimated half-life of 12 days, what holding period does that imply, and what goes wrong if the true half-life is 60?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +59,12 @@ Ten minutes tonight so Day 83, Wednesday, 28 October 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down the cost assumption for the pairs backtest: spread crossed, commission, and borrow on the short leg.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Estimate the strategy's annual turnover from the half-life alone, before running anything.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two numbers, turnover and cost per round trip. Their product is tomorrow's headline.
 :::
 :::

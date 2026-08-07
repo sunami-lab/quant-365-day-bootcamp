@@ -1,6 +1,6 @@
 ---
-title: "Day 5 — Placeholder title for day 5"
-subtitle: "Tuesday, 11 August 2026 · Week 1 of 52 · Markets · Study day · 60 min"
+title: "Day 5 — A put is an obligation you sold, not a bet you made"
+subtitle: "Tuesday, 11 August 2026 · Week 1 of 52 · Markets · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,40 @@ subtitle: "Tuesday, 11 August 2026 · Week 1 of 52 · Markets · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Options are the only instrument this year where the two sides have completely different risk, and getting that asymmetry into your hands now makes phase 8 a mathematics problem rather than a vocabulary problem.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Draw the four basic payoff diagrams at expiry from memory, with the axes labelled and the break-even marked.
+- Say what the seller of a put is obliged to do, when, and what their worst case is in dollars.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Watch the options lecture from MIT 15.401 as far as payoff diagrams and put-call parity. Stop before any pricing model. Pricing is week 36 and you will do it properly there.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} From the saved AAPL chain, pick the nearest expiry and build the payoff at expiry of a bought call, a sold call, a bought put and a sold put at the closest-to-spot strike, using the mid of bid and ask as the premium. Plot all four on one figure and mark the break-evens.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 15.401 — Finance Theory I (Andrew Lo), video lectures and slides](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/pages/video-lectures-and-slides/) [course]{.res-kind}
+- [Cboe delayed option chains (JSON, with greeks)](https://cdn.cboe.com/api/global/delayed_quotes/options/AAPL.json) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-005-option-payoffs.ipynb with four payoff diagrams built from a real chain, break-evens marked.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You sold a 190-strike put on a 200 stock for 4 dollars. What is your worst case, and what has to happen for it?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 6, Wednesday, 12 August 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Register for a FRED API key at the St. Louis Fed and put it in your shell profile as FRED_API_KEY. It takes two minutes and is free.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Install fredapi into the quant environment.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Pull the DGS3MO, DGS2 and DGS10 series and save them. Tomorrow you plot a yield curve from them.
 :::
 :::

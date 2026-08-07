@@ -1,6 +1,6 @@
 ---
-title: "Day 28 — Placeholder title for day 28"
-subtitle: "Thursday, 3 September 2026 · Week 4 of 52 · Markets · Milestone · 45 min"
+title: "Day 28 — Milestone: the market map and a store that does not lie"
+subtitle: "Thursday, 3 September 2026 · Week 4 of 52 · Markets · Milestone · 50 min"
 ---
 
 ::: {.day-nav .kind-milestone}
@@ -12,22 +12,22 @@ subtitle: "Thursday, 3 September 2026 · Week 4 of 52 · Markets · Milestone ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The week's work becomes a document today. If the store does not rebuild or the limitations section is thin, the milestone is telling you something true and you should let it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Hand someone the repository and have them rebuild the store and query it as of an arbitrary past date, with one command each.
+- State what your data does not contain without going to look.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Finish reports/milestone-01-market-map.md: the payment map, the six-instrument glossary in your own words, the store's schema with the two-date rule justified, and the limitations section. Prose, not bullets, for the map and the limitations.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Verify the claims the document makes. Rebuild the store from empty, run the test suite, and run one as-of query for 12 March 2019 and paste the result into the report. A milestone that asserts something the repository does not do is worse than no milestone.
 :::
 :::
 
@@ -37,27 +37,37 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, fourth sitting: ten two-digit multiplications, the sevenths, then 1/13 to three places and 17 times 23 in your head. Now plot the four times you have recorded. The trend is the point.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Symmetry, the argument that replaces a calculation: two players alternate flipping a fair coin, first to get heads wins. Probability the first player wins? Solve it with a one-line symmetry or recursion argument rather than summing the series.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> The follow-up: same game, but you need two heads in a row to win. Set up the recursion and solve it. Say out loud which states you need and why there are exactly three.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+Milestone 1 closes phase 1 with a working point-in-time daily store and a written account of what it cannot do. Every backtest for the rest of the year reads from qlib/store.py, and the limitations section is the list you check whenever a result looks better than it should.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — puzzles](https://www.janestreet.com/puzzles/) [problems]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/milestone-01-market-map.md, complete, with a rebuilt store and a passing test suite behind every claim it makes.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Without opening the file: what does your data source not contain, and which of those omissions would most change a backtested result?
 :::
 
 ## Prepare for tomorrow
@@ -66,6 +76,12 @@ Ten minutes tonight so Day 29, Friday, 4 September 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pull SPY daily closes from 2000 to today into a clean series and have it open. Tomorrow is arithmetic on it, not data work.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute the arithmetic mean of SPY's daily returns and multiply by 252. Write the number down without interpreting it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute the total return over the same window from first close to last close. Write that down too. Tomorrow is about why those two disagree.
 :::
 :::

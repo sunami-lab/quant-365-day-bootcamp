@@ -1,5 +1,5 @@
 ---
-title: "Day 236 — Placeholder title for day 236"
+title: "Day 236 — When the flexible model wins, and when it does not"
 subtitle: "Tuesday, 30 March 2027 · Week 34 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Tuesday, 30 March 2027 · Week 34 of 52 · Machine learning · Study 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A single average hides the conditional structure, and knowing which regimes each model wins in is more useful than knowing which won overall.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report each model's performance conditional on volatility regime, on dispersion, and on sub-period.
+- State whether the conditional pattern is stable enough to act on, using an interval rather than an eyeball.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Run the conditional analysis: performance by volatility tercile, by cross-sectional dispersion tercile, and by sub-period, for every model, with intervals throughout. Then count how many conditional comparisons you have just made, since this is a place where conditioning can generate an apparent pattern out of nothing.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Test the pattern rather than describing it: if the flexible model appears to win in high-dispersion periods, check whether that holds in the validation period too. A conditional effect that appears only in the test period is a conditional effect you found by looking.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey & López de Prado (2014) — The Deflated Sharpe Ratio](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf) [paper]{.res-kind}
+- [Efron & Hastie — Computer Age Statistical Inference](https://hastie.su.domains/CASI/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Conditional performance by regime for every model with intervals, and a validation-period check on any conditional pattern found.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+The boosting model wins in high-dispersion months. Is that real, and what did you do to find out?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 237, Wednesday, 31 March 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Draft the one-sentence verdict of the phase.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then write the sentence you would have written if the result had gone the other way.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> If the two are stylistically different, rewrite the first.
 :::
 :::

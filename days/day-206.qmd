@@ -1,5 +1,5 @@
 ---
-title: "Day 206 — Placeholder title for day 206"
+title: "Day 206 — Purging and embargoing, and why they are two fixes"
 subtitle: "Sunday, 28 February 2027 · Week 30 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Sunday, 28 February 2027 · Week 30 of 52 · Machine learning · Stud
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Purging removes training observations whose labels overlap the test period; embargoing removes ones that follow it. Both are needed, they solve different problems, and conflating them is the standard mistake.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement purged and embargoed cross-validation and state which leakage each part prevents.
+- Justify the embargo length from a measured property of your data rather than from a convention.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement `PurgedKFold` in qlib/ml/cv.py, compatible with the scikit-learn splitter interface so it drops into any search: purge training observations whose label windows overlap the test window, then embargo a fixed number of observations after the test window. Test it by rerunning yesterday's pure-noise experiment and confirming the cross-validated R-squared returns to zero.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Set the embargo from the data: measure the autocorrelation of your labels and of your features, and choose the embargo as the lag at which both have decayed. Report the number and the measurement behind it. An embargo picked by convention is a parameter you cannot defend in an interview.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/ml/cv.py provides a purged and embargoed splitter with the scikit-learn interface, so every model search in the phase uses it by default and the noise experiment from day 205 is a standing test that it works.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [scikit-learn documentation](https://scikit-learn.org/stable/) [tool]{.res-kind}
+- [López de Prado — Advances in Financial Machine Learning, seminar slides](https://www.quantresearch.org/Lectures.htm) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/ml/cv.py with a tested purged and embargoed splitter, and an embargo length justified from measured label autocorrelation.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Describe purging and embargoing as fixes for two different problems, and say how you chose your embargo length.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 207, Monday, 1 March 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Sketch two validation schemes on a timeline: an expanding window walk-forward and a rolling window walk-forward.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write one sentence on what each assumes about whether the relationship is stable.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two sketches, no code.
 :::
 :::

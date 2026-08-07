@@ -1,5 +1,5 @@
 ---
-title: "Day 349 — Placeholder title for day 349"
+title: "Day 349 — The questions academics answer badly"
 subtitle: "Wednesday, 21 July 2027 · Week 50 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Wednesday, 21 July 2027 · Week 50 of 52 · The interview · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Three attempts at the academia question and the defensive part has probably survived all three, which is worth fixing because it is the question that decides whether the rest of the interview is read charitably.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Answer the leaving-academia question in three sentences that a researcher at the firm would find convincing rather than polite.
+- Answer the money question in a way that says something about how you think about risk.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Rewrite the academia answer around what you want rather than what you are leaving: faster feedback loops, decisions with money attached, and a field where being wrong is measurable within months. Then remove every clause about what is wrong with academia, because those clauses are what make it sound defensive.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Prepare the other three: what would you do with a million dollars, where do you want to be in five years, and why this firm. The first is a risk question, the second is answered badly by saying running my own fund to someone who is hiring you, and the third requires the firm list you build on day 353.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — tech blog](https://blog.janestreet.com/) [reference]{.res-kind}
+- [Two Sigma — Insights](https://www.twosigma.com/insights/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Four rehearsed behavioural answers recorded, with the academia one under forty-five seconds and free of complaint.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why are you leaving academia? Three sentences, and a researcher at the firm has to find it convincing rather than polite.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 350, Thursday, 22 July 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Assemble the recordings from this week into one folder and listen to the worst one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the single change that would improve it most.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your timed mixed-set scores; tomorrow is the eleventh sitting.
 :::
 :::

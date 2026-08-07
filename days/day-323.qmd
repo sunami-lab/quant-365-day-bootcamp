@@ -1,5 +1,5 @@
 ---
-title: "Day 323 — Placeholder title for day 323"
+title: "Day 323 — The daily run, as a sequence of steps that can each fail"
 subtitle: "Friday, 25 June 2027 · Week 47 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Friday, 25 June 2027 · Week 47 of 52 · Production · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Week 47 turns the research pipeline into a scheduled system, and the design that matters is which failures are loud and which are silent, because the silent ones are the expensive ones.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement the daily run as an ordered set of steps, each with an explicit success condition rather than an absence of exceptions.
+- Name the three failures that would not raise an exception and say how each is detected.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Write qlib/run/daily.py: ingest, validate, compute signals, construct the portfolio, generate orders, submit, and reconcile. Each step returns a status with the checks it performed, and a step that produced no data succeeds only if producing no data was expected on that date.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Enumerate the silent failures and add a check for each: stale data that is present but unchanged from yesterday, a signal that computed but is outside its historical range, and an order set that is empty because a join failed rather than because the strategy wanted no positions. Those three account for most silent production failures in this kind of system.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/run/daily.py is the production entry point: seven ordered steps, each with an explicit success condition, and three checks for the failures that do not raise exceptions.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [NautilusTrader documentation](https://nautilustrader.io/docs/) [tool]{.res-kind}
+- [Docker — get started](https://docs.docker.com/get-started/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A daily run script with per-step success conditions and three silent-failure checks implemented.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your pipeline silently produced yesterday's signal today. Which check catches it, and why is job succeeded not that check?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 324, Saturday, 26 June 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Look at whatever logging your code currently does and write down a question you would want to answer from it in three months.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then check whether you could.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> You almost certainly could not, and that gap is tomorrow.
 :::
 :::

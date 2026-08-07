@@ -1,6 +1,6 @@
 ---
-title: "Day 97 — Placeholder title for day 97"
-subtitle: "Wednesday, 11 November 2026 · Week 14 of 52 · Time series · Study day · 60 min"
+title: "Day 97 — Writing down what would have made you stop"
+subtitle: "Wednesday, 11 November 2026 · Week 14 of 52 · Time series · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Wednesday, 11 November 2026 · Week 14 of 52 · Time series · Study 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The abandonment criteria are the part of a research document that separates a report from an advertisement, and writing them after the result is worth less than writing them before, so today at least writes them explicitly.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State three specific conditions under which you would have abandoned the pairs strategy, and whether each was met.
+- Say which of your earlier numbers in this phase you now believe was wrong.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write the abandonment section of reports/milestone-03-pairs.md: three conditions with thresholds attached, each checked against what actually happened. Include the cost level at which the strategy dies and where your actual costs sit relative to it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Assemble the phase-3 self-check questions and answer all seven out loud, timed. Anything that takes more than two minutes is a compression problem rather than a knowledge problem, and marking which is which is the point of doing it now rather than in July.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatev, Goetzmann & Rouwenhorst (1999) — Pairs Trading (NBER w7032)](https://www.nber.org/papers/w7032) [paper]{.res-kind}
+- [McLean & Pontiff (draft) — Does Academic Research Destroy Stock Return Predictability?](https://www.hec.ca/finance/Fichier/McLean.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The abandonment section with three checked conditions, and your timed answers to the phase 3 self-check.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What would have made you abandon the pairs strategy, and was that condition met?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 98, Thursday, 12 November 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Confirm the test suite is green and the frozen configuration reproduces the out-of-sample number exactly.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check that research_log.jsonl covers the whole phase, and count the entries.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing else. Tomorrow is assembly.
 :::
 :::

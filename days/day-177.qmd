@@ -1,6 +1,6 @@
 ---
-title: "Day 177 — Placeholder title for day 177"
-subtitle: "Saturday, 30 January 2027 · Week 26 of 52 · Alpha · Study day · 60 min"
+title: "Day 177 — Momentum, and the crashes that pay for its Sharpe"
+subtitle: "Saturday, 30 January 2027 · Week 26 of 52 · Alpha · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,49 @@ subtitle: "Saturday, 30 January 2027 · Week 26 of 52 · Alpha · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The number you found for 2009 is not an anomaly in the data, it is the defining property of the signal, and any risk model that treats momentum as a normal factor is understating what it does.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report momentum's conditional performance after market drawdowns and say what drives the asymmetry.
+- Say what a momentum crash implies about position sizing that the unconditional volatility does not.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the results section of Jegadeesh and Titman, then measure the crash on your data: momentum returns conditional on the trailing market return being in its worst decile, against the unconditional. Report both, with the crash months named.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Find the mechanism: after a large market fall, the short leg of a momentum portfolio holds high-beta names that rebound hardest, so the portfolio's beta swings negative exactly before a reversal. Measure your momentum portfolio's rolling market beta and confirm it does what that story predicts.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the fix and defer it: scaling momentum by its own forecast volatility removes much of the crash, which is week 33's material combined with week 13's. Record it as a planned improvement rather than doing it now.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+Momentum is in the book with its conditional crash behaviour measured and its rolling beta documented, so the sizing decision in week 29 has the tail behaviour in front of it rather than only the volatility.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jegadeesh & Titman (1993) — Returns to Buying Winners and Selling Losers](https://www.bauer.uh.edu/rsusmel/phd/jegadeesh-titman93.pdf) [paper]{.res-kind}
+- [Asness, Moskowitz & Pedersen (2013) — Value and Momentum Everywhere](https://w4.stern.nyu.edu/facdir/lpederse/papers/ValMomEverywhere.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/signals/momentum.py with the crash conditioning measured and the rolling beta of the momentum portfolio plotted.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does momentum crash after a market bottom, and what does that do to a risk model built on trailing volatility?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +59,12 @@ Ten minutes tonight so Day 178, Sunday, 31 January 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the abstract and the definition section of the Novy-Marx gross profitability paper.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the exact numerator and denominator he uses, and why he argues for that denominator.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> It is a different choice from what most people would guess.
 :::
 :::

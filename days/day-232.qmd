@@ -1,6 +1,6 @@
 ---
-title: "Day 232 — Placeholder title for day 232"
-subtitle: "Friday, 26 March 2027 · Week 34 of 52 · Machine learning · Study day · 60 min"
+title: "Day 232 — Freezing everything before the comparison"
+subtitle: "Friday, 26 March 2027 · Week 34 of 52 · Machine learning · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Friday, 26 March 2027 · Week 34 of 52 · Machine learning · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The audit is only worth running once, so today is spent making sure that when it runs, every model is on identical footing and no configuration was chosen with the test data in view.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Fix and commit the audit protocol: the same test set, the same features, the same costs and the same portfolio construction for every model.
+- State which decisions were made before the test set was set aside and which were not.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write the audit configuration: test period, universe, feature set, label, weighting, portfolio construction, cost model, and the metric with its interval method. One file, committed, with the commit timestamp as the evidence that it predates the run.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the honest provenance note: for each model, when its hyperparameters were fixed and against what data. Any model whose configuration was influenced by something you learned from the test period is marked as such, and marking it is better than pretending otherwise.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Verify by dry run: execute the audit on the validation period rather than the test period, to confirm the pipeline runs end to end for every model before the one run that counts.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2017) — The Probability of Backtest Overfitting](https://escholarship.org/content/qt4w1110bb/qt4w1110bb.pdf) [paper]{.res-kind}
+- [pytest documentation](https://docs.pytest.org/en/stable/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The committed audit configuration with per-model provenance, and a successful dry run on the validation period.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which of your models had its configuration influenced by anything you learned from the test period, and how do you know?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 233, Saturday, 27 March 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Check the compute time of the full audit from the dry run, and make sure it fits in one sitting.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> If it does not, reduce the seed count rather than dropping a model.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note what you changed.
 :::
 :::

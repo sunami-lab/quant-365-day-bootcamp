@@ -1,6 +1,6 @@
 ---
-title: "Day 140 — Placeholder title for day 140"
-subtitle: "Thursday, 24 December 2026 · Week 20 of 52 · The research harness · Catch-up day · 45 min"
+title: "Day 140 — What the point-in-time rebuild cost you"
+subtitle: "Thursday, 24 December 2026 · Week 20 of 52 · The research harness · Catch-up day · 40 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 24 December 2026 · Week 20 of 52 · The research harness �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day, and the first time this year an earlier result gets revised downward by your own work rather than by someone else's criticism.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the change in each strategy's Sharpe after the rebuild and attribute it to specific taxonomy entries.
+- Reproduce the look-ahead taxonomy from memory to at least eight entries.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>40 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Finish anything outstanding from days 134 to 139, then write the correction into reports/milestone-03-pairs.md: the old number, the new number, and which look-ahead mechanism accounted for most of the difference. Superseding your own result in writing is the habit worth building here.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Closed book: list the look-ahead taxonomy and check against your written version. Eight from memory is a pass.
 :::
 :::
 
@@ -33,33 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, twentieth sitting. Ten two-digit multiplications, the sevenths, and 1/7 through 1/13 to three decimals.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Random walk maximum: a symmetric random walk runs for 100 steps. What is the expected maximum? Use the reflection principle to get the distribution of the maximum first, and say the argument out loud rather than writing it.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> Arcsine law, stated as an interview question: over a long fair coin-flipping game, what is the most likely fraction of time spent ahead? Most people say one half. Say the right answer and the shape of the distribution.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A written correction to milestone 3 with the old and new numbers and the mechanism responsible.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your Sharpe fell from 0.9 to 0.55 after the point-in-time rebuild. Which taxonomy entry was responsible, and how do you know?
 :::
 
 ## Prepare for tomorrow
@@ -68,6 +65,12 @@ Ten minutes tonight so Day 141, Friday, 25 December 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Take your current vectorised pairs backtest and write down every assumption it makes about how orders become positions. There are at least four.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> For each, write whether it flatters the strategy or penalises it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not change any code.
 :::
 :::

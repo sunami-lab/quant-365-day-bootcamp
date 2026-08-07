@@ -1,6 +1,6 @@
 ---
-title: "Day 7 — Placeholder title for day 7"
-subtitle: "Thursday, 13 August 2026 · Week 1 of 52 · Markets · Catch-up day · 45 min"
+title: "Day 7 — Six instruments, from memory, on one page"
+subtitle: "Thursday, 13 August 2026 · Week 1 of 52 · Markets · Catch-up day · 35 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 13 August 2026 · Week 1 of 52 · Markets · Catch-up day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Nothing new today. If days 1 to 6 landed, this hour is yours to spend or to skip; if two of the glossary entries are thin, this is where they get fixed.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Reproduce all six instrument definitions from memory with no more than one prompt each.
+- Say which two of the six you understand least well, and what specifically is missing.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>35 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Finish anything outstanding from days 1 to 6. The most common gap is the ETF creation-redemption sequence, because it is the only one that is a process rather than a definition.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Close every file. On one blank page, write the six instruments and for each: what it obliges you to do, what it obliges the other side to do, and the one thing that surprised you. Then open the glossary and mark what you missed.
 :::
 :::
 
@@ -33,27 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Mental arithmetic baseline, and you will repeat this every drill day for a year, so write the numbers down. Ten two-digit multiplications against a 60-second clock, then 1/7 through 6/7 as decimals from memory, then 15 percent of 340 and 340 divided by 8. Record the time and the error count.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Counting, warm-up: how many distinct five-card poker hands contain exactly one pair? Get the number, then check it sums correctly against the total of 2,598,960 hands when you add the other categories from memory.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Conditional probability, the version that gets asked: a family has two children, at least one of whom is a boy born on a Tuesday. Probability both are boys? Do it by enumerating the sample space, and then say out loud why the Tuesday changes the answer at all.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The blank-page recall sheet, photographed or retyped into reports/milestone-01-market-map.md, with your gaps marked.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which of the six instruments has cash flows before expiry that are not optional for either side, and why does that matter for how you fund it?
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +65,12 @@ Ten minutes tonight so Day 8, Friday, 14 August 2026 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Watch the first ten minutes of the Copenhagen microstructure playlist tonight, only to hear the vocabulary once before you meet it properly tomorrow.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Clone the finmarkets repository so the slides are local.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at any broker's order ticket screen and list every order type it offers. Tomorrow you find out what each one actually instructs the exchange to do.
 :::
 :::

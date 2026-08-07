@@ -1,5 +1,5 @@
 ---
-title: "Day 79 — Placeholder title for day 79"
+title: "Day 79 — How often your own screen finds a pair that does not exist"
 subtitle: "Saturday, 24 October 2026 · Week 12 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Saturday, 24 October 2026 · Week 12 of 52 · Time series · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You now have a procedure and a null; measuring the false positive rate of your own pipeline before running it on real data is the discipline this whole course is built around.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the empirical false positive rate of your cointegration screen on independent random walks, at a nominal 5 percent.
+- Say what the rate becomes when you screen 200 pairs and keep only the best, and state the correction that implies.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run your day 78 procedure over the 200 independent random walk pairs and report the rejection rate at 5 percent. Then compute the probability that at least one of 200 independent tests rejects, and compare against what you observed.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Do the version that matters: from a universe of 50 real names, screen all 1,225 pairs, and record how many pass. Then run the identical screen on 50 synthetic series from qlib.simulate that have the right stylized facts and no true relationships, and record how many pass there. The second number is the one that goes into the milestone.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatev, Goetzmann & Rouwenhorst (1999) — Pairs Trading (NBER w7032)](https://www.nber.org/papers/w7032) [paper]{.res-kind}
+- [statsmodels — time series analysis (tsa)](https://www.statsmodels.org/stable/tsa.html) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-079-screen-null.ipynb reporting pass rates for real pairs and for synthetic pairs with no true cointegration.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You screened 1,225 pairs and 74 passed at 5 percent. How many would you expect under the null, and what does the difference tell you?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 80, Sunday, 25 October 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the statsmodels documentation page for the Johansen procedure and note what it returns that Engle-Granger does not.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down one situation in which the order of the two series in an Engle-Granger regression would change your answer.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Keep your 50-name universe loaded.
 :::
 :::

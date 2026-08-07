@@ -1,6 +1,6 @@
 ---
-title: "Day 147 — Placeholder title for day 147"
-subtitle: "Thursday, 31 December 2026 · Week 21 of 52 · The research harness · Catch-up day · 45 min"
+title: "Day 147 — The engine, exercised"
+subtitle: "Thursday, 31 December 2026 · Week 21 of 52 · The research harness · Catch-up day · 40 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 31 December 2026 · Week 21 of 52 · The research harness �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day. Week 21 built the thing the rest of the year runs on, so today is about making sure it actually runs rather than about adding to it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Run both strategies end to end through the engine and reproduce the result object from disk.
+- State the sequence of the event loop from memory, including what each step is allowed to read.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>40 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Finish anything outstanding from days 141 to 146. The accounting identity test and the reconciliation against the vectorised version are the two pieces to have working before week 22 puts costs on top.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Closed book: write the event loop sequence, the three fill conventions, and the reason positions are derived from fills. Then check against the code.
 :::
 :::
 
@@ -33,27 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, twenty-first sitting. Ten two-digit multiplications, the sevenths, and 17 times 18, 23 times 27 and 34 times 36 using the complements trick.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Markov chains: a mouse in a 3 by 3 grid of rooms moves to a uniformly chosen adjacent room each minute, starting in a corner. Expected time to reach the centre? Set up the states using symmetry so there are three, not nine.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The follow-up: what is the long-run fraction of time spent in the centre? Get it from the stationary distribution and say why it is proportional to the number of doors.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Both strategies run through the engine with results serialised and reloaded, and the closed-book event loop description.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State the event loop sequence and say what the strategy is allowed to read at the decision step.
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +65,12 @@ Ten minutes tonight so Day 148, Friday, 1 January 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Measure the quoted spread in basis points for ten names across the liquidity spectrum, from SPY to a small cap.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write the ten numbers down, sorted.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the ratio between the largest and smallest. It is bigger than most cost models assume.
 :::
 :::

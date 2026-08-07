@@ -1,6 +1,6 @@
 ---
-title: "Day 357 — Placeholder title for day 357"
-subtitle: "Thursday, 29 July 2027 · Week 51 of 52 · The interview · Milestone · 45 min"
+title: "Day 357 — Milestone: the interview dossier"
+subtitle: "Thursday, 29 July 2027 · Week 51 of 52 · The interview · Milestone · 50 min"
 ---
 
 ::: {.day-nav .kind-milestone}
@@ -12,22 +12,22 @@ subtitle: "Thursday, 29 July 2027 · Week 51 of 52 · The interview · Milestone
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Everything a hiring process needs from you, assembled and rehearsed, and the test is the academia question rather than the document.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Have a CV, three write-ups, a firm list with reasons, sent outreach and a rehearsed presentation, all in one place.
+- Answer the leaving-academia question in three sentences a researcher would find convincing.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Finish reports/milestone-11-dossier.md: the CV, the three two-page write-ups, the problem log with what you have solved and what you are still slow on, the recorded five-minute presentation, and the firm list with the outreach actually sent and its dates.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Do the honest section: the problem log with your remaining weak categories named, and the timed mixed-set score trend from eleven sittings. A dossier that claims no weaknesses is one an interviewer discounts entirely.
 :::
 :::
 
@@ -37,27 +37,37 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Timed mixed set, twelfth sitting: five problems in fifteen minutes. Score, plot all twelve, and compare against the target you set on day 330.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Full mock round, second attempt: fifteen minutes, mixed, cold. Compare against day 350 and note whether the transitions have improved.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> The academia question, fourth and final rehearsed attempt, recorded. Play days 287, 308, 329 and today in sequence and keep whichever is best rather than the most recent.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+Milestone 11 assembles the year's work into the form a hiring process consumes: three two-page write-ups drawn from the milestones, a CV that describes the genetics work in the language of the job, and a firm list with outreach already sent.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — puzzle archive with solutions](https://www.janestreet.com/puzzles/archive/index.html) [problems]{.res-kind}
+- [Two Sigma — Insights](https://www.twosigma.com/insights/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/milestone-11-dossier.md, complete, including the problem log with your remaining weak categories named.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why are you leaving academia? Three sentences, out loud, and they have to be convincing rather than polite.
 :::
 
 ## Prepare for tomorrow
@@ -66,6 +76,12 @@ Ten minutes tonight so Day 358, Friday, 30 July 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pull the paper account's full history since day 329 and compute its return, volatility and maximum drawdown.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not adjust anything or exclude any period.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write the three numbers down. They are what the capstone reports.
 :::
 :::

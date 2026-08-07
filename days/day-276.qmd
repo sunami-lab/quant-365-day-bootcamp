@@ -1,5 +1,5 @@
 ---
-title: "Day 276 — Placeholder title for day 276"
+title: "Day 276 — VIX is a variance swap rate wearing volatility units"
 subtitle: "Sunday, 9 May 2027 · Week 40 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 9 May 2027 · Week 40 of 52 · Derivatives · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+It is quoted everywhere and misdescribed almost as often, and computing it yourself from a chain settles what it is in a way no description does.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Compute VIX from an option chain and reconcile against the published level.
+- State three things VIX is not, including what its level does and does not forecast.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement the calculation and reconcile: the variance strike from each of two expiries, interpolated to 30 days, square-rooted and annualised. Compare against the published value on the same timestamp and account for any gap.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the three corrections: it is a risk-neutral expectation and not a forecast, it is a variance rate expressed in volatility units so it is not the expected volatility, and it includes the variance risk premium you measured on day 274. Then check the second point numerically by comparing the square root of expected variance against the expected volatility on simulated paths.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Cboe VIX historical data](https://www.cboe.com/tradable_products/vix/vix_historical_data/) [data]{.res-kind}
+- [Cboe options market statistics](https://www.cboe.com/us/options/market_statistics/historical_data/) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Your own VIX calculation reconciled against the published level, plus the numerical demonstration that the square root of expected variance is not expected volatility.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+VIX is at 18. Name three things that number does not mean.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 277, Monday, 10 May 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the Cboe futures market statistics page and look at the VIX futures term structure on a recent date.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note whether it slopes up or down, and by how much.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then write down what a long position in the front future earns if the curve does not move.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 183 — Placeholder title for day 183"
+title: "Day 183 — A continuous futures series is something you construct"
 subtitle: "Friday, 5 February 2027 · Week 27 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Friday, 5 February 2027 · Week 27 of 52 · Alpha · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+There is no such thing as a ten-year price history for a contract that expires quarterly, so every futures backtest starts with a construction choice that changes the answer.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Name three ways to splice a continuous series and say what each does to the return series and to the price level.
+- Show that a naive price-splice creates returns that nobody could have earned.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Build all three from whatever contract data or ETF proxies you have: an unadjusted price splice, a back-adjusted series where the gap at each roll is subtracted from history, and a ratio-adjusted series. Plot the three and note that the back-adjusted one can go negative far enough back, which is a real property and not a bug.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Show the error: compute the return series from the naive splice and find the fictitious return on each roll date, then report the annualised size of that artifact. This is the single most common futures backtest mistake and it can be worth several percent a year.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Fix the convention in qlib: returns come from within-contract price changes, never across a roll, and the continuous series exists only for display. Write it as a docstring rule and a test.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pysystemtrade (Carver) — systematic futures](https://github.com/pst-group/pysystemtrade) [repo]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Three continuous series constructions compared, with the naive splice's fictitious annual return quantified, and the returns convention tested.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Futures are in contango and you roll. What happens to a long position's return, and why is losing money on the roll not the right description?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 184, Saturday, 6 February 2027 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Build a 12-month time-series momentum signal on four instruments across two asset classes and record each one's Sharpe.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then record the Sharpe of the equal-weighted combination of the four.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The combination will be better than any single one. Note by how much.
 :::
 :::

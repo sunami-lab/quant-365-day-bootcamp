@@ -1,5 +1,5 @@
 ---
-title: "Day 239 — Placeholder title for day 239"
+title: "Day 239 — Brownian motion is a random walk you took a limit of"
 subtitle: "Friday, 2 April 2027 · Week 35 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Friday, 2 April 2027 · Week 35 of 52 · Derivatives · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The furthest material from your training starts here, and it starts from an object you already know well, which is the only reason six weeks is enough.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the three defining properties of Brownian motion and say which of them a scaled random walk satisfies in the limit.
+- Say why the paths are continuous everywhere and differentiable nowhere, in terms of the scaling between time and displacement.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the first chapter of Etheridge's Oxford stochastic calculus notes, on the construction of Brownian motion from a random walk. It is written for people who know probability, which saves you the two weeks a finance-first treatment would cost.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Build the limit yourself: simulate a symmetric random walk with n steps over a fixed time interval, scaling the step size as the square root of the time increment, for n of 100, 10,000 and 1,000,000. Plot all three paths on the same time axis and note that the picture stops changing qualitatively.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Show the non-differentiability numerically: for one path, compute the ratio of the increment to the time step at increasingly fine resolution, and watch it diverge. The square-root scaling is exactly what makes that ratio blow up.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Oxford — Etheridge, Stochastic Calculus for Finance (lecture notes)](https://www.stats.ox.ac.uk/~etheridg/finmath/index.html) [course]{.res-kind}
+- [MIT 15.070J — Advanced Stochastic Processes, lecture notes](https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/pages/lecture-notes/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-239-brownian.ipynb with the scaling limit at three resolutions and the divergence of the difference quotient demonstrated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State the three defining properties of Brownian motion, and say which one gives you the square-root-of-time scaling.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 240, Saturday, 3 April 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> For one simulated Brownian path, compute the sum of squared increments at partition sizes of 100, 1,000 and 10,000.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then compute the sum of absolute increments at the same partition sizes.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the six numbers. One column converges and one does not.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 12 — Placeholder title for day 12"
+title: "Day 12 — Shorting is a loan, and the lender can call it"
 subtitle: "Tuesday, 18 August 2026 · Week 2 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Tuesday, 18 August 2026 · Week 2 of 52 · Markets · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Half the strategies in this year are long-short, and the short leg carries a financing cost, a recall risk and a dividend obligation that no price series will ever show you.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Walk through a short sale in the order the steps happen: locate, borrow, sell, mark, return.
+- State what you owe when the stock you are short pays a dividend, and what a recall forces you to do at the worst possible moment.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read the Efficiently Inefficient introduction chapter section on short selling and the limits of arbitrage. Pedersen's account of why an arbitrage can be right and still bankrupt you is the one to have in your head from now on.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Write the short-sale sequence into the glossary with the cash flows attached: what you receive, what you pay in borrow, what you owe on the dividend, and what the rebate on your short proceeds is worth at current short rates. Use the two borrow numbers you looked up last night.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Compute the drag: a market-neutral strategy holds 100 percent long and 100 percent short. At a 40-basis-point general collateral borrow fee, what does the short leg cost per year, in basis points of gross exposure? Now redo it at 8 percent for a hard-to-borrow name.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Pedersen — Efficiently Inefficient, free introduction chapter](http://assets.press.princeton.edu/chapters/i10441.pdf) [reference]{.res-kind}
+- [Pedersen — Efficiently Inefficient (Princeton UP)](https://press.princeton.edu/books/hardcover/9780691166193/efficiently-inefficient) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The short-sale glossary entry with every cash flow named, plus the two borrow-cost calculations in basis points a year.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your short position is recalled on the day the stock gaps up 20 percent. Describe what you have to do and what it costs you.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 13, Wednesday, 19 August 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Find Regulation T's initial margin requirement and your broker's maintenance margin requirement, and write both down as percentages.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write the equation you think connects account equity, position value and margin. Tomorrow you will derive it properly.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at the margin rates your broker charges on a debit balance. Note how they vary with size.
 :::
 :::

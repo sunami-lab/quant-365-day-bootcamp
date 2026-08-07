@@ -1,6 +1,6 @@
 ---
-title: "Day 235 — Placeholder title for day 235"
-subtitle: "Monday, 29 March 2027 · Week 34 of 52 · Machine learning · Study day · 60 min"
+title: "Day 235 — The model that wins gross and loses net"
+subtitle: "Monday, 29 March 2027 · Week 34 of 52 · Machine learning · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,43 @@ subtitle: "Monday, 29 March 2027 · Week 34 of 52 · Machine learning · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A more flexible model produces a less stable forecast, which produces more turnover, which costs money, and that chain is where most machine learning advantages in this field disappear.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report gross and net performance for every model and the turnover that separates them.
+- Say what constraint you would add to make the flexible model competitive net, and test it.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Report the full picture: for every model, gross information ratio, turnover, net information ratio, and the net-Sharpe-against-cost curve on one axis. The flexible models will have higher turnover and the ordering may reverse between the gross and net columns.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Test one fix rather than several: add a turnover penalty to the portfolio construction, tuned on the validation period rather than the test period, and rerun. Report whether it closes the gap. Note that this is one more specification and log it, since the audit's trial count now includes it.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Compute the capacity of the winning model's portfolio using the same method as day 173, so the comparison against the alpha book is like for like.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Tóth et al. (2011) — Anomalous price impact and the critical nature of liquidity](https://arxiv.org/abs/1105.1694) [paper]{.res-kind}
+- [Gu, Kelly & Xiu (2020) — Empirical Asset Pricing via Machine Learning](https://dachxiu.chicagobooth.edu/download/ML.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Gross and net results with turnover for every model, the cost curve on one axis, and the turnover penalty tested.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your boosting model wins gross by 20 percent and loses net. What is the mechanism, and did the turnover penalty fix it?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 236, Tuesday, 30 March 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Split the test period into four sub-periods and report each model's performance in each.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note whether the winner is the same in all four.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> It probably is not.
 :::
 :::

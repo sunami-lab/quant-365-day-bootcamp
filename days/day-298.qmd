@@ -1,5 +1,5 @@
 ---
-title: "Day 298 — Placeholder title for day 298"
+title: "Day 298 — Implementation shortfall counts the trade you missed"
 subtitle: "Monday, 31 May 2027 · Week 43 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Monday, 31 May 2027 · Week 43 of 52 · Microstructure · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+It is the only execution metric that charges you for not trading, which is why it is the honest one and why algorithms optimised against VWAP can look good while losing money.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Decompose implementation shortfall into its standard components including opportunity cost.
+- Say what it captures that VWAP slippage does not, with an example where the two disagree.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement the decomposition in qlib/exec/shortfall.py: the difference between the decision price and the achieved price, split into delay cost, trading cost against the arrival price, and the opportunity cost of the unfilled quantity valued at the closing price. Assert the components sum to the total.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Construct the disagreement: a passive algorithm that fills only when the price comes to it will beat VWAP on the fills it gets and will fail to fill when the price runs away, which is exactly when not filling is most expensive. Simulate that case and report both metrics to show the divergence.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/exec/shortfall.py measures implementation shortfall with opportunity cost included and its components reconciling to the total, which becomes the standard execution metric for the paper account in phase 10.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Almgren & Chriss (2000) — Optimal Execution of Portfolio Transactions](https://www.smallake.kr/wp-content/uploads/2016/03/optliq.pdf) [paper]{.res-kind}
+- [Bouchaud, Bonart, Donier & Gould — Trades, Quotes and Prices (Cambridge)](https://www.cambridge.org/core/books/trades-quotes-and-prices/029A71078EE4C41C0D5D4574211AB1B5) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+An implementation shortfall decomposition that reconciles, plus a simulated case where it and VWAP slippage disagree.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Describe implementation shortfall and say what it captures that VWAP slippage does not.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 299, Tuesday, 1 June 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Check your Alpaca paper account is still active and can place orders.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Place two small paper orders in a liquid name, one market and one limit, and record the timestamps and fills.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> You are going to measure your own slippage tomorrow and you need real fills to do it.
 :::
 :::

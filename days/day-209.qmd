@@ -1,5 +1,5 @@
 ---
-title: "Day 209 — Placeholder title for day 209"
+title: "Day 209 — The dataset assembly, and the test that guards it"
 subtitle: "Wednesday, 3 March 2027 · Week 30 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Wednesday, 3 March 2027 · Week 30 of 52 · Machine learning · Study
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Four weeks of modelling run off one feature matrix, so an alignment error made today is an error in every result until day 238.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Assemble a feature matrix with an explicit as-of date per row and no forward-filled values crossing an availability boundary.
+- Have a test that fails if any feature value in a row postdates that row's as-of date.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build qlib/ml/dataset.py: rows keyed by security and as-of date, features pulled through the store's as-of interface, labels computed forward from the as-of date with the lag convention applied. Handle missingness explicitly with an indicator rather than imputing, because for most of these features missing is informative.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the guard test: for a sample of rows, check every feature value against the store's own availability timestamp and assert none postdates the row. Then rerun the day 155 poisoned-future test through the model pipeline rather than through the engine, since the model path is new and untested.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/ml/dataset.py assembles the feature matrix through the store's as-of interface with a test that no feature value postdates its row. The poisoned-future test now covers the model path as well as the engine.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Machine Learning for Trading (Jansen) — code repository](https://github.com/stefan-jansen/machine-learning-for-trading) [repo]{.res-kind}
+- [pytest documentation](https://docs.pytest.org/en/stable/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/ml/dataset.py with an as-of-safe feature matrix, and a passing guard test plus a model-path poisoning test.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+A feature is missing for 30 percent of your rows. What do you do, and why is imputation usually wrong here?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 210, Thursday, 4 March 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread the four validation schemes you now have and write one line each on what it estimates.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times; tomorrow is the thirtieth sitting.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to install.
 :::
 :::

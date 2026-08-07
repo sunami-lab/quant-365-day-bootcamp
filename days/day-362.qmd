@@ -1,6 +1,6 @@
 ---
-title: "Day 362 — Placeholder title for day 362"
-subtitle: "Tuesday, 3 August 2027 · Week 52 of 52 · Capstone · Study day · 60 min"
+title: "Day 362 — What you believed in September that turned out wrong"
+subtitle: "Tuesday, 3 August 2027 · Week 52 of 52 · Capstone · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Tuesday, 3 August 2027 · Week 52 of 52 · Capstone · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+This is the page you will value most in 2029, and it is worth more than the dossier because it is the only part of the year that cannot be reconstructed later.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- List what you believed at the start that turned out to be wrong, with what changed your mind in each case.
+- Name what took three times longer than planned and which milestone you would drop.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write the wrong beliefs with their corrections: the marks you made last night, each with the evidence that moved you and the date it did. Expect several to be about how much of a backtested result survives contact with costs, and at least one to be about how long something would take.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the process retrospective: what took three times longer than planned, which milestone you would drop, what you would add, and how you would spend the next 365 hours differently. Be specific about the hours; a plan without a time budget is the same mistake this course was designed around.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add the one about yourself: the class of error you made most often, which is more useful than any individual mistake because it predicts the next one.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2014) — Pseudo-Mathematics and Financial Charlatanism](https://www.davidhbailey.com/dhbpapers/backtest-pseudo.pdf) [paper]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The retrospective: wrong beliefs with their corrections and dates, the process review, and your most frequent class of error.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What did you believe in September 2026 that turned out to be wrong, and what specifically changed your mind?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 363, Wednesday, 4 August 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Open the self-check page and read the phase 12 list without attempting any of it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note which questions you expect to struggle with.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow you answer all of them out loud, so the expectation is worth recording first.
 :::
 :::

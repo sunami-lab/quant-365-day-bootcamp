@@ -1,6 +1,6 @@
 ---
-title: "Day 296 — Placeholder title for day 296"
-subtitle: "Saturday, 29 May 2027 · Week 43 of 52 · Microstructure · Study day · 60 min"
+title: "Day 296 — The efficient frontier of execution, and where to sit on it"
+subtitle: "Saturday, 29 May 2027 · Week 43 of 52 · Microstructure · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,49 @@ subtitle: "Saturday, 29 May 2027 · Week 43 of 52 · Microstructure · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The same picture as week 15, in a different problem, and the useful part is that here the risk being traded against is over minutes rather than years, which makes the preference easier to state.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Draw the execution efficient frontier for a specific order and identify the schedule at a stated risk aversion.
+- Say how the frontier's shape changes with the order's size relative to daily volume.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Trace the frontier: expected implementation cost against its standard deviation, across the family of optimal schedules, for a specific order size in a specific name using your fitted impact model. Mark TWAP on it and note that it sits at one end rather than in the middle.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Vary the size: redraw the frontier for orders at 0.5, 2 and 10 percent of daily volume. The frontier moves out and its shape changes, and with your fitted square-root exponent the cost scales sublinearly, which is a different picture from the linear-impact version in the original paper.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Implement the schedule generator in qlib/exec/schedule.py, taking an order, a horizon and a risk aversion, and returning a target trajectory.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/exec/schedule.py generates an execution trajectory from an order, a horizon and a stated risk aversion, using the fitted impact model rather than the linear assumption in the original paper.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Almgren & Chriss (2000) — Optimal Execution of Portfolio Transactions](https://www.smallake.kr/wp-content/uploads/2016/03/optliq.pdf) [paper]{.res-kind}
+- [Tóth et al. (2011) — Anomalous price impact and the critical nature of liquidity](https://arxiv.org/abs/1105.1694) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/exec/schedule.py with a schedule generator, and execution frontiers at three order sizes with TWAP marked.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Where does TWAP sit on the execution efficient frontier, and what preference does choosing it express?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +59,12 @@ Ten minutes tonight so Day 297, Sunday, 30 May 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down what TWAP, VWAP and a participation-rate algorithm each target.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two of them are the same idea with a different clock.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Say which two and what the clock is.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 188 — Placeholder title for day 188"
-subtitle: "Wednesday, 10 February 2027 · Week 27 of 52 · Alpha · Study day · 60 min"
+title: "Day 188 — Sizing a futures book when the contracts are not comparable"
+subtitle: "Wednesday, 10 February 2027 · Week 27 of 52 · Alpha · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 10 February 2027 · Week 27 of 52 · Alpha · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+One contract of one thing is not comparable to one contract of another, and the notional-to-risk conversion is where a futures book either becomes a portfolio or stays a pile of positions.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Convert a signal into a contract count via a risk target, contract multiplier and volatility estimate, and check the arithmetic end to end.
+- Report the risk contribution of each instrument in your book and say whether it matches what you intended.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Do the conversion explicitly in qlib/portfolio.py: target risk per instrument, divided by the instrument's volatility in currency terms per contract, gives a contract count that must then be rounded. Rounding matters for small books and the rounding error is a real cost, so report it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Check what you actually built: report the ex-ante risk contribution of each instrument in the combined book and compare against the equal-risk intention. Then compare the ex-post realised contributions. The gap between intended, ex-ante and realised is the thing to know about your own book.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the constraint a small account faces: with a fixed contract size, below a certain capital level you cannot hold a diversified futures book at all. Compute your own threshold.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pysystemtrade (Carver) — systematic futures](https://github.com/pst-group/pysystemtrade) [repo]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A contract-count sizing path with rounding cost reported, and intended against ex-ante against realised risk contributions.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your book intends equal risk across four instruments and realises 40 percent in one. Name two causes and how you would tell them apart.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 189, Thursday, 11 February 2027 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write out, in ninety seconds and out loud, what the bias-variance trade-off is. Time yourself.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then write it again without using the word trade-off.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow's drill starts the statistics and machine learning band, and this is the warm-up.
 :::
 :::

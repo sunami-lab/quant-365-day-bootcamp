@@ -1,6 +1,6 @@
 ---
-title: "Day 303 — Placeholder title for day 303"
-subtitle: "Saturday, 5 June 2027 · Week 44 of 52 · Microstructure · Study day · 60 min"
+title: "Day 303 — Which strategy dies first as the money grows"
+subtitle: "Saturday, 5 June 2027 · Week 44 of 52 · Microstructure · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,49 @@ subtitle: "Saturday, 5 June 2027 · Week 44 of 52 · Microstructure · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Capacity is not a single number per strategy but a curve, and the ordering of those curves decides what a larger version of your book would even contain.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Rank your strategies by how fast their net performance decays with size, and explain the ordering from turnover and universe liquidity.
+- Say what the book would look like at ten and at a hundred times your current size.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Explain the ordering rather than just reporting it: decay speed is driven by turnover and by the liquidity of the names the signal concentrates in, so a fast signal in small caps dies first and a slow signal in large caps last. Check that prediction against your curves and note any strategy that does not fit it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Construct the larger books: re-optimise the combination at ten and a hundred times current size, letting the weights respond to the size-dependent costs. The composition changes, and the way it changes is the most interesting result of the day.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the one-paragraph answer to which strategy dies first and why, which milestone 9 requires.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+The book is re-optimised at ten and a hundred times current size with size-dependent costs, showing how the composition changes as capacity binds rather than only how performance falls.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Tóth et al. (2011) — Anomalous price impact and the critical nature of liquidity](https://arxiv.org/abs/1105.1694) [paper]{.res-kind}
+- [AQR — Research and Insights](https://www.aqr.com/Insights/Research) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Net performance curves against size for every signal, and re-optimised book compositions at two larger sizes.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which of your strategies dies first as size grows, and why was that predictable from its turnover?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +59,12 @@ Ten minutes tonight so Day 304, Sunday, 6 June 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down your best guess at four latency numbers: an L1 cache reference, a main memory reference, a random SSD read, and a round trip across a data centre.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then a fifth: the round trip from Chicago to New York on the fastest available route.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow you check all five.
 :::
 :::

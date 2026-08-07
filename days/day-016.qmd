@@ -1,5 +1,5 @@
 ---
-title: "Day 16 — Placeholder title for day 16"
+title: "Day 16 — The adjusted close is a derived series, not a price"
 subtitle: "Saturday, 22 August 2026 · Week 3 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Saturday, 22 August 2026 · Week 3 of 52 · Markets · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Nothing that follows works if you do not know what the vendor did to the history, and the adjustment is the single most common silent error in retail-grade backtests.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the arithmetic a vendor performs on the whole history when a dividend is paid, and what that does to the level of prices ten years ago.
+- Name two analyses that adjusted prices silently break, and say what you would use instead for each.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Reconstruct the adjustment yourself. From the unadjusted SPY closes plus the dividend and split history, build your own back-adjusted series and check it matches yfinance's `auto_adjust=True` close to within rounding. When it does not match, the discrepancy is the interesting part.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Now break it deliberately: compute the number of shares 10,000 dollars would have bought in 2005 using the adjusted series, and using the unadjusted series. One of those numbers is meaningless. Say which and why, in two sentences in the notebook.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add to the glossary: the two analyses adjusted prices break. Dollar volume and any price-level rule such as a 5 dollar minimum are the two to name.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [yfinance](https://github.com/ranaroussi/yfinance) [repo]{.res-kind}
+- [Kenneth R. French — Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-016-adjustment.ipynb with your own back-adjusted series reconciled against the vendor's, and the residual explained.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your screen requires a share price above 5 dollars. Run on adjusted history, what does that screen actually select, and in which direction is it biased?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 17, Sunday, 23 August 2026 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pick three corporate actions to look at tomorrow and find their dates: the Apple 2020 split, one spinoff you have heard of, and one ticker change.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Pull the raw unadjusted price series around each of those three dates and save them.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Skim the DuckDB documentation front page for ten minutes. You start building on it in four days.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 105 — Placeholder title for day 105"
-subtitle: "Thursday, 19 November 2026 · Week 15 of 52 · Portfolios and risk · Catch-up day · 45 min"
+title: "Day 105 — Week 15, and the number of parameters you are estimating"
+subtitle: "Thursday, 19 November 2026 · Week 15 of 52 · Portfolios and risk · Catch-up day · 35 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 19 November 2026 · Week 15 of 52 · Portfolios and risk ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day. If the horse race runs and the benchmarks are in qlib/portfolio.py, take the hour; if not, this is the day that makes week 16 possible.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State how many free parameters a mean-variance problem on N assets requires, and how that grows.
+- Reproduce the estimation-error argument against raw optimisation from memory, with a number attached.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>35 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Finish anything outstanding from days 99 to 104. The rolling out-of-sample horse race is the piece worth having complete, because week 16 measures improvements against it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Count the parameters, closed book: N means, N variances and N choose 2 correlations, evaluated at N of 25, 100 and 500, against the number of monthly observations you have. Then write the sentence that follows from the comparison.
 :::
 :::
 
@@ -33,33 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, fifteenth sitting. Ten two-digit multiplications, the sevenths, and 1.02 to the 36th power approximated in your head.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Random walk, first passage: a symmetric random walk starts at 0. What is the probability it ever reaches plus 5? Now what is the expected time to do so? Say the second answer out loud before you compute it, and notice that it is surprising.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> Optional stopping, gently: you flip a fair coin and win one unit for heads, lose one for tails. You stop when you are up 1 unit. Is this a winning strategy? Say precisely which assumption of optional stopping fails, and what a broker would call the thing that makes it fail.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The parameter count at three universe sizes against your available sample, with the one-sentence conclusion.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+For 500 assets, how many covariance parameters are you estimating, and how many observations do you have per parameter?
 :::
 
 ## Prepare for tomorrow
@@ -68,6 +65,12 @@ Ten minutes tonight so Day 106, Friday, 20 November 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Build a daily return matrix for 200 names over 500 trading days from your store, and compute its sample covariance.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute the eigenvalues and plot them, sorted, on a log scale.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Count how many are close to zero. That count is tomorrow's subject.
 :::
 :::

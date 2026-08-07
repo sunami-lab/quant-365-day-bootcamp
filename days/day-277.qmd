@@ -1,5 +1,5 @@
 ---
-title: "Day 277 — Placeholder title for day 277"
+title: "Day 277 — Which volatility trades have an edge, and what February 2018 did"
 subtitle: "Monday, 10 May 2027 · Week 40 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Monday, 10 May 2027 · Week 40 of 52 · Derivatives · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The variance premium is real and the strategies that harvest it have destroyed more capital than most, which makes this the clearest case in the year of a positive expected return being insufficient.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Name three distinct ways to be short volatility and say how their payoffs differ in a fast move.
+- Describe what happened to short-volatility products in February 2018 in mechanical terms.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Compare the three: selling a delta-hedged straddle, selling a variance swap, and holding a short VIX futures position. Simulate a fast volatility spike and report each one's loss. They differ substantially because a variance swap's payoff is quadratic in the move while a delta-hedged option's is not, and a VIX future is a bet on the term structure rather than on realized variance at all.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Work through the February 2018 mechanics: an inverse volatility product rebalances to a constant short exposure daily, so a large volatility rise forces buying at the close into the move, which raises volatility further. Write the mechanism out and note that it is the same forced-deleveraging structure as day 13's margin spiral.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Cboe futures market statistics](https://www.cboe.com/us/futures/market_statistics/historical_data/) [data]{.res-kind}
+- [Sinclair — Volatility Trading, 2nd ed. (Wiley)](https://www.wiley.com/en-us/Volatility+Trading,+++Website,+2nd+Edition-p-9781118416723) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Three short-volatility structures simulated through a spike with losses compared, and a written account of the February 2018 rebalancing mechanism.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You are short variance through three different instruments. Volatility doubles overnight. Rank your losses and say why.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 278, Tuesday, 11 May 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Take the variance risk premium specification you wrote on day 187 and check whether you now have everything it needs.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> You should have implied variance from VIX and realized variance from your store.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the position rule you would test, in one sentence.
 :::
 :::

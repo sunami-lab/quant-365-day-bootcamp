@@ -1,5 +1,5 @@
 ---
-title: "Day 227 — Placeholder title for day 227"
+title: "Day 227 — Seed variance is larger than the model differences"
 subtitle: "Sunday, 21 March 2027 · Week 33 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 21 March 2027 · Week 33 of 52 · Machine learning · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The spread you measured last night is probably as large as the gap between your best and worst model family, which means most published comparisons at this signal level are reporting seed noise.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the across-seed standard deviation of out-of-sample performance and compare it against the across-model differences.
+- State the reporting rule you will follow for the rest of the phase.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Quantify it across the board: for every model family, refit with ten seeds and report the mean and standard deviation of out-of-sample R-squared. Then plot the across-model differences against the across-seed spreads. Any comparison smaller than the spread is not a comparison.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Adopt the fix, which is cheap: every reported model result from here is the average of an ensemble across seeds, with the across-seed spread reported alongside. Ensembling also improves the result, so this costs nothing except computation.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Murphy — Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html) [textbook]{.res-kind}
+- [Efron & Hastie — Computer Age Statistical Inference](https://hastie.su.domains/CASI/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Across-seed spreads for every model family plotted against the across-model differences, and the ensembling rule adopted.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your boosting model beats ridge by 0.0004 in R-squared and your seed spread is 0.0006. What do you report?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 228, Monday, 22 March 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pick one structured field you would want extracted from a filing, such as a guidance number or a segment breakdown.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write the extraction as a question with a verifiable answer.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Verifiable is the important word.
 :::
 :::

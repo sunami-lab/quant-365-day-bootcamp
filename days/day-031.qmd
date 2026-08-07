@@ -1,6 +1,6 @@
 ---
-title: "Day 31 — Placeholder title for day 31"
-subtitle: "Sunday, 6 September 2026 · Week 5 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 31 — Volatility eats return, and you can say how much"
+subtitle: "Sunday, 6 September 2026 · Week 5 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,42 @@ subtitle: "Sunday, 6 September 2026 · Week 5 of 52 · Returns and noise · Stud
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The gap between what you average and what you compound is not a curiosity; it is the reason a strategy can have a positive expected return and lose money, and it is one line of algebra.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Derive the approximate relationship between the geometric mean, the arithmetic mean and the variance, and say when the approximation fails.
+- Compute the annual drag for a 15 percent volatility asset and for a 60 percent volatility asset, and say which one that argues against.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Derive it: with log returns approximately normal, the expected log return is the arithmetic mean minus half the variance. Do the second-order Taylor expansion yourself rather than quoting the result, and note exactly which step is the approximation.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Verify it against your four numbers from last night. For each asset, compare the measured geometric mean against arithmetic mean minus half the variance. Report the residual. Then compute the drag at 15, 30 and 60 percent annual volatility and tabulate it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} The consequence, in one paragraph: two assets have the same arithmetic mean return and different volatilities. Say which one you would rather own and prove it with the drag table rather than with an argument about risk aversion.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Zivot — Introduction to Computational Finance and Financial Econometrics with R](https://bookdown.org/compfinezbook/introcompfinr/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-031-drag.ipynb with the drag table at three volatility levels and the empirical residual against the approximation.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State the arithmetic-geometric relationship and the volatility at which the drag exceeds two percentage points a year.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +52,12 @@ Ten minutes tonight so Day 32, Monday, 7 September 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download daily closes for SPY and for a 3x leveraged S&P ETF over the longest common window you can get.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute the ratio of the two total returns over that window and write it down. It will not be three.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note in one line what you think explains the gap. Tomorrow you decompose it.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 10 — Placeholder title for day 10"
+title: "Day 10 — The close is an auction, and it is the biggest trade of the day"
 subtitle: "Sunday, 16 August 2026 · Week 2 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,45 +8,43 @@ subtitle: "Sunday, 16 August 2026 · Week 2 of 52 · Markets · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every strategy you build this year will notionally trade at the close, so it is worth knowing that the close is not a trade at all but a single-price auction with its own participants and its own deadlines.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Describe how a closing auction sets one price, and say what an imbalance message tells you and when it starts being published.
+- Say why a large index fund trades in the auction rather than during the day, and what that does to your fill if you join them.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Watch the Copenhagen microstructure lecture on call auctions and price discovery. The mechanism is the same one that opens every equity market in the world.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Measure it: from your five days of SPY one-minute bars, compute the share of the day's volume that trades in the final minute, and the same for the opening minute. Do it for one small-cap ticker too. Report four numbers.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Read the data description of the Optiver Trading at the Close competition and write down the three fields it gives you that you did not know existed until today.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Financial Markets Microstructure (Copenhagen, Starkov) — video lectures](https://www.youtube.com/playlist?list=PL4pUs4P_j1Wa2_P1lw44kFWWjKDTGUY7S) [video]{.res-kind}
+- [Kaggle — Optiver, Trading at the Close (Nasdaq closing auction)](https://www.kaggle.com/competitions/optiver-trading-at-the-close) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Four measured numbers in notebooks/day-010-auctions.ipynb: closing and opening volume share for one large-cap ETF and one small-cap name.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does an index fund rebalancing at the close get a better outcome than the same fund working the order from 3 pm?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 11, Monday, 17 August 2026 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Find the fee schedule page of any US equity exchange and locate the maker rebate and the taker fee, in dollars per hundred shares.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what you currently believe a rebate is for. Tomorrow tests it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Pull the quoted spread in cents for SPY, AAPL and a stock trading under 5 dollars, from any snapshot you can get.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 242 — Placeholder title for day 242"
+title: "Day 242 — Itô's lemma is a Taylor expansion with one extra term"
 subtitle: "Monday, 5 April 2027 · Week 35 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Monday, 5 April 2027 · Week 35 of 52 · Derivatives · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The single most used result in derivatives pricing, and given quadratic variation it is a two-line derivation rather than a mystery, which is why the last three days were spent on quadratic variation.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Derive Itô's lemma from a second-order Taylor expansion and say in words what the extra term is doing.
+- Apply it to obtain the dynamics of the log of a geometric Brownian motion, and connect the result to volatility drag.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Derive it: expand a twice-differentiable function of a stochastic process to second order, substitute the quadratic variation identity for the squared increment, and drop the terms that vanish. Do it on paper without looking, then check against the notes.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Apply it to the log: with a process whose relative increments have constant drift and volatility, the log has drift reduced by half the variance. That result is exactly your day 31 arithmetic-geometric gap, arrived at from a completely different direction, and noticing that is worth more than either derivation alone.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Verify by simulation: simulate the process and its log, and confirm the drift of the log matches the lemma's prediction to within sampling error.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 18.S096 — Topics in Mathematics with Applications in Finance](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/) [course]{.res-kind}
+- [Oxford — Etheridge, Stochastic Calculus for Finance (lecture notes)](https://www.stats.ox.ac.uk/~etheridg/finmath/index.html) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-242-itos-lemma.ipynb with the derivation written out and the log drift verified by simulation.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State Itô's lemma and say, in words, what the extra term is doing that ordinary calculus does not have.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 243, Tuesday, 6 April 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down three stochastic differential equations: geometric Brownian motion, an Ornstein-Uhlenbeck process, and a square-root diffusion.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> You met the second one on day 82 without the notation.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> For each, say in one clause what the drift term is doing.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 211 — Placeholder title for day 211"
+title: "Day 211 — The label is a modelling decision, not a given"
 subtitle: "Friday, 5 March 2027 · Week 31 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 5 March 2027 · Week 31 of 52 · Machine learning · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Regression on raw forward return, classification on its sign, and ranking within the cross-section are three different problems with three different loss functions, and picking one by habit throws away the choice.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what each of the three label types optimises and which one matches how you actually trade.
+- Report the same model's performance under all three labels, evaluated on a common metric.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Fit all three and evaluate them on the same footing: convert each model's output into a portfolio through the same score-to-weight map, and report information ratio rather than the model's native metric. A classifier with a great AUC and a poor information ratio is the normal outcome and this is where you see it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Say what the fixed-horizon label assumes: that the return over a fixed window is what you care about, regardless of the path. Name two situations where that is false, which are a stop loss and any position you would have exited early, and note that tomorrow's method addresses exactly this.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) [textbook]{.res-kind}
+- [scikit-learn documentation](https://scikit-learn.org/stable/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-211-labels.ipynb with three label types compared on a common information ratio metric.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your classifier has an AUC of 0.54 and an information ratio of 0.1. Are those consistent, and which do you report?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 212, Saturday, 6 March 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the description of the triple barrier method from the López de Prado seminar slides.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the three barriers and what each one represents in trading terms.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Sketch one path hitting each barrier.
 :::
 :::

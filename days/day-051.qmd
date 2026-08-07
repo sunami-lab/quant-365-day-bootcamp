@@ -1,6 +1,6 @@
 ---
-title: "Day 51 — Placeholder title for day 51"
-subtitle: "Saturday, 26 September 2026 · Week 8 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 51 — The best of a thousand nulls, and what it looks like"
+subtitle: "Saturday, 26 September 2026 · Week 8 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,39 @@ subtitle: "Saturday, 26 September 2026 · Week 8 of 52 · Returns and noise · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The number you read off last night is the bar any backtest has to clear before it means anything, and it is higher than intuition puts it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the expected maximum of N independent Sharpe estimates under the null, and how it grows with N.
+- Say what correlation between the tried strategies does to that maximum, and in which direction.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Extend last night's simulation across N: for N of 10, 100, 1,000 and 10,000 null strategies, report the expected maximum realised Sharpe and its 95th percentile. Plot the expected maximum against log N and note that the growth is roughly proportional to the square root of the log.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Add correlation: repeat with the null strategies generated from a common factor so that they correlate at 0.5, and show the maximum falls. This is the effective-number-of-tests problem, and it is the reason a naive Bonferroni is conservative here for the same reason it is conservative across correlated variants in a scan.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2014) — Pseudo-Mathematics and Financial Charlatanism](https://www.davidhbailey.com/dhbpapers/backtest-pseudo.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-051-max-of-nulls.ipynb with expected maximum Sharpe against N, for independent and for correlated strategy sets.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You tried 200 variants and the best has a Sharpe of 1.6 over three years. What do you now believe about its true Sharpe?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +49,12 @@ Ten minutes tonight so Day 52, Sunday, 27 September 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download the Bailey and Lopez de Prado deflated Sharpe ratio paper and skim the abstract and the definition of the statistic.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note which inputs it needs beyond the Sharpe itself. There are four.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check that your simulation from last night saved the full vector of null Sharpes; tomorrow needs their variance.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 335 — Placeholder title for day 335"
+title: "Day 335 — Order statistics, extremes, and the winner's curse"
 subtitle: "Wednesday, 7 July 2027 · Week 48 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Wednesday, 7 July 2027 · Week 48 of 52 · The interview · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The last family of the week and the one with the most direct trading content, because the extreme of many draws is exactly what you are trading against when your order is the one that gets filled.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Solve six order statistics problems under a clock.
+- State the winner's curse in trading terms and connect it to two things you measured earlier in the year.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [40 min]{.task-min} Forty minutes, six problems. The general result for the expectation of the kth of n uniforms is worth having memorised because it makes several of these immediate, and everything else transforms to the uniform case.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Connect it to your own work: the best of many backtests from day 51 and the best of many quotes from day 119 are the same calculation. Write the connection in the form you would use in an interview, which is one sentence naming both and one saying what the correction is.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
+- [Jane Street — puzzles](https://www.janestreet.com/puzzles/) [problems]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A scored six-problem session, plus the written connection between the winner's curse, backtest selection and quote selection.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Twenty dealers quote you a price and you trade on the best one. What have you learned about that price?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 336, Thursday, 8 July 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Update your error log with everything from this week.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check whether the category ranking has changed since day 330.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your timed mixed-set scores; tomorrow is the ninth sitting.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 163 — Placeholder title for day 163"
+title: "Day 163 — Cross-sectional and time-series signals bet on different things"
 subtitle: "Saturday, 16 January 2027 · Week 24 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Saturday, 16 January 2027 · Week 24 of 52 · Alpha · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The same underlying quantity becomes two different strategies depending on whether you compare a stock to its peers or to its own history, and they have different nulls, different capacities and different failure modes.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what a cross-sectional signal is neutral to by construction, and what a time-series signal is exposed to that it is not.
+- Report the market beta of the same quantity traded cross-sectionally and traded as a time-series rule.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build both from last night's quantity: a cross-sectional version that goes long the top decile and short the bottom decile each day, and a time-series version that goes long or short each name against its own history. Run both through the engine and report Sharpe, market beta and gross exposure for each.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Say what the difference is: the cross-sectional version is dollar neutral by construction and its return comes from relative ordering, while the time-series version takes a net market position whose size varies. Then check whether the time-series version's Sharpe survives once you neutralise its market exposure.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Asness, Moskowitz & Pedersen (2013) — Value and Momentum Everywhere](https://w4.stern.nyu.edu/facdir/lpederse/papers/ValMomEverywhere.pdf) [paper]{.res-kind}
+- [alphalens-reloaded documentation](https://alphalens.ml4trading.io/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-163-cross-vs-ts.ipynb with the same quantity traded both ways and market beta reported for each.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+The same 12-month return quantity gives a Sharpe of 0.6 cross-sectionally and 0.7 as a time-series rule. Which do you believe more, and why?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 164, Sunday, 17 January 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Take one cross-sectional signal and compute its raw values, its z-scores, and its ranks on a single date.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot the three distributions side by side.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the most extreme name under each transform. It may not be the same name.
 :::
 :::

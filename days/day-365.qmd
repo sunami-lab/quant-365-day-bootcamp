@@ -1,6 +1,6 @@
 ---
-title: "Day 365 — Placeholder title for day 365"
-subtitle: "Friday, 6 August 2027 · Week 52 of 52 · Capstone · Capstone · 45 min"
+title: "Day 365 — Capstone"
+subtitle: "Friday, 6 August 2027 · Week 52 of 52 · Capstone · Capstone · 55 min"
 ---
 
 ::: {.day-nav .kind-capstone}
@@ -12,56 +12,44 @@ subtitle: "Friday, 6 August 2027 · Week 52 of 52 · Capstone · Capstone · 45 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Three hundred and sixty-five hours, one system that trades, and a written account of what you got wrong, which is the part that will still be useful in three years.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Publish the dossier, the unadjusted track record and the retrospective as one set.
+- State what you would do with the next 365 hours, with the same time budget honesty this year was built on.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Assemble and publish reports/capstone.md: the dossier with its six sections, the track record with every month included and its standard error, the recommendation with capital and drawdown, and the retrospective. Put the live-against-backtest disagreement at the front, because it is the only genuinely out-of-sample evidence in the whole year.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
-:::
-:::
-
-## Drill <span class='task-total'>interview thread</span>
-
-Spaced repetition, not cramming. Every drill in the year is collected on the [drills page](../drills.qmd).
-
-::: {.task-list .drill}
-::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
-:::
-::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the last page, which is the plan for the next 365 hours: what you would build, what you would abandon, the three items from your autumn reading list, and the application timeline from milestone 11. Give it a time budget in hours per week rather than in intentions.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+The system that started as an empty DuckDB file on day 20 now ingests, forecasts, sizes, executes, reconciles and reports on a schedule, with a track record it did not tamper with and a written account of everything it still gets wrong.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2014) — Pseudo-Mathematics and Financial Charlatanism](https://www.davidhbailey.com/dhbpapers/backtest-pseudo.pdf) [paper]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/capstone.md, published, with the live-against-backtest disagreement at the front and a time-budgeted plan for the next 365 hours.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What would make you stop running this strategy tomorrow? Then: which result of the year are you least confident in, and why?
 :::

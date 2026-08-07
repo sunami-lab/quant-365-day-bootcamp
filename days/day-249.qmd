@@ -1,5 +1,5 @@
 ---
-title: "Day 249 — Placeholder title for day 249"
+title: "Day 249 — Risk-neutral is a change of measure, not a claim about people"
 subtitle: "Monday, 12 April 2027 · Week 36 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Monday, 12 April 2027 · Week 36 of 52 · Derivatives · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The most commonly misstated idea in derivatives, asked in interviews precisely because the wrong answer is so available, and the right answer is a statement about what the replication argument permits.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what the risk-neutral measure is and what the replication argument lets you conclude about pricing under it.
+- Say what Girsanov's theorem changes and what it leaves invariant, without needing to prove it.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Read the treatment of the equivalent martingale measure in the Etheridge or van Handel notes, as far as the statement of Girsanov. The content you need is that changing measure changes the drift and leaves the volatility alone, and that the discounted price of a traded asset is a martingale under the new measure.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Write the correct answer in three sentences: the price of a replicable claim equals the cost of its replicating portfolio, that cost happens to equal a discounted expectation under a particular measure, and that measure is the one under which the discounted stock is a martingale. Nobody is assumed to be risk neutral anywhere in that chain.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Check the invariance numerically: simulate the same paths under two drifts with identical volatility, and confirm that the quadratic variation, and hence the implied volatility, is unchanged. Volatility is the same under both measures and that is why it is the parameter you can estimate from prices.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Princeton — van Handel, Stochastic Calculus, Filtering and Stochastic Control (notes)](https://web.math.princeton.edu/~rvan/acm217/ACM217.pdf) [reference]{.res-kind}
+- [Oxford — Etheridge, Stochastic Calculus for Finance (lecture notes)](https://www.stats.ox.ac.uk/~etheridg/finmath/index.html) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The three-sentence statement of risk-neutral pricing, plus a numerical check that volatility is measure-invariant.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What does risk-neutral mean? Give the answer that is not the claim that investors are risk neutral.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 250, Tuesday, 13 April 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write the Black-Scholes call price as a discounted expectation of the payoff under the risk-neutral measure.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The lognormal integral has a closed form. Set it up but do not evaluate it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow you evaluate it and reconcile with the PDE.
 :::
 :::

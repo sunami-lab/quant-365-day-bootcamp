@@ -1,5 +1,5 @@
 ---
-title: "Day 191 — Placeholder title for day 191"
+title: "Day 191 — Accruals, and a signal that is about accounting rather than price"
 subtitle: "Saturday, 13 February 2027 · Week 28 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Saturday, 13 February 2027 · Week 28 of 52 · Alpha · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The first signal in the book whose input is not a price, which means its failure modes are data-quality failures rather than statistical ones, and those are the ones your pipeline has not been tested against.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Build an accruals signal from EDGAR data and report the fraction of the universe it covers on each date.
+- Say what happens to a cross-sectional signal when coverage is not random with respect to the thing you are predicting.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build the signal both ways, from balance sheet changes and from the cash flow statement, and compare them. Where they disagree the cause is usually acquisitions or a tag you mapped wrongly, and finding out which is the real work of a fundamental pipeline.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Audit the coverage, which is the part that matters more than the signal: report the fraction of the universe with a usable value on each date, and compare the forward returns of the covered and uncovered groups. If they differ, your signal has a selection effect that no amount of neutralisation will remove.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [SEC Financial Statement Data Sets (quarterly XBRL)](https://www.sec.gov/data-research/sec-markets-data/financial-statement-data-sets) [data]{.res-kind}
+- [Novy-Marx (2012) — The Other Side of Value: The Gross Profitability Premium](https://mysimon.rochester.edu/novy-marx/research/OSoV.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+An accruals signal with both constructions compared, plus a coverage audit reporting whether missingness is related to forward returns.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your fundamental signal covers 70 percent of the universe. What would you check before believing its information coefficient?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 192, Sunday, 14 February 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pick twenty earnings announcement dates from EDGAR filing timestamps and pull the price reaction on each.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot the cumulative abnormal return from the announcement out to 60 days.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not average them yet.
 :::
 :::

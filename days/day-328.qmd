@@ -1,5 +1,5 @@
 ---
-title: "Day 328 — Placeholder title for day 328"
+title: "Day 328 — The first unattended run, and what it got wrong"
 subtitle: "Wednesday, 30 June 2027 · Week 47 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Wednesday, 30 June 2027 · Week 47 of 52 · Production · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A pipeline that works when you run it by hand and a pipeline that works when it runs itself are different pipelines, and the difference shows up in the environment rather than in the code.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Diagnose the first unattended run entirely from its logs and monitors, without rerunning it.
+- Fix whatever broke and say which category of failure it was.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the logs before touching anything: what ran, what each step took, what the monitors said, and what the reconciliation reported. Diagnosing from logs alone is the skill being tested, and if you cannot, the logging work from day 324 is incomplete rather than the run being at fault.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Fix what broke, which will be an environment difference: a path that resolved differently, a credential not in the scheduler's environment, a timezone assumption, or a dependency on a shell profile. Write which category it was into the runbook, because the next one will be from the same list.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The pipeline runs unattended on a schedule, and the first failure is diagnosed from logs alone and fixed, with the failure category recorded in the runbook.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Docker — get started](https://docs.docker.com/get-started/) [course]{.res-kind}
+- [uv documentation (Astral)](https://docs.astral.sh/uv/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A diagnosed and fixed first unattended run, with the failure category added to the runbook.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What broke on the first unattended run, and could you tell from the logs alone?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 329, Thursday, 1 July 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Let it run again tomorrow morning and do not intervene.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Reread reports/milestone-10-production.md and mark what is still notes.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your timed mixed-set scores; tomorrow is the eighth sitting.
 :::
 :::

@@ -1,5 +1,5 @@
 ---
-title: "Day 201 — Placeholder title for day 201"
+title: "Day 201 — The combined book, with every constraint applied"
 subtitle: "Tuesday, 23 February 2027 · Week 29 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Tuesday, 23 February 2027 · Week 29 of 52 · Alpha · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Everything from phases 4, 5 and 6 meets here, and the number that comes out is the one milestone 6 reports, so today is about making sure it is produced by the whole pipeline rather than by a shortcut.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Produce the combined book's result through the full pipeline: signals, combination, risk model, neutralisation, sizing, costs.
+- Attribute the combined performance across signals and say which contributes most after accounting for correlation.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Run the full pipeline and check the seams: the combined score feeds the weight map, the weight map feeds neutralisation, neutralisation feeds volatility targeting, and the engine applies costs per fill. Confirm the accounting identity still holds and that turnover is what the netting analysis predicted.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Attribute the result: marginal contribution of each signal to the combined information ratio, computed by removing one signal at a time rather than by looking at standalone performance. A signal with a poor standalone result and low correlation can contribute more than a good correlated one, and this is where that shows up.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The combined alpha book runs through the whole pipeline end to end and produces one result object, with each signal's marginal contribution computed by leave-one-out rather than by standalone performance.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [alphalens-reloaded — factor IC, quantile returns, turnover](https://github.com/stefan-jansen/alphalens-reloaded) [repo]{.res-kind}
+- [pyfolio-reloaded — tear sheets](https://github.com/stefan-jansen/pyfolio-reloaded) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The combined book's result object, with leave-one-out marginal contributions for every signal.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which signal contributes most to your combined book, and is it the same one with the best standalone information ratio?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 202, Wednesday, 24 February 2027 starts clean. This i
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Count the total entries in research_log.jsonl since day 162.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare it against the number of signals in your book.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The ratio is what tomorrow's correction is applied to.
 :::
 :::

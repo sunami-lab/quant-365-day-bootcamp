@@ -1,5 +1,5 @@
 ---
-title: "Day 290 — Placeholder title for day 290"
+title: "Day 290 — Estimating lambda, and the endogeneity that ruins it"
 subtitle: "Sunday, 23 May 2027 · Week 42 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Sunday, 23 May 2027 · Week 42 of 52 · Microstructure · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The regression you ran last night has a problem you would spot instantly in any other context, and it is the same problem you spend your working life correcting for.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Estimate lambda by regression and say why the estimate is biased.
+- Name an instrument or design that would address the bias, and say whether you can implement it.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} State the problem precisely: order flow is not exogenous, because traders respond to price moves as well as causing them, so the regression coefficient mixes impact with reaction. This is simultaneity, and you would reach for an instrument immediately in a Mendelian randomization setting.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Try the fixes available to you: estimate lambda separately in periods with different noise trading volume, use lagged rather than contemporaneous flow, and compare against an estimate from the permanent impact of large trades from day 284. Report all three and note the spread between them, which is the honest uncertainty about lambda for your symbol.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Kyle (1985) — Continuous Auctions and Insider Trading](https://people.duke.edu/~qc2/BA532/1985%20EMA%20Kyle.pdf) [paper]{.res-kind}
+- [linearmodels — panel, IV/2SLS and Fama-MacBeth (Sheppard)](https://bashtage.github.io/linearmodels/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Three estimates of lambda from different designs with the spread between them reported as the uncertainty.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your regression of returns on order flow is biased. Say why, and name the design you would use if you could.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 291, Monday, 24 May 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> For the largest trades in your sample, plot the mid path from ten minutes before to sixty minutes after.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Some of the move comes back and some does not.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Estimate the fraction that persists.
 :::
 :::

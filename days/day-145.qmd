@@ -1,5 +1,5 @@
 ---
-title: "Day 145 — Placeholder title for day 145"
+title: "Day 145 — One result object, and everything downstream reads it"
 subtitle: "Tuesday, 29 December 2026 · Week 21 of 52 · The research harness · Study day · 60 min"
 ---
 
@@ -8,45 +8,46 @@ subtitle: "Tuesday, 29 December 2026 · Week 21 of 52 · The research harness ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Six strategies compared in phase 6 means six result objects that have to be identical in shape, and defining that shape now is cheaper than converting later.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Define a result object carrying returns, positions, fills, costs, metadata and the trial record, and serialise it.
+- Produce a tearsheet from the result object alone, with no access to the engine.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Define the result in qlib/backtest/result.py: daily returns, positions, fills, a cost breakdown by component, the configuration that produced it, the code version, and the research log entry id. Serialise it to disk so a result can be reloaded a month later without rerunning.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Build the tearsheet from it: equity curve, drawdown, rolling Sharpe with the interval from qlib/stats.py, turnover, exposure, and the cost breakdown. Compare your output against what pyfolio-reloaded produces on the same returns to check you have not missed a standard panel.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+Every backtest now returns one serialisable result object carrying its own configuration and code version, and the tearsheet is built from that object alone. Reproducing a figure from March in July becomes a file read rather than a rerun.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pyfolio-reloaded — tear sheets](https://github.com/stefan-jansen/pyfolio-reloaded) [repo]{.res-kind}
+- [QuantStats — standalone HTML tear sheets](https://github.com/ranaroussi/quantstats) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/backtest/result.py with a serialisable result, and a tearsheet generated from a reloaded result file.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What does your result object carry that lets you reproduce a number six months later without rerunning anything?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +56,12 @@ Ten minutes tonight so Day 146, Wednesday, 30 December 2026 starts clean. This i
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Clone zipline-reloaded and find its data ingestion and its main simulation loop. Do not run it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the two design decisions it makes that yours does not.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Fifteen minutes of reading, no more.
 :::
 :::

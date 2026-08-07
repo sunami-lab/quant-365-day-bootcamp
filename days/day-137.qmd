@@ -1,6 +1,6 @@
 ---
-title: "Day 137 — Placeholder title for day 137"
-subtitle: "Monday, 21 December 2026 · Week 20 of 52 · The research harness · Study day · 60 min"
+title: "Day 137 — Fundamentals are revised, and your backtest read the revision"
+subtitle: "Monday, 21 December 2026 · Week 20 of 52 · The research harness · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Monday, 21 December 2026 · Week 20 of 52 · The research harness · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Price data is rarely restated and fundamental data routinely is, so any signal built on reported numbers is using a value that did not exist on the day the backtest says it traded.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what point-in-time means for a fundamental item, and name the three dates every such item needs.
+- Estimate the size of the restatement effect using your one worked example and the reporting lag distribution.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read the SEC financial statement data sets documentation as far as understanding the file structure and the ADSH accession identifier, which is what lets you tie a number to the filing that reported it rather than to the period it describes.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Design the schema you would need: fiscal period end, filing date, and ingestion date, with the query returning the latest filing whose filing date precedes the as-of date. Write the SQL, using the same pattern as day 19's as-of query, and note the one extra complication, which is that a later filing can restate an earlier period.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Measure the lag distribution: for a sample of filings, report the median and 90th percentile days between fiscal period end and filing date. That distribution is the minimum lag any fundamental signal must respect.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [SEC Financial Statement Data Sets (quarterly XBRL)](https://www.sec.gov/data-research/sec-markets-data/financial-statement-data-sets) [data]{.res-kind}
+- [SEC EDGAR REST APIs (data.sec.gov)](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The three-date fundamental schema with its as-of query written, and the measured reporting lag distribution.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What does point in time mean for a reported earnings figure, and what does a restatement do to a backtest that ignores it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 138, Tuesday, 22 December 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Find out what your data source does with a delisted stock's final return. For yfinance the answer is that the series simply stops.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what the correct treatment is for a delisting at a loss and for a delisting through acquisition.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note which of the two your data cannot distinguish.
 :::
 :::

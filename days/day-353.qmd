@@ -1,5 +1,5 @@
 ---
-title: "Day 353 — Placeholder title for day 353"
+title: "Day 353 — The firm list, with a reason next to each name"
 subtitle: "Sunday, 25 July 2027 · Week 51 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,41 @@ subtitle: "Sunday, 25 July 2027 · Week 51 of 52 · The interview · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A list without reasons produces identical applications, and the reason next to each name is what makes the outreach on day 354 worth sending.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Reduce the list to fifteen firms, each with a specific reason and a named team or research area.
+- Classify each by structure, since a pod shop, a partnership and a systematic manager want different things from you.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Research rather than recall: for each firm, find something specific from its own research page, blog or published papers, and write the reason from that. Two Sigma, Man, AQR and Jane Street all publish, so the specific reason is available for at least a third of your list without any inside knowledge.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Classify by structure and match it to yourself: a multi-manager pod is a fast, capital-allocated seat with a short leash, a partnership is a longer horizon with a harder entry bar, and a systematic manager is closest to what you have spent the year doing. Rank the fifteen by fit rather than by prestige, and write the ranking down so the outreach order is decided in advance.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Two Sigma — Insights](https://www.twosigma.com/insights/) [reference]{.res-kind}
+- [Man Group — Man Insights](https://www.man.com/insights) [reference]{.res-kind}
+- [AQR — Research and Insights](https://www.aqr.com/Insights/Research) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Fifteen firms with a specific reason, a named team or research area, a structural classification and a fit ranking.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Name three firms on your list and say, for each, the specific thing that put it there.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +51,12 @@ Ten minutes tonight so Day 354, Monday, 26 July 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Find three people who moved from a quantitative science PhD into this industry, through your own network or through published author lists.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note what they worked on before and where they are now.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not contact anyone tonight.
 :::
 :::

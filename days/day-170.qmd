@@ -1,5 +1,5 @@
 ---
-title: "Day 170 — Placeholder title for day 170"
+title: "Day 170 — IC decay tells you the horizon to trade"
 subtitle: "Saturday, 23 January 2027 · Week 25 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Saturday, 23 January 2027 · Week 25 of 52 · Alpha · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The curve you plotted last night contains the holding period, the turnover and most of the capacity, and reading it correctly saves you a parameter sweep.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Read a holding period off an IC decay curve and justify it against the turnover cost it implies.
+- Say what a decay curve that peaks at a lag greater than zero would mean, and whether yours does.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Produce decay curves for all four signals with intervals at each horizon, and read off the horizon at which each stops being distinguishable from zero. Then compute the implied turnover for a rule that rebalances at that horizon and the cost it implies from qlib/costs.py.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Find the optimum properly: net information ratio is the product of IC and the square root of breadth, minus cost, and all three vary with horizon. Plot net expected performance against rebalance frequency for one signal and mark the maximum. This is the calculation that replaces a parameter sweep for holding period.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [alphalens-reloaded documentation](https://alphalens.ml4trading.io/) [tool]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+IC decay curves with intervals for four signals, and a derived rebalance frequency for each with its net performance curve.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your signal's IC is 0.04 at one day and 0.01 at twenty. What rebalance frequency does that imply once costs are included?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 171, Sunday, 24 January 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down the relationship between information ratio, information coefficient and breadth, from memory if you can.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Evaluate it for an IC of 0.03 and 500 names traded daily.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare the answer against the Sharpe your engine reports for that signal. They will differ.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 73 — Placeholder title for day 73"
-subtitle: "Sunday, 18 October 2026 · Week 11 of 52 · Time series · Study day · 60 min"
+title: "Day 73 — HAC standard errors, and the lag choice nobody defends"
+subtitle: "Sunday, 18 October 2026 · Week 11 of 52 · Time series · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Sunday, 18 October 2026 · Week 11 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Overlapping observations and persistent regressors are how predictive regressions in this field are usually run, and the standard errors that come out of ordinary least squares are wrong by a factor you can compute.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what Newey-West is estimating and why the naive standard error is too small under positive residual autocorrelation.
+- Show how much the t-statistic on your own predictive regression moves under three different lag truncation choices.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Rerun last night's predictive regression with ordinary standard errors and with Newey-West at lag truncations of 4, 12 and the automatic Newey-West rule from statsmodels. Report four t-statistics from the same point estimate. The spread is the honest uncertainty about your uncertainty.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Demonstrate the mechanism on a case with a known answer: simulate a regression with autocorrelated residuals and a persistent regressor, and compare the empirical standard deviation of the estimated coefficient across replications against what the ordinary and HAC formulas each report. Then say which of the two matched.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [statsmodels documentation](https://www.statsmodels.org/stable/index.html) [tool]{.res-kind}
+- [Greene — Econometric Analysis, free appendices and data](https://pages.stern.nyu.edu/~wgreene/Text/econometricanalysis.htm) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-073-hac.ipynb with four t-statistics from one regression and a simulation confirming which standard error is calibrated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your predictive regression uses 12-month overlapping returns. Roughly what factor should the standard error be inflated by, and where does that factor come from?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 74, Monday, 19 October 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Take your 12-month momentum strategy's monthly returns and compute the mean with an ordinary standard error and with a Newey-West standard error.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the two t-statistics.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow this becomes part of the strategy's write-up rather than an exercise.
 :::
 :::

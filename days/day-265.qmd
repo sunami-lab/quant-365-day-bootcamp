@@ -1,5 +1,5 @@
 ---
-title: "Day 265 — Placeholder title for day 265"
+title: "Day 265 — Fitting the surface, weighted by what you can actually trade"
 subtitle: "Wednesday, 28 April 2027 · Week 38 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Wednesday, 28 April 2027 · Week 38 of 52 · Derivatives · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+An unweighted fit chases the far wings where quotes are wide and nobody trades, and choosing the weight is the difference between a fit that describes the market and one that describes its noise.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Fit SVI slice by slice with a defensible weighting and report the fit quality in volatility points and in price.
+- Check the fitted surface against all three no-arbitrage conditions, including across maturities.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Fit each maturity with the admissibility constraint enforced during optimisation rather than checked afterwards, weighting by vega or by the reciprocal of the spread so the fit concentrates where quotes are meaningful. Report residuals in implied volatility points and in price, since a large volatility error on a deep wing can be a tiny price error.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Check calendar arbitrage across the fitted slices, which is the condition that slice-by-slice fitting can violate even when each slice is individually fine. Where it fails, note it rather than patching it, and record which maturity pairs are involved.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatheral & Jacquier — Arbitrage-free SVI volatility surfaces](https://arxiv.org/abs/1204.0646) [paper]{.res-kind}
+- [QuantLib-Python documentation](https://quantlib-python-docs.readthedocs.io/en/latest/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A fitted SVI surface with residuals reported in both volatility and price, and a calendar arbitrage check across slices.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your fit has a 2 volatility point error on a deep out-of-the-money put. Is that a problem? Answer in price terms.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 266, Thursday, 29 April 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reproduce the three no-arbitrage conditions from memory and name the trade for each.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times; tomorrow is the thirty-eighth sitting.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to install.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 35 — Placeholder title for day 35"
-subtitle: "Thursday, 10 September 2026 · Week 5 of 52 · Returns and noise · Catch-up day · 45 min"
+title: "Day 35 — The week's arithmetic, from memory"
+subtitle: "Thursday, 10 September 2026 · Week 5 of 52 · Returns and noise · Catch-up day · 35 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 10 September 2026 · Week 5 of 52 · Returns and noise · C
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Nothing new. Week 5 is five pieces of algebra you will use every week for the rest of the year, so today is retrieval; if you have them, take the hour back.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Write the five relationships of week 5 from memory: log-simple conversion, time aggregation, cross-sectional aggregation, the drag, and the square-root rule with its correction.
+- State which of the five you were least able to reproduce, and fix that one.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>35 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Finish anything outstanding from days 29 to 34. qlib/returns.py is the piece that matters; everything from here reads from it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Closed book, one page: the five relationships, each with the assumption it rests on. Then check against your notebooks and mark the misses.
 :::
 :::
 
@@ -33,33 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed: ten two-digit multiplications, the sevenths, then 3/8, 5/16 and 1/11 as decimals. Fifth sitting. Compare against the plot you made last night.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> The urn canon: an urn has 5 red and 7 blue balls; you draw 3 without replacement. Probability all three are the same colour? Do it two ways, by counting and by the multiplication rule, and check they agree.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> Variance by conditioning: you roll a die, then flip that many coins. What is the expected number of heads and its variance? Use the law of total variance and say out loud which term is which.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The one-page closed-book sheet with the five week-5 relationships and the assumptions attached.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State the volatility drag relationship and the condition under which the approximation behind it breaks down.
 :::
 
 ## Prepare for tomorrow
@@ -68,6 +65,12 @@ Ten minutes tonight so Day 36, Friday, 11 September 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pull daily returns for SPY, one small-cap name and one currency pair over the longest window you have, and standardise each to zero mean and unit variance.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot a histogram of each against a standard normal density. Just look at them; the measurement is tomorrow.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what you would guess the largest standardised daily move in SPY's history is, in standard deviations.
 :::
 :::

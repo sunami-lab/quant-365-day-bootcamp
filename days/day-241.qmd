@@ -1,5 +1,5 @@
 ---
-title: "Day 241 — Placeholder title for day 241"
+title: "Day 241 — The Itô integral, and why the left endpoint is a choice"
 subtitle: "Sunday, 4 April 2027 · Week 35 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Sunday, 4 April 2027 · Week 35 of 52 · Derivatives · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The gap you found last night does not shrink, which means a stochastic integral is not defined until you say where in each interval you evaluate, and the financial reason for choosing the left is worth more than the mathematical one.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say why the left-endpoint convention is the one that makes financial sense, in terms of what a trader knows when.
+- State the Itô isometry and use it to compute the variance of a simple stochastic integral.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the construction of the Itô integral in the CMU or Etheridge notes, as far as the isometry. The construction is from simple predictable integrands, which is exactly a trading strategy that holds a fixed position between rebalances, and that correspondence is worth making explicit as you read.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Make the financial argument in writing: the left-endpoint convention means your position over an interval is decided before the interval's price change is known. Any other convention lets the strategy see the increment it is about to profit from, which is the look-ahead you spent phase 5 eliminating, in continuous time.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Use the isometry once: compute the variance of the integral of a deterministic function against Brownian motion, and check it by simulation.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [CMU — Iyer, Stochastic Calculus for Finance (notes)](https://www.math.cmu.edu/~gautam/sj/teaching/2021-22/944-scalc-finance1/pdfs/notes-tablet.pdf) [reference]{.res-kind}
+- [NYU Courant — Goodman, Stochastic Calculus (course materials)](https://math.nyu.edu/~goodman/teaching/StochCalc2020/material.html) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-241-ito-integral.ipynb with the endpoint discrepancy quantified and the Itô isometry verified by simulation.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does the Itô integral evaluate the integrand at the left endpoint, and what would the other choice mean for a trading strategy?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 242, Monday, 5 April 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write the ordinary chain rule for a function of a smooth path.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then write what you think the extra term would be for a Brownian path, using the identity from day 240.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> You will probably get it right, and tomorrow you derive it properly.
 :::
 :::

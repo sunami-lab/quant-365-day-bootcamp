@@ -1,6 +1,6 @@
 ---
-title: "Day 219 — Placeholder title for day 219"
-subtitle: "Saturday, 13 March 2027 · Week 32 of 52 · Machine learning · Study day · 60 min"
+title: "Day 219 — Reading a regularization path as a feature ranking"
+subtitle: "Saturday, 13 March 2027 · Week 32 of 52 · Machine learning · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Saturday, 13 March 2027 · Week 32 of 52 · Machine learning · Study
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The order in which coefficients survive as the penalty rises is a ranking you get for free, and comparing it against your standalone signal ranking tells you which signals are carrying independent information.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Interpret a regularization path in terms of which features carry independent information.
+- Report the disagreement between the path ordering and the standalone ranking, and explain the largest discrepancy.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Compare the two rankings side by side: the order features survive in the path, and their standalone net information ratios from day 181. Then explain the largest discrepancy, which will be a signal with a good standalone result that drops early because it is nearly a combination of two others.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Check the stability of the path, which is where most feature ranking claims fall apart: refit on bootstrap resamples of the training set and report how often each feature is in the top three. A ranking that is not stable across resamples is not a ranking.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Record the selection-frequency table into reports/milestone-07-ml.md, since it is more honest than any single ordering.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [scikit-learn documentation](https://scikit-learn.org/stable/) [tool]{.res-kind}
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The regularization path against the standalone ranking, with a bootstrap selection-frequency table for every feature.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+A signal with a good standalone information ratio drops out of the path first. What does that tell you?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 220, Sunday, 14 March 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Fit a gradient boosting model with default hyperparameters on the same data under the same protocol.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Record its out-of-sample R-squared next to the linear one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not tune anything tonight.
 :::
 :::

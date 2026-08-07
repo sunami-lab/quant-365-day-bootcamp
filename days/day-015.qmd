@@ -1,5 +1,5 @@
 ---
-title: "Day 15 — Placeholder title for day 15"
+title: "Day 15 — What an OHLCV bar throws away"
 subtitle: "Friday, 21 August 2026 · Week 3 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,45 +8,43 @@ subtitle: "Friday, 21 August 2026 · Week 3 of 52 · Markets · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You are about to build a data store, and every design decision in it follows from knowing what a daily bar is a summary of and what it destroys.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what each of open, high, low, close and volume is a summary of, and name one thing you cannot recover from the five of them.
+- Explain why the close in your file may not be a trade that happened at a price anyone paid.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Take one liquid name and one day of one-minute bars, and reconstruct the daily bar from them. Check open, high, low and volume reconcile. Then say what the daily bar cannot tell you that the minute bars can: the path, the time of the high, the intraday range distribution.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Compare closes across sources for the same five tickers on the same day: yfinance against any second source you have. Where they differ, work out which is the consolidated close, which is the primary exchange close, and which is the auction print.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the bar definition into the glossary, ending with the sentence about which of the five fields you would trust least and why.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [yfinance](https://github.com/ranaroussi/yfinance) [repo]{.res-kind}
+- [Alpaca — market data](https://alpaca.markets/data) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-015-bars.ipynb showing a daily bar reconstructed from minute bars, plus a five-ticker cross-source close comparison.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Two vendors give different closes for the same stock on the same day and neither is wrong. Give two reasons.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 16, Saturday, 22 August 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Have both SPY files from last night to hand, adjusted and unadjusted, and check they cover the same dates.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Pull the dividend and split history for SPY from yfinance and save it separately.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the number you get for SPY's total return from 2005 to today using the adjusted series. Tomorrow you will get a different number and have to explain it.
 :::
 :::

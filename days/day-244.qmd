@@ -1,5 +1,5 @@
 ---
-title: "Day 244 — Placeholder title for day 244"
+title: "Day 244 — Simulating an SDE, and measuring the discretisation error"
 subtitle: "Wednesday, 7 April 2027 · Week 35 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 7 April 2027 · Week 35 of 52 · Derivatives · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every pricing method in week 39 is a simulation, so knowing the error of your integrator, and that it has two different rates depending on what you are measuring, prevents a class of silent inaccuracy.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Implement the Euler-Maruyama scheme and measure its strong and weak convergence rates against the exact solution.
+- Say which rate matters for pricing an option and which matters for hedging a path.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement the scheme in qlib/derivatives/sde.py and measure both errors against the exact geometric Brownian motion solution: strong error as the mean absolute path difference, and weak error as the difference in the mean of a function of the terminal value. Plot both against the step size on log axes and read off the two slopes.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Say which one you need: pricing depends on the distribution of the terminal value, so weak convergence is what matters and it is the faster of the two rates. Path-dependent hedging depends on the path, so strong convergence matters there and it is slower. Getting this wrong makes people use far smaller steps than they need for a European price.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Implement the exact simulation for geometric Brownian motion too, since it exists, and note that using the exact scheme where one is available removes the question entirely.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 15.070J — Advanced Stochastic Processes, lecture notes](https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/pages/lecture-notes/) [course]{.res-kind}
+- [NYU Courant — Goodman, Stochastic Calculus (course materials)](https://math.nyu.edu/~goodman/teaching/StochCalc2020/material.html) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/derivatives/sde.py with Euler-Maruyama and exact schemes, plus measured strong and weak convergence slopes.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which convergence rate matters for pricing a European option, and which for simulating a hedging strategy?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 245, Thursday, 8 April 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread your derivation of Itô's lemma and try to reproduce it from a blank page.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times; tomorrow is the thirty-fifth sitting.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to install.
 :::
 :::

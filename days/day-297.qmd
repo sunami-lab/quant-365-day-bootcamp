@@ -1,5 +1,5 @@
 ---
-title: "Day 297 — Placeholder title for day 297"
+title: "Day 297 — TWAP, VWAP and participation, and what each one is for"
 subtitle: "Sunday, 30 May 2027 · Week 43 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 30 May 2027 · Week 43 of 52 · Microstructure · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Three algorithms that cover most institutional execution, each optimal against a different benchmark, and the choice of benchmark is a choice about who is being blamed for the outcome.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what benchmark each algorithm minimises deviation from, and when each is the right one.
+- Implement all three and compare their realised cost on your own data.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Implement the three in qlib/exec/: TWAP on a clock, VWAP on a forecast volume profile, and a participation-rate algorithm that trades a fixed fraction of observed volume. The middle one needs an intraday volume forecast, which you can build as a simple average profile by time of day from your ITCH sample.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Compare them on the same orders: simulate each against your reconstructed book for a set of order sizes, and report realised cost against arrival price and against the day's VWAP. An algorithm that beats VWAP and loses against arrival is doing exactly what it was designed to do, and that is the point of the comparison.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Almgren & Chriss (2000) — Optimal Execution of Portfolio Transactions](https://www.smallake.kr/wp-content/uploads/2016/03/optliq.pdf) [paper]{.res-kind}
+- [Financial Markets Microstructure — slides, homework and exams](https://github.com/electronicgore/finmarkets) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Three execution algorithms in qlib/exec/ compared on realised cost against two benchmarks.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your algorithm beat VWAP and lost against arrival price. Is that good? Say what each benchmark measures.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 298, Monday, 31 May 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down every component of the difference between the price you decided to trade at and the price you achieved.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> There are at least four, and one of them is the trade you did not manage to do.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Four lines.
 :::
 :::

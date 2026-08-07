@@ -1,5 +1,5 @@
 ---
-title: "Day 166 — Placeholder title for day 166"
+title: "Day 166 — From scores to weights, the map you keep implicit"
 subtitle: "Tuesday, 19 January 2027 · Week 24 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Tuesday, 19 January 2027 · Week 24 of 52 · Alpha · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Two people with the same signal and different sizing rules get different Sharpe ratios, and treating the sizing as part of the signal is how strategies get credited with things they did not do.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Name four score-to-weight maps and state what each assumes about the score's relationship to expected return.
+- Show how much of one signal's performance is attributable to the sizing rule rather than the ordering.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Implement four maps in qlib/portfolio.py: proportional to score, proportional to rank, equal weight within top and bottom quantiles, and mean-variance optimal treating the score as an expected-return estimate. Each returns weights summing to zero for a long-short book.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Attribute the performance: run one signal under all four maps with identical costs and report Sharpe, turnover and concentration. Then run a randomised control where the ordering is preserved but the magnitudes are shuffled, to separate what the ordering contributes from what the magnitudes do.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [CVXPY — disciplined convex programming](https://www.cvxpy.org/) [tool]{.res-kind}
+- [PyPortfolioOpt](https://pyportfolioopt.readthedocs.io/en/latest/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Four score-to-weight maps in qlib/portfolio.py, with one signal's performance attributed between ordering and magnitude.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your signal's Sharpe drops from 1.1 to 0.7 when you switch from score-proportional to rank-based weights. What did that tell you?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 167, Wednesday, 20 January 2027 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pick the first three signals for the book and write one sentence each on the economic reason it might work.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write the reason before you compute anything. If you cannot write one, that is information.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Three sentences, no code.
 :::
 :::

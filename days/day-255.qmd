@@ -1,5 +1,5 @@
 ---
-title: "Day 255 — Placeholder title for day 255"
+title: "Day 255 — The hedged option pays the gap between two variances"
 subtitle: "Sunday, 18 April 2027 · Week 37 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Sunday, 18 April 2027 · Week 37 of 52 · Derivatives · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The number you produced last night has a closed-form prediction, and confirming your simulation against it is the moment the whole phase becomes usable rather than formal.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the profit of a continuously delta-hedged short option as a function of implied and realized variance.
+- Confirm your simulation matches that prediction across a range of volatility gaps.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Derive the relationship: the instantaneous profit of a delta-hedged short option is proportional to gamma times the difference between implied variance and the squared realized move, integrated over the life of the option. Write it out, then note that gamma weights the contribution by where the path spent its time.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Test the prediction: run the simulation at implied minus realized volatility gaps from minus 10 to plus 10 points and plot mean profit against the gap. Overlay the closed-form prediction. Where the simulation deviates, the cause is that the path-dependent gamma weighting is not captured by the simple version, which is itself the point of the next day.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatheral — The Volatility Surface, Statics and Dynamics (Imperial lecture 1)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-1st-Lecture.pdf) [reference]{.res-kind}
+- [Sinclair — Volatility Trading, 2nd ed. (Wiley)](https://www.wiley.com/en-us/Volatility+Trading,+++Website,+2nd+Edition-p-9781118416723) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-255-vol-arb.ipynb with mean hedged profit plotted against the implied-realized gap, overlaid with the closed-form prediction.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You are short a straddle and delta hedging continuously. Write your profit as a relationship between implied and realized volatility.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 256, Monday, 19 April 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> For one option, plot gamma and theta against time to expiry on the same axes, with theta negated.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The two curves have the same shape.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the relationship you think connects them.
 :::
 :::

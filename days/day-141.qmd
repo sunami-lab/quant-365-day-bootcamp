@@ -1,6 +1,6 @@
 ---
-title: "Day 141 — Placeholder title for day 141"
-subtitle: "Friday, 25 December 2026 · Week 21 of 52 · The research harness · Study day · 60 min"
+title: "Day 141 — Vectorized and event-driven lie about different things"
+subtitle: "Friday, 25 December 2026 · Week 21 of 52 · The research harness · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Friday, 25 December 2026 · Week 21 of 52 · The research harness · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every backtest you have run this year computes positions as an array operation, which is fast and which quietly assumes several things you listed last night.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Name three things a vectorised backtest cannot represent and one thing it gets right that an event-driven engine often gets wrong.
+- Give two reasons the two architectures legitimately disagree and one that means you have a bug.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the comparison out: a vectorised backtest cannot represent partial fills, order rejection, intraday sequencing, position-dependent sizing, or a stop that triggers within a bar. An event-driven engine represents all of those and is slower by two orders of magnitude, which changes what research you can afford to do.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the source of a small event-driven engine, backtesting.py, specifically its main loop and its order handling. It is a few hundred readable lines and reading it is faster than reading the documentation.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Decide and record the architecture you will build: an event loop over sessions rather than over ticks, which keeps the sequencing honest without paying for intraday simulation you have no data for.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [backtesting.py — small readable event-driven backtester](https://kernc.github.io/backtesting.py/) [tool]{.res-kind}
+- [vectorbt — vectorized backtesting over NumPy/Numba](https://vectorbt.dev/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A written architecture decision in reports/milestone-05-platform.md with the three things vectorisation cannot represent.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Vectorized and event-driven backtests disagree on the same strategy. Give two reasons that is expected and one that means you have a bug.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 142, Saturday, 26 December 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Sketch the event loop on paper: what events exist, in what order they fire within a session, and what state each one may read.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The ordering of signal computation, order generation and fill is the part that decides correctness.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Three boxes and some arrows is enough.
 :::
 :::

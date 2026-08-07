@@ -1,5 +1,5 @@
 ---
-title: "Day 324 — Placeholder title for day 324"
+title: "Day 324 — Logging for the questions you will ask in March"
 subtitle: "Saturday, 26 June 2027 · Week 47 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Saturday, 26 June 2027 · Week 47 of 52 · Production · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The purpose of a log is not to record that something happened but to let you reconstruct why a position was what it was, six weeks later, without rerunning anything.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Log structured records that let you reconstruct any day's decisions without rerunning the pipeline.
+- Answer three specific reconstruction questions from the log alone.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Convert your logging to structured records: one line per event as JSON, with a run identifier, a step name, a timestamp, and the numbers rather than a formatted sentence. Include the input row counts, the signal summary statistics, the target positions and the orders generated. A log you have to parse with a regular expression is a log you will not use.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Test it against real questions: why did the book hold this position on that date, what did the signal look like the day the pipeline produced no orders, and how long did each step take across the last month. If any of the three cannot be answered from the log alone, add what is missing now.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The production run emits structured JSON logs with run identifiers, per-step timings and the numbers behind each decision, so any day's positions can be reconstructed from the log without rerunning the pipeline.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [NautilusTrader documentation](https://nautilustrader.io/docs/) [tool]{.res-kind}
+- [DuckDB documentation](https://duckdb.org/docs/current/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Structured logging in place, with three reconstruction questions answered from the log alone.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+From your logs alone, can you say why the book held a particular position on a particular day? Demonstrate it.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 325, Sunday, 27 June 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List the four things most likely to break in your pipeline over a year of unattended running.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> For each, say how you would find out and how long it would take.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> If any answer is that you would notice eventually, mark it.
 :::
 :::

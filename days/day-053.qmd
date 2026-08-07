@@ -1,6 +1,6 @@
 ---
-title: "Day 53 — Placeholder title for day 53"
-subtitle: "Monday, 28 September 2026 · Week 8 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 53 — Implement the correction, and make the count automatic"
+subtitle: "Monday, 28 September 2026 · Week 8 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,46 @@ subtitle: "Monday, 28 September 2026 · Week 8 of 52 · Returns and noise · Stu
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A correction you have to remember to apply is a correction you will not apply in March, so today it goes into the code that reports every Sharpe you will ever compute.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Compute a deflated Sharpe ratio from a return series, a trial count and the cross-trial Sharpe variance.
+- Have your own tooling count the trials rather than trusting you to remember them.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Add `deflated_sharpe()` to qlib/stats.py, taking the observed Sharpe, the number of trials, the variance of Sharpes across trials, and the sample skewness and kurtosis. Test it against your day 51 simulation: feed it the null set and confirm the deflated value is not significant.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Build the trial counter: a small append-only log, `research_log.jsonl` in the work repo, where every backtest run writes one line with the strategy name, parameters, date and realised Sharpe. Wire it into the stats module so that running an evaluation records itself. In eleven months this file is the evidence behind the number on the front page of milestone 6.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The research log begins. Every strategy evaluation from today writes a line to research_log.jsonl, so the number of trials behind any later result is a fact you can count rather than a number you have to recall.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey & López de Prado (2014) — The Deflated Sharpe Ratio](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf) [paper]{.res-kind}
+- [pytest documentation](https://docs.pytest.org/en/stable/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/stats.py with a tested deflated Sharpe, and research_log.jsonl accumulating one line per evaluation automatically.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Where does the number of trials in your deflated Sharpe come from, and what happens to it when you rerun a grid search twice?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 54, Tuesday, 29 September 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download the probability of backtest overfitting paper from eScholarship and read the abstract.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what you think the difference is between it and the deflated Sharpe. One line.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note how many parameter combinations your most recent grid search covered.
 :::
 :::

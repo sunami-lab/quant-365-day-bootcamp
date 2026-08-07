@@ -1,5 +1,5 @@
 ---
-title: "Day 317 — Placeholder title for day 317"
+title: "Day 317 — Memory layout, and why one loop is four times faster"
 subtitle: "Saturday, 19 June 2027 · Week 46 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Saturday, 19 June 2027 · Week 46 of 52 · Production · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The timing difference you found last night has nothing to do with the language and everything to do with what the cache line contains, which is the single most useful performance idea in this week.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Explain the array-of-structs against struct-of-arrays result in terms of cache lines and prefetching.
+- Say what that implies for how a tick database should be laid out, and connect it to your Parquet work.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Explain your measurement: a cache line brings in 64 bytes, so iterating over one field of a struct array wastes most of every line, while a columnar layout uses all of it. Then vary the struct size and plot the timing ratio against it, which makes the mechanism visible rather than asserted.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Connect it back: Parquet is struct-of-arrays on disk for the same reason, and your day 311 measurement of bytes read is the same effect one level up the hierarchy. Write the connection down, since it is the answer to the tick database question you will be asked.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add the second effect: measure a random access pattern over the same array against a sequential one, and report the ratio. Prefetching only helps when the access is predictable.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Modern C++ Tutorial (Ou) — C++11 to C++26](https://changkun.de/modern-cpp/) [textbook]{.res-kind}
+- [Jane Street — tech blog](https://blog.janestreet.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Timing ratio plotted against struct size, plus a random-against-sequential access comparison and the written connection to Parquet.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why is a columnar layout faster for a scan, and how does that answer the question about storing a tick database?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 318, Sunday, 20 June 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the cppreference pages for vector, unordered_map and map, and note the complexity guarantees of each operation.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then write down which you would use for an order book's price levels and which for its order lookup.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two choices with reasons.
 :::
 :::

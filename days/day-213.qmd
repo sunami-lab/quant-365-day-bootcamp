@@ -1,6 +1,6 @@
 ---
-title: "Day 213 — Placeholder title for day 213"
-subtitle: "Sunday, 7 March 2027 · Week 31 of 52 · Machine learning · Study day · 60 min"
+title: "Day 213 — Sample uniqueness, and the effective size of your training set"
+subtitle: "Sunday, 7 March 2027 · Week 31 of 52 · Machine learning · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Sunday, 7 March 2027 · Week 31 of 52 · Machine learning · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The overlap counts you plotted last night mean your hundred thousand training rows contain far fewer independent observations, and every standard error in the phase depends on knowing how many.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Compute average uniqueness per observation and derive the effective sample size of your training set.
+- Say what an inflated effective sample size does to a model comparison, and in which direction.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Implement uniqueness in qlib/ml/labels.py: for each observation, the average over its label window of the reciprocal of the number of concurrent labels. Then report the effective sample size as the sum of uniqueness across the training set, against the raw row count. The ratio is often four or five to one.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Show what it changes: recompute the standard error of your out-of-sample R-squared using the effective sample size rather than the row count, and note how many model comparisons that reclassifies from significant to indistinguishable. This is the same correction as clustering standard errors, applied to a machine learning workflow that usually does not do it at all.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the second use: bagging with a sample size set by uniqueness rather than by the row count, which is where tomorrow starts.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [López de Prado — Advances in Financial Machine Learning, seminar slides](https://www.quantresearch.org/Lectures.htm) [reference]{.res-kind}
+- [Efron & Hastie — Computer Age Statistical Inference](https://hastie.su.domains/CASI/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Uniqueness and effective sample size computed for your dataset, with the corrected standard error on out-of-sample R-squared.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Overlapping labels break an assumption most estimators rely on. Which one, and what is the standard correction?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 214, Monday, 8 March 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down two reasons you might want to weight one training observation more than another, other than uniqueness.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> One is about how much the observation moved, and one is about how old it is.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two sentences.
 :::
 :::

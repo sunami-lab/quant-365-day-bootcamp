@@ -1,6 +1,6 @@
 ---
-title: "Day 150 — Placeholder title for day 150"
-subtitle: "Sunday, 3 January 2027 · Week 22 of 52 · The research harness · Study day · 60 min"
+title: "Day 150 — Borrow and financing, the costs with no price print"
+subtitle: "Sunday, 3 January 2027 · Week 22 of 52 · The research harness · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,43 @@ subtitle: "Sunday, 3 January 2027 · Week 22 of 52 · The research harness · St
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The two costs you cannot see in any price series, which is exactly why they are the ones most often left out of a backtest and most reliably present in a brokerage statement.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Compute the annual financing and borrow cost of a long-short book at stated rates, and express it as a Sharpe reduction.
+- Say what happens to the calculation when one name in your short book becomes hard to borrow.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Add financing to qlib/costs.py: a daily charge on the net debit balance at the broker call rate, and a daily borrow fee on the short market value at a per-name rate defaulting to general collateral. Apply it to your pairs strategy and report the drag in basis points a year and the Sharpe before and after.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Model the tail: assume 5 percent of your short positions become hard to borrow at 8 percent a year for a quarter of the holding period, and recompute. Then say what a recall would cost on top, using your day 12 notes. Borrow costs are not symmetric and the tail is what matters.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the assumption list for financing into the milestone report, since every number here is an assumption rather than a measurement until phase 10.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Pedersen — Efficiently Inefficient, free introduction chapter](http://assets.press.princeton.edu/chapters/i10441.pdf) [reference]{.res-kind}
+- [Interactive Brokers — TWS API pacing limits](https://interactivebrokers.github.io/tws-api/historical_limitations.html) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Financing and borrow costs in qlib/costs.py, with the pairs strategy's Sharpe before and after and a hard-to-borrow tail scenario.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your market-neutral book is 100 long and 100 short. What does it cost to carry for a year before you trade at all?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 151, Monday, 4 January 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the annual turnover of both your strategies as a fraction of portfolio value, one-way.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Divide by 252 to get the daily fraction traded.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two numbers per strategy. Tomorrow turns them into money.
 :::
 :::

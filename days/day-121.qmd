@@ -1,6 +1,6 @@
 ---
-title: "Day 121 — Placeholder title for day 121"
-subtitle: "Saturday, 5 December 2026 · Week 18 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 121 — VaR says nothing about the day it is wrong"
+subtitle: "Saturday, 5 December 2026 · Week 18 of 52 · Portfolios and risk · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Saturday, 5 December 2026 · Week 18 of 52 · Portfolios and risk · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+It is the number a risk committee asks for, it is not a bound, and the two numbers you computed last night differ by an amount that depends entirely on an assumption you did not make consciously.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State exactly what a 99 percent one-day VaR claims and what it is silent about.
+- Report historical, parametric and filtered-historical VaR for your book, and explain the ordering.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Compute all three: historical simulation, the normal parametric estimate, and filtered historical simulation where returns are standardised by a volatility forecast before resampling and then rescaled. Report all three for 95 and 99 percent, one-day and ten-day.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Say what each assumes: the historical version assumes the past sample covers the relevant states, the parametric version assumes a shape you disproved in week 6, and the filtered version assumes the standardised residuals are exchangeable. Write one line each into the milestone report.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 18.S096 — Topics in Mathematics with Applications in Finance](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/) [course]{.res-kind}
+- [Bouchaud & Potters — Theory of Financial Risk and Derivative Pricing (Cambridge)](https://www.cambridge.org/core/books/theory-of-financial-risk-and-derivative-pricing/5BBBA04CE72ED9E5E7C1C028D9A94FCB) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-121-var.ipynb with three VaR estimators at two confidence levels and two horizons, and the assumption behind each stated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your 99 percent one-day VaR is one million. Say precisely what that claims, and name the loss it is silent about.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 122, Sunday, 6 December 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the average loss on the days where your book exceeded its 99 percent VaR.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare that against the VaR itself.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> That ratio is tomorrow's statistic and it has a name.
 :::
 :::

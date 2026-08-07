@@ -1,6 +1,6 @@
 ---
-title: "Day 41 — Placeholder title for day 41"
-subtitle: "Wednesday, 16 September 2026 · Week 6 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 41 — Correlations rise exactly when you need them not to"
+subtitle: "Wednesday, 16 September 2026 · Week 6 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,39 @@ subtitle: "Wednesday, 16 September 2026 · Week 6 of 52 · Returns and noise · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The last stylized fact of the week and the one with the most direct consequence for position sizing, because a diversification benefit that disappears in a drawdown was never a diversification benefit.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report your average pairwise correlation in the calmest and the most volatile deciles of the sample, and say how much diversification is lost between them.
+- Say why part of the measured rise is an artifact of conditioning on volatility, and how you would separate the artifact from the real effect.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Quantify last night's plot: bucket the sample by SPY realised volatility decile and report the average pairwise correlation in each. Then translate it into what it costs you, by computing the volatility of an equal-weighted 50-name portfolio implied by each bucket's correlation.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Separate the artifact: simulate 50 series with constant true correlation and time-varying common volatility, then run the same bucketing on the simulation. Some of the effect appears with no change in the true correlation at all, and knowing how much is the difference between a finding and a mistake.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Laloux, Cizeau, Bouchaud & Potters (1998) — Noise Dressing of Financial Correlation Matrices](https://arxiv.org/abs/cond-mat/9810255) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-041-correlation.ipynb with correlation by volatility decile for real and simulated data, and the implied portfolio volatility in each bucket.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Correlation rose from 0.25 to 0.6 in the worst decile. How much of that is real, and what simulation told you so?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +49,12 @@ Ten minutes tonight so Day 42, Thursday, 17 September 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Assemble a single figure with the six stylized facts from this week as six panels. Do not polish it; just get all six on one canvas.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write a one-line caption under each panel saying what is being claimed.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the drill times you have recorded so far so tomorrow's sixth sitting has a target.
 :::
 :::

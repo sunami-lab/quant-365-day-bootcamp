@@ -1,5 +1,5 @@
 ---
-title: "Day 13 — Placeholder title for day 13"
+title: "Day 13 — Leverage decides when you are forced to sell"
 subtitle: "Wednesday, 19 August 2026 · Week 2 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,39 +8,42 @@ subtitle: "Wednesday, 19 August 2026 · Week 2 of 52 · Markets · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every risk of ruin calculation in week 19 is a statement about margin, and margin is arithmetic you should be able to do in your head before then.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Derive the price at which a leveraged long position gets a maintenance margin call, from equity, position value and the maintenance fraction.
+- Say what forced deleveraging does to a crowded position, and why it makes correlations rise exactly when you do not want them to.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Derive it rather than look it up: with initial equity E, borrowing to hold N shares at price P, and maintenance requirement m, find the price at which equity divided by position value falls to m. Then evaluate it for 2 to 1 leverage at m equal to 0.25.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Simulate the mechanic: take SPY daily returns over 2007-2009, apply 3 to 1 leverage with daily rebalancing to constant leverage, and plot the equity path against the unleveraged one. Note where a 33 percent drawdown in the index becomes something else entirely.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the leverage entry in the glossary, ending with the sentence about what happens to everyone holding the same position when one large holder is forced out.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Pedersen — Efficiently Inefficient, free introduction chapter](http://assets.press.princeton.edu/chapters/i10441.pdf) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-013-leverage.ipynb with the margin-call price derived symbolically and the 2007-2009 leveraged equity path plotted.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You are 3 to 1 long with maintenance margin at 25 percent. How far can the position fall before you are called, and what happens to that distance after a 10 percent fall?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +52,12 @@ Ten minutes tonight so Day 14, Thursday, 20 August 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread your week 2 glossary entries and mark anything you could not explain to a broker on the phone.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Set the 60-second timer out again for tomorrow's arithmetic drill and check last week's numbers so you know what you are trying to beat.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Skim the Jane Street puzzle archive and pick one problem that looks tractable. It is not tomorrow's drill; it is a reserve for a day when the drill is short.
 :::
 :::

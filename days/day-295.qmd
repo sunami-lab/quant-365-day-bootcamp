@@ -1,5 +1,5 @@
 ---
-title: "Day 295 — Placeholder title for day 295"
+title: "Day 295 — The execution problem, stated as a trade-off you choose"
 subtitle: "Friday, 28 May 2027 · Week 43 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Friday, 28 May 2027 · Week 43 of 52 · Microstructure · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Trading fast costs impact and trading slow costs risk, and the whole content of execution theory is that the balance between them depends on a preference you have to state rather than estimate.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the Almgren-Chriss objective and identify which term is a cost and which is a risk preference.
+- Say what happens to the optimal schedule as risk aversion goes to zero and to infinity.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Read the Almgren and Chriss problem setup and the derivation of the optimal trajectory as far as the closed form for linear impact. The objective is expected cost plus a risk aversion times the variance of cost, and the solution is an exponentially shaped schedule whose curvature is set by that aversion.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Explore the two limits: with zero risk aversion the optimal schedule is a straight line, which is TWAP, and with infinite aversion it is an immediate trade. Implement the closed form and plot schedules across a range of aversions to see the family.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Almgren & Chriss (2000) — Optimal Execution of Portfolio Transactions](https://www.smallake.kr/wp-content/uploads/2016/03/optliq.pdf) [paper]{.res-kind}
+- [Institut Louis Bachelier — Practical Introduction to Market Microstructure](https://mooc.institutlouisbachelier.org/en/mooc/practical-introduction-to-market-microstructure-2/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-295-almgren-chriss.ipynb with the optimal schedule family plotted across risk aversions and both limits identified.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+In the Almgren-Chriss objective, which term is a measured cost and which is a preference you chose?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 296, Saturday, 29 May 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the expected cost and the standard deviation of cost for three of the schedules you plotted.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot the three points with cost on one axis and its standard deviation on the other.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> You have drawn two points of a frontier. Tomorrow fills it in.
 :::
 :::

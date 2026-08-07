@@ -1,5 +1,5 @@
 ---
-title: "Day 360 — Placeholder title for day 360"
+title: "Day 360 — The research dossier, assembled from eleven documents"
 subtitle: "Sunday, 1 August 2027 · Week 52 of 52 · Capstone · Study day · 60 min"
 ---
 
@@ -8,45 +8,46 @@ subtitle: "Sunday, 1 August 2027 · Week 52 of 52 · Capstone · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The year exists in eleven separate reports and nobody will read eleven, so the dossier is the one document that has to stand alone and it is built from your eleven sentences.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Produce a single document covering the platform, the alpha book, the risk model, the execution study and the live record.
+- Have every claim in it traceable to a milestone and reproducible from committed code.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Write the dossier around the eleven sentences: one section per theme rather than per milestone, with the strongest figure from each and a pointer to the full report. The platform, the noise floor, the alpha book, the risk model, the execution study and the live record are six sections, and the machine learning audit belongs inside the alpha book section rather than beside it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Verify traceability: every number in the dossier gets a reference to the milestone and the configuration that produced it. Then pick three at random and reproduce them from a clean checkout. Anything that fails is a claim to remove rather than a bug to note.
 :::
 :::
 
 ## The running strategy
 
 ::: {.project}
-Placeholder project increment.
+The research dossier pulls the year into one document with every claim traced to a milestone and a configuration, verified by reproducing three claims at random from a clean checkout.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — tech blog](https://blog.janestreet.com/) [reference]{.res-kind}
+- [Man Group — Man Insights](https://www.man.com/insights) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/capstone-dossier.md covering six themes, with three claims verified by reproduction from a clean checkout.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Pick a number from your dossier at random. Which milestone produced it, and what command reproduces it?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +56,12 @@ Ten minutes tonight so Day 361, Monday, 2 August 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down which parts of your system you would actually run with your own money, and at what size.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then write down what you would not run and why.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Be specific about the size; a range is an evasion.
 :::
 :::

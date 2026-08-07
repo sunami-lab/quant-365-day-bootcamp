@@ -3,8 +3,195 @@ title: "Every resource"
 subtitle: "Every link the year uses, grouped by what it is."
 ---
 
-1 distinct resources across the 365 days. The day numbers after each entry tell you where it is used, so an entry used on twelve days is one you will live in.
+164 distinct resources across the 365 days. The day numbers after each entry tell you where it is used, so an entry used on twelve days is one you will live in.
+
+## Books and long-form references
+
+- [Pedersen — Efficiently Inefficient (Princeton UP)](https://press.princeton.edu/books/hardcover/9780691166193/efficiently-inefficient) — days [1](days/day-001.qmd), [12](days/day-012.qmd)
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) — days [7](days/day-007.qmd), [14](days/day-014.qmd), [21](days/day-021.qmd), [28](days/day-028.qmd), [35](days/day-035.qmd), [42](days/day-042.qmd), [49](days/day-049.qmd), [56](days/day-056.qmd), [63](days/day-063.qmd), [70](days/day-070.qmd), [77](days/day-077.qmd), [84](days/day-084.qmd) and 24 more
+- [Ilmanen — Expected Returns (Wiley)](https://www.wiley.com/en-us/Expected+Returns:+An+Investor's+Guide+to+Harvesting+Market+Rewards-p-9781119990772) — day [24](days/day-024.qmd)
+- [Narang — Inside the Black Box, 3rd ed. (Wiley)](https://www.wiley.com/en-us/Inside+the+Black+Box%3A+A+Simple+Guide+to+Systematic+Investing%2C+3rd+Edition-p-9781119931904) — days [27](days/day-027.qmd), [162](days/day-162.qmd), [200](days/day-200.qmd)
+- [Sheppard — Python for Econometrics (notes)](https://bashtage.github.io/kevinsheppard.com/teaching/python/notes/) — days [34](days/day-034.qmd), [36](days/day-036.qmd), [37](days/day-037.qmd), [46](days/day-046.qmd), [86](days/day-086.qmd), [312](days/day-312.qmd)
+- [Efron & Hastie — Computer Age Statistical Inference](https://hastie.su.domains/CASI/) — days [37](days/day-037.qmd), [40](days/day-040.qmd), [44](days/day-044.qmd), [57](days/day-057.qmd), [59](days/day-059.qmd), [208](days/day-208.qmd), [213](days/day-213.qmd), [223](days/day-223.qmd), [227](days/day-227.qmd), [233](days/day-233.qmd), [236](days/day-236.qmd), [344](days/day-344.qmd)
+- [Casella & Berger — Statistical Inference (Cengage)](https://www.cengage.com/c/statistical-inference-2e-casella/9780534243128/) — day [44](days/day-044.qmd)
+- [Hyndman & Athanasopoulos — Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/) — days [64](days/day-064.qmd), [65](days/day-065.qmd), [66](days/day-066.qmd), [67](days/day-067.qmd), [71](days/day-071.qmd), [75](days/day-075.qmd)
+- [Hamilton — Time Series Analysis (Princeton UP)](https://press.princeton.edu/books/hardcover/9780691042893/time-series-analysis) — day [80](days/day-080.qmd)
+- [Boyd & Vandenberghe — Convex Optimization (free book)](https://web.stanford.edu/~boyd/cvxbook/) — days [99](days/day-099.qmd), [102](days/day-102.qmd)
+- [Ang — Asset Management: A Systematic Approach to Factor Investing (Oxford)](https://academic.oup.com/book/3342) — days [116](days/day-116.qmd), [165](days/day-165.qmd), [171](days/day-171.qmd)
+- [Bouchaud & Potters — Theory of Financial Risk and Derivative Pricing (Cambridge)](https://www.cambridge.org/core/books/theory-of-financial-risk-and-derivative-pricing/5BBBA04CE72ED9E5E7C1C028D9A94FCB) — days [121](days/day-121.qmd), [122](days/day-122.qmd)
+- [Meucci — Risk and Asset Allocation (Springer)](https://link.springer.com/book/10.1007/978-3-540-27904-4) — day [122](days/day-122.qmd)
+- [Bouchaud, Bonart, Donier & Gould — Trades, Quotes and Prices (Cambridge)](https://www.cambridge.org/core/books/trades-quotes-and-prices/029A71078EE4C41C0D5D4574211AB1B5) — days [148](days/day-148.qmd), [281](days/day-281.qmd), [283](days/day-283.qmd), [286](days/day-286.qmd), [291](days/day-291.qmd), [293](days/day-293.qmd), [298](days/day-298.qmd)
+- [Pro Git (Chacon & Straub, free)](https://git-scm.com/book/en/v2) — day [159](days/day-159.qmd)
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) — days [189](days/day-189.qmd), [196](days/day-196.qmd), [198](days/day-198.qmd), [203](days/day-203.qmd), [204](days/day-204.qmd), [205](days/day-205.qmd), [211](days/day-211.qmd), [217](days/day-217.qmd), [218](days/day-218.qmd), [219](days/day-219.qmd), [220](days/day-220.qmd), [224](days/day-224.qmd) and 6 more
+- [Murphy — Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html) — days [225](days/day-225.qmd), [227](days/day-227.qmd), [231](days/day-231.qmd)
+- [Murphy — Probabilistic Machine Learning: Advanced Topics](https://probml.github.io/pml-book/book2.html) — day [226](days/day-226.qmd)
+- [Sinclair — Volatility Trading, 2nd ed. (Wiley)](https://www.wiley.com/en-us/Volatility+Trading,+++Website,+2nd+Edition-p-9781118416723) — days [254](days/day-254.qmd), [255](days/day-255.qmd), [256](days/day-256.qmd), [258](days/day-258.qmd), [274](days/day-274.qmd), [277](days/day-277.qmd), [278](days/day-278.qmd)
+- [Wilmott — Paul Wilmott Introduces Quantitative Finance (Wiley)](https://www.wiley.com/en-us/Paul+Wilmott+Introduces+Quantitative+Finance,+2nd+Edition-p-9781118836798) — day [256](days/day-256.qmd)
+- [Gatheral — The Volatility Surface (Wiley)](https://www.wiley.com/en-us/The+Volatility+Surface:+A+Practitioner's+Guide-p-9780471792512) — days [261](days/day-261.qmd), [267](days/day-267.qmd), [275](days/day-275.qmd)
+- [QuantLib Python Cookbook (Ballabio & Balaraman, free)](https://leanpub.com/quantlibpythoncookbook) — days [268](days/day-268.qmd), [270](days/day-270.qmd)
+- [Modern C++ Tutorial (Ou) — C++11 to C++26](https://changkun.de/modern-cpp/) — day [317](days/day-317.qmd)
+- [Durrett — Probability: Theory and Examples (author's free 5th ed. draft)](https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf) — day [333](days/day-333.qmd)
+
+## Papers
+
+- [Gatev, Goetzmann & Rouwenhorst (1999) — Pairs Trading (NBER w7032)](https://www.nber.org/papers/w7032) — days [26](days/day-026.qmd), [79](days/day-079.qmd), [81](days/day-081.qmd), [83](days/day-083.qmd), [96](days/day-096.qmd), [97](days/day-097.qmd)
+- [Avellaneda & Lee (2010) — Statistical arbitrage in the US equities market](https://traders.studentorg.berkeley.edu/papers/Statistical%20arbitrage%20in%20the%20US%20equities%20market.pdf) — days [26](days/day-026.qmd), [78](days/day-078.qmd), [81](days/day-081.qmd), [82](days/day-082.qmd), [83](days/day-083.qmd), [94](days/day-094.qmd), [98](days/day-098.qmd)
+- [Laloux, Cizeau, Bouchaud & Potters (1998) — Noise Dressing of Financial Correlation Matrices](https://arxiv.org/abs/cond-mat/9810255) — days [41](days/day-041.qmd), [107](days/day-107.qmd), [125](days/day-125.qmd), [133](days/day-133.qmd), [197](days/day-197.qmd)
+- [Bailey, Borwein, López de Prado & Zhu (2014) — Pseudo-Mathematics and Financial Charlatanism](https://www.davidhbailey.com/dhbpapers/backtest-pseudo.pdf) — days [50](days/day-050.qmd), [51](days/day-051.qmd), [63](days/day-063.qmd), [160](days/day-160.qmd), [186](days/day-186.qmd), [237](days/day-237.qmd), [307](days/day-307.qmd), [362](days/day-362.qmd), [365](days/day-365.qmd)
+- [Harvey, Liu & Zhu (2014) — ...and the Cross-Section of Expected Returns](https://www.nber.org/papers/w20592) — days [50](days/day-050.qmd), [62](days/day-062.qmd), [181](days/day-181.qmd), [186](days/day-186.qmd), [199](days/day-199.qmd), [237](days/day-237.qmd)
+- [Bailey & López de Prado (2014) — The Deflated Sharpe Ratio](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf) — days [52](days/day-052.qmd), [53](days/day-053.qmd), [61](days/day-061.qmd), [69](days/day-069.qmd), [202](days/day-202.qmd), [236](days/day-236.qmd)
+- [Bailey, Borwein, López de Prado & Zhu (2017) — The Probability of Backtest Overfitting](https://escholarship.org/content/qt4w1110bb/qt4w1110bb.pdf) — days [54](days/day-054.qmd), [61](days/day-061.qmd), [96](days/day-096.qmd), [157](days/day-157.qmd), [202](days/day-202.qmd), [222](days/day-222.qmd), [232](days/day-232.qmd)
+- [White (2000) — A Reality Check for Data Snooping](https://users.ssc.wisc.edu/~bhansen/718/White2000.pdf) — day [55](days/day-055.qmd)
+- [McLean & Pontiff (draft) — Does Academic Research Destroy Stock Return Predictability?](https://www.hec.ca/finance/Fichier/McLean.pdf) — days [62](days/day-062.qmd), [97](days/day-097.qmd), [115](days/day-115.qmd), [180](days/day-180.qmd), [192](days/day-192.qmd)
+- [Carr & López de Prado (2014) — Determining Optimal Trading Rules without Backtesting](https://arxiv.org/abs/1408.1159) — days [82](days/day-082.qmd), [129](days/day-129.qmd)
+- [Black & Litterman (1992) — Global Portfolio Optimization](https://www.cis.upenn.edu/~mkearns/finread/black.pdf) — day [104](days/day-104.qmd)
+- [Bouchaud & Potters — Financial Applications of Random Matrix Theory (review)](https://arxiv.org/abs/0910.1205) — days [107](days/day-107.qmd), [108](days/day-108.qmd), [125](days/day-125.qmd)
+- [Potters, Bouchaud & Laloux — Financial Applications of RMT: Old Laces and New Pieces](https://arxiv.org/abs/physics/0507111) — day [108](days/day-108.qmd)
+- [Fama & French (1993) — Common risk factors in the returns on stocks and bonds](https://www.bauer.uh.edu/rsusmel/phd/Fama-French_JFE93.pdf) — days [111](days/day-111.qmd), [114](days/day-114.qmd), [118](days/day-118.qmd), [176](days/day-176.qmd)
+- [Frazzini & Pedersen — Betting Against Beta (draft)](https://w4.stern.nyu.edu/facdir/lpederse/papers/BettingAgainstBeta.pdf) — days [113](days/day-113.qmd), [179](days/day-179.qmd)
+- [Hou, Xue & Zhang (2017) — Replicating Anomalies](https://www.nber.org/papers/w23394) — days [115](days/day-115.qmd), [178](days/day-178.qmd), [181](days/day-181.qmd), [234](days/day-234.qmd)
+- [Jegadeesh & Titman (1993) — Returns to Buying Winners and Selling Losers](https://www.bauer.uh.edu/rsusmel/phd/jegadeesh-titman93.pdf) — days [115](days/day-115.qmd), [167](days/day-167.qmd), [177](days/day-177.qmd)
+- [Amihud (2002) — Illiquidity and stock returns](https://www.cis.upenn.edu/~mkearns/finread/amihud.pdf) — days [148](days/day-148.qmd), [153](days/day-153.qmd), [173](days/day-173.qmd), [180](days/day-180.qmd), [292](days/day-292.qmd), [302](days/day-302.qmd)
+- [Tóth et al. (2011) — Anomalous price impact and the critical nature of liquidity](https://arxiv.org/abs/1105.1694) — days [149](days/day-149.qmd), [173](days/day-173.qmd), [235](days/day-235.qmd), [292](days/day-292.qmd), [296](days/day-296.qmd), [300](days/day-300.qmd), [302](days/day-302.qmd), [303](days/day-303.qmd)
+- [Almgren & Chriss (2000) — Optimal Execution of Portfolio Transactions](https://www.smallake.kr/wp-content/uploads/2016/03/optliq.pdf) — days [149](days/day-149.qmd), [153](days/day-153.qmd), [258](days/day-258.qmd), [291](days/day-291.qmd), [295](days/day-295.qmd), [296](days/day-296.qmd), [297](days/day-297.qmd), [298](days/day-298.qmd), [301](days/day-301.qmd), [308](days/day-308.qmd)
+- [Asness, Moskowitz & Pedersen (2013) — Value and Momentum Everywhere](https://w4.stern.nyu.edu/facdir/lpederse/papers/ValMomEverywhere.pdf) — days [163](days/day-163.qmd), [171](days/day-171.qmd), [177](days/day-177.qmd), [184](days/day-184.qmd), [185](days/day-185.qmd)
+- [Novy-Marx (2012) — The Other Side of Value: The Gross Profitability Premium](https://mysimon.rochester.edu/novy-marx/research/OSoV.pdf) — days [178](days/day-178.qmd), [191](days/day-191.qmd)
+- [Gu, Kelly & Xiu (2020) — Empirical Asset Pricing via Machine Learning](https://dachxiu.chicagobooth.edu/download/ML.pdf) — days [194](days/day-194.qmd), [203](days/day-203.qmd), [204](days/day-204.qmd), [208](days/day-208.qmd), [216](days/day-216.qmd), [220](days/day-220.qmd), [224](days/day-224.qmd), [229](days/day-229.qmd), [233](days/day-233.qmd), [235](days/day-235.qmd), [238](days/day-238.qmd), [345](days/day-345.qmd)
+- [Chen, Pelger & Zhu — Deep Learning in Asset Pricing](https://arxiv.org/abs/1904.00745) — days [194](days/day-194.qmd), [216](days/day-216.qmd), [225](days/day-225.qmd), [229](days/day-229.qmd)
+- [Gatheral & Jacquier — Arbitrage-free SVI volatility surfaces](https://arxiv.org/abs/1204.0646) — days [263](days/day-263.qmd), [264](days/day-264.qmd), [265](days/day-265.qmd)
+- [Gatheral, Jaisson & Rosenbaum — Volatility is rough](https://arxiv.org/abs/1410.3394) — day [272](days/day-272.qmd)
+- [Glosten & Milgrom (1983 working paper) — Bid, Ask and Transaction Prices in a Specialist Market](https://www.kellogg.northwestern.edu/research/math/papers/570.pdf) — days [284](days/day-284.qmd), [285](days/day-285.qmd), [288](days/day-288.qmd), [339](days/day-339.qmd)
+- [Kyle (1985) — Continuous Auctions and Insider Trading](https://people.duke.edu/~qc2/BA532/1985%20EMA%20Kyle.pdf) — days [289](days/day-289.qmd), [290](days/day-290.qmd), [294](days/day-294.qmd)
+- [Budish, Cramton & Shim (2015) — The High-Frequency Trading Arms Race](https://www.cramton.umd.edu/papers2015-2019/budish-cramton-shim-hft-frequent-batch-auctions.pdf) — days [304](days/day-304.qmd), [305](days/day-305.qmd)
+
+## Courses
+
+- [MIT 15.401 — Finance Theory I (Andrew Lo), video lectures and slides](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/pages/video-lectures-and-slides/) — days [2](days/day-002.qmd), [4](days/day-004.qmd), [5](days/day-005.qmd), [6](days/day-006.qmd), [247](days/day-247.qmd)
+- [Financial Markets Microstructure — slides, homework and exams](https://github.com/electronicgore/finmarkets) — days [8](days/day-008.qmd), [9](days/day-009.qmd), [11](days/day-011.qmd), [25](days/day-025.qmd), [284](days/day-284.qmd), [288](days/day-288.qmd), [297](days/day-297.qmd)
+- [Zivot — Introduction to Computational Finance and Financial Econometrics with R](https://bookdown.org/compfinezbook/introcompfinr/) — days [29](days/day-029.qmd), [30](days/day-030.qmd), [31](days/day-031.qmd), [32](days/day-032.qmd), [36](days/day-036.qmd), [40](days/day-040.qmd), [60](days/day-060.qmd)
+- [MIT 18.S096 — Topics in Mathematics with Applications in Finance](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/) — days [38](days/day-038.qmd), [85](days/day-085.qmd), [101](days/day-101.qmd), [111](days/day-111.qmd), [121](days/day-121.qmd), [242](days/day-242.qmd), [246](days/day-246.qmd), [250](days/day-250.qmd)
+- [Kalman and Bayesian Filters in Python (Labbe)](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python) — days [92](days/day-092.qmd), [93](days/day-093.qmd)
+- [MIT 18.065 — Matrix Methods in Data Analysis, Signal Processing and ML (Strang)](https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) — days [100](days/day-100.qmd), [106](days/day-106.qmd), [198](days/day-198.qmd)
+- [Stanford EE364a — Convex Optimization I, lecture slides (Boyd)](https://web.stanford.edu/class/ee364a/lectures.html) — day [102](days/day-102.qmd)
+- [MIT 15.450 — Analytics of Finance (Kogan)](https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/) — days [128](days/day-128.qmd), [246](days/day-246.qmd), [247](days/day-247.qmd), [248](days/day-248.qmd), [250](days/day-250.qmd), [252](days/day-252.qmd), [363](days/day-363.qmd)
+- [MIT 15.070J — Advanced Stochastic Processes, lecture notes](https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/pages/lecture-notes/) — days [130](days/day-130.qmd), [239](days/day-239.qmd), [244](days/day-244.qmd), [270](days/day-270.qmd)
+- [Oxford — Etheridge, Stochastic Calculus for Finance (lecture notes)](https://www.stats.ox.ac.uk/~etheridg/finmath/index.html) — days [239](days/day-239.qmd), [240](days/day-240.qmd), [242](days/day-242.qmd), [245](days/day-245.qmd), [248](days/day-248.qmd), [249](days/day-249.qmd)
+- [NYU Courant — Goodman, Stochastic Calculus (course materials)](https://math.nyu.edu/~goodman/teaching/StochCalc2020/material.html) — days [241](days/day-241.qmd), [244](days/day-244.qmd)
+- [Institut Louis Bachelier — Practical Introduction to Market Microstructure](https://mooc.institutlouisbachelier.org/en/mooc/practical-introduction-to-market-microstructure-2/) — days [282](days/day-282.qmd), [289](days/day-289.qmd), [295](days/day-295.qmd)
+- [PostgreSQL tutorial (official)](https://www.postgresql.org/docs/current/tutorial.html) — day [310](days/day-310.qmd)
+- [LearnCpp — free structured C++ course](https://www.learncpp.com/) — days [316](days/day-316.qmd), [320](days/day-320.qmd)
+- [Docker — get started](https://docs.docker.com/get-started/) — days [323](days/day-323.qmd), [326](days/day-326.qmd), [328](days/day-328.qmd)
+- [SQLBolt — 18 interactive SQL lessons](https://sqlbolt.com/) — day [346](days/day-346.qmd)
+
+## Lectures and video
+
+- [Financial Markets Microstructure (Copenhagen, Starkov) — video lectures](https://www.youtube.com/playlist?list=PL4pUs4P_j1Wa2_P1lw44kFWWjKDTGUY7S) — days [8](days/day-008.qmd), [9](days/day-009.qmd), [10](days/day-010.qmd), [11](days/day-011.qmd), [25](days/day-025.qmd), [283](days/day-283.qmd), [287](days/day-287.qmd), [337](days/day-337.qmd)
+- [QuantPy (YouTube channel)](https://www.youtube.com/@QuantPy) — days [254](days/day-254.qmd), [257](days/day-257.qmd)
+- [Harvard Stat 110 — Probability (Blitzstein), lecture videos](https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo) — day [331](days/day-331.qmd)
+
+## Code repositories
+
+- [yfinance](https://github.com/ranaroussi/yfinance) — days [2](days/day-002.qmd), [3](days/day-003.qmd), [15](days/day-015.qmd), [16](days/day-016.qmd), [17](days/day-017.qmd), [20](days/day-020.qmd)
+- [exchange_calendars — 50+ exchange trading calendars](https://github.com/gerrymanoim/exchange_calendars) — days [4](days/day-004.qmd), [20](days/day-020.qmd), [34](days/day-034.qmd), [135](days/day-135.qmd), [325](days/day-325.qmd)
+- [fredapi — Python client with ALFRED vintages](https://github.com/mortada/fredapi) — days [6](days/day-006.qmd), [19](days/day-019.qmd)
+- [empyrical-reloaded — Sharpe, Sortino, drawdown primitives](https://github.com/stefan-jansen/empyrical-reloaded) — days [43](days/day-043.qmd), [45](days/day-045.qmd), [47](days/day-047.qmd), [48](days/day-048.qmd), [358](days/day-358.qmd)
+- [QuantStats — standalone HTML tear sheets](https://github.com/ranaroussi/quantstats) — days [43](days/day-043.qmd), [47](days/day-047.qmd), [48](days/day-048.qmd), [145](days/day-145.qmd), [174](days/day-174.qmd)
+- [arch — source repository](https://github.com/bashtage/arch) — day [58](days/day-058.qmd)
+- [Open Source Asset Pricing — replication code](https://github.com/OpenSourceAP/CrossSection) — day [138](days/day-138.qmd)
+- [pysystemtrade (Carver) — systematic futures](https://github.com/pst-group/pysystemtrade) — days [143](days/day-143.qmd), [151](days/day-151.qmd), [183](days/day-183.qmd), [188](days/day-188.qmd)
+- [pyfolio-reloaded — tear sheets](https://github.com/stefan-jansen/pyfolio-reloaded) — days [145](days/day-145.qmd), [152](days/day-152.qmd), [174](days/day-174.qmd), [201](days/day-201.qmd)
+- [zipline-reloaded — the maintained zipline](https://github.com/stefan-jansen/zipline-reloaded) — day [146](days/day-146.qmd)
+- [alphalens-reloaded — factor IC, quantile returns, turnover](https://github.com/stefan-jansen/alphalens-reloaded) — days [162](days/day-162.qmd), [164](days/day-164.qmd), [167](days/day-167.qmd), [169](days/day-169.qmd), [172](days/day-172.qmd), [201](days/day-201.qmd)
+- [Machine Learning for Trading (Jansen) — code repository](https://github.com/stefan-jansen/machine-learning-for-trading) — days [164](days/day-164.qmd), [207](days/day-207.qmd), [209](days/day-209.qmd), [212](days/day-212.qmd), [215](days/day-215.qmd)
+- [py_vollib — Black-Scholes prices, greeks and implied volatility](https://github.com/vollib/py_vollib) — days [251](days/day-251.qmd), [253](days/day-253.qmd), [259](days/day-259.qmd), [279](days/day-279.qmd)
+- [FinancePy — rates, FX, equity and credit derivatives](https://github.com/domokane/FinancePy) — day [271](days/day-271.qmd)
+- [ib_async — Interactive Brokers API (successor to ib_insync)](https://github.com/ib-api-reloaded/ib_async) — days [299](days/day-299.qmd), [327](days/day-327.qmd)
+- [LEAN — source repository](https://github.com/QuantConnect/Lean) — day [319](days/day-319.qmd)
+- [IMC Prosperity 3 backtester with real round data](https://github.com/jmerle/imc-prosperity-3-backtester) — days [338](days/day-338.qmd), [339](days/day-339.qmd), [342](days/day-342.qmd), [343](days/day-343.qmd), [355](days/day-355.qmd)
+- [Optiver Ready Trader Go — surviving simulator mirror](https://github.com/keanekwa/Optiver-Ready-Trader-Go) — days [338](days/day-338.qmd), [342](days/day-342.qmd)
+
+## Libraries, platforms and docs
+
+- [DuckDB documentation](https://duckdb.org/docs/current/) — days [19](days/day-019.qmd), [20](days/day-020.qmd), [22](days/day-022.qmd), [23](days/day-023.qmd), [135](days/day-135.qmd), [139](days/day-139.qmd), [309](days/day-309.qmd), [310](days/day-310.qmd), [311](days/day-311.qmd), [324](days/day-324.qmd)
+- [PyArrow documentation](https://arrow.apache.org/docs/python/) — days [22](days/day-022.qmd), [144](days/day-144.qmd), [311](days/day-311.qmd)
+- [pytest documentation](https://docs.pytest.org/en/stable/) — days [23](days/day-023.qmd), [45](days/day-045.qmd), [53](days/day-053.qmd), [110](days/day-110.qmd), [139](days/day-139.qmd), [144](days/day-144.qmd), [155](days/day-155.qmd), [156](days/day-156.qmd), [157](days/day-157.qmd), [158](days/day-158.qmd), [161](days/day-161.qmd), [209](days/day-209.qmd) and 1 more
+- [statsmodels — time series analysis (tsa)](https://www.statsmodels.org/stable/tsa.html) — days [38](days/day-038.qmd), [46](days/day-046.qmd), [64](days/day-064.qmd), [65](days/day-065.qmd), [66](days/day-066.qmd), [68](days/day-068.qmd), [72](days/day-072.qmd), [75](days/day-075.qmd), [78](days/day-078.qmd), [79](days/day-079.qmd), [80](days/day-080.qmd)
+- [statsmodels documentation](https://www.statsmodels.org/stable/index.html) — days [39](days/day-039.qmd), [73](days/day-073.qmd), [74](days/day-074.qmd), [88](days/day-088.qmd), [89](days/day-089.qmd), [123](days/day-123.qmd)
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) — days [39](days/day-039.qmd), [55](days/day-055.qmd), [57](days/day-057.qmd), [58](days/day-058.qmd), [59](days/day-059.qmd), [60](days/day-060.qmd), [69](days/day-069.qmd), [72](days/day-072.qmd), [74](days/day-074.qmd), [76](days/day-076.qmd), [85](days/day-085.qmd), [86](days/day-086.qmd) and 7 more
+- [StatsForecast (Nixtla) — AutoARIMA and friends](https://nixtlaverse.nixtla.io/statsforecast/index.html) — day [67](days/day-067.qmd)
+- [ruptures — changepoint detection](https://centre-borelli.github.io/ruptures-docs/) — days [76](days/day-076.qmd), [95](days/day-095.qmd)
+- [statsmodels — state space models and the Kalman filter](https://www.statsmodels.org/stable/statespace.html) — days [92](days/day-092.qmd), [93](days/day-093.qmd), [94](days/day-094.qmd), [95](days/day-095.qmd)
+- [CVXPY — disciplined convex programming](https://www.cvxpy.org/) — days [99](days/day-099.qmd), [100](days/day-100.qmd), [117](days/day-117.qmd), [131](days/day-131.qmd), [166](days/day-166.qmd)
+- [PyPortfolioOpt](https://pyportfolioopt.readthedocs.io/en/latest/) — days [101](days/day-101.qmd), [103](days/day-103.qmd), [104](days/day-104.qmd), [166](days/day-166.qmd)
+- [skfolio — scikit-learn compatible portfolio optimization](https://skfolio.org/) — days [103](days/day-103.qmd), [132](days/day-132.qmd), [199](days/day-199.qmd)
+- [scikit-learn documentation](https://scikit-learn.org/stable/) — days [109](days/day-109.qmd), [193](days/day-193.qmd), [196](days/day-196.qmd), [206](days/day-206.qmd), [207](days/day-207.qmd), [211](days/day-211.qmd), [214](days/day-214.qmd), [218](days/day-218.qmd), [219](days/day-219.qmd), [221](days/day-221.qmd), [222](days/day-222.qmd), [223](days/day-223.qmd) and 1 more
+- [Riskfolio-Lib](https://riskfolio-lib.readthedocs.io/en/latest/) — days [117](days/day-117.qmd), [131](days/day-131.qmd)
+- [linearmodels — panel, IV/2SLS and Fama-MacBeth (Sheppard)](https://bashtage.github.io/linearmodels/) — days [118](days/day-118.qmd), [290](days/day-290.qmd)
+- [backtesting.py — small readable event-driven backtester](https://kernc.github.io/backtesting.py/) — days [141](days/day-141.qmd), [142](days/day-142.qmd), [143](days/day-143.qmd), [156](days/day-156.qmd)
+- [vectorbt — vectorized backtesting over NumPy/Numba](https://vectorbt.dev/) — day [141](days/day-141.qmd)
+- [NautilusTrader documentation](https://nautilustrader.io/docs/) — days [142](days/day-142.qmd), [146](days/day-146.qmd), [158](days/day-158.qmd), [319](days/day-319.qmd), [323](days/day-323.qmd), [324](days/day-324.qmd)
+- [LEAN engine (QuantConnect) documentation](https://www.quantconnect.com/docs/v2/lean-engine) — day [146](days/day-146.qmd)
+- [uv documentation (Astral)](https://docs.astral.sh/uv/) — days [159](days/day-159.qmd), [328](days/day-328.qmd)
+- [alphalens-reloaded documentation](https://alphalens.ml4trading.io/) — days [163](days/day-163.qmd), [165](days/day-165.qmd), [169](days/day-169.qmd), [170](days/day-170.qmd), [172](days/day-172.qmd), [197](days/day-197.qmd)
+- [Alpaca — paper trading documentation](https://docs.alpaca.markets/docs/paper-trading) — days [299](days/day-299.qmd), [300](days/day-300.qmd), [325](days/day-325.qmd), [326](days/day-326.qmd), [327](days/day-327.qmd), [329](days/day-329.qmd), [358](days/day-358.qmd), [359](days/day-359.qmd)
+- [NumPy documentation](https://numpy.org/doc/stable/) — day [312](days/day-312.qmd)
+- [Polars user guide](https://docs.pola.rs/) — day [313](days/day-313.qmd)
+- [pandas documentation](https://pandas.pydata.org/docs/) — day [313](days/day-313.qmd)
+- [Numba documentation](https://numba.readthedocs.io/en/stable/) — days [314](days/day-314.qmd), [321](days/day-321.qmd)
+- [Cython documentation](https://cython.readthedocs.io/en/latest/) — days [314](days/day-314.qmd), [321](days/day-321.qmd)
 
 ## Data sources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) — days [1](days/day-001.qmd), [2](days/day-002.qmd), [3](days/day-003.qmd), [4](days/day-004.qmd), [5](days/day-005.qmd), [6](days/day-006.qmd), [7](days/day-007.qmd), [8](days/day-008.qmd), [9](days/day-009.qmd), [10](days/day-010.qmd), [11](days/day-011.qmd), [12](days/day-012.qmd) and 353 more
+- [Cboe delayed option chains (JSON, with greeks)](https://cdn.cboe.com/api/global/delayed_quotes/options/AAPL.json) — days [5](days/day-005.qmd), [260](days/day-260.qmd), [262](days/day-262.qmd)
+- [FRED API documentation (St. Louis Fed)](https://fred.stlouisfed.org/docs/api/fred/) — days [6](days/day-006.qmd), [19](days/day-019.qmd), [33](days/day-033.qmd)
+- [Kaggle — Optiver, Trading at the Close (Nasdaq closing auction)](https://www.kaggle.com/competitions/optiver-trading-at-the-close) — days [10](days/day-010.qmd), [286](days/day-286.qmd)
+- [Alpaca — market data](https://alpaca.markets/data) — day [15](days/day-015.qmd)
+- [Kenneth R. French — Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) — days [16](days/day-016.qmd), [24](days/day-024.qmd), [33](days/day-033.qmd), [113](days/day-113.qmd), [114](days/day-114.qmd)
+- [WRDS — CRSP data vendor page](https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/center-for-research-in-security-prices-crsp/) — days [17](days/day-017.qmd), [18](days/day-018.qmd), [136](days/day-136.qmd), [138](days/day-138.qmd)
+- [AQR — datasets (BAB, QMJ, time-series momentum)](https://www.aqr.com/Insights/Datasets) — days [68](days/day-068.qmd), [179](days/day-179.qmd), [184](days/day-184.qmd)
+- [Kaggle — Optiver Realized Volatility Prediction (order book data)](https://www.kaggle.com/competitions/optiver-realized-volatility-prediction) — days [87](days/day-087.qmd), [226](days/day-226.qmd)
+- [Open Source Asset Pricing (Chen & Zimmermann)](https://www.openassetpricing.com/data/) — days [136](days/day-136.qmd), [195](days/day-195.qmd)
+- [SEC Financial Statement Data Sets (quarterly XBRL)](https://www.sec.gov/data-research/sec-markets-data/financial-statement-data-sets) — days [137](days/day-137.qmd), [176](days/day-176.qmd), [190](days/day-190.qmd), [191](days/day-191.qmd)
+- [SEC EDGAR REST APIs (data.sec.gov)](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) — days [137](days/day-137.qmd), [190](days/day-190.qmd), [228](days/day-228.qmd)
+- [Cboe VIX historical data](https://www.cboe.com/tradable_products/vix/vix_historical_data/) — days [187](days/day-187.qmd), [274](days/day-274.qmd), [276](days/day-276.qmd), [278](days/day-278.qmd)
+- [SEC EDGAR full-text search](https://www.sec.gov/edgar/search/) — days [192](days/day-192.qmd), [193](days/day-193.qmd), [228](days/day-228.qmd)
+- [Databento — pricing and free credits](https://www.databento.com/pricing) — day [195](days/day-195.qmd)
+- [Global Factor Data (Jensen, Kelly & Pedersen)](https://jkpfactors.com/) — day [195](days/day-195.qmd)
+- [Numerai — dataset](https://numer.ai/data) — day [230](days/day-230.qmd)
+- [Cboe options market statistics](https://www.cboe.com/us/options/market_statistics/historical_data/) — days [276](days/day-276.qmd), [280](days/day-280.qmd)
+- [Cboe futures market statistics](https://www.cboe.com/us/futures/market_statistics/historical_data/) — day [277](days/day-277.qmd)
+- [Nasdaq TotalView-ITCH sample days (full order book, free)](https://emi.nasdaq.com/ITCH/Nasdaq%20ITCH/) — days [281](days/day-281.qmd), [282](days/day-282.qmd), [285](days/day-285.qmd), [293](days/day-293.qmd)
+
+## Problem sets and drills
+
+- [Jane Street — puzzles](https://www.janestreet.com/puzzles/) — days [28](days/day-028.qmd), [280](days/day-280.qmd), [287](days/day-287.qmd), [294](days/day-294.qmd), [301](days/day-301.qmd), [308](days/day-308.qmd), [322](days/day-322.qmd), [329](days/day-329.qmd), [332](days/day-332.qmd), [335](days/day-335.qmd), [337](days/day-337.qmd), [340](days/day-340.qmd) and 3 more
+- [Pedersen — Efficiently Inefficient, free exercise sets](http://docs.lhpedersen.com/EfficientlyInefficient_Exercises.pdf) — days [127](days/day-127.qmd), [128](days/day-128.qmd), [129](days/day-129.qmd), [361](days/day-361.qmd)
+- [PostgreSQL Exercises — graded, in-browser](https://pgexercises.com/) — days [210](days/day-210.qmd), [315](days/day-315.qmd), [346](days/day-346.qmd)
+- [Jane Street — puzzle archive with solutions](https://www.janestreet.com/puzzles/archive/index.html) — days [330](days/day-330.qmd), [331](days/day-331.qmd), [334](days/day-334.qmd), [336](days/day-336.qmd), [340](days/day-340.qmd), [350](days/day-350.qmd), [357](days/day-357.qmd), [363](days/day-363.qmd), [364](days/day-364.qmd)
+
+## Reference and reading
+
+- [Pedersen — Efficiently Inefficient, free introduction chapter](http://assets.press.princeton.edu/chapters/i10441.pdf) — days [1](days/day-001.qmd), [3](days/day-003.qmd), [12](days/day-012.qmd), [13](days/day-013.qmd), [150](days/day-150.qmd), [306](days/day-306.qmd)
+- [UW-Madison — business databases and WRDS access](https://www.library.wisc.edu/business/research-help/business-databases/finance-and-investing/) — day [18](days/day-018.qmd)
+- [Ilmanen — Investing Amid Low Expected Returns, free chapter 1 (AQR)](https://www.aqr.com/Learning-Center/Understanding-Return-Expectations/Book-Excerpt-Investing-Amid-Low-Expected-Returns) — day [24](days/day-024.qmd)
+- [AQR — Research and Insights](https://www.aqr.com/Insights/Research) — days [27](days/day-027.qmd), [90](days/day-090.qmd), [116](days/day-116.qmd), [120](days/day-120.qmd), [124](days/day-124.qmd), [185](days/day-185.qmd), [303](days/day-303.qmd), [348](days/day-348.qmd), [351](days/day-351.qmd), [353](days/day-353.qmd)
+- [López de Prado — Advances in Financial Machine Learning, seminar slides](https://www.quantresearch.org/Lectures.htm) — days [52](days/day-052.qmd), [134](days/day-134.qmd), [155](days/day-155.qmd), [205](days/day-205.qmd), [206](days/day-206.qmd), [212](days/day-212.qmd), [213](days/day-213.qmd), [214](days/day-214.qmd), [215](days/day-215.qmd), [221](days/day-221.qmd)
+- [Greene — Econometric Analysis, free appendices and data](https://pages.stern.nyu.edu/~wgreene/Text/econometricanalysis.htm) — days [71](days/day-071.qmd), [73](days/day-073.qmd)
+- [scikit-learn — covariance estimation and Ledoit-Wolf shrinkage](https://scikit-learn.org/stable/modules/covariance.html) — days [106](days/day-106.qmd), [109](days/day-109.qmd), [110](days/day-110.qmd), [132](days/day-132.qmd)
+- [Man Group — Man Insights](https://www.man.com/insights) — days [124](days/day-124.qmd), [348](days/day-348.qmd), [352](days/day-352.qmd), [353](days/day-353.qmd), [360](days/day-360.qmd)
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) — days [134](days/day-134.qmd), [151](days/day-151.qmd), [152](days/day-152.qmd), [160](days/day-160.qmd), [170](days/day-170.qmd), [183](days/day-183.qmd), [188](days/day-188.qmd), [200](days/day-200.qmd), [306](days/day-306.qmd), [307](days/day-307.qmd), [359](days/day-359.qmd), [361](days/day-361.qmd) and 2 more
+- [Interactive Brokers — TWS API pacing limits](https://interactivebrokers.github.io/tws-api/historical_limitations.html) — day [150](days/day-150.qmd)
+- [Stanford CS229 — Machine Learning, main lecture notes (PDF)](https://cs229.stanford.edu/main_notes.pdf) — days [189](days/day-189.qmd), [217](days/day-217.qmd), [231](days/day-231.qmd), [252](days/day-252.qmd), [273](days/day-273.qmd), [345](days/day-345.qmd)
+- [Modern SQL (Winand) — window functions, CTEs](https://modern-sql.com/) — days [210](days/day-210.qmd), [309](days/day-309.qmd), [315](days/day-315.qmd)
+- [Numerai — documentation](https://docs.numer.ai/) — day [230](days/day-230.qmd)
+- [CMU — Iyer, Stochastic Calculus for Finance (notes)](https://www.math.cmu.edu/~gautam/sj/teaching/2021-22/944-scalc-finance1/pdfs/notes-tablet.pdf) — days [240](days/day-240.qmd), [241](days/day-241.qmd), [243](days/day-243.qmd)
+- [Princeton — van Handel, Stochastic Calculus, Filtering and Stochastic Control (notes)](https://web.math.princeton.edu/~rvan/acm217/ACM217.pdf) — days [243](days/day-243.qmd), [249](days/day-249.qmd)
+- [QuantLib-Python documentation](https://quantlib-python-docs.readthedocs.io/en/latest/) — days [251](days/day-251.qmd), [253](days/day-253.qmd), [265](days/day-265.qmd), [268](days/day-268.qmd), [269](days/day-269.qmd), [271](days/day-271.qmd), [279](days/day-279.qmd)
+- [Gatheral — The Volatility Surface, Statics and Dynamics (Imperial lecture 1)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-1st-Lecture.pdf) — days [255](days/day-255.qmd), [257](days/day-257.qmd), [260](days/day-260.qmd), [261](days/day-261.qmd), [262](days/day-262.qmd), [266](days/day-266.qmd), [267](days/day-267.qmd), [272](days/day-272.qmd), [275](days/day-275.qmd)
+- [Gatheral — The SVI Arbitrage-Free Volatility Surface Parameterization (Imperial lecture 2)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-2nd-Lecture.pdf) — days [263](days/day-263.qmd), [264](days/day-264.qmd)
+- [Gatheral — Rough Volatility (Imperial lecture 3)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-3rd.pdf) — days [269](days/day-269.qmd), [273](days/day-273.qmd)
+- [Jane Street — tech blog](https://blog.janestreet.com/) — days [304](days/day-304.qmd), [317](days/day-317.qmd), [349](days/day-349.qmd), [352](days/day-352.qmd), [356](days/day-356.qmd), [360](days/day-360.qmd)
+- [Jane Street — Signals and Threads podcast](https://signalsandthreads.com/) — days [305](days/day-305.qmd), [347](days/day-347.qmd), [354](days/day-354.qmd)
+- [cppreference — C and C++ standard library reference](https://en.cppreference.com/w/) — days [316](days/day-316.qmd), [318](days/day-318.qmd), [322](days/day-322.qmd)
+- [C++ Core Guidelines (Stroustrup & Sutter)](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) — days [318](days/day-318.qmd), [320](days/day-320.qmd)
+- [Two Sigma — Insights](https://www.twosigma.com/insights/) — days [347](days/day-347.qmd), [349](days/day-349.qmd), [351](days/day-351.qmd), [353](days/day-353.qmd), [354](days/day-354.qmd), [356](days/day-356.qmd), [357](days/day-357.qmd)

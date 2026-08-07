@@ -1,6 +1,6 @@
 ---
-title: "Day 42 — Placeholder title for day 42"
-subtitle: "Thursday, 17 September 2026 · Week 6 of 52 · Returns and noise · Catch-up day · 45 min"
+title: "Day 42 — Six stylized facts on one page"
+subtitle: "Thursday, 17 September 2026 · Week 6 of 52 · Returns and noise · Catch-up day · 40 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 17 September 2026 · Week 6 of 52 · Returns and noise · C
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The panel figure you started last night is the front page of milestone 2 in three weeks. Today is where it stops being six notebooks and becomes one artifact.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State all six stylized facts from memory with the number attached to each, measured on your own data.
+- Name the one of the six that most constrains what a return model is allowed to look like.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>40 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Finish outstanding work from days 36 to 41. The Hill plot and the leverage-effect regression are the two most often left half-done.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Turn the six panels into the figure that goes into reports/milestone-02-noise-floor.md: consistent axes, a caption per panel giving the measured number, and your own data rather than a citation behind every one.
 :::
 :::
 
@@ -33,27 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, sixth sitting: ten two-digit multiplications, the sevenths, then 2/7 times 3/8 as a decimal without writing anything down.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> The classic they open with: 100 people board a plane, the first sits at random, everyone after sits in their own seat if free and at random otherwise. Probability the last passenger gets their own seat? Answer by symmetry in under a minute, then justify the symmetry out loud.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Conditional expectation, geometric flavour: you flip a fair coin until you see HH. Expected number of flips? Set up the states, solve, then do the same for HT and say out loud why the two answers differ.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The six-panel stylized-facts figure in reports/milestone-02-noise-floor.md, each panel captioned with a number from your own data.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Name the six stylized facts with your measured number for each, without opening the figure.
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +65,12 @@ Ten minutes tonight so Day 43, Friday, 18 September 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Find three published Sharpe ratios, from a fund fact sheet, a paper and a blog post, and note for each whether it says what risk-free rate and what frequency it used.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Most of them will not say. Write down which ones did.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Have your qlib/returns.py open; tomorrow adds to it.
 :::
 :::

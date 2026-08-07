@@ -1,5 +1,5 @@
 ---
-title: "Day 192 — Placeholder title for day 192"
+title: "Day 192 — Post-earnings drift, and the event study machinery"
 subtitle: "Sunday, 14 February 2027 · Week 28 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 14 February 2027 · Week 28 of 52 · Alpha · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+An event signal has a different shape from a cross-sectional one, and building the event study apparatus once means the news and filing signals later in the week cost you an hour rather than a day.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Build an event study with correct abnormal return definition and confidence bands, and apply it to earnings announcements.
+- Report the drift's magnitude and say what it has done since the effect was published.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build the apparatus in qlib/signals/events.py: align returns on the event date, subtract a benchmark or factor-model expected return, accumulate, and produce a mean cumulative abnormal return with bands that account for cross-sectional correlation among events on the same date. That last correction is the one most event studies omit and it is the one that matters most here.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Apply it to earnings surprise, split by surprise decile, and report the drift over 60 days. Then split the sample before and after 2005 and report both. The decay is the finding, and it is another instance of the pattern from day 115.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [SEC EDGAR full-text search](https://www.sec.gov/edgar/search/) [data]{.res-kind}
+- [McLean & Pontiff (draft) — Does Academic Research Destroy Stock Return Predictability?](https://www.hec.ca/finance/Fichier/McLean.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+An event study module with cross-sectionally corrected bands, and post-earnings drift reported by surprise decile in two eras.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why do event study standard errors need a correction when many events share a date, and which direction does ignoring it push them?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 193, Monday, 15 February 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pull the text of five annual filings from EDGAR full-text search and save them locally.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Count the words in each and note the range.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at one section for two minutes and note how much of it is boilerplate.
 :::
 :::

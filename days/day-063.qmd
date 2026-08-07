@@ -1,6 +1,6 @@
 ---
-title: "Day 63 — Placeholder title for day 63"
-subtitle: "Thursday, 8 October 2026 · Week 9 of 52 · Returns and noise · Milestone · 45 min"
+title: "Day 63 — Milestone: the stylized facts and the noise floor"
+subtitle: "Thursday, 8 October 2026 · Week 9 of 52 · Returns and noise · Milestone · 50 min"
 ---
 
 ::: {.day-nav .kind-milestone}
@@ -12,22 +12,22 @@ subtitle: "Thursday, 8 October 2026 · Week 9 of 52 · Returns and noise · Mile
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The document you will reread every time a backtest looks good, and the only one this year that is worth more if it makes you less optimistic.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Produce one number for the required Sharpe threshold that you are willing to be held to for eleven months.
+- State the mapping from this phase onto genome-wide multiple testing in one paragraph, without forcing the parts that do not fit.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Finish reports/milestone-02-noise-floor.md: the six-panel stylized facts figure with your numbers, the Sharpe-as-estimator section with the standard error and the autocorrelation correction, the three corrections table, the trial-count audit, and the noise floor with its calculation.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Write the paragraph that nobody else in your interview pool can write: the correspondence to genome-wide association studies, with the row that does not carry over named explicitly. A forced analogy is worth less than an honest one with a boundary on it.
 :::
 :::
 
@@ -37,27 +37,37 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, ninth sitting. Ten two-digit multiplications, the sevenths, and the square root of 2, 3 and 5 to three decimal places from memory.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Symmetry and conditioning combined: a fair coin is flipped 100 times. Given that the first 50 flips contained 30 heads, what is the expected total number of heads? Then, given that the total was 60 heads, what is the expected number in the first 50? Say why the two questions are not the same shape.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> Two months of drills have accumulated. Write down the three problem types that have been slowest for you so far. That list is the thing you actually track, not any individual answer.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+Milestone 2 sets the evidence bar for everything that follows. qlib/stats.py, qlib/simulate.py and qlib/noise.py are now the three modules that every later strategy result passes through before it is allowed to be called a result.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2014) — Pseudo-Mathematics and Financial Charlatanism](https://www.davidhbailey.com/dhbpapers/backtest-pseudo.pdf) [paper]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/milestone-02-noise-floor.md, complete, with a stated Sharpe threshold and a green test suite behind every claim.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State your noise floor out loud with its two assumptions, then say what you will do the first time a backtest comes in just above it.
 :::
 
 ## Prepare for tomorrow
@@ -66,6 +76,12 @@ Ten minutes tonight so Day 64, Friday, 9 October 2026 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Pull a long daily series for one index and one currency pair, and plot the level, the first difference and the log first difference for each.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at which of the three panels looks like it has a constant mean. Do not compute anything.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Skim the first two sections of the Hyndman and Athanasopoulos chapter on ARIMA models so the vocabulary is not new tomorrow.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 181 — Placeholder title for day 181"
-subtitle: "Wednesday, 3 February 2027 · Week 26 of 52 · Alpha · Study day · 60 min"
+title: "Day 181 — Which of them still work, on your data, after costs"
+subtitle: "Wednesday, 3 February 2027 · Week 26 of 52 · Alpha · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 3 February 2027 · Week 26 of 52 · Alpha · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Six or seven classic signals evaluated identically on one universe with one cost model is a comparison almost nobody publishes, and it is the most defensible page in milestone 6.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Rank every signal by net information ratio with intervals, and state which are distinguishable from the null.
+- State the total number of specifications tried across the week and the correction that implies.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Produce the comparison table: every signal with rationale, IC, decay horizon, gross and net information ratio with intervals, turnover, capacity and its position in the null distribution. One table, one page, sorted by net.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Apply the correction to the set rather than to each signal: read the trial count from research_log.jsonl for the whole week, compute the threshold from qlib/noise.py at that count, and mark which signals clear it. Then keep the ones that do not in the table, with the diagnosis. A book with only winners in it is a book that was filtered.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the paragraph on decay: for each signal, note its publication date and whether your post-publication estimate is lower, and connect that to what McLean and Pontiff report.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Hou, Xue & Zhang (2017) — Replicating Anomalies](https://www.nber.org/papers/w23394) [paper]{.res-kind}
+- [Harvey, Liu & Zhu (2014) — ...and the Cross-Section of Expected Returns](https://www.nber.org/papers/w20592) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The full comparison table in reports/milestone-06-alpha-book.md, with the week's trial count and the threshold it implies.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which classic signals survive on your data after costs and after the correction, and how many specifications did you try to find out?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 182, Thursday, 4 February 2027 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread the table and mark the signal you would be least willing to defend to a researcher.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write one sentence on why.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times; tomorrow is the twenty-sixth sitting.
 :::
 :::

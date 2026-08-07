@@ -1,6 +1,6 @@
 ---
-title: "Day 61 — Placeholder title for day 61"
-subtitle: "Tuesday, 6 October 2026 · Week 9 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 61 — The noise floor: one number you will be held to"
+subtitle: "Tuesday, 6 October 2026 · Week 9 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,46 @@ subtitle: "Tuesday, 6 October 2026 · Week 9 of 52 · Returns and noise · Study
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+This is the deliverable the rest of the year refers back to, and its value is entirely in being computed once, in advance, before any result you care about exists.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the backtested Sharpe ratio your own research process must exceed before the result is evidence of anything, and show the calculation.
+- Say what would make that number change, and by how much.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write qlib/noise.py: given a trial count, a sample length and a strategy correlation assumption, return the required Sharpe threshold, using your day 51 maximum-of-nulls simulation rather than a closed form. Have it also return the threshold under the pessimistic and optimistic trial counts, so the answer is a range and not a point.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Compute your own number and write it into reports/milestone-02-noise-floor.md as a single sentence you will be held to: at your expected trial count and sample length, a backtested Sharpe below this value is not evidence. Then state the two things that would move it, which are the trial count and the correlation among the variants you try.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/noise.py fixes the evidence threshold for the whole year. Every later milestone reports its results against this number, which was computed before any of those results existed, and that ordering is what makes it a threshold rather than a rationalisation.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey & López de Prado (2014) — The Deflated Sharpe Ratio](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf) [paper]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2017) — The Probability of Backtest Overfitting](https://escholarship.org/content/qt4w1110bb/qt4w1110bb.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/noise.py returning a Sharpe threshold, and the one-sentence commitment in the milestone report with the number in it.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State your noise floor and the two assumptions behind it. Then say what it becomes if you try five times as many variants.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 62, Wednesday, 7 October 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Count what you have actually tried since day 1 by reading research_log.jsonl. Write the number down.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare it against the guess you made on day 49. Note the ratio.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> That ratio is the honest input to tomorrow's exercise.
 :::
 :::

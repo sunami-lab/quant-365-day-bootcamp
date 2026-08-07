@@ -1,5 +1,5 @@
 ---
-title: "Day 33 — Placeholder title for day 33"
+title: "Day 33 — Return against what: excess, financing and the wrong benchmark"
 subtitle: "Tuesday, 8 September 2026 · Week 5 of 52 · Returns and noise · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Tuesday, 8 September 2026 · Week 5 of 52 · Returns and noise · Stu
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every ratio in the next two weeks divides by something, and choosing what you subtract first is a modelling decision that most published numbers make silently.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what a long-short market-neutral book earns on its cash, and what the correct risk-free adjustment for it is.
+- Show, with your own numbers, how much of a reported Sharpe ratio can come from the choice of risk-free rate alone.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Finish the comparison you started last night: SPY Sharpe with and without the bill rate, in two eras. Report four numbers and the difference in each era. The 2004-2007 gap is the one that should change how you read any Sharpe published before 2009.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Work out the cash mechanics for three books on paper: fully invested long-only, 100 long and 100 short, and a futures position with 5 percent margin posted. For each, say what balance earns interest, what balance pays it, and what the correct excess-return definition is.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add `excess_returns(returns, rf)` to qlib/returns.py, taking an annualised rate series and converting it to the daily convention correctly. Getting the day-count conversion right here saves an argument with yourself in week 43.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [FRED API documentation (St. Louis Fed)](https://fred.stlouisfed.org/docs/api/fred/) [data]{.res-kind}
+- [Kenneth R. French — Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/returns.py with excess-return handling, and four measured Sharpe ratios showing the risk-free rate's contribution in two eras.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your market-neutral book is 100 long, 100 short, on 100 of capital. What is the correct benchmark return, and what do you earn on the short proceeds?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 34, Wednesday, 9 September 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Count the number of NYSE trading sessions in each of the last ten calendar years using exchange_calendars, and write the ten numbers down.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the number you have always seen used instead.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the largest and smallest of the ten. Tomorrow is about what the gap costs you.
 :::
 :::

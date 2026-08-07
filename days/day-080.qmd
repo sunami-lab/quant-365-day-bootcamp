@@ -1,6 +1,6 @@
 ---
-title: "Day 80 — Placeholder title for day 80"
-subtitle: "Sunday, 25 October 2026 · Week 12 of 52 · Time series · Study day · 60 min"
+title: "Day 80 — Johansen tests the whole system at once"
+subtitle: "Sunday, 25 October 2026 · Week 12 of 52 · Time series · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,43 @@ subtitle: "Sunday, 25 October 2026 · Week 12 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Engle-Granger picks a left-hand side and a right-hand side, and the answer depends on which you picked, which is a defect Johansen does not have.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the difference between Engle-Granger and Johansen, and say which you would run given two price series and which given six.
+- Show, on your own data, a pair where reversing the Engle-Granger regression changes the conclusion.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Find the asymmetry: run Engle-Granger both ways round on all pairs from your 50-name universe and count how many change their verdict at 5 percent when the regression is reversed. That count is the practical argument for Johansen.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run Johansen on a three-asset system, such as three ETFs tracking related exposures, and interpret the trace statistic: how many cointegrating relations, and what the first eigenvector says about the hedge weights. Compare its implied weights against the Engle-Granger slope for the corresponding pair.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the decision rule into the milestone report: which procedure for two series, which for many, and the one-sentence reason.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [statsmodels — time series analysis (tsa)](https://www.statsmodels.org/stable/tsa.html) [tool]{.res-kind}
+- [Hamilton — Time Series Analysis (Princeton UP)](https://press.princeton.edu/books/hardcover/9780691042893/time-series-analysis) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-080-johansen.ipynb with the count of order-dependent Engle-Granger verdicts and a Johansen fit on a three-asset system.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Given two price series, which of Engle-Granger and Johansen would you run and why? Now given six.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 81, Monday, 26 October 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Fix your pair selection rule in writing before you look at any more results: universe, lookback, test, threshold, and the maximum number of pairs you will carry.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down how many pairs the rule will have screened by the time it selects. That count goes on the first page of milestone 3.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not tune anything tonight.
 :::
 :::

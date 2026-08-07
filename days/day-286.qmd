@@ -1,5 +1,5 @@
 ---
-title: "Day 286 — Placeholder title for day 286"
+title: "Day 286 — Order flow predicts the next second, and not the next hour"
 subtitle: "Wednesday, 19 May 2027 · Week 41 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Wednesday, 19 May 2027 · Week 41 of 52 · Microstructure · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The R-squared you found last night is two orders of magnitude above anything in your daily work, and understanding why that does not make it a strategy is the most useful lesson in the week.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the predictive R-squared of order flow imbalance for mid returns at several horizons and show the decay.
+- Say why a high short-horizon R-squared does not survive the round-trip cost, with the arithmetic.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Map the decay: regress mid change on order flow imbalance at horizons from 100 milliseconds to 10 minutes, and plot R-squared against horizon. It falls off a cliff, and where it crosses your cost threshold is the boundary of the game you are not in.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Do the arithmetic that closes the question: at the R-squared you measured, the expected move over the horizon in basis points, against half the spread plus fees. Then compute how much faster you would need to be for the trade to be positive, and note that the answer is a latency figure rather than a research figure.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bouchaud, Bonart, Donier & Gould — Trades, Quotes and Prices (Cambridge)](https://www.cambridge.org/core/books/trades-quotes-and-prices/029A71078EE4C41C0D5D4574211AB1B5) [textbook]{.res-kind}
+- [Kaggle — Optiver, Trading at the Close (Nasdaq closing auction)](https://www.kaggle.com/competitions/optiver-trading-at-the-close) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-286-order-flow.ipynb with predictive R-squared against horizon and the break-even latency computed.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Order flow imbalance explains 8 percent of the next second's return. Why is that not a strategy for you?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 287, Thursday, 20 May 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down the four measurements from this week and one line each on what they are for.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times and your timed mixed-set score from day 280.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to install.
 :::
 :::

@@ -1,6 +1,6 @@
 ---
-title: "Day 238 — Placeholder title for day 238"
-subtitle: "Thursday, 1 April 2027 · Week 34 of 52 · Machine learning · Milestone · 45 min"
+title: "Day 238 — Milestone: machine learning against the linear baseline"
+subtitle: "Thursday, 1 April 2027 · Week 34 of 52 · Machine learning · Milestone · 50 min"
 ---
 
 ::: {.day-nav .kind-milestone}
@@ -12,22 +12,22 @@ subtitle: "Thursday, 1 April 2027 · Week 34 of 52 · Machine learning · Milest
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The milestone you are most at risk of doing well and concluding too much from, which is why it is graded on the interval and the provenance rather than on which model won.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Present a conclusion that is a number with an interval, reported the same way it would have been in the other direction.
+- Show the linear baseline was tuned as carefully as the alternative, with evidence rather than assertion.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Assemble reports/milestone-07-ml.md: the labelling scheme and why, purged and embargoed validation with the embargo justified from measured autocorrelation, the linear baseline with its tuning shown, the audit table with intervals and seed spreads, permutation importance with the proxy analysis, and the verdict.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Verify: rerun the audit from the committed configuration and confirm every number matches, then check the provenance notes are still accurate after a week of work.
 :::
 :::
 
@@ -37,27 +37,37 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, thirty-fourth sitting. Ten two-digit multiplications and the sevenths.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> The whole machine learning round, compressed: bias and variance, regularisation, cross-validation on dependent data, and why more capacity does not help at low signal-to-noise. Four answers, ninety seconds each, out loud, against a clock.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> Research presentation, third sitting: expand to two minutes, and this time include one number with its uncertainty. Time it. The number with the uncertainty is what makes a quantitative audience trust the rest.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+Milestone 7 closes the machine learning phase. The ML layer either joins the book with a stated marginal contribution or does not join it, and either outcome is recorded with the interval that produced the decision.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gu, Kelly & Xiu (2020) — Empirical Asset Pricing via Machine Learning](https://dachxiu.chicagobooth.edu/download/ML.pdf) [paper]{.res-kind}
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/milestone-07-ml.md, complete, with the conclusion stated as a number with an interval and the baseline's tuning shown.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Did the machine learning earn its complexity? Answer with a number, an interval, and the turnover that separates gross from net.
 :::
 
 ## Prepare for tomorrow
@@ -66,6 +76,12 @@ Ten minutes tonight so Day 239, Friday, 2 April 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down what you know about Brownian motion. It will be more than you expect and less organised than you would like.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then write down what Ito's lemma is for, in one sentence, even if you have never seen it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Phase 8 is the furthest from your training and it starts tomorrow, so go slowly from the beginning.
 :::
 :::

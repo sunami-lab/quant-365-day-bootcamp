@@ -1,6 +1,6 @@
 ---
-title: "Day 157 — Placeholder title for day 157"
-subtitle: "Sunday, 10 January 2027 · Week 23 of 52 · The research harness · Study day · 60 min"
+title: "Day 157 — The null strategy test, and what your engine says about nothing"
+subtitle: "Sunday, 10 January 2027 · Week 23 of 52 · The research harness · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,49 @@ subtitle: "Sunday, 10 January 2027 · Week 23 of 52 · The research harness · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+An engine with a subtle bias will give a random strategy a nonzero expected return, and running 200 of them is the cheapest way to find out whether yours does.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the mean and distribution of Sharpe for random strategies through your engine, and state what it should be.
+- Say what a nonzero mean would imply about the engine rather than about the strategies.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Analyse last night's 200 null runs: report the mean Sharpe with a standard error and test whether it differs from the small negative value that costs alone should produce. A mean above zero after costs means the engine has a bias, and the usual culprits are fill timing and the treatment of the first and last session.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Turn it into a permanent test: assert the mean null Sharpe lies within an interval around the cost-implied value, with enough replications that the test is powered to catch a bias of the size that would matter. Record the runtime, since a slow test is one you will disable.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Characterise the distribution too, since you will use it as the reference null for phase 6: report its standard deviation and the 95th percentile.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+The null-strategy distribution is now a characterised property of the engine and a standing test. Phase 6 evaluates every signal against this distribution rather than against zero.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pytest documentation](https://docs.pytest.org/en/stable/) [tool]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2017) — The Probability of Backtest Overfitting](https://escholarship.org/content/qt4w1110bb/qt4w1110bb.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A null-strategy test in the suite with the distribution characterised, and the mean tested against the cost-implied value.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your 200 null strategies have a mean Sharpe of plus 0.15 after costs. What is wrong, and where would you look first?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +59,12 @@ Ten minutes tonight so Day 158, Monday, 11 January 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List the invariants your engine should satisfy for any strategy and any data. There are at least five.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The accounting identity is one. Non-negative absolute positions under a long-only constraint is another.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write them as assertions, not as sentences.
 :::
 :::

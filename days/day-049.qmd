@@ -1,6 +1,6 @@
 ---
-title: "Day 49 — Placeholder title for day 49"
-subtitle: "Thursday, 24 September 2026 · Week 7 of 52 · Returns and noise · Catch-up day · 45 min"
+title: "Day 49 — The Sharpe ratio as an estimator, from memory"
+subtitle: "Thursday, 24 September 2026 · Week 7 of 52 · Returns and noise · Catch-up day · 35 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 24 September 2026 · Week 7 of 52 · Returns and noise · C
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Week 7 produced one formula and one habit, and if both are in place this hour is yours. If the interval is not appearing by default in your own code, that is today's work.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the standard error of a Sharpe ratio and the autocorrelation correction from memory.
+- Report a performance result out loud in the form you will use all year: estimate, interval, sample size, convention.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>35 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Finish anything outstanding from days 43 to 48. The coverage test is the one worth having green before week 8, because week 8 uses it as the null.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Closed book: write the Sharpe standard error, the autocorrelation-corrected annualisation, and the sample size needed to distinguish a Sharpe of 0.5 from zero. Then check all three against your notebooks.
 :::
 :::
 
@@ -33,27 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, seventh sitting. Ten two-digit multiplications, the sevenths, then 1.05 to the 12th power to two decimal places, approximated in your head.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Order statistics, a first look: draw three independent uniforms on the unit interval. What is the expected value of the largest? Of the middle one? Get the general formula for the kth of n and say out loud why the answers are equally spaced.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The trading-flavoured version they actually ask: two people each draw a uniform on the unit interval, see only their own, and may swap once if both agree. Should you ever agree to swap? Explain the adverse selection in two sentences.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The closed-book sheet for week 7, checked, with the misses marked and fixed.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+How long a track record does it take before a Sharpe of 0.5 is distinguishable from zero at 95 percent confidence?
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +65,12 @@ Ten minutes tonight so Day 50, Friday, 25 September 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download the Bailey, Borwein, Lopez de Prado and Zhu paper on pseudo-mathematics and read only the abstract tonight.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down, in one line, how many strategy variants you think you will try over this year. Keep the number; week 9 uses it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the analogous number from a genome-wide scan you have run, and the threshold it implied.
 :::
 :::

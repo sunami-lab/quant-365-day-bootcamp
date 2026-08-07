@@ -1,6 +1,6 @@
 ---
-title: "Day 126 — Placeholder title for day 126"
-subtitle: "Thursday, 10 December 2026 · Week 18 of 52 · Portfolios and risk · Catch-up day · 45 min"
+title: "Day 126 — Risk measurement, closed book"
+subtitle: "Thursday, 10 December 2026 · Week 18 of 52 · Portfolios and risk · Catch-up day · 35 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 10 December 2026 · Week 18 of 52 · Portfolios and risk ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Light day before the last week of the phase. Week 18 gave you numbers that are easy to compute and easy to misstate, so today is about the statements rather than the code.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what VaR claims, what expected shortfall adds, and what both assume, from memory.
+- Name the failure mode of each risk statistic you can compute.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>35 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Finish anything outstanding from days 120 to 125. The coverage and independence tests are the pieces to have working, since milestone 4 reports them.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Closed book: the precise claim of a 99 percent VaR, the subadditivity counterexample, the two backtest tests and what each catches, and the correlation conditioning argument. Say each out loud in under ninety seconds.
 :::
 :::
 
@@ -33,27 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, eighteenth sitting. Ten two-digit multiplications, the sevenths, and 1/3, 2/9 and 5/6 as decimals plus their reciprocals.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Poisson processes: buses arrive as a Poisson process with mean gap 10 minutes. You arrive at a random time. What is your expected wait, and what is the expected length of the gap you land in? Explain the inspection paradox out loud.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The follow-up they use to check you understood: what is the expected time since the last bus? Give it without computing anything new.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The closed-book week 18 page with each risk statistic and its failure mode.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+State the inspection paradox, then say where it appears in a trading context.
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +65,12 @@ Ten minutes tonight so Day 127, Friday, 11 December 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down the Kelly fraction for a simple bet with probability p of winning b to 1, from memory if you can.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Evaluate it for p of 0.55 and b of 1.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note what fraction of your capital that implies, and whether you would actually do it.
 :::
 :::

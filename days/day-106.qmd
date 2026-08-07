@@ -1,6 +1,6 @@
 ---
-title: "Day 106 — Placeholder title for day 106"
-subtitle: "Friday, 20 November 2026 · Week 16 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 106 — A sample covariance matrix with more assets than days"
+subtitle: "Friday, 20 November 2026 · Week 16 of 52 · Portfolios and risk · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Friday, 20 November 2026 · Week 16 of 52 · Portfolios and risk · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The rank deficiency you counted last night is not an edge case; it is the normal situation in equity portfolio construction, and every practical method exists because of it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the rank of a sample covariance matrix from T observations of N assets, and what that implies for its inverse.
+- Show that the sample matrix produces a portfolio with zero predicted risk and large realised risk.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Demonstrate the failure end to end: with 200 names and 150 days, find a portfolio the sample covariance says has almost zero variance, then measure what it actually realises over the next 150 days. The ratio between predicted and realised risk is the number to remember.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Map the breakdown: repeat with the ratio of assets to observations from 0.1 to 1.5 and plot predicted-to-realised risk against that ratio. The curve tells you where your own universe sits and how bad the problem is for you specifically.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [scikit-learn — covariance estimation and Ledoit-Wolf shrinkage](https://scikit-learn.org/stable/modules/covariance.html) [reference]{.res-kind}
+- [MIT 18.065 — Matrix Methods in Data Analysis, Signal Processing and ML (Strang)](https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-106-sample-covariance.ipynb with predicted-to-realised risk plotted against the asset-to-observation ratio.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You estimate a 500 by 500 covariance from 750 daily observations. What is wrong with it, and what does the optimiser do with the smallest eigenvalues?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 107, Saturday, 21 November 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Generate a matrix of pure noise with the same dimensions as your return matrix and compute its eigenvalue spectrum.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot that spectrum next to the one from real returns.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The bulk of the two will look similar. That similarity is tomorrow's entire point.
 :::
 :::

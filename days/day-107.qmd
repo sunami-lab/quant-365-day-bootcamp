@@ -1,6 +1,6 @@
 ---
-title: "Day 107 — Placeholder title for day 107"
-subtitle: "Saturday, 21 November 2026 · Week 16 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 107 — Marchenko-Pastur says which eigenvalues are noise"
+subtitle: "Saturday, 21 November 2026 · Week 16 of 52 · Portfolios and risk · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Saturday, 21 November 2026 · Week 16 of 52 · Portfolios and risk ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+There is a closed-form prediction for the spectrum of a pure-noise correlation matrix, and comparing your real one against it separates structure from sampling with no tuning parameter.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the Marchenko-Pastur edges in terms of the asset-to-observation ratio, and evaluate them for your own matrix.
+- Report how many of your eigenvalues lie outside the predicted noise band, and what they correspond to.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the Laloux, Cizeau, Bouchaud and Potters noise dressing paper. It is short and it is the original statement of this comparison on financial data.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Overlay the theory on your data: plot the empirical eigenvalue density of your correlation matrix with the Marchenko-Pastur density drawn on top, with the edges computed from your own N and T. Count the eigenvalues above the upper edge and identify what the top two eigenvectors are loading on.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write down the interpretation: the largest eigenvalue is the market, the next few are usually sectors or styles, and everything inside the bulk is indistinguishable from noise at your sample length.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Laloux, Cizeau, Bouchaud & Potters (1998) — Noise Dressing of Financial Correlation Matrices](https://arxiv.org/abs/cond-mat/9810255) [paper]{.res-kind}
+- [Bouchaud & Potters — Financial Applications of Random Matrix Theory (review)](https://arxiv.org/abs/0910.1205) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-107-marchenko-pastur.ipynb with the empirical spectrum against the theoretical density and a count of informative eigenvalues.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Compute the Marchenko-Pastur upper edge for 200 assets and 500 observations, and say how many of your eigenvalues exceed it.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 108, Sunday, 22 November 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Implement eigenvalue clipping: replace every eigenvalue inside the noise band with their average, keep the rest, and reconstruct the matrix.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the result is still positive definite and that its trace is unchanged.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the condition number before and after.
 :::
 :::

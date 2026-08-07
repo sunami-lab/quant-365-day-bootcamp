@@ -1,6 +1,6 @@
 ---
-title: "Day 285 — Placeholder title for day 285"
-subtitle: "Tuesday, 18 May 2027 · Week 41 of 52 · Microstructure · Study day · 60 min"
+title: "Day 285 — Adverse selection, measured as the drift after your fill"
+subtitle: "Tuesday, 18 May 2027 · Week 41 of 52 · Microstructure · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,43 @@ subtitle: "Tuesday, 18 May 2027 · Week 41 of 52 · Microstructure · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The divergence you plotted last night is the empirical definition of adverse selection, and it is the reason a market maker's problem is a statistical one rather than an operational one.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the post-trade mid drift conditional on trade direction and size, out to a stated horizon.
+- Explain adverse selection in plain language and say how a market maker prices it in.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Quantify the drift: average signed mid move after a trade, as a function of horizon and of trade size relative to displayed depth. Report at 1, 10 and 60 seconds. The large-trade curve keeps rising, which is exactly the permanent impact from yesterday appearing conditionally.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read Glosten and Milgrom's setup and note that their model produces a positive spread with no inventory costs and no processing costs at all, purely from the possibility that the counterparty is informed. That is the sharpest statement of why a spread exists.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the plain-language explanation you would give in an interview, in three sentences, followed by the sentence about how a market maker responds, which is by widening and by skewing rather than by refusing to trade.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Glosten & Milgrom (1983 working paper) — Bid, Ask and Transaction Prices in a Specialist Market](https://www.kellogg.northwestern.edu/research/math/papers/570.pdf) [paper]{.res-kind}
+- [Nasdaq TotalView-ITCH sample days (full order book, free)](https://emi.nasdaq.com/ITCH/Nasdaq%20ITCH/) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-285-adverse-selection.ipynb with post-trade drift by direction, size and horizon, plus the three-sentence explanation.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Explain adverse selection to a market maker's grandmother, then say how the market maker prices it in.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +53,12 @@ Ten minutes tonight so Day 286, Wednesday, 19 May 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute order flow imbalance in one-second buckets: signed volume, or the change in bid depth minus the change in ask depth.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Regress the next second's mid change on it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the R-squared. It will be higher than anything you saw in phase 7.
 :::
 :::

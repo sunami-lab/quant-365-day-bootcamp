@@ -1,5 +1,5 @@
 ---
-title: "Day 179 — Placeholder title for day 179"
+title: "Day 179 — Low volatility wins, and the explanation is a constraint"
 subtitle: "Monday, 1 February 2027 · Week 26 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Monday, 1 February 2027 · Week 26 of 52 · Alpha · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The signal that most directly contradicts the textbook relationship between risk and return, with an explanation that is about leverage limits rather than about mispricing.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the low-volatility and betting-against-beta signals on your universe and say how they differ in construction.
+- State the leverage-constraint explanation and name the observation that supports it.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the Frazzini and Pedersen draft's model section, where the flat security market line follows from investors being unable to lever and therefore bidding up high-beta assets instead. Note that betting against beta is beta-neutral by construction, which is what distinguishes it from a plain low-volatility sort.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Build both signals: low trailing volatility ranked cross-sectionally, and a beta-neutral long-low-beta short-high-beta construction with the leverage that neutrality requires. Evaluate both, and report the leverage the second one needs, since that leverage is exactly what the explanation says most investors cannot use.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+Low volatility and betting against beta are both in the book, with the leverage required by the beta-neutral construction reported explicitly, since that leverage is both the mechanism of the return and the constraint on running it.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Frazzini & Pedersen — Betting Against Beta (draft)](https://w4.stern.nyu.edu/facdir/lpederse/papers/BettingAgainstBeta.pdf) [paper]{.res-kind}
+- [AQR — datasets (BAB, QMJ, time-series momentum)](https://www.aqr.com/Insights/Datasets) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Two volatility-related signals evaluated, with the leverage required by the beta-neutral version reported.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Betting against beta needs leverage to be beta neutral. Why is that the same fact as the explanation for why it works?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 180, Tuesday, 2 February 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the forward 5-day return of the worst-performing decile over the last 5 days, across your universe.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do the same for a 1-day formation window.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the difference in magnitude between the two. It is large.
 :::
 :::

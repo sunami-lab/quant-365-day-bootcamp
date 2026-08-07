@@ -1,6 +1,6 @@
 ---
-title: "Day 256 — Placeholder title for day 256"
-subtitle: "Monday, 19 April 2027 · Week 37 of 52 · Derivatives · Study day · 60 min"
+title: "Day 256 — Gamma and theta are two sides of one equation"
+subtitle: "Monday, 19 April 2027 · Week 37 of 52 · Derivatives · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Monday, 19 April 2027 · Week 37 of 52 · Derivatives · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The relationship you noticed last night is the Black-Scholes PDE rearranged, which means it is exact rather than approximate, and stating it that way is how the trade-off gets explained in an interview.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Derive the gamma-theta relationship from the PDE and state it for a zero-rate case in one line.
+- Say what being long gamma in a quiet market costs you per day, in dollars, for a specific position.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Rearrange the PDE: with rates at zero, theta equals minus half the variance times the square of the spot times gamma. That single line says that time decay is exactly the cost of the convexity you own, priced at the implied variance. Verify it numerically against your greeks across a grid.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Make it concrete in money: for a specific long straddle on a specific underlying, compute the daily theta in dollars and the move in the underlying that would break even against it. That break-even move is the implied daily volatility, which is a fact worth having in your hands rather than in a formula.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Then reverse it: for a short position, state the daily income and the move that wipes it out, and note the asymmetry between the two cases.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Sinclair — Volatility Trading, 2nd ed. (Wiley)](https://www.wiley.com/en-us/Volatility+Trading,+++Website,+2nd+Edition-p-9781118416723) [textbook]{.res-kind}
+- [Wilmott — Paul Wilmott Introduces Quantitative Finance (Wiley)](https://www.wiley.com/en-us/Paul+Wilmott+Introduces+Quantitative+Finance,+2nd+Edition-p-9781118836798) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The gamma-theta identity verified numerically, plus a dollar break-even move computed for a specific straddle.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Gamma and theta have opposite signs for a reason. State it, and say what it implies for a long-gamma position in a quiet market.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 257, Tuesday, 20 April 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Rerun the hedging simulation at rebalancing frequencies of daily, twice daily and hourly, with implied equal to realized.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Record the standard deviation of profit at each.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot it against frequency and note the slope.
 :::
 :::

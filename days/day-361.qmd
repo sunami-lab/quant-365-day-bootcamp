@@ -1,5 +1,5 @@
 ---
-title: "Day 361 — Placeholder title for day 361"
+title: "Day 361 — What you would actually run, and at what size"
 subtitle: "Monday, 2 August 2027 · Week 52 of 52 · Capstone · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Monday, 2 August 2027 · Week 52 of 52 · Capstone · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The dossier describes what you built and this section says what you believe, which is the harder document and the one a portfolio manager would ask for first.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Recommend which components to run, at what capital, with what expected performance and what drawdown.
+- Name what you would not run and give the reason for each.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Write the recommendation with numbers rather than adjectives: which signals, at what combined capital, at what Kelly fraction from day 129, with the resulting expected performance stated as an interval and the 95th percentile drawdown you are accepting. Include the capacity constraint from milestone 9 and say which constraint binds first.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the exclusions, which are more informative: the signals whose net performance did not clear the noise floor, the ones whose capacity is below the cost of running them, and the machine learning layer if the audit did not justify it. One line of reason each, and no hedging about revisiting them later.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The dossier gains a recommendation section: which components to run, at what capital and Kelly fraction, with the expected interval and accepted drawdown, and an explicit list of what is excluded and why.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Pedersen — Efficiently Inefficient, free exercise sets](http://docs.lhpedersen.com/EfficientlyInefficient_Exercises.pdf) [problems]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A written recommendation with capital, fraction, expected interval and accepted drawdown, plus the exclusion list with reasons.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What would you run with your own money tomorrow, at what size, and what drawdown are you accepting to do it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 362, Tuesday, 3 August 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread your notes and the first two milestone documents from September and October 2026.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Mark every claim you no longer believe.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not correct anything; the marks are tomorrow's material.
 :::
 :::

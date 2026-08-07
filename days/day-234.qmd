@@ -1,6 +1,6 @@
 ---
-title: "Day 234 — Placeholder title for day 234"
-subtitle: "Sunday, 28 March 2027 · Week 34 of 52 · Machine learning · Study day · 60 min"
+title: "Day 234 — Which features are proxies for something you did not intend"
+subtitle: "Sunday, 28 March 2027 · Week 34 of 52 · Machine learning · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Sunday, 28 March 2027 · Week 34 of 52 · Machine learning · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A feature that carries most of the model's weight and has no economic story is usually standing in for something structural, and finding out what is more valuable than the model.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Identify the features carrying the model's performance and check each against an economic story.
+- Name at least one feature that is a proxy for something unintended, and say what.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Investigate the surprising features: for each, check whether it correlates with liquidity, with market capitalisation, with sector membership or with a data-availability pattern. A feature that is really a size proxy will show up as a size exposure in the portfolio, which you can check directly.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Check the portfolio rather than the model: report the factor exposures of the winning model's portfolio against your standard exposure set. If a large part of its performance is a known factor, the model has rediscovered something you already had and its marginal value is much smaller than the audit table suggests.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the finding into the milestone whichever way it comes out, including if the answer is that the model is mostly a repackaged momentum exposure.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [scikit-learn documentation](https://scikit-learn.org/stable/) [tool]{.res-kind}
+- [Hou, Xue & Zhang (2017) — Replicating Anomalies](https://www.nber.org/papers/w23394) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A proxy analysis for the top features and the winning model's factor exposures, with any rediscovered factor named.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your model's most important feature has no economic story. What did you check, and what did it turn out to be?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 235, Monday, 29 March 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the turnover of the winning model's portfolio and compare it against your linear baseline's.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then compute both at your estimated costs.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> One of the two gaps will be larger than you expect.
 :::
 :::

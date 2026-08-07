@@ -1,5 +1,5 @@
 ---
-title: "Day 260 — Placeholder title for day 260"
+title: "Day 260 — The smile is the market disagreeing with your model"
 subtitle: "Friday, 23 April 2027 · Week 38 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,45 +8,40 @@ subtitle: "Friday, 23 April 2027 · Week 38 of 52 · Derivatives · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The curve you plotted last night is a direct measurement of how far the market's terminal distribution is from lognormal, and reading it that way makes the rest of the week straightforward.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the implied volatility curve for one expiry and state what its curvature says about the risk-neutral density's tails.
+- Say why quoting in implied volatility rather than in price is a convention that makes the disagreement visible.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Clean and plot the chain properly: filter for quotes with real two-sided markets, invert mid prices for implied volatility using your own pricer, and plot against strike and against log-moneyness. Note that using moneyness rather than strike makes different expiries comparable, which is why everyone does it.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the curvature as a statement about the density: a symmetric smile means fatter tails than lognormal on both sides. Extract the implied density directly using the second derivative of price with respect to strike, and compare it against the lognormal implied by the at-the-money volatility. The two plots make the same point twice and the second is the more convincing one.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Cboe delayed option chains (JSON, with greeks)](https://cdn.cboe.com/api/global/delayed_quotes/options/AAPL.json) [data]{.res-kind}
+- [Gatheral — The Volatility Surface, Statics and Dynamics (Imperial lecture 1)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-1st-Lecture.pdf) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-260-smile.ipynb with an implied volatility curve and the extracted risk-neutral density against the lognormal.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+The smile is symmetric and curved. What does that say about the market's terminal distribution relative to lognormal?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 261, Saturday, 24 April 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Do the same for an index rather than a single stock, and plot both curves on the same log-moneyness axis.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The index curve will slope rather than smile.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down which side is higher, before tomorrow explains it.
 :::
 :::

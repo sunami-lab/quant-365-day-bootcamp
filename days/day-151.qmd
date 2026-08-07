@@ -1,6 +1,6 @@
 ---
-title: "Day 151 — Placeholder title for day 151"
-subtitle: "Monday, 4 January 2027 · Week 22 of 52 · The research harness · Study day · 60 min"
+title: "Day 151 — Turnover is the variable that decides everything"
+subtitle: "Monday, 4 January 2027 · Week 22 of 52 · The research harness · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Monday, 4 January 2027 · Week 22 of 52 · The research harness · St
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Cost is a rate and turnover is the quantity it multiplies, which means every conversation about whether a strategy survives costs is really a conversation about turnover.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Express net Sharpe as a function of gross Sharpe, turnover and cost per unit traded, and check the algebra against your engine.
+- Report the turnover at which each of your strategies breaks even.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Derive the relationship: annual cost equals one-way turnover times round-trip cost, and net return is gross return minus that. Write net Sharpe in terms of the three quantities, then verify the formula reproduces your engine's net number to within rounding for both strategies.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Find the levers: for each strategy, compute how much gross Sharpe you would need at twice the turnover to hold net Sharpe constant, and how much turnover you could cut by halving the rebalance frequency, with the resulting loss in signal freshness. This trade-off is what phase 6 optimises rather than the raw signal.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add turnover reporting to the result object so every strategy carries it without being asked.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Rob Carver — This Blog is Systematic](https://qoppac.blogspot.com/) [reference]{.res-kind}
+- [pysystemtrade (Carver) — systematic futures](https://github.com/pst-group/pysystemtrade) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The net Sharpe relationship derived and verified against the engine, with break-even turnover reported for both strategies.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+A strategy has a Sharpe of 2.0 before costs and 0.3 after. What is its turnover, roughly, and what would you change first?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 152, Tuesday, 5 January 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Sketch the chart you want: net Sharpe on the vertical axis, round-trip cost on the horizontal, one line per strategy.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Decide the cost range it should span. Your own costs should be a marked point inside it, not at the edge.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Two minutes on paper.
 :::
 :::

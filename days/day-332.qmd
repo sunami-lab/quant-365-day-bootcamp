@@ -1,5 +1,5 @@
 ---
-title: "Day 332 — Placeholder title for day 332"
+title: "Day 332 — Expectation by indicators, symmetry and conditioning"
 subtitle: "Sunday, 4 July 2027 · Week 48 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 4 July 2027 · Week 48 of 52 · The interview · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Three techniques cover most expectation problems asked in interviews, and recognising which one applies in the first fifteen seconds is what separates a two-minute answer from a ten-minute one.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Solve eight expectation problems under a clock, and for each name the technique before starting.
+- State the recognition rule for each of the three techniques.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [40 min]{.task-min} Forty minutes, eight problems. Before starting each one, write down which technique you are going to use. Getting the technique right and the arithmetic wrong is a much better outcome than the reverse, and tracking the two separately tells you which to practise.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Write the three recognition rules: indicators when the quantity is a count of events, conditioning when the process has a natural first step, and symmetry when relabelling the objects leaves the problem unchanged. Then test the rules against the eight problems you just did.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
+- [Jane Street — puzzles](https://www.janestreet.com/puzzles/) [problems]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A scored session with the technique predicted before each problem, and three written recognition rules.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You draw cards until you see an ace. Expected number of draws? Do it by symmetry in under a minute.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 333, Monday, 5 July 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Choose six martingale and optional stopping problems, including at least one with a drift.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the three conditions of the optional stopping theorem from memory tonight.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> You will need them tomorrow to say why a particular strategy fails.
 :::
 :::

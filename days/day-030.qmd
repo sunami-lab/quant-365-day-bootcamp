@@ -1,5 +1,5 @@
 ---
-title: "Day 30 — Placeholder title for day 30"
+title: "Day 30 — Logs add across time, simple returns add across assets"
 subtitle: "Saturday, 5 September 2026 · Week 5 of 52 · Returns and noise · Study day · 60 min"
 ---
 
@@ -8,45 +8,42 @@ subtitle: "Saturday, 5 September 2026 · Week 5 of 52 · Returns and noise · St
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You cannot use one convention for both, and the day you forget that is the day a portfolio return is silently wrong by an amount too small to notice and too large to ignore.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Give the one line of algebra showing that log returns aggregate over time, and the one line showing simple returns aggregate over assets.
+- Say what goes wrong, numerically, if you build a portfolio by weighting log returns.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Do both derivations on paper, in four lines total. Time aggregation is the telescoping product of gross returns. Cross-sectional aggregation is the weighted sum of gross returns minus one. Then say why no convention aggregates in both directions.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Measure the error you would have made: build your ten-name equal-weighted portfolio the wrong way, by averaging log returns, and compare its cumulative path to the correct construction over ten years. Report the terminal gap in percent. It will be small enough to have gone unnoticed and large enough to matter.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the convention into qlib/ as a docstring rule at the top of a new returns module: prices to log returns for anything through time, gross simple returns for anything across names. You will read that docstring in week 24.
 :::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Zivot — Introduction to Computational Finance and Financial Econometrics with R](https://bookdown.org/compfinezbook/introcompfinr/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/returns.py with the two conversion functions and the convention stated in the module docstring, plus the measured error from doing it wrongly.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Show in one line why the log return of a two-asset portfolio is not the weighted average of the two log returns.
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +52,12 @@ Ten minutes tonight so Day 31, Sunday, 6 September 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the annualised mean and annualised volatility of SPY daily log returns, and of a high-volatility name such as a leveraged ETF or a small-cap. Save both pairs.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the geometric mean of each. Tomorrow explains the pattern in the four numbers.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to read. Ten minutes on the numbers is enough.
 :::
 :::

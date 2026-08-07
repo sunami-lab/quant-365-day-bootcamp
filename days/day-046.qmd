@@ -1,6 +1,6 @@
 ---
-title: "Day 46 — Placeholder title for day 46"
-subtitle: "Monday, 21 September 2026 · Week 7 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 46 — Serial correlation inflates a Sharpe ratio, and by how much"
+subtitle: "Monday, 21 September 2026 · Week 7 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Monday, 21 September 2026 · Week 7 of 52 · Returns and noise · Stu
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Smoothed returns are the easiest way to look good without doing anything, and it happens accidentally in illiquid holdings as often as it happens deliberately.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Give the correction to an annualised Sharpe ratio for autocorrelated returns, and evaluate it for a lag-1 autocorrelation of 0.2.
+- Name two mechanisms that produce positive return autocorrelation without any skill, and say which one you might introduce accidentally.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Derive the corrected annualisation factor: the variance of a sum of correlated returns includes the covariance terms, so the naive square root of 252 is wrong. Write the general factor for an arbitrary autocorrelation function, then simplify for AR(1) and evaluate at rho of 0.1, 0.2 and 0.4.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Demonstrate the inflation: take a return series with zero true autocorrelation, apply a two-period moving average to it, and compute the naive annualised Sharpe of the smoothed series against the original. Report the inflation factor. Then note that a monthly-marked illiquid position produces the same effect for free.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [statsmodels — time series analysis (tsa)](https://www.statsmodels.org/stable/tsa.html) [tool]{.res-kind}
+- [Sheppard — Python for Econometrics (notes)](https://bashtage.github.io/kevinsheppard.com/teaching/python/notes/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-046-autocorrelation-sharpe.ipynb with the corrected annualisation factor and a measured inflation from artificial smoothing.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Monthly returns with lag-1 autocorrelation of 0.2. By what factor is the naively annualised Sharpe ratio overstated?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 47, Tuesday, 22 September 2026 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the maximum drawdown of SPY over 2000-today, and over each of the four separate five-year sub-periods.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the five numbers. Note that the whole-period number is not the maximum of the four.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Think for one minute about why not.
 :::
 :::

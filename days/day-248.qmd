@@ -1,5 +1,5 @@
 ---
-title: "Day 248 — Placeholder title for day 248"
+title: "Day 248 — The Black-Scholes PDE, from the hedge that removes the risk"
 subtitle: "Sunday, 11 April 2027 · Week 36 of 52 · Derivatives · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Sunday, 11 April 2027 · Week 36 of 52 · Derivatives · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The derivation you are one line from is the one you should be able to do on a whiteboard, and it is short enough that there is no excuse for not having it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Derive the Black-Scholes partial differential equation from a delta-hedged self-financing portfolio.
+- Say exactly where the stock's expected return cancels, and what that cancellation depends on.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Finish the derivation: apply Itô to the option value, form the portfolio that is long the option and short delta shares, observe that the Brownian term cancels when delta is the partial derivative, and conclude that the remaining deterministic portfolio must earn the risk-free rate. Write it out cleanly, once, and keep the page.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Identify what the cancellation needs: continuous rebalancing, continuous paths, and a known volatility. Each failure of those three is a real hedging cost, and weeks 37 and 39 measure the first two.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Solve the PDE for a European call by recognising it as a heat equation after a change of variables, or read the transformation in the MIT 15.450 notes. You do not need to do the transformation from memory, but you should have seen why it works.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [MIT 15.450 — Analytics of Finance (Kogan)](https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/) [course]{.res-kind}
+- [Oxford — Etheridge, Stochastic Calculus for Finance (lecture notes)](https://www.stats.ox.ac.uk/~etheridg/finmath/index.html) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A clean written derivation of the Black-Scholes PDE from the replication argument, kept as a single page.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Derive Black-Scholes by replication and say where the real-world drift went.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 249, Monday, 12 April 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write down what you currently think risk-neutral means. Do not look it up.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then write down the common wrong answer, which is that investors are risk neutral.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow makes the difference precise, and starting from your own wrong version helps.
 :::
 :::

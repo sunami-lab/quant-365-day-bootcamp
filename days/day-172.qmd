@@ -1,5 +1,5 @@
 ---
-title: "Day 172 — Placeholder title for day 172"
+title: "Day 172 — Quantile spreads, and the monotonicity nobody checks"
 subtitle: "Monday, 25 January 2027 · Week 25 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Monday, 25 January 2027 · Week 25 of 52 · Alpha · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A signal whose top and bottom deciles differ but whose middle is unordered is telling you something specific about where its information lives, and averaging it into one IC hides that.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report quantile forward returns with intervals and test whether the ordering is monotone.
+- Say what a non-monotone pattern with a strong extreme spread implies about the signal and about its capacity.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build the quantile analysis in qlib/signals/evaluate.py: forward return per quantile with a standard error, the top-minus-bottom spread with an interval, and a formal test of monotonicity across quantiles rather than an eyeball judgement. Run it for all four signals at their chosen horizons.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Interpret the shapes you get: a signal that works only in the extremes has lower capacity than its IC suggests, because the tradeable names are fewer. Compute, for each signal, the fraction of the spread that comes from the extreme decile alone, and note which signals are concentrated that way.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [alphalens-reloaded — factor IC, quantile returns, turnover](https://github.com/stefan-jansen/alphalens-reloaded) [repo]{.res-kind}
+- [alphalens-reloaded documentation](https://alphalens.ml4trading.io/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Quantile returns with intervals and monotonicity tests for four signals, and the extreme-decile share reported for each.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your signal's top decile beats the bottom by 8 percent a year but quantiles 2 through 4 are unordered. What does that tell you?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 173, Tuesday, 26 January 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the fraction of your portfolio that turns over each rebalance for all four signals.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then compute each signal's autocorrelation at lag one day.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The two numbers are closely related and tomorrow makes the link explicit.
 :::
 :::

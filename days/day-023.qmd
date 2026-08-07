@@ -1,6 +1,6 @@
 ---
-title: "Day 23 — Placeholder title for day 23"
-subtitle: "Saturday, 29 August 2026 · Week 4 of 52 · Markets · Study day · 60 min"
+title: "Day 23 — The store, part three: the test that makes as-of true"
+subtitle: "Saturday, 29 August 2026 · Week 4 of 52 · Markets · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,46 @@ subtitle: "Saturday, 29 August 2026 · Week 4 of 52 · Markets · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+A point-in-time claim you have not tested is a comment, and comments do not stop you from reading the future.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Write a test that fails if any query returns a row whose ingested_at is after the as-of date.
+- Say what your store would have returned on 12 March 2019, and demonstrate it rather than assert it.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Add `as_of` to the store's query interface, defaulting to now, and make every read filter on ingested_at less than or equal to it. Then write tests/test_asof.py with two tests: one that inserts a row with a future ingested_at and asserts it is invisible, and one that reproduces the store's state on a past date and asserts a known row count.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Write qlib/ingest.py's rebuild path: drop, recreate, ingest, verify row counts, in one command. Time it and put the number in the README. A store you are afraid to rebuild is a store you will stop trusting.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The as-of semantics are now enforced by two tests rather than by intention. This is the first instance of the pattern that week 23 generalises: leakage is prevented by construction and asserted by a test, never by remembering to be careful.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pytest documentation](https://docs.pytest.org/en/stable/) [tool]{.res-kind}
+- [DuckDB documentation](https://duckdb.org/docs/current/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+tests/test_asof.py passing, and a one-command rebuild whose runtime is recorded in the work repo README.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Describe the test that would fail if someone added a query path that ignored as_of. If your suite does not have one, you have not finished.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 24, Sunday, 30 August 2026 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Download the Ken French monthly market, size and value factor returns and save them. They are the input for the next four days.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Open AQR's datasets page and note which series are free. You will use Betting Against Beta and time-series momentum in phase 6.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Read the first two paragraphs of the free chapter 1 of Ilmanen's Investing Amid Low Expected Returns so tomorrow starts warm.
 :::
 :::

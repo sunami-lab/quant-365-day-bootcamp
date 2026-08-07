@@ -1,6 +1,6 @@
 ---
-title: "Day 363 — Placeholder title for day 363"
-subtitle: "Wednesday, 4 August 2027 · Week 52 of 52 · Capstone · Study day · 60 min"
+title: "Day 363 — The self-check, answered out loud and scored"
+subtitle: "Wednesday, 4 August 2027 · Week 52 of 52 · Capstone · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Wednesday, 4 August 2027 · Week 52 of 52 · Capstone · Study day ·
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Ten questions the whole year was designed around, and anything you cannot answer is not a failure but the reading list for the autumn, which is only true if you find out which ones they are.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Answer all ten final questions out loud without notes, and score each as fluent, slow or missing.
+- Attempt the four practical items and report which you could do today.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Answer the ten questions out loud, recorded, two minutes each maximum. Score each honestly against the expectation you wrote last night, and note where the expectation was wrong in either direction, since being wrong about what you know is itself worth knowing.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Attempt the four practical items rather than assuming: a point-in-time backtest of a signal from raw data in an afternoon, Black-Scholes on a whiteboard, an unseen probability question out loud, and naming the result you are least confident in. The second and third can be done in twenty minutes today; the first is a claim you should check by actually starting the clock.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the autumn reading list from whatever you scored as missing. Three items is a good list and ten is a wish.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Jane Street — puzzle archive with solutions](https://www.janestreet.com/puzzles/archive/index.html) [problems]{.res-kind}
+- [MIT 15.450 — Analytics of Finance (Kogan)](https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+All ten self-check questions answered and scored, the four practical items attempted, and a three-item autumn reading list.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which of the ten final questions could you not answer, and what does that tell you about where to spend September?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 364, Thursday, 5 August 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Confirm the system is still running unattended and the reconciliation is clean.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your timed mixed-set scores; tomorrow is the fifty-second and final drill sitting.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing else. Tomorrow is a light day on purpose.
 :::
 :::

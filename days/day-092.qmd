@@ -1,5 +1,5 @@
 ---
-title: "Day 92 — Placeholder title for day 92"
+title: "Day 92 — The Kalman filter in one sentence, then in one dimension"
 subtitle: "Friday, 6 November 2026 · Week 14 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 6 November 2026 · Week 14 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+It is the most useful estimator in this half of the course and it is usually taught matrices first, which is backwards; the recursive weighted average is the idea and the algebra is bookkeeping.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what the filter does in one sentence containing no matrices, and say what the gain is a ratio of.
+- Implement a scalar Kalman filter from scratch and show it reduces to a known estimator when the process noise is zero.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Work through chapters 4 and 5 of Kalman and Bayesian Filters in Python, the one-dimensional filter and the multivariate Gaussian chapters, running the notebooks rather than reading them.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write your own twenty-line scalar filter with no library, and check two limits: with zero process noise it converges to the running mean, and with zero measurement noise it tracks the observation exactly. Those two checks are the whole intuition.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Kalman and Bayesian Filters in Python (Labbe)](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python) [course]{.res-kind}
+- [statsmodels — state space models and the Kalman filter](https://www.statsmodels.org/stable/statespace.html) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-092-kalman-scalar.ipynb with a hand-written scalar filter and both limiting cases demonstrated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What is the Kalman filter doing, in one sentence with no matrices, and what two quantities does the gain balance?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 93, Saturday, 7 November 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Write your pairs hedge ratio problem in state space form on paper: what is the state, what is the observation, and what are the two noise variances.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note that you have two unknown variances and no obvious way to set them. That is tomorrow's problem.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Read the statsmodels statespace overview page.
 :::
 :::

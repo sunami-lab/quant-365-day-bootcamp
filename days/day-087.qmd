@@ -1,5 +1,5 @@
 ---
-title: "Day 87 — Placeholder title for day 87"
+title: "Day 87 — Realised volatility, and the estimator that uses the intraday path"
 subtitle: "Sunday, 1 November 2026 · Week 13 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Sunday, 1 November 2026 · Week 13 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The squared daily return is a one-observation estimate of a daily variance, and using the intraday path instead is the single largest accuracy improvement available in volatility forecasting.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say why realised variance from 5-minute returns is a far better estimate of daily variance than the squared daily return, in terms of estimator variance.
+- Name the two biases that appear as the sampling frequency increases, and say which direction each pushes the estimate.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Read the Optiver realized volatility competition's data description and evaluation metric. It is the cleanest public statement of the problem, and the dataset is order-book data you will use again in phase 9.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Build the estimator and its signature plot: compute realised variance at sampling intervals from 30 seconds to 30 minutes on whatever intraday data you have, and plot the average estimate against sampling frequency. The rise at high frequency is microstructure noise, and the flat region is where practitioners sample.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add `realised_variance()` to qlib/vol.py with the sampling interval as a required argument, and a docstring naming the two biases.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Kaggle — Optiver Realized Volatility Prediction (order book data)](https://www.kaggle.com/competitions/optiver-realized-volatility-prediction) [data]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/vol.py with a realised variance estimator, plus the volatility signature plot across sampling frequencies.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does realised variance rise as you sample more finely than 5 minutes, and what would you do about it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 88, Monday, 2 November 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Set up a regression of tomorrow's realised variance on today's, the past week's average, and the past month's average.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the three coefficients.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> That regression has a name, and you will meet it tomorrow.
 :::
 :::

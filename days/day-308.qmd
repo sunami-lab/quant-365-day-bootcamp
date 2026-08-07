@@ -1,6 +1,6 @@
 ---
-title: "Day 308 — Placeholder title for day 308"
-subtitle: "Thursday, 10 June 2027 · Week 44 of 52 · Microstructure · Milestone · 45 min"
+title: "Day 308 — Milestone: execution, impact and honest capacity"
+subtitle: "Thursday, 10 June 2027 · Week 44 of 52 · Microstructure · Milestone · 50 min"
 ---
 
 ::: {.day-nav .kind-milestone}
@@ -12,22 +12,22 @@ subtitle: "Thursday, 10 June 2027 · Week 44 of 52 · Microstructure · Mileston
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The milestone that revises every earlier number downward, which is what it is for, and the one whose credibility comes entirely from saying so plainly.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report a fitted impact model with its coefficient, exponent and uncertainty, tested rather than assumed.
+- State which of your strategies dies first as size grows, and name one earlier result you now believe was wrong.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Finish reports/milestone-09-execution.md: the impact model fitted with the square-root form tested and the coefficient stated with uncertainty, your own slippage measured against arrival price and attributed, the revised capacity of the alpha book at several asset levels, and the paragraph on which strategy dies first.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Verify: rerun the capacity numbers from committed code, check the revision table's old values against the earlier milestone documents, and confirm the shortfall components reconcile.
 :::
 :::
 
@@ -37,27 +37,37 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Timed mixed set, fifth sitting: five problems in fifteen minutes. Score, and plot all five scores. The trend is what matters.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> Market making under adverse selection: I make a market in a stock and you may trade with me, but you know one piece of information I do not. How should I set my width, and how should you trade to avoid revealing what you know? Argue both sides out loud.
 :::
+::: {.task}
+<input type="checkbox" class="task-check"> Why are you leaving academia, second attempt. Compare against your day 287 recording. The improvement to aim for is fewer words about what is wrong with academia and more about what the work you want is.
+:::
+:::
+
+## The running strategy
+
+::: {.project}
+Milestone 9 closes the microstructure phase. The cost model's impact term is now fitted rather than assumed, every capacity figure has been revised, and the engine records what it needs to measure the live account's shortfall in phase 10.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Almgren & Chriss (2000) — Optimal Execution of Portfolio Transactions](https://www.smallake.kr/wp-content/uploads/2016/03/optliq.pdf) [paper]{.res-kind}
+- [Jane Street — puzzles](https://www.janestreet.com/puzzles/) [problems]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+reports/milestone-09-execution.md, complete, containing at least one earlier result named as wrong in those words.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Give your fitted impact exponent and coefficient with their uncertainty, and say which earlier result they invalidated.
 :::
 
 ## Prepare for tomorrow
@@ -66,6 +76,12 @@ Ten minutes tonight so Day 309, Friday, 11 June 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Run one of your heaviest data queries and time it. Write the number down.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Then look at how it is written: pandas, SQL, or a loop.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Phase 10 starts with making that number smaller and knowing why it got smaller.
 :::
 :::

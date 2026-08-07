@@ -1,5 +1,5 @@
 ---
-title: "Day 173 — Placeholder title for day 173"
+title: "Day 173 — Turnover, capacity, and the size where a signal dies"
 subtitle: "Tuesday, 26 January 2027 · Week 25 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Tuesday, 26 January 2027 · Week 25 of 52 · Alpha · Study day · 60
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Capacity is not a property of a signal, it is a property of a signal at a size in a universe with a cost model, and being precise about that is what separates an estimate from a number you made up.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Relate signal autocorrelation to turnover and derive the turnover of a signal from its persistence.
+- Estimate the capacity of each signal in dollars, stating the three assumptions that estimate depends on.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Derive the link: a signal with lag-one autocorrelation rho implies a turnover roughly proportional to one minus rho, and check the relationship against your measured turnover for all four signals. Where it fails, the cause is usually the transform rather than the signal.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Estimate capacity: for each signal, find the portfolio size at which the impact cost from qlib/costs.py reduces net information ratio to half its small-size value. Report the number in dollars with the three assumptions attached, which are the impact coefficient, the participation rate you allow, and the universe's dollar volume.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Tóth et al. (2011) — Anomalous price impact and the critical nature of liquidity](https://arxiv.org/abs/1105.1694) [paper]{.res-kind}
+- [Amihud (2002) — Illiquidity and stock returns](https://www.cis.upenn.edu/~mkearns/finread/amihud.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Capacity estimates in dollars for four signals, each with the impact coefficient, participation cap and volume assumption stated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What is the capacity of your momentum signal, and why is that not a property of the signal alone?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 174, Wednesday, 27 January 2027 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List everything a one-page signal summary should carry so that week 29 can compare eight of them.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Ten fields is about right, and the economic rationale is the first one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Sketch the layout on paper.
 :::
 :::

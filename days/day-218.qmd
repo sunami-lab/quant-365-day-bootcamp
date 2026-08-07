@@ -1,5 +1,5 @@
 ---
-title: "Day 218 — Placeholder title for day 218"
+title: "Day 218 — The linear baseline, taken as seriously as the rival"
 subtitle: "Friday, 12 March 2027 · Week 32 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Friday, 12 March 2027 · Week 32 of 52 · Machine learning · Study d
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Most published comparisons lose here by tuning the complicated model carefully and the simple one not at all, and milestone 7 is specifically graded on not doing that.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Tune a regularized linear model as carefully as you intend to tune anything else, and report its out-of-sample performance with an interval.
+- Say which regularizer you chose and defend it from the correlation structure of your features.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Fit ridge, lasso and elastic net under the frozen protocol with the purged splitter, tuning the penalty properly inside each training fold rather than once globally. Report out-of-sample R-squared and information ratio with intervals from the effective sample size.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Defend the choice from the data: report the condition number and the correlation structure of your feature matrix, and say which regularizer that argues for. With eight correlated signals, lasso's tendency to pick one from a correlated group is a defect rather than a feature, and elastic net is usually the right default for that reason.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The linear baseline is fitted and tuned under the frozen protocol with nested penalty selection, and its interval is the bar every later model in the phase is measured against.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [An Introduction to Statistical Learning (free PDFs, R and Python)](https://www.statlearning.com/) [textbook]{.res-kind}
+- [scikit-learn documentation](https://scikit-learn.org/stable/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Three regularized linear models tuned under the frozen protocol, with intervals and a defended choice of regularizer.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You have eight correlated signals. Which regularizer, and what property of lasso made you avoid it?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 219, Saturday, 13 March 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Plot the regularization path for your elastic net: coefficients against penalty strength.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the order in which features drop out.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare that order against your day 181 ranking by net information ratio.
 :::
 :::

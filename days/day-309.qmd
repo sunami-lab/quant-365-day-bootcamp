@@ -1,5 +1,5 @@
 ---
-title: "Day 309 — Placeholder title for day 309"
+title: "Day 309 — The SQL you keep rewriting in pandas, written once"
 subtitle: "Friday, 11 June 2027 · Week 45 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 11 June 2027 · Week 45 of 52 · Production · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Half the transformations in your notebooks are window functions, and writing them where the data lives is faster, shorter and the version an interviewer will ask you to produce.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Write a rolling aggregate per symbol as a window function and explain the frame clause.
+- Say when computing in SQL beats pulling into pandas, in terms of what crosses the process boundary.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Work through the window functions material on Modern SQL, then write four queries against your own DuckDB store: a 20-day rolling mean per symbol, a rank within each date, a lagged value per symbol, and a cumulative sum reset at each year. Get the partition and frame clauses right rather than approximately right.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Measure the boundary: time each query computed in SQL against the equivalent pulled into pandas, for a full universe over ten years. Report both times and the peak memory. The gap is mostly serialisation, and knowing that is what tells you which side of the boundary a computation belongs on.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Modern SQL (Winand) — window functions, CTEs](https://modern-sql.com/) [reference]{.res-kind}
+- [DuckDB documentation](https://duckdb.org/docs/current/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Four window-function queries against your store, each timed against its pandas equivalent with peak memory reported.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Write a query that computes a 20-day rolling mean per symbol from a trades table, then say why doing it in SQL might be the right call.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 310, Saturday, 12 June 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Work through the first eight lessons of SQLBolt if joins are rusty, or the aggregation section of PostgreSQL Exercises if they are not.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Twenty minutes maximum.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note which construct you had to look up.
 :::
 :::

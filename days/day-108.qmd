@@ -1,6 +1,6 @@
 ---
-title: "Day 108 — Placeholder title for day 108"
-subtitle: "Sunday, 22 November 2026 · Week 16 of 52 · Portfolios and risk · Study day · 60 min"
+title: "Day 108 — Cleaning a spectrum, and testing whether it helped"
+subtitle: "Sunday, 22 November 2026 · Week 16 of 52 · Portfolios and risk · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Sunday, 22 November 2026 · Week 16 of 52 · Portfolios and risk · S
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Clipping is the most direct application of yesterday's result, and it gives you a cleaning method whose only parameter comes from theory rather than from a sweep.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Build a cleaned covariance estimator by eigenvalue clipping and confirm it is positive definite with the trace preserved.
+- Report the out-of-sample realised risk of a minimum-variance portfolio under the sample and the cleaned matrix.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Test the estimator the only way that matters: build minimum-variance portfolios from the sample matrix and from the clipped matrix on a rolling basis, and compare the realised out-of-sample volatility of each against what each predicted. Report predicted and realised for both.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Read the Bouchaud and Potters review's section on optimal rotationally invariant estimators, far enough to see that clipping is the crude member of a family, and note the name of the better estimator for when you need it.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bouchaud & Potters — Financial Applications of Random Matrix Theory (review)](https://arxiv.org/abs/0910.1205) [paper]{.res-kind}
+- [Potters, Bouchaud & Laloux — Financial Applications of RMT: Old Laces and New Pieces](https://arxiv.org/abs/physics/0507111) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-108-clipping.ipynb comparing predicted and realised out-of-sample risk for sample and clipped covariance estimators.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your clipped matrix predicted 11 percent volatility and realised 13 percent, against sample predicting 6 and realising 19. What did clipping fix?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 109, Monday, 23 November 2026 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the scikit-learn covariance module page as far as the Ledoit-Wolf section and note what the shrinkage target is.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down, in one sentence, what quantity the shrinkage intensity is chosen to minimise.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note the analogous choice you make when conditioning a linkage disequilibrium matrix.
 :::
 :::

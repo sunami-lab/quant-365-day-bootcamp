@@ -1,5 +1,5 @@
 ---
-title: "Day 96 — Placeholder title for day 96"
+title: "Day 96 — The out-of-sample run, once, on a period you never looked at"
 subtitle: "Tuesday, 10 November 2026 · Week 14 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Tuesday, 10 November 2026 · Week 14 of 52 · Time series · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+This is the one measurement in the phase that cannot be repeated, so everything about the strategy has to be frozen before you start it.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Freeze every parameter and run the strategy once on the held-out period.
+- Report the result whatever it is, alongside what the in-sample period predicted.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Freeze the configuration in a file so it is auditable: universe, formation window, selection rule, threshold derivation, hedge ratio method, cost assumption. Commit it. Then run the strategy once on the held-out period and record the result.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run the same frozen configuration on 500 synthetic universes from qlib.simulate that contain no true cointegration, and report the distribution of Sharpe ratios it produces. Your out-of-sample number belongs somewhere in that distribution, and where it falls is the actual result of milestone 3.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The pairs strategy is frozen in a committed configuration file and run once out of sample, with its result placed against the distribution the same procedure produces on synthetic data containing no relationships at all.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bailey, Borwein, López de Prado & Zhu (2017) — The Probability of Backtest Overfitting](https://escholarship.org/content/qt4w1110bb/qt4w1110bb.pdf) [paper]{.res-kind}
+- [Gatev, Goetzmann & Rouwenhorst (1999) — Pairs Trading (NBER w7032)](https://www.nber.org/papers/w7032) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The frozen configuration file, the single out-of-sample result, and the null distribution from 500 synthetic universes.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your out-of-sample Sharpe is 0.4 and the synthetic null distribution has a 95th percentile of 0.6. What have you learned?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 97, Wednesday, 11 November 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread reports/milestone-03-pairs.md and mark what is still notes rather than prose.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> List, in one line each, the conditions under which you would have abandoned this strategy. Then check whether any of them were met.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times.
 :::
 :::

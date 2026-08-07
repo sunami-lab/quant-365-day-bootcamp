@@ -1,6 +1,6 @@
 ---
-title: "Day 56 — Placeholder title for day 56"
-subtitle: "Thursday, 1 October 2026 · Week 8 of 52 · Returns and noise · Catch-up day · 45 min"
+title: "Day 56 — The three corrections, and when each applies"
+subtitle: "Thursday, 1 October 2026 · Week 8 of 52 · Returns and noise · Catch-up day · 40 min"
 ---
 
 ::: {.day-nav .kind-catchup}
@@ -8,22 +8,22 @@ subtitle: "Thursday, 1 October 2026 · Week 8 of 52 · Returns and noise · Catc
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Week 8 gave you three instruments for one problem and they answer different questions, so today is about knowing which to reach for rather than learning anything new.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say, for each of the deflated Sharpe, the probability of backtest overfitting and the reality check, what question it answers and what it needs as input.
+- State which of the three you can compute honestly for your own research and which you cannot.
 
-## Tasks <span class='task-total'>45 min</span>
+## Tasks <span class='task-total'>40 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder catch-up task.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} Finish anything outstanding from days 50 to 55, and confirm research_log.jsonl is recording automatically. A trial counter that needs to be remembered has already failed.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [20 min]{.task-min} Placeholder consolidation.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the comparison table in reports/milestone-02-noise-floor.md: three rows, columns for the question answered, the inputs required, the assumption most likely to fail, and whether you can supply the inputs honestly. Then write one sentence on which you will actually use for milestone 6.
 :::
 :::
 
@@ -33,27 +33,30 @@ Spaced repetition, not cramming. Every drill in the year is collected on the [dr
 
 ::: {.task-list .drill}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item one.
+<input type="checkbox" class="task-check"> Arithmetic, timed, eighth sitting: ten two-digit multiplications, the sevenths, and 1/1.05 to four decimal places by long division in your head.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder drill item two.
+<input type="checkbox" class="task-check"> The canonical urn-and-information problem: three cards, one red on both sides, one white on both sides, one red and white. You draw one at random and see red. Probability the other side is red? Say the wrong answer out loud first, then the right one, and name the mistake in the wrong one.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Expectation with a twist: you roll a fair die repeatedly and stop when you choose. Your payoff is the last roll. What is the optimal stopping rule and its expected value? Then do it for a payoff of the average of all rolls so far.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Grinstead & Snell — Introduction to Probability (free PDF)](https://math.dartmouth.edu/~prob/prob/prob.pdf) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+The three-row comparison table of multiple-testing corrections in the milestone report, with the honesty column filled in.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You have one strategy, one backtest and no record of what else you tried. Which of the three corrections can you compute, and what does that tell you about how to work from now on?
 :::
 
 ## Prepare for tomorrow
@@ -62,6 +65,12 @@ Ten minutes tonight so Day 57, Friday, 2 October 2026 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Resample SPY daily returns with replacement, 10,000 times, and compute the Sharpe of each resample. Save the distribution.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot it next to the distribution you get by resampling in blocks of 20 days. Do not interpret it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note which of the two is wider.
 :::
 :::

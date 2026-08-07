@@ -1,5 +1,5 @@
 ---
-title: "Day 169 — Placeholder title for day 169"
+title: "Day 169 — The information coefficient is a Spearman correlation"
 subtitle: "Friday, 22 January 2027 · Week 25 of 52 · Alpha · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Friday, 22 January 2027 · Week 25 of 52 · Alpha · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You have computed thousands of these under a different name, so the useful content is the conventions, the sampling error, and what magnitudes are actually good here.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Compute an IC series with a correct standard error and say what a mean IC of 0.03 implies.
+- State the difference between the Spearman and Pearson versions and say which you would report and why.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Build `information_coefficient()` in qlib/signals/evaluate.py: per-date cross-sectional Spearman correlation between the signal and forward returns at a stated horizon, returning the series, its mean, and a standard error that accounts for the autocorrelation of the IC series rather than treating dates as independent.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Calibrate your expectations: compute mean IC for your four signals at horizons of 1, 5 and 21 days, and put an interval on each. Then run the same computation on 200 random signals to get the null distribution of mean IC at your universe size and sample length. Almost every real IC you will ever see is between 0.01 and 0.05, and the null band tells you which of those is distinguishable from zero.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+qlib/signals/evaluate.py computes the information coefficient with a dependence-aware standard error and a null distribution from random signals, so every signal in the book is reported against a measured null rather than against zero.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [alphalens-reloaded documentation](https://alphalens.ml4trading.io/) [tool]{.res-kind}
+- [alphalens-reloaded — factor IC, quantile returns, turnover](https://github.com/stefan-jansen/alphalens-reloaded) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+An IC function with intervals in qlib/signals/evaluate.py, and mean IC at three horizons for four signals against a null distribution.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your signal has an IC of 0.03. Is that good? Answer in terms of breadth and turnover rather than in the abstract.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 170, Saturday, 23 January 2027 starts clean. This is 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute mean IC for one signal at forward horizons from 1 to 60 days, and plot it against horizon.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at where it peaks and where it crosses zero.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not act on it yet.
 :::
 :::

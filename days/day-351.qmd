@@ -1,5 +1,5 @@
 ---
-title: "Day 351 — Placeholder title for day 351"
+title: "Day 351 — The CV, rewritten without overclaiming or disowning"
 subtitle: "Friday, 23 July 2027 · Week 51 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Friday, 23 July 2027 · Week 51 of 52 · The interview · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The failure modes are opposite and both common: describing genetics work in its own vocabulary so nobody reads it, or dressing it up as finance so a researcher stops trusting you in the second line.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Rewrite the research section in the language of the job without misdescribing what you did.
+- Have every line on the first page either state a measurable result or a technique the reader recognises.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Rewrite the research section: Mendelian randomization becomes instrumental variable estimation with weak-instrument diagnostics, a genome-wide scan becomes high-dimensional multiple testing with a controlled error rate, and colocalization becomes Bayesian model comparison over shared causal variants. Each of those is true and each is a technique the reader uses.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Add this year's work with numbers rather than nouns: the platform with its test suite, the alpha book with its specification count, the audit with its interval, and the paper-traded track record with its length. Then cut everything from the first page that is neither a result nor a recognised technique.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Two Sigma — Insights](https://www.twosigma.com/insights/) [reference]{.res-kind}
+- [AQR — Research and Insights](https://www.aqr.com/Insights/Research) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A rewritten CV whose first page contains only measurable results and recognised techniques.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Describe your thesis work in the vocabulary of quantitative research, in three sentences, without overclaiming.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 352, Saturday, 24 July 2027 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread milestones 5, 6 and 8 and time how long each takes to understand.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> If any takes more than ten minutes, note where you stalled.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Tomorrow they get cut to two pages each.
 :::
 :::

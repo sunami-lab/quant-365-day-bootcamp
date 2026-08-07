@@ -1,6 +1,6 @@
 ---
-title: "Day 257 — Placeholder title for day 257"
-subtitle: "Tuesday, 20 April 2027 · Week 37 of 52 · Derivatives · Study day · 60 min"
+title: "Day 257 — Discrete hedging error, and the rate it shrinks at"
+subtitle: "Tuesday, 20 April 2027 · Week 37 of 52 · Derivatives · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,43 @@ subtitle: "Tuesday, 20 April 2027 · Week 37 of 52 · Derivatives · Study day �
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The slope you measured last night is a known result, and knowing it tells you exactly how much more often you would have to trade to halve your hedging risk, which is the input to the cost trade-off tomorrow.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State the rate at which hedging error falls with rebalancing frequency and confirm it from your simulation.
+- Describe the distribution of hedging error, and say why it is not symmetric for a short option.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Confirm the rate: the standard deviation of hedging error falls as the reciprocal of the square root of the number of rebalances. Fit the slope on log axes from your simulation and check it matches. Then say what that implies: halving the error costs four times the trading.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Look at the shape rather than only the spread: plot the histogram of hedging profit for a short option and note the skew. A short gamma position loses on large moves and wins slowly, which produces exactly the return distribution that looks excellent in a backtest and is not.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Connect it back: that shape is the same one you would get from any strategy that sells insurance, and your day 47 drawdown work applies to it directly.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Gatheral — The Volatility Surface, Statics and Dynamics (Imperial lecture 1)](https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/cfm-imperial-institute-of-quantitative-finance/events/distinguished-lectures/Gatheral-1st-Lecture.pdf) [reference]{.res-kind}
+- [QuantPy (YouTube channel)](https://www.youtube.com/@QuantPy) [video]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-257-discrete-hedging.ipynb with the fitted convergence rate and the skewed profit distribution for a short position.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You halve your hedging error. How much more trading did that take, and what did it cost?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 258, Wednesday, 21 April 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Add a proportional transaction cost to your hedging simulation and rerun across rebalancing frequencies.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note that the total cost now rises with frequency while the error falls.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> There is a minimum. Find roughly where it is.
 :::
 :::

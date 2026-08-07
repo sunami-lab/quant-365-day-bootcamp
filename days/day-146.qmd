@@ -1,6 +1,6 @@
 ---
-title: "Day 146 — Placeholder title for day 146"
-subtitle: "Wednesday, 30 December 2026 · Week 21 of 52 · The research harness · Study day · 60 min"
+title: "Day 146 — Reading a production engine, and what it does differently"
+subtitle: "Wednesday, 30 December 2026 · Week 21 of 52 · The research harness · Study day · 65 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,44 @@ subtitle: "Wednesday, 30 December 2026 · Week 21 of 52 · The research harness 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Your engine is now good enough to be worth comparing against ones that have run real money, and the differences are the specification for the next two phases.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Name three things a production backtester does that yours does not, and say which of the three you actually need.
+- Decide, in writing, what you will not build and why.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>65 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Read the architecture pages of NautilusTrader's documentation and the LEAN engine's, far enough to see how each separates data, execution and portfolio. Both are designed to run the same strategy code in backtest and live, which is a property your engine should have by phase 10.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Write the comparison and the decision: three things they do that you do not, three things your engine does that a general framework cannot easily do because it knows your data model, and the list of features you are deliberately not building. That last list is the one an interviewer will find most credible.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Note the one property to adopt now rather than later: the same strategy object should run against a historical data source or a live one, differing only in what feeds it.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [NautilusTrader documentation](https://nautilustrader.io/docs/) [tool]{.res-kind}
+- [LEAN engine (QuantConnect) documentation](https://www.quantconnect.com/docs/v2/lean-engine) [tool]{.res-kind}
+- [zipline-reloaded — the maintained zipline](https://github.com/stefan-jansen/zipline-reloaded) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A written comparison against two production engines, with an explicit list of what you are not building and why.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Name one thing NautilusTrader does that your engine does not, and say whether you need it.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +54,12 @@ Ten minutes tonight so Day 147, Thursday, 31 December 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Run both strategies through the new engine and record the numbers alongside the vectorised ones.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the accounting identity test is still green.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check the arithmetic drill times; tomorrow is the twenty-first sitting.
 :::
 :::

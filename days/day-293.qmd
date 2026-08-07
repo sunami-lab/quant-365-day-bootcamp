@@ -1,5 +1,5 @@
 ---
-title: "Day 293 — Placeholder title for day 293"
+title: "Day 293 — Telling informed flow from uninformed, and the limits of it"
 subtitle: "Wednesday, 26 May 2027 · Week 42 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Wednesday, 26 May 2027 · Week 42 of 52 · Microstructure · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every impact model treats order flow as one thing, and the models this week say it is two things with very different consequences, so knowing how well they can be separated matters.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Construct a flow-toxicity measure from your data and say what it is estimating.
+- State why the standard measure is contested, and check its behaviour on a day with a known event.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Build a volume-bucketed order imbalance measure: bucket trades by volume rather than by clock time, compute the imbalance in each bucket, and track its rolling distribution. Then check that it rises before large price moves in your sample, which is the property it is supposed to have.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Be careful about the claim: the measure depends on a trade-signing rule and on the bucketing, and published critiques argue that much of its apparent predictive power comes from those choices. Test one of those criticisms yourself by changing the bucket size and reporting how much the result moves.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Bouchaud, Bonart, Donier & Gould — Trades, Quotes and Prices (Cambridge)](https://www.cambridge.org/core/books/trades-quotes-and-prices/029A71078EE4C41C0D5D4574211AB1B5) [textbook]{.res-kind}
+- [Nasdaq TotalView-ITCH sample days (full order book, free)](https://emi.nasdaq.com/ITCH/Nasdaq%20ITCH/) [data]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-293-toxicity.ipynb with a volume-bucketed imbalance measure and a sensitivity check on the bucketing choice.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your toxicity measure predicts large moves. How much of that survives changing the bucket size, and what does that tell you?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 294, Thursday, 27 May 2027 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> List the three models from this week and one line each on what each one explains that the others do not.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Check your timed mixed-set scores.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing to install.
 :::
 :::

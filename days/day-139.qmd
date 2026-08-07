@@ -1,5 +1,5 @@
 ---
-title: "Day 139 — Placeholder title for day 139"
+title: "Day 139 — The rebuild, and the test that guards it"
 subtitle: "Wednesday, 23 December 2026 · Week 20 of 52 · The research harness · Study day · 60 min"
 ---
 
@@ -8,39 +8,46 @@ subtitle: "Wednesday, 23 December 2026 · Week 20 of 52 · The research harness 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Four days of taxonomy are worth nothing until the store enforces them, and the enforcement has to be a test rather than a convention because you will forget the convention by March.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Rebuild the store so every read path takes an as-of date and a per-source lag, with no path that bypasses either.
+- Have a test that fails if any query returns data whose availability timestamp is after the as-of date.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Refactor qlib/store.py so `as_of` is a required argument on every public read function rather than a default. Requiring it is the point: a default is a decision you will stop noticing.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Write tests/test_leakage.py with three tests: every read function rejects a call without as_of, a row inserted with a future availability timestamp is invisible, and the point-in-time universe at a past date excludes a security that first listed after it. Run the full suite.
 :::
+:::
+
+## The running strategy
+
+::: {.project}
+The store's read interface now requires an as-of date on every path and enforces per-source availability lags, with three tests that fail if a future value becomes visible. This is the foundation the event-driven engine is built on next week.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [pytest documentation](https://docs.pytest.org/en/stable/) [tool]{.res-kind}
+- [DuckDB documentation](https://duckdb.org/docs/current/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A refactored store with as_of required everywhere, and tests/test_leakage.py passing with three distinct leakage tests.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Describe a unit test that makes look-ahead impossible rather than merely undetected, and say why yours qualifies.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +56,12 @@ Ten minutes tonight so Day 140, Thursday, 24 December 2026 starts clean. This is
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Rerun your pairs and trend strategies through the rebuilt store and record the new Sharpe ratios.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compare against the numbers in milestone 3. They will be lower.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down the difference; tomorrow it goes into the report as a correction.
 :::
 :::

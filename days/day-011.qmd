@@ -1,5 +1,5 @@
 ---
-title: "Day 11 — Placeholder title for day 11"
+title: "Day 11 — Tick size, lot size, and who pays the rebate"
 subtitle: "Monday, 17 August 2026 · Week 2 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Monday, 17 August 2026 · Week 2 of 52 · Markets · Study day · 60 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The minimum price increment sets the size of the queue, the size of the queue sets the value of passivity, and the fee schedule decides who wants to be passive at all.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what happens to the depth at the touch when the tick is large relative to the spread, and why.
+- Compute the round-trip cost of a maker-taker versus a taker-maker fill for 1,000 shares, in dollars, from a real fee schedule.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Read the finmarkets slides on tick size and trading costs. Then, from a real exchange fee schedule, write down the maker rebate and taker fee per hundred shares.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Arithmetic you will use all year: for 1,000 shares of a 50-dollar stock quoted with a 1-cent spread, compute the cost of crossing the spread, then add the taker fee, then compute the same trade done passively with the rebate. Express both as basis points of notional. The ratio between them is the reason execution is a discipline.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Add the three spreads you pulled last night to the glossary with the tick size next to each, and note which of the three is tick-constrained.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Financial Markets Microstructure — slides, homework and exams](https://github.com/electronicgore/finmarkets) [course]{.res-kind}
+- [Financial Markets Microstructure (Copenhagen, Starkov) — video lectures](https://www.youtube.com/playlist?list=PL4pUs4P_j1Wa2_P1lw44kFWWjKDTGUY7S) [video]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A four-cell cost table in notebooks/day-011-fees.ipynb: aggressive and passive, in dollars and in basis points.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+A stock is quoted 20.00 bid, 20.01 offered with 40,000 shares on each side. What does that tell you about the tick, and what does it tell you about the queue?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 12, Tuesday, 18 August 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Look up the current borrow fee for one hard-to-borrow name on any broker's stock loan page, and one for SPY. Write down both numbers.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Read your broker's one-page description of what a buy-in is.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note in your notebook what you think happens to a short seller when a stock pays a dividend. Tomorrow answers it.
 :::
 :::

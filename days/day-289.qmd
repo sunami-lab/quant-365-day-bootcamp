@@ -1,5 +1,5 @@
 ---
-title: "Day 289 — Placeholder title for day 289"
+title: "Day 289 — Kyle's lambda, and the equilibrium that produces linearity"
 subtitle: "Saturday, 22 May 2027 · Week 42 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Saturday, 22 May 2027 · Week 42 of 52 · Microstructure · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The most cited model in microstructure, and its content is that a strategic informed trader and a rational market maker together produce a price that moves linearly in net order flow.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what lambda measures and what determines its size in the model.
+- Derive or follow the linear equilibrium and say what the informed trader is trading off.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Read the single-period Kyle model in the original paper as far as the equilibrium, and follow the fixed point: the market maker's pricing rule is linear given the informed trader's strategy, and the informed trader's optimal strategy is linear given the pricing rule. The fixed point of those two is the equilibrium, and the algebra is a page.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Interpret lambda: it is the price move per unit of net order flow, it rises with the informed trader's information advantage and falls with the amount of noise trading. The second dependence is the useful one, because it says liquidity is supplied by uninformed volume rather than by market makers' willingness.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Kyle (1985) — Continuous Auctions and Insider Trading](https://people.duke.edu/~qc2/BA532/1985%20EMA%20Kyle.pdf) [paper]{.res-kind}
+- [Institut Louis Bachelier — Practical Introduction to Market Microstructure](https://mooc.institutlouisbachelier.org/en/mooc/practical-introduction-to-market-microstructure-2/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-289-kyle.ipynb with the linear equilibrium worked through and lambda's dependence on noise volume plotted.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What does Kyle's lambda measure, and what does its magnitude tell you about how much you can trade?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 290, Sunday, 23 May 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Regress five-minute mid returns on five-minute signed volume for one symbol across your sample.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The slope is an estimate of lambda.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note its units and check they make sense before believing the number.
 :::
 :::

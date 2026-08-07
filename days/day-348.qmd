@@ -1,5 +1,5 @@
 ---
-title: "Day 348 — Placeholder title for day 348"
+title: "Day 348 — The market intuition questions, answered as a researcher"
 subtitle: "Tuesday, 20 July 2027 · Week 50 of 52 · The interview · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Tuesday, 20 July 2027 · Week 50 of 52 · The interview · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You are not expected to have a view on rates, but you are expected to be able to reason about a market question from evidence, and the failure is either bluffing or refusing to engage.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Answer three open market questions in the form of a research approach rather than a prediction.
+- State what you would need to measure to have a view, for each.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Answer three questions of the form what do you find interesting about markets, what would you research first if you joined, and what do you think about a named phenomenon. The good answer names something you have actually measured this year, states what surprised you, and says what you would do next. Your day 307 revision table is full of material for this.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Practise the honest non-answer: for a question you have no basis for, the correct response says so and then says what evidence would change that, which is a stronger answer than a guess. Rehearse it once so that it comes out as confidence rather than as evasion.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Man Group — Man Insights](https://www.man.com/insights) [reference]{.res-kind}
+- [AQR — Research and Insights](https://www.aqr.com/Insights/Research) [reference]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Three recorded answers to open market questions grounded in your own measurements, plus a rehearsed honest non-answer.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+What would you research first if you joined tomorrow, and what have you already measured that makes you think so?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 349, Wednesday, 21 July 2027 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Listen to your three recordings of the academia question from days 287, 308 and 329.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down what changed and what did not.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> The part that did not change is tomorrow's work.
 :::
 :::

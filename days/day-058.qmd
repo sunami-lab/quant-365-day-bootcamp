@@ -1,5 +1,5 @@
 ---
-title: "Day 58 — Placeholder title for day 58"
+title: "Day 58 — Choosing a block length is choosing what you preserve"
 subtitle: "Saturday, 3 October 2026 · Week 9 of 52 · Returns and noise · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Saturday, 3 October 2026 · Week 9 of 52 · Returns and noise · Stud
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Every block bootstrap result depends on a number nobody defends, and picking it from the data rather than from habit is a thirty-minute job you will do once and reuse all year.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what the block length controls, and what goes wrong at both extremes.
+- Select a block length from your own data by a stated rule, and show the interval's sensitivity to that choice.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run the sensitivity: build block-bootstrap intervals for the Sharpe ratio of one strategy at block lengths of 1, 5, 10, 20, 40 and 80 days, and plot interval width against block length. The curve flattens somewhere, and where it flattens is your answer.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Compare against a rule: the stationary bootstrap picks geometric block lengths with a mean you choose. Set that mean from the autocorrelation decay lag you measured last night, run it, and compare the interval against your flattening point. Then add `block_bootstrap_ci()` to qlib/stats.py with the block length as an explicit required argument, never a default.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
+- [arch — source repository](https://github.com/bashtage/arch) [repo]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+qlib/stats.py with a block bootstrap requiring an explicit block length, plus the interval-width-versus-block-length curve.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why is a block bootstrap the right scheme for a return series, and what determines the block length you chose?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 59, Sunday, 4 October 2026 starts clean. This is what
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Take one signal you have built, such as a moving-average crossover, and save both its position series and the return series it traded.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down two different things you could permute to destroy the relationship between them. There are more than two.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do not run anything.
 :::
 :::

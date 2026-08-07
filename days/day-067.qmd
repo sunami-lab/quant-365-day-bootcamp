@@ -1,5 +1,5 @@
 ---
-title: "Day 67 — Placeholder title for day 67"
+title: "Day 67 — AIC picks a bigger model than BIC, and that is not a bug"
 subtitle: "Monday, 12 October 2026 · Week 10 of 52 · Time series · Study day · 60 min"
 ---
 
@@ -8,39 +8,43 @@ subtitle: "Monday, 12 October 2026 · Week 10 of 52 · Time series · Study day 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Order selection is model selection under a different name, and the criteria disagree for a reason you can state precisely, which matters more here than in most fields because the true model is not in the set.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State what AIC and BIC each estimate, and why BIC selects a smaller model as the sample grows.
+- Say which criterion you would use for a forecasting model and which for an inference claim, and defend the split.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Write out the two penalties and their motivations from memory, then check them: AIC targets predictive risk and BIC approximates a marginal likelihood under a prior on models. Say what each one assumes about whether the true model is in the candidate set.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Run the simulation that settles it: generate 500 series from a known AR(2), and record how often AIC and BIC each recover the true order at sample sizes of 250, 1,000 and 5,000. Report a table of recovery rates. Then repeat with data generated from a process that is not in your candidate set at all and see what each criterion does.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Try StatsForecast's AutoARIMA on the same series and compare its choice against your grid. It is the tool most people reach for and it is worth knowing what it optimises before you use its output.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [StatsForecast (Nixtla) — AutoARIMA and friends](https://nixtlaverse.nixtla.io/statsforecast/index.html) [tool]{.res-kind}
+- [Hyndman & Athanasopoulos — Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-067-order-selection.ipynb with an order-recovery table for AIC and BIC at three sample sizes, in-model and out-of-model.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Why does BIC choose a smaller model than AIC as the sample grows, and which of the two is consistent for order selection?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +53,12 @@ Ten minutes tonight so Day 68, Tuesday, 13 October 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Build a 12-month time-series momentum signal on SPY: long when the trailing 12-month return is positive, flat otherwise.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute its Sharpe with qlib.stats, and let the research log record it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write the number down next to your day 61 noise floor. Do not interpret it yet.
 :::
 :::

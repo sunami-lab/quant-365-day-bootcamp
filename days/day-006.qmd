@@ -1,5 +1,5 @@
 ---
-title: "Day 6 — Placeholder title for day 6"
+title: "Day 6 — A bond is a schedule, and FX is a relative price"
 subtitle: "Wednesday, 12 August 2026 · Week 1 of 52 · Markets · Study day · 60 min"
 ---
 
@@ -8,39 +8,44 @@ subtitle: "Wednesday, 12 August 2026 · Week 1 of 52 · Markets · Study day · 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The last two instrument families, and the two you will use as inputs rather than trade: the curve sets the discount rate behind everything in phase 4, and FX is where carry is easiest to see.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Given a bond's coupon, face value and maturity, write out its cash flow schedule and say what its price being below par tells you.
+- State what a spot FX trade obliges each side to deliver, and where the interest rate differential shows up.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Watch the fixed income lecture from MIT 15.401 through discounting, yield to maturity and duration. Duration is the one concept here you will reuse, in phase 4, as a first-order sensitivity.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [20 min]{.task-min} Plot the US Treasury curve from FRED on three dates you choose: one in 2019, one in mid-2020, and the most recent. Use DGS3MO, DGS2, DGS10 and DGS30. Say in one line which of the three is inverted and what that means as a statement about expected short rates.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> [10 min]{.task-min} Write the FX entry in the glossary: what EURUSD 1.08 means operationally, who delivers what in two business days, and the one sentence linking the forward points to the two countries' interest rates.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [FRED API documentation (St. Louis Fed)](https://fred.stlouisfed.org/docs/api/fred/) [data]{.res-kind}
+- [fredapi — Python client with ALFRED vintages](https://github.com/mortada/fredapi) [repo]{.res-kind}
+- [MIT 15.401 — Finance Theory I (Andrew Lo), video lectures and slides](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/pages/video-lectures-and-slides/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-006-curve-and-fx.ipynb with three dated yield curves on one axis, plus the FX glossary entry.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+The 3-month yield is above the 10-year. State what the market is asserting about the path of short rates, without using the word recession.
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +54,12 @@ Ten minutes tonight so Day 7, Thursday, 13 August 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Reread your six glossary entries and mark the ones you could not defend to someone who trades the instrument. That marking is tomorrow's task list.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Set a 60-second timer on your phone and leave it somewhere you will see it. The drill thread starts tomorrow and it runs on a clock.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Download the Grinstead and Snell probability PDF once, so it is local for the next year of drills.
 :::
 :::

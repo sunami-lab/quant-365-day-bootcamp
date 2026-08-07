@@ -1,5 +1,5 @@
 ---
-title: "Day 311 — Placeholder title for day 311"
+title: "Day 311 — Parquet, partitioning, and only reading what you need"
 subtitle: "Sunday, 13 June 2027 · Week 45 of 52 · Production · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Sunday, 13 June 2027 · Week 45 of 52 · Production · Study day · 6
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Columnar storage with predicate pushdown means a well-designed layout reads a fraction of the bytes, and the difference between a good and a bad partitioning is a factor you measured last night.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Explain predicate pushdown and column pruning, and demonstrate both with measured bytes read.
+- Choose a partitioning scheme for your own store and defend it against the query pattern.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Measure the two mechanisms separately: read one column of one year from a partitioned dataset, then all columns of one year, then one column of all years. The three byte counts show pruning and pushdown independently, and having seen them you will stop guessing about layout.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Choose and implement a partitioning scheme, then check the failure mode: too many small partitions makes metadata dominate. Report the file count, the average file size, and the query time across three schemes, and pick from the measurements.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [PyArrow documentation](https://arrow.apache.org/docs/python/) [tool]{.res-kind}
+- [DuckDB documentation](https://duckdb.org/docs/current/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+Bytes read measured for three access patterns, and a partitioning scheme chosen from a three-way comparison.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+You partition by symbol and get 5,000 tiny files. What went wrong, and what would you do instead?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 312, Monday, 14 June 2027 starts clean. This is what 
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Profile your slowest pipeline step with cProfile and save the output.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at the top five entries by cumulative time.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down where you thought the time was going before you looked.
 :::
 :::

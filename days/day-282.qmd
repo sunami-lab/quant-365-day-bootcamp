@@ -1,5 +1,5 @@
 ---
-title: "Day 282 — Placeholder title for day 282"
+title: "Day 282 — The shape of the book, and how fast it refills"
 subtitle: "Saturday, 15 May 2027 · Week 41 of 52 · Microstructure · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Saturday, 15 May 2027 · Week 41 of 52 · Microstructure · Study day
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Depth decides what a trade costs and resiliency decides how long that cost lasts, and both are measurable from the reconstruction you built yesterday.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report the depth profile as a function of distance from the mid, and how it varies through the session.
+- Measure resiliency as the time for depth to recover after a large trade, and give a number.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Build the depth profile: average displayed size against distance from the mid in ticks, computed separately for the first thirty minutes, the middle of the day and the last thirty minutes. The intraday pattern is strong and it explains why execution algorithms trade the way they do.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Measure resiliency: find the largest trades of the day, and for each plot the depth at the touch in the seconds before and after. Report the median recovery half-life. That number is what decides whether splitting an order into ten pieces one second apart is different from doing it all at once.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Nasdaq TotalView-ITCH sample days (full order book, free)](https://emi.nasdaq.com/ITCH/Nasdaq%20ITCH/) [data]{.res-kind}
+- [Institut Louis Bachelier — Practical Introduction to Market Microstructure](https://mooc.institutlouisbachelier.org/en/mooc/practical-introduction-to-market-microstructure-2/) [course]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-282-depth.ipynb with a depth profile at three times of day and a measured resiliency half-life.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Your book recovers half its depth in 300 milliseconds after a large trade. What does that tell you about how to split an order?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 283, Sunday, 16 May 2027 starts clean. This is what t
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Track one resting order at the touch through your reconstruction and record how much size was ahead of it and whether it eventually traded.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Do it for twenty orders.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Count how many traded and how many were cancelled.
 :::
 :::

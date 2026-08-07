@@ -1,5 +1,5 @@
 ---
-title: "Day 229 — Placeholder title for day 229"
+title: "Day 229 — What the published deep learning results actually claim"
 subtitle: "Tuesday, 23 March 2027 · Week 33 of 52 · Machine learning · Study day · 60 min"
 ---
 
@@ -8,39 +8,40 @@ subtitle: "Tuesday, 23 March 2027 · Week 33 of 52 · Machine learning · Study 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+The headline results in this literature are real and much smaller than the abstracts suggest, and being able to convert them into your own units is what stops you from either dismissing or overestimating them.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Convert two published results into information ratio at a stated breadth and compare against your own models.
+- Name the methodological choice in each paper that most affects its headline number.
 
 ## Tasks <span class='task-total'>60 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Read both papers' results sections and tabulate: sample period, universe, features, out-of-sample metric and its value, and the portfolio performance they report. Then convert each into the units you use and put your own models in the same table.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Find the choice that drives each result: usually the feature set rather than the architecture, and often the inclusion of microcaps where the returns are large and untradeable. Check whether either paper reports results with a liquidity screen, and note what happens to the headline when they do.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Chen, Pelger & Zhu — Deep Learning in Asset Pricing](https://arxiv.org/abs/1904.00745) [paper]{.res-kind}
+- [Gu, Kelly & Xiu (2020) — Empirical Asset Pricing via Machine Learning](https://dachxiu.chicagobooth.edu/download/ML.pdf) [paper]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+A comparison table putting two published results and your own models in the same units, with the driving methodological choice named for each.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+A paper reports a monthly out-of-sample R-squared of 0.4 percent. What information ratio is that at 500 names, and does it survive a liquidity screen?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 230, Wednesday, 24 March 2027 starts clean. This is w
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Create a Numerai account if you have not, download the current dataset, and look at its shape.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Note that the features are obfuscated and the eras are labelled.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down why obfuscated features remove one specific failure mode.
 :::
 :::

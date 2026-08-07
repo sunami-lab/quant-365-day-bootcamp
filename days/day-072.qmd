@@ -1,6 +1,6 @@
 ---
-title: "Day 72 — Placeholder title for day 72"
-subtitle: "Saturday, 17 October 2026 · Week 11 of 52 · Time series · Study day · 60 min"
+title: "Day 72 — ADF and KPSS have opposite nulls, and both can fail"
+subtitle: "Saturday, 17 October 2026 · Week 11 of 52 · Time series · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Saturday, 17 October 2026 · Week 11 of 52 · Time series · Study da
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You will be asked what you conclude when the two disagree, and the answer is not a coin flip; it is a statement about the power of each test at your sample length.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- State both null hypotheses precisely and say what you conclude in each of the four possible outcome combinations.
+- Report the power of the ADF test against a stationary alternative with an autoregressive root of 0.98 at your sample length.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Run both tests on five series: an index level, its returns, a yield, a spread and one of your simulated random walks. Tabulate the four possible outcomes and write the conclusion for each combination, including the case where both reject and the case where neither does.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Measure the power, which is the part textbooks omit: simulate AR(1) series with coefficients of 0.9, 0.95, 0.98 and 0.99 at 500 and 2,000 observations, and report the fraction of times ADF rejects the unit root. The result at 0.98 with 500 observations is the reason a failure to reject means very little.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
+- [statsmodels — time series analysis (tsa)](https://www.statsmodels.org/stable/tsa.html) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-072-unit-roots.ipynb with a four-outcome interpretation table and an ADF power curve against near-unit-root alternatives.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+ADF fails to reject and KPSS also rejects stationarity. What do you conclude, and what would you do next?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 73, Sunday, 18 October 2026 starts clean. This is wha
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Regress SPY monthly excess returns on the lagged dividend yield or any slow-moving predictor you can build, and note the t-statistic.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at the residual autocorrelation from that regression.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Write down whether you believe the t-statistic. Tomorrow gives you the tool to check.
 :::
 :::

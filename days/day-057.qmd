@@ -1,6 +1,6 @@
 ---
-title: "Day 57 — Placeholder title for day 57"
-subtitle: "Friday, 2 October 2026 · Week 9 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 57 — The bootstrap breaks on dependent data, visibly"
+subtitle: "Friday, 2 October 2026 · Week 9 of 52 · Returns and noise · Study day · 55 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,39 +8,40 @@ subtitle: "Friday, 2 October 2026 · Week 9 of 52 · Returns and noise · Study 
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+You know the bootstrap better than most people in this field; what is new is that the iid version destroys exactly the structure that week 6 spent five days measuring.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Say what an iid bootstrap does to volatility clustering, and which statistics it therefore gives wrong intervals for.
+- Show the interval width difference between iid and block resampling for a statistic that depends on dependence.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>55 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [25 min]{.task-min} Diagnose last night's two distributions: compute the absolute-return autocorrelation of the original series, of one iid resample, and of one block resample. The iid resample has none. That is the whole argument, in one number.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [30 min]{.task-min} Show where it matters: build bootstrap intervals for three statistics, the mean, the Sharpe ratio, and the maximum drawdown, under both schemes. The mean is barely affected, the Sharpe somewhat, the drawdown badly. Report the three interval widths under each scheme in a table.
 :::
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Efron & Hastie — Computer Age Statistical Inference](https://hastie.su.domains/CASI/) [textbook]{.res-kind}
+- [arch — GARCH, bootstrap, unit root tests (Sheppard)](https://bashtage.github.io/arch/) [tool]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-057-bootstrap.ipynb with a three-statistic, two-scheme interval width table and the destroyed autocorrelation demonstrated.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Which statistic is most damaged by an iid bootstrap of a return series, and what property of the series does that damage come from?
 :::
 
 ## Prepare for tomorrow
@@ -49,6 +50,12 @@ Ten minutes tonight so Day 58, Saturday, 3 October 2026 starts clean. This is wh
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Read the arch documentation page for CircularBlockBootstrap and StationaryBootstrap and note the one parameter that differs between them.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Compute the lag at which SPY's absolute-return autocorrelation falls below 0.05. Write the number down; tomorrow uses it.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Nothing else.
 :::
 :::

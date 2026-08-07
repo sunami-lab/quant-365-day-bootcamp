@@ -1,6 +1,6 @@
 ---
-title: "Day 40 — Placeholder title for day 40"
-subtitle: "Tuesday, 15 September 2026 · Week 6 of 52 · Returns and noise · Study day · 60 min"
+title: "Day 40 — The tails thin out as you aggregate, but slowly"
+subtitle: "Tuesday, 15 September 2026 · Week 6 of 52 · Returns and noise · Study day · 50 min"
 ---
 
 ::: {.day-nav .kind-study}
@@ -8,45 +8,40 @@ subtitle: "Tuesday, 15 September 2026 · Week 6 of 52 · Returns and noise · St
 :::
 
 ::: {.why}
-Placeholder one-sentence rationale.
+Whether a stylized fact survives aggregation decides at what horizon you are allowed to use Gaussian machinery, and the answer is further out than most people assume.
 :::
 
 ## What you should be able to do tonight
 
-- Placeholder objective one.
-- Placeholder objective two.
+- Report how kurtosis falls with horizon in your data and compare it against what the central limit theorem would give for independent draws.
+- Say at what horizon a normal approximation becomes defensible for your series, and what still breaks at that horizon.
 
-## Tasks <span class='task-total'>60 min</span>
+## Tasks <span class='task-total'>50 min</span>
 
 ::: {.task-list}
 ::: {.task}
-<input type="checkbox" class="task-check"> [35 min]{.task-min} Placeholder task one.
+<input type="checkbox" class="task-check"> [35 min]{.task-min} Extend last night's four numbers: compute kurtosis, the 1st and 99th percentile in standard deviations, and the largest standardised move at each of the four horizons. Then simulate iid draws from the daily empirical distribution and aggregate them the same way. The gap between your real series and the shuffled one is the contribution of dependence rather than of the marginal distribution.
 :::
 ::: {.task}
-<input type="checkbox" class="task-check"> [25 min]{.task-min} Placeholder task two.
+<input type="checkbox" class="task-check"> [15 min]{.task-min} State the conclusion in the notebook as a rule you will follow: at what horizon you will use normal approximations, at what horizon you will not, and which quantity remains non-normal at every horizon you looked at.
 :::
-:::
-
-## The running strategy
-
-::: {.project}
-Placeholder project increment.
 :::
 
 ## Resources
 
-- [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) [data]{.res-kind}
+- [Zivot — Introduction to Computational Finance and Financial Econometrics with R](https://bookdown.org/compfinezbook/introcompfinr/) [course]{.res-kind}
+- [Efron & Hastie — Computer Age Statistical Inference](https://hastie.su.domains/CASI/) [textbook]{.res-kind}
 
 ## Deliverable
 
 ::: {.deliverable}
-Placeholder deliverable.
+notebooks/day-040-aggregation.ipynb with the kurtosis-versus-horizon table for real and shuffled returns, and your stated horizon rule.
 :::
 
 ## Checkpoint
 
 ::: {.checkpoint}
-Placeholder checkpoint question?
+Shuffling the daily returns changes the multi-day kurtosis. Why, and what does the size of the change tell you?
 :::
 
 ## Prepare for tomorrow
@@ -55,6 +50,12 @@ Ten minutes tonight so Day 41, Wednesday, 16 September 2026 starts clean. This i
 
 ::: {.task-list .prep}
 ::: {.task}
-<input type="checkbox" class="task-check"> Placeholder prep item.
+<input type="checkbox" class="task-check"> Compute the average pairwise correlation of daily returns among 50 large-cap names in your store, over a 60-day rolling window.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Plot that series against SPY's cumulative return over the same period.
+:::
+::: {.task}
+<input type="checkbox" class="task-check"> Look at 2008 and 2020 on the plot. Do not compute anything else.
 :::
 :::

@@ -1,5 +1,181 @@
 ---
 title: "Hiring"
+subtitle: "The roles, the process, the timeline, and the parts of this that are genuinely against you. Read this early rather than in June."
+toc-depth: 2
 ---
 
-Placeholder.
+This page exists because a study plan that does not say what it is aiming at is a hobby. Everything here is
+about the thing the other 365 pages are for: a seat as a **buy-side quantitative researcher**, applied for
+during 2027.
+
+The last section is the uncomfortable one and it is the reason to read this in September rather than in
+June, because two of the gaps take a year to close and one of them you close by choosing differently.
+
+## The seat you are aiming at
+
+**Quantitative researcher, systematic equity or multi-asset.** You are given data, a research platform and
+a mandate, and you produce signals that go into a book someone else risks capital on. The work is
+statistics under adversarial conditions: the effects are small, the data is non-stationary, most of what
+you find is not real, and the cost of being wrong is measured rather than argued about.
+
+That description is not a coincidence. It is the seat where your existing training transfers hardest, and
+the mapping is specific:
+
+| What you do now | What it is called there |
+|:--|:--|
+| Mendelian randomization | Instrumental variable estimation |
+| Genome-wide significance, winner's curse | Backtest overfitting, the deflated Sharpe ratio |
+| Colocalization | Bayesian model comparison over shared-signal hypotheses |
+| Conditioning an LD matrix | Shrinking a return covariance matrix |
+| Not splitting relatives across folds | Purged, embargoed cross-validation |
+| Ascertainment bias in a cohort | Survivorship bias in a universe |
+
+Four adjacent seats you will see advertised, and how they differ:
+
+- **Quantitative trader.** Faster horizons, more decisions per day, and the interview is a trading game
+  rather than a research presentation. Weeks 41–44 and 49 are the parts of this course that point here.
+- **Quantitative developer.** Building the platform rather than the signals. Better paid at the entry
+  level, harder to move out of into research than people expect. Phase 10 is the relevant preparation and
+  it is not enough on its own.
+- **Quantitative analyst, sell side.** Derivatives pricing and risk at a bank. More mathematics, less
+  data, much less of your existing training used. Phase 8 is the relevant preparation.
+- **Data scientist at a systematic manager.** Sometimes the same job with a different title and sometimes
+  a support function. Ask, in the first call, whose profit and loss the work appears in.
+
+## Who hires, and what the structure does to the job
+
+Four structures, and the difference matters more than the brand:
+
+**Multi-manager pod shops** — Millennium, Point72, Balyasny, Citadel's equities business. A portfolio
+manager runs a book, you are on their team, and the drawdown limit is real and short. Fastest entry,
+fastest exit, and the highest variance in outcome. Ask what happens to the team if the book is down 5
+percent.
+
+**Partnerships and prop firms** — Jane Street, Optiver, IMC, SIG, Hudson River. Trade their own capital,
+no external investors, longer horizons on people. The bar at entry is the highest and the interview is the
+most standardised, which is good for you because a standardised process rewards preparation.
+
+**Systematic managers** — AQR, Man AHL, Winton, Two Sigma, D. E. Shaw. Research at longer horizons,
+published papers, closest to what you have spent this year doing and the closest cultural match to
+academia. Slowest hiring, smallest number of seats.
+
+**Bank quant groups.** Different work, mentioned for completeness. Better hours, lower ceiling.
+
+## The process, round by round
+
+Roughly five stages over four to eight weeks, and each one is testing something different:
+
+1. **Screen.** CV against a filter, human or otherwise. This is where the genetics background is either a
+   differentiator or a reason to stop reading, and which one it is depends entirely on the vocabulary on
+   the first page. Day 351 is about that.
+2. **Online test.** Timed probability and mathematics, often an hour, often unforgiving. This round has no
+   partial credit and no conversation, and it is the one the drill thread exists for. Fifty sittings of
+   twenty minutes is the preparation; four weeks in July is not.
+3. **Technical phone screens.** One to three of them. Probability out loud, statistics, coding, and for a
+   research seat a conversation about something you built. The failure mode here is length, not
+   correctness — week 50 is entirely about compressing correct answers into ninety seconds.
+4. **The superday.** Four to six back-to-back rounds: probability under a clock, a trading or estimation
+   game, a coding round, your research presentation, and one behavioural conversation. Nobody tells you
+   which is next. Day 355 exists because the transitions are what actually degrade.
+5. **Offer and negotiation.** Day 356. The short version: the sign-on and any first-year guarantee move,
+   the base moves within a band, the deferral schedule does not, and the leverage comes entirely from
+   having a second process finishing at the same time.
+
+**What each round is really testing.** The probability rounds test whether you can be quantitative under
+time pressure with someone watching, which is a different skill from being quantitative. The research
+presentation tests whether you know which of your results is weakest. The trading game tests whether you
+update on evidence when the evidence is that someone chose to trade with you. None of these are tests of
+what you know.
+
+## Timing
+
+- **Autumn 2026 through spring 2027** — no applications. You have nothing to show yet and a rejection now
+  costs you the same firm later.
+- **March–April 2027** — the firm list and the outreach for conversations rather than roles ([day
+  353](days/day-353.qmd), [day 354](days/day-354.qmd)). Referrals take months to become anything and this
+  is the last point at which starting them still works.
+- **May–July 2027** — applications, in a batch rather than sequentially. Batching is what gives you two
+  offers in the same fortnight, and two offers in the same fortnight is the only real negotiating
+  position that exists.
+- **August–October 2027** — processes run. Expect four to eight weeks each and expect several to end
+  without explanation.
+
+Two calendar facts worth knowing: the campus pipelines these firms run for graduating PhDs fill in the
+autumn for the following summer, and you are not in that pipeline. Experienced-hire processes run
+continuously and are less predictable but also less seasonal, which is the route you are on.
+
+## The honest gaps
+
+**You are a career changer, and the default pipeline is not built for you.** The standard hire is a PhD in
+physics, mathematics or computer science, recruited in their final year through a campus process, with no
+industry experience and no expectation of any. You are a postdoc in a different field applying laterally.
+That is not disqualifying and it does mean every application is a non-standard one, which raises the value
+of a referral from a low multiple to the single largest factor in the outcome.
+
+**You have no track record anyone can verify.** A paper-traded year is not a track record and will not be
+treated as one. What it is is evidence of process, which is a different and still useful thing. The two
+public records that carry actual weight are a Numerai history with real submissions over time ([day
+230](days/day-230.qmd)) and a placing in a serious competition. Both take months of elapsed time, which is
+why they are in the course early rather than in phase 11.
+
+**Madison is not where these jobs are.** They are in New York, Chicago, London, and a small number in the
+Bay Area, Amsterdam and Hong Kong. Remote research seats exist and are rare and mostly go to people with
+an existing track record at the firm. Decide before you apply whether you will move, because the answer
+changes the firm list and it is a question you will be asked in the first call.
+
+**The competition is specifically good at the interview.** The pool includes people who have been doing
+timed competitive mathematics since they were sixteen and who will beat you on the online test on speed
+alone. The drill thread is the only response to that and it works by accumulating fifty sittings rather
+than by intensity.
+
+**Your background reads as biology to a screener.** This is the gap you close cheapest and it is entirely
+a vocabulary problem. "Genome-wide association study of protein levels" and "high-dimensional multiple
+testing with a controlled error rate across 10 million correlated hypotheses" describe the same work, and
+only one of them survives a thirty-second CV scan by someone hiring for statistical arbitrage.
+
+**You will not be a C++ programmer in a year.** Phase 10 gets you to reading a matching engine and writing
+something small that works. That is a real and defensible claim and it is not the same as the claim a
+low-latency firm needs. It closes the quantitative developer route and closes most of high-frequency
+trading, and both of those were closed anyway for reasons that have nothing to do with C++.
+
+**The base rate is against any individual application, and that is the wrong frame.** The relevant
+questions are how many processes you can run in parallel, how many are warm rather than cold, and whether
+what you can show is different from what everyone else shows. You control all three. Nobody applying from
+a physics PhD arrives with instrumental variables and massive multiple testing already in their hands, and
+that is the entire argument for this year.
+
+**One year at an hour a day is not a PhD in this field.** By August 2027 you will be able to hold a
+research conversation, build a defensible backtest, derive Black-Scholes and pass a probability round.
+There are people three years into the seat you want who have forgotten more market structure than this
+course covers. The plan is to be hireable, not to be finished.
+
+## What actually changes the outcome
+
+In rough order of effect:
+
+1. **A referral.** One warm introduction is worth more than twenty applications, and warm introductions
+   come from conversations started months earlier about something specific the person worked on.
+2. **A work product someone can read in ten minutes.** The three two-page write-ups from [milestone
+   11](milestones.qmd#m357). Almost nobody applying has one, and it converts a screening decision from a
+   guess into a reading.
+3. **The drill thread, finished.** Not started in June. The online test has no partial credit and the
+   probability round is the most common single point of failure for exactly the kind of candidate you are.
+4. **Being able to say what is weakest in your own work.** [Milestone 9](milestones.qmd#m308) requires you
+   to name an earlier result you now believe was wrong. That habit is the most distinguishing thing you
+   can bring into a research conversation, and it is rarer than it should be.
+
+## If it does not work in 2027
+
+Three outcomes that are not failure, listed because deciding in advance which of them you would accept
+stops the decision being made under pressure in November:
+
+- **An adjacent seat with a path.** A quantitative developer or data science role at a systematic manager,
+  moving into research from inside. Slower, and internal moves have a much higher success rate than
+  external applications.
+- **Applying again in 2028 with a live track record.** A second year of the paper account, or a real one,
+  plus a Numerai history with two years of submissions, is a materially different application from the
+  2027 one.
+- **Running your own capital and not changing jobs.** Everything in this course works at small size, and
+  the strategies with capacity too small for a fund to bother with are the ones you can actually run. The
+  [capstone](days/day-365.qmd) asks what you would run with your own money and at what size, and a
+  serious answer to that question is worth having regardless of what happens to the applications.

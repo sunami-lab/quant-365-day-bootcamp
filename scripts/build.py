@@ -243,9 +243,11 @@ def timeline_page(days, meta):
     lines.append("| Phase | Weeks | Days | When |")
     lines.append("|:--|:--|:--|:--|")
     for phase, block in blocks:
-        weeks = f"{block[0]['week']}–{block[-1]['week']}"
+        first_week, last_week = block[0]["week"], block[-1]["week"]
+        weeks = str(first_week) if first_week == last_week else f"{first_week}–{last_week}"
         span = f"{block[0]['day']}–{block[-1]['day']}"
-        when = f"{month_year(block[0]['date'])} – {month_year(block[-1]['date'])}"
+        first_month, last_month = month_year(block[0]["date"]), month_year(block[-1]["date"])
+        when = first_month if first_month == last_month else f"{first_month} – {last_month}"
         lines.append(f"| [{phase}](#{anchor(phase)}) | {weeks} | {span} | {when} |")
     lines.append("")
 

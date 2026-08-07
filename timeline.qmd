@@ -18,8 +18,8 @@ Six study days, then a lighter seventh, fifty-two times over, then the capstone.
 | [Derivatives](#derivatives) | 35–40 | 239–280 | April 2027 – May 2027 |
 | [Microstructure](#microstructure) | 41–44 | 281–308 | May 2027 – June 2027 |
 | [Production](#production) | 45–47 | 309–329 | June 2027 – July 2027 |
-| [The interview](#the-interview) | 48–51 | 330–357 | July 2027 – July 2027 |
-| [Capstone](#capstone) | 52–52 | 358–365 | July 2027 – August 2027 |
+| [The interview](#the-interview) | 48–51 | 330–357 | July 2027 |
+| [Capstone](#capstone) | 52 | 358–365 | July 2027 – August 2027 |
 
 ::: {.timeline}
 

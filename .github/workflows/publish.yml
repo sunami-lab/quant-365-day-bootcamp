@@ -1,12 +1,17 @@
 name: Publish site
 
-# Dormant by default. GitHub Pages will not serve a private repository on a free
-# organisation plan, so this only runs once you have made one of those two things
-# untrue and then set the repository variable PUBLISH_PAGES to `true`
+# Live. The repository is public, so Pages will serve it on the free organisation
+# plan, and the repository variable PUBLISH_PAGES is set to `true`
 # (Settings -> Secrets and variables -> Actions -> Variables).
 #
-# After enabling: Settings -> Pages -> Branch `gh-pages`, folder `/`.
-# Then set site-url in _quarto.yml so open-graph tags and absolute links resolve.
+# Renders on every push to main and pushes _site/ to the `gh-pages` branch, which
+# Pages serves from the branch root. The site is at
+# https://sunami-lab.github.io/quant-365-day-bootcamp/, which is also the site-url
+# in _quarto.yml, where open-graph tags and absolute links resolve from.
+#
+# To take the site down, set PUBLISH_PAGES to anything other than `true`. That
+# stops the deploy but leaves the already-published gh-pages branch being served,
+# so delete that branch too if you need the site actually gone.
 
 on:
     push:

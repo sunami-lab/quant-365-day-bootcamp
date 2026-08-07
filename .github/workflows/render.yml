@@ -1,13 +1,14 @@
 name: Render site
 
-# This repository is private and sunami-lab is on GitHub's free org plan, where
-# Pages cannot serve from a private repo. So the default here is not to deploy
-# anywhere -- it renders the site and attaches _site/ to the run as a downloadable
-# artifact. Actions -> the run -> Artifacts -> quant-365-site. Unzip it and open
-# index.html. Locally, `quarto preview` is nicer and needs none of this.
+# The reason this workflow still exists, now that publish.yml deploys the site for
+# real, is the drift check: it re-runs scripts/build.py and fails if the committed
+# generated pages have drifted from data/schedule.yml, which is the mistake this
+# layout invites. Nothing in publish.yml catches that.
 #
-# It also re-runs scripts/build.py and fails if the committed generated pages have
-# drifted from data/schedule.yml, which is the mistake this layout invites.
+# It also renders and attaches _site/ to the run as a downloadable artifact
+# (Actions -> the run -> Artifacts -> quant-365-site). That is redundant with the
+# published site now and is only worth keeping for inspecting a run whose deploy
+# failed. Locally, `quarto preview` is nicer and needs none of this.
 
 on:
     push:

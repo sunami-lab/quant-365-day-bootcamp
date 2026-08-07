@@ -9,6 +9,7 @@ project:
 website:
     title: "365-Day Quant Bootcamp"
     description: "A day-by-day year taking a statistician with no finance background to hireable as a buy-side quantitative researcher."
+    site-url: https://sunami-lab.github.io/quant-365-day-bootcamp/
     open-graph: true
     search:
         location: navbar

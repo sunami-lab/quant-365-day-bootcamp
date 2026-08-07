@@ -1,7 +1,7 @@
 # How this curriculum was written
 
-Kept in the repository rather than beside it, because this one is private anyway and the method is the
-part most worth reusing.
+Kept in the repository rather than beside it, because the method is the part most worth reusing. The
+repository is public, so these are public too — that is the intent, not an oversight.
 
 | File | What it is |
 |:--|:--|

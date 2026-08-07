@@ -38,8 +38,8 @@ Generated files are committed so the site builds with Quarto alone, no Python st
 
 ## Reading it
 
-There is no hosted URL. This repository is private, and GitHub Pages does not serve private
-repositories on a free organisation plan (see **Publishing** below). Two ways to read it:
+The site is at <https://sunami-lab.github.io/quant-365-day-bootcamp/>, rebuilt from `main` on every
+push (see **Publishing** below). To read it locally instead:
 
 ```bash
 quarto preview          # live reload at localhost:4200 — this is the good one
@@ -110,10 +110,12 @@ tomorrow. On a date the schedule does not cover — before day 1, during a pause
 sends nothing.
 
 The 50-day LLM bootcamp pinned its send to exactly 5 pm local by starting the cron early and sleeping
-off the difference. That repository is public, where Actions minutes are free. This one is private,
-where they are metered, and sleeping three hours a day would spend the entire monthly allowance doing
-nothing. So this one sends whenever the runner starts. GitHub's scheduler runs late under load, which
-moves the email later in the evening but never skips it.
+off the difference. It could afford to: Actions minutes are free on public repositories. This one was
+private when it was written, where they are metered and sleeping three hours a day would have spent the
+entire monthly allowance doing nothing, so it sends whenever the runner starts instead. It is public
+now and the sleep would be free again, but drifting an hour with the seasons is not worth a job that
+idles for three hours. GitHub's scheduler also runs late under load, which moves the email later in the
+evening but never skips it.
 
 Editing the schedule and pushing is enough to change what the emails say — there is nothing to keep in
 sync by hand.
@@ -156,15 +158,25 @@ emails you.
 
 ## Publishing
 
-`sunami-lab` is on GitHub's **free** organisation plan, where Pages will not serve a private repository.
-So there is no live site, and `.github/workflows/publish.yml` is dormant.
+Live at <https://sunami-lab.github.io/quant-365-day-bootcamp/>.
 
-To turn it on, make one of those two things untrue — upgrade the org to Team, or make this repository
-public — then set the repository variable `PUBLISH_PAGES` to `true` (Settings → Secrets and variables →
-Actions → Variables), set Settings → Pages → Branch `gh-pages`, folder `/`, and add `site-url` back to
-`_quarto.yml` so open-graph tags resolve.
+`sunami-lab` is on GitHub's **free** organisation plan, which will not serve Pages from a private
+repository. This repository is public, so it does. `.github/workflows/publish.yml` renders on every push
+to `main` and pushes `_site/` to the `gh-pages` branch, which Pages serves from the branch root. Three
+things have to stay true for that to keep working:
 
-Until then, `quarto preview` locally is the intended way to read it, and it is better anyway.
+| Setting | Value |
+|:--|:--|
+| Repository visibility | public |
+| Repository variable `PUBLISH_PAGES` | `true` (Settings → Secrets and variables → Actions → Variables) |
+| Settings → Pages source | branch `gh-pages`, folder `/` |
+| `site-url` in `_quarto.yml` | `https://sunami-lab.github.io/quant-365-day-bootcamp/`, so open-graph tags and absolute links resolve |
+
+To take the site down, set `PUBLISH_PAGES` to anything other than `true`. That stops the deploy but
+leaves the already-published `gh-pages` branch being served, so delete that branch too if you need the
+site actually gone.
+
+`quarto preview` locally is still the better way to read it while you are editing.
 
 ## Related repositories
 

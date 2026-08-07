@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Day 248 — The Black-Scholes PDE, from the hedge that removes the risk – 365-Day Quant Bootcamp</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6ac2aec46ad7f46b16024ee4409aa65c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8a591ff59271d21f6a5d1e80b3747fb5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6ac2aec46ad7f46b16024ee4409aa65c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Day 248 — The Black-Scholes PDE, from the hedge that removes the risk – 365-Day Quant Bootcamp">
+<meta property="og:description" content="Sunday, 11 April 2027 · Week 36 of 52 · Derivatives · Study day · 60 min">
+<meta property="og:site_name" content="365-Day Quant Bootcamp">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">365-Day Quant Bootcamp</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../timeline.html"> 
+<span class="menu-text">The year</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../milestones.html"> 
+<span class="menu-text">Milestones</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../project.html"> 
+<span class="menu-text">The strategy</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../drills.html"> 
+<span class="menu-text">Drills</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../hiring.html"> 
+<span class="menu-text">Hiring</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../setup.html"> 
+<span class="menu-text">Setup</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../assessment.html"> 
+<span class="menu-text">Self-check</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sunami-lab/quant-365-day-bootcamp"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#what-you-should-be-able-to-do-tonight" id="toc-what-you-should-be-able-to-do-tonight" class="nav-link active" data-scroll-target="#what-you-should-be-able-to-do-tonight">What you should be able to do tonight</a></li>
+  <li><a href="#tasks-60-min" id="toc-tasks-60-min" class="nav-link" data-scroll-target="#tasks-60-min">Tasks <span class="task-total">60 min</span></a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#deliverable" id="toc-deliverable" class="nav-link" data-scroll-target="#deliverable">Deliverable</a></li>
+  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint">Checkpoint</a></li>
+  <li><a href="#prepare-for-tomorrow" id="toc-prepare-for-tomorrow" class="nav-link" data-scroll-target="#prepare-for-tomorrow">Prepare for tomorrow</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Day 248 — The Black-Scholes PDE, from the hedge that removes the risk</h1>
+<p class="subtitle lead">Sunday, 11 April 2027 · Week 36 of 52 · Derivatives · Study day · 60 min</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="day-nav kind-study">
+<p><a href="../days/day-247.html">← Day 247</a> · <a href="../timeline.html">All 365 days</a> · <a href="../days/day-249.html">Day 249 →</a></p>
+</div>
+<div class="why">
+<p>The derivation you are one line from is the one you should be able to do on a whiteboard, and it is short enough that there is no excuse for not having it.</p>
+</div>
+<section id="what-you-should-be-able-to-do-tonight" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-should-be-able-to-do-tonight">What you should be able to do tonight</h2>
+<ul>
+<li>Derive the Black-Scholes partial differential equation from a delta-hedged self-financing portfolio.</li>
+<li>Say exactly where the stock’s expected return cancels, and what that cancellation depends on.</li>
+</ul>
+</section>
+<section id="tasks-60-min" class="level2">
+<h2 class="anchored" data-anchor-id="tasks-60-min">Tasks <span class="task-total">60 min</span></h2>
+<div class="task-list">
+<div class="task">
+<p><input type="checkbox" class="task-check"> <span class="task-min">30 min</span> Finish the derivation: apply Itô to the option value, form the portfolio that is long the option and short delta shares, observe that the Brownian term cancels when delta is the partial derivative, and conclude that the remaining deterministic portfolio must earn the risk-free rate. Write it out cleanly, once, and keep the page.</p>
+</div>
+<div class="task">
+<p><input type="checkbox" class="task-check"> <span class="task-min">20 min</span> Identify what the cancellation needs: continuous rebalancing, continuous paths, and a known volatility. Each failure of those three is a real hedging cost, and weeks 37 and 39 measure the first two.</p>
+</div>
+<div class="task">
+<p><input type="checkbox" class="task-check"> <span class="task-min">10 min</span> Solve the PDE for a European call by recognising it as a heat equation after a change of variables, or read the transformation in the MIT 15.450 notes. You do not need to do the transformation from memory, but you should have seen why it works.</p>
+</div>
+</div>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/">MIT 15.450 — Analytics of Finance (Kogan)</a> <span class="res-kind">course</span></li>
+<li><a href="https://www.stats.ox.ac.uk/~etheridg/finmath/index.html">Oxford — Etheridge, Stochastic Calculus for Finance (lecture notes)</a> <span class="res-kind">course</span></li>
+</ul>
+</section>
+<section id="deliverable" class="level2">
+<h2 class="anchored" data-anchor-id="deliverable">Deliverable</h2>
+<div class="deliverable">
+<p>A clean written derivation of the Black-Scholes PDE from the replication argument, kept as a single page.</p>
+</div>
+</section>
+<section id="checkpoint" class="level2">
+<h2 class="anchored" data-anchor-id="checkpoint">Checkpoint</h2>
+<div class="checkpoint">
+<p>Derive Black-Scholes by replication and say where the real-world drift went.</p>
+</div>
+</section>
+<section id="prepare-for-tomorrow" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-for-tomorrow">Prepare for tomorrow</h2>
+<p>Ten minutes tonight so Day 249, Monday, 12 April 2027 starts clean. This is what the evening email sends you.</p>
+<div class="task-list prep">
+<div class="task">
+<p><input type="checkbox" class="task-check"> Write down what you currently think risk-neutral means. Do not look it up.</p>
+</div>
+<div class="task">
+<p><input type="checkbox" class="task-check"> Then write down the common wrong answer, which is that investors are risk neutral.</p>
+</div>
+<div class="task">
+<p><input type="checkbox" class="task-check"> Tomorrow makes the difference precise, and starting from your own wrong version helps.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- Generated by scripts/build.py -- do not edit. -->
+<script>
+const BOOTCAMP_START = "2026-08-07";
+const BOOTCAMP_DAYS = [{"day": 1, "date": "2026-08-07", "title": "Who pays whom, and for what", "kind": "study", "week": 1, "phase": "Markets"}, {"day": 2, "date": "2026-08-08", "title": "What a share obliges each side to do", "kind": "study", "week": 1, "phase": "Markets"}, {"day": 3, "date": "2026-08-09", "title": "The arbitrage that keeps an ETF near its NAV", "kind": "study", "week": 1, "phase": "Markets"}, {"day": 4, "date": "2026-08-10", "title": "A future settles every night, and that changes everything", "kind": "study", "week": 1, "phase": "Markets"}, {"day": 5, "date": "2026-08-11", "title": "A put is an obligation you sold, not a bet you made", "kind": "study", "week": 1, "phase": "Markets"}, {"day": 6, "date": "2026-08-12", "title": "A bond is a schedule, and FX is a relative price", "kind": "study", "week": 1, "phase": "Markets"}, {"day": 7, "date": "2026-08-13", "title": "Six instruments, from memory, on one page", "kind": "catchup", "week": 1, "phase": "Markets"}, {"day": 8, "date": "2026-08-14", "title": "An order is an instruction, and there are only a few", "kind": "study", "week": 2, "phase": "Markets"}, {"day": 9, "date": "2026-08-15", "title": "Price-time priority, and what happens to your order", "kind": "study", "week": 2, "phase": "Markets"}, {"day": 10, "date": "2026-08-16", "title": "The close is an auction, and it is the biggest trade of the day", "kind": "study", "week": 2, "phase": "Markets"}, {"day": 11, "date": "2026-08-17", "title": "Tick size, lot size, and who pays the rebate", "kind": "study", "week": 2, "phase": "Markets"}, {"day": 12, "date": "2026-08-18", "title": "Shorting is a loan, and the lender can call it", "kind": "study", "week": 2, "phase": "Markets"}, {"day": 13, "date": "2026-08-19", "title": "Leverage decides when you are forced to sell", "kind": "study", "week": 2, "phase": "Markets"}, {"day": 14, "date": "2026-08-20", "title": "The plumbing, from memory, with the costs attached", "kind": "catchup", "week": 2, "phase": "Markets"}, {"day": 15, "date": "2026-08-21", "title": "What an OHLCV bar throws away", "kind": "study", "week": 3, "phase": "Markets"}, {"day": 16, "date": "2026-08-22", "title": "The adjusted close is a derived series, not a price", "kind": "study", "week": 3, "phase": "Markets"}, {"day": 17, "date": "2026-08-23", "title": "Splits, dividends, spinoffs, and the ticker that moved", "kind": "study", "week": 3, "phase": "Markets"}, {"day": 18, "date": "2026-08-24", "title": "Today's index members, backfilled ten years, is a lie", "kind": "study", "week": 3, "phase": "Markets"}, {"day": 19, "date": "2026-08-25", "title": "As of when did you know that", "kind": "study", "week": 3, "phase": "Markets"}, {"day": 20, "date": "2026-08-26", "title": "The store, part one: schema and ingestion", "kind": "study", "week": 3, "phase": "Markets"}, {"day": 21, "date": "2026-08-27", "title": "The store so far, and what it does not contain", "kind": "catchup", "week": 3, "phase": "Markets"}, {"day": 22, "date": "2026-08-28", "title": "The store, part two: adjustment as a view, not a column", "kind": "study", "week": 4, "phase": "Markets"}, {"day": 23, "date": "2026-08-29", "title": "The store, part three: the test that makes as-of true", "kind": "study", "week": 4, "phase": "Markets"}, {"day": 24, "date": "2026-08-30", "title": "Risk premia: what you get paid for holding", "kind": "study", "week": 4, "phase": "Markets"}, {"day": 25, "date": "2026-08-31", "title": "Market making is an inventory business", "kind": "study", "week": 4, "phase": "Markets"}, {"day": 26, "date": "2026-09-01", "title": "Statistical arbitrage is a portfolio of weak bets", "kind": "study", "week": 4, "phase": "Markets"}, {"day": 27, "date": "2026-09-02", "title": "Fees, capacity, and where one person can compete", "kind": "study", "week": 4, "phase": "Markets"}, {"day": 28, "date": "2026-09-03", "title": "Milestone: the market map and a store that does not lie", "kind": "milestone", "week": 4, "phase": "Markets"}, {"day": 29, "date": "2026-09-04", "title": "Log returns and why the average is a lie", "kind": "study", "week": 5, "phase": "Returns and noise"}, {"day": 30, "date": "2026-09-05", "title": "Logs add across time, simple returns add across assets", "kind": "study", "week": 5, "phase": "Returns and noise"}, {"day": 31, "date": "2026-09-06", "title": "Volatility eats return, and you can say how much", "kind": "study", "week": 5, "phase": "Returns and noise"}, {"day": 32, "date": "2026-09-07", "title": "Daily rebalancing to constant leverage is a trade", "kind": "study", "week": 5, "phase": "Returns and noise"}, {"day": 33, "date": "2026-09-08", "title": "Return against what: excess, financing and the wrong benchmark", "kind": "study", "week": 5, "phase": "Returns and noise"}, {"day": 34, "date": "2026-09-09", "title": "The 252 that nobody checks, and the square root of time", "kind": "study", "week": 5, "phase": "Returns and noise"}, {"day": 35, "date": "2026-09-10", "title": "The week's arithmetic, from memory", "kind": "catchup", "week": 5, "phase": "Returns and noise"}, {"day": 36, "date": "2026-09-11", "title": "How far from normal, measured rather than asserted", "kind": "study", "week": 6, "phase": "Returns and noise"}, {"day": 37, "date": "2026-09-12", "title": "Estimating a tail index, and why yours will move", "kind": "study", "week": 6, "phase": "Returns and noise"}, {"day": 38, "date": "2026-09-13", "title": "Returns are unpredictable, their sizes are not", "kind": "study", "week": 6, "phase": "Returns and noise"}, {"day": 39, "date": "2026-09-14", "title": "Down moves raise volatility more than up moves do", "kind": "study", "week": 6, "phase": "Returns and noise"}, {"day": 40, "date": "2026-09-15", "title": "The tails thin out as you aggregate, but slowly", "kind": "study", "week": 6, "phase": "Returns and noise"}, {"day": 41, "date": "2026-09-16", "title": "Correlations rise exactly when you need them not to", "kind": "study", "week": 6, "phase": "Returns and noise"}, {"day": 42, "date": "2026-09-17", "title": "Six stylized facts on one page", "kind": "catchup", "week": 6, "phase": "Returns and noise"}, {"day": 43, "date": "2026-09-18", "title": "Three Sharpe ratios from the same returns", "kind": "study", "week": 7, "phase": "Returns and noise"}, {"day": 44, "date": "2026-09-19", "title": "The standard error of a Sharpe ratio, derived", "kind": "study", "week": 7, "phase": "Returns and noise"}, {"day": 45, "date": "2026-09-20", "title": "Every performance number gets an interval from now on", "kind": "study", "week": 7, "phase": "Returns and noise"}, {"day": 46, "date": "2026-09-21", "title": "Serial correlation inflates a Sharpe ratio, and by how much", "kind": "study", "week": 7, "phase": "Returns and noise"}, {"day": 47, "date": "2026-09-22", "title": "Maximum drawdown is one draw from a wide distribution", "kind": "study", "week": 7, "phase": "Returns and noise"}, {"day": 48, "date": "2026-09-23", "title": "Sortino, Calmar and the ratios that add nothing", "kind": "study", "week": 7, "phase": "Returns and noise"}, {"day": 49, "date": "2026-09-24", "title": "The Sharpe ratio as an estimator, from memory", "kind": "catchup", "week": 7, "phase": "Returns and noise"}, {"day": 50, "date": "2026-09-25", "title": "Backtest overfitting is a multiple testing problem you already know", "kind": "study", "week": 8, "phase": "Returns and noise"}, {"day": 51, "date": "2026-09-26", "title": "The best of a thousand nulls, and what it looks like", "kind": "study", "week": 8, "phase": "Returns and noise"}, {"day": 52, "date": "2026-09-27", "title": "The deflated Sharpe ratio, and what it assumes", "kind": "study", "week": 8, "phase": "Returns and noise"}, {"day": 53, "date": "2026-09-28", "title": "Implement the correction, and make the count automatic", "kind": "study", "week": 8, "phase": "Returns and noise"}, {"day": 54, "date": "2026-09-29", "title": "The probability that your best variant is the best by luck", "kind": "study", "week": 8, "phase": "Returns and noise"}, {"day": 55, "date": "2026-09-30", "title": "White's reality check, and the null that is about the best", "kind": "study", "week": 8, "phase": "Returns and noise"}, {"day": 56, "date": "2026-10-01", "title": "The three corrections, and when each applies", "kind": "catchup", "week": 8, "phase": "Returns and noise"}, {"day": 57, "date": "2026-10-02", "title": "The bootstrap breaks on dependent data, visibly", "kind": "study", "week": 9, "phase": "Returns and noise"}, {"day": 58, "date": "2026-10-03", "title": "Choosing a block length is choosing what you preserve", "kind": "study", "week": 9, "phase": "Returns and noise"}, {"day": 59, "date": "2026-10-04", "title": "Permuting a strategy: what exactly do you shuffle", "kind": "study", "week": 9, "phase": "Returns and noise"}, {"day": 60, "date": "2026-10-05", "title": "A simulator whose output passes your own stylized-facts test", "kind": "study", "week": 9, "phase": "Returns and noise"}, {"day": 61, "date": "2026-10-06", "title": "The noise floor: one number you will be held to", "kind": "study", "week": 9, "phase": "Returns and noise"}, {"day": 62, "date": "2026-10-07", "title": "Counting your own hypotheses, honestly", "kind": "study", "week": 9, "phase": "Returns and noise"}, {"day": 63, "date": "2026-10-08", "title": "Milestone: the stylized facts and the noise floor", "kind": "milestone", "week": 9, "phase": "Returns and noise"}, {"day": 64, "date": "2026-10-09", "title": "Stationarity, and the three financial series that have it", "kind": "study", "week": 10, "phase": "Time series"}, {"day": 65, "date": "2026-10-10", "title": "Reading an ACF and a PACF without fitting anything", "kind": "study", "week": 10, "phase": "Time series"}, {"day": 66, "date": "2026-10-11", "title": "Fitting AR and MA models to things that barely have structure", "kind": "study", "week": 10, "phase": "Time series"}, {"day": 67, "date": "2026-10-12", "title": "AIC picks a bigger model than BIC, and that is not a bug", "kind": "study", "week": 10, "phase": "Time series"}, {"day": 68, "date": "2026-10-13", "title": "A trend follower is an AR model with a hard threshold", "kind": "study", "week": 10, "phase": "Time series"}, {"day": 69, "date": "2026-10-14", "title": "The first strategy meets the noise floor", "kind": "study", "week": 10, "phase": "Time series"}, {"day": 70, "date": "2026-10-15", "title": "Week 10, closed book", "kind": "catchup", "week": 10, "phase": "Time series"}, {"day": 71, "date": "2026-10-16", "title": "Two independent random walks, regressed, look significant", "kind": "study", "week": 11, "phase": "Time series"}, {"day": 72, "date": "2026-10-17", "title": "ADF and KPSS have opposite nulls, and both can fail", "kind": "study", "week": 11, "phase": "Time series"}, {"day": 73, "date": "2026-10-18", "title": "HAC standard errors, and the lag choice nobody defends", "kind": "study", "week": 11, "phase": "Time series"}, {"day": 74, "date": "2026-10-19", "title": "Applying it: the trend follower's t-statistic, corrected", "kind": "study", "week": 11, "phase": "Time series"}, {"day": 75, "date": "2026-10-20", "title": "Differencing throws away the thing you wanted", "kind": "study", "week": 11, "phase": "Time series"}, {"day": 76, "date": "2026-10-21", "title": "A structural break looks exactly like a unit root", "kind": "study", "week": 11, "phase": "Time series"}, {"day": 77, "date": "2026-10-22", "title": "Unit roots and spurious regression, closed book", "kind": "catchup", "week": 11, "phase": "Time series"}, {"day": 78, "date": "2026-10-23", "title": "Cointegration, and the error correction model", "kind": "study", "week": 12, "phase": "Time series"}, {"day": 79, "date": "2026-10-24", "title": "How often your own screen finds a pair that does not exist", "kind": "study", "week": 12, "phase": "Time series"}, {"day": 80, "date": "2026-10-25", "title": "Johansen tests the whole system at once", "kind": "study", "week": 12, "phase": "Time series"}, {"day": 81, "date": "2026-10-26", "title": "The pair selection rule, written down before the results", "kind": "study", "week": 12, "phase": "Time series"}, {"day": 82, "date": "2026-10-27", "title": "The half-life, and thresholds derived from it", "kind": "study", "week": 12, "phase": "Time series"}, {"day": 83, "date": "2026-10-28", "title": "The pairs backtest, with costs, in sample", "kind": "study", "week": 12, "phase": "Time series"}, {"day": 84, "date": "2026-10-29", "title": "Cointegration, closed book", "kind": "catchup", "week": 12, "phase": "Time series"}, {"day": 85, "date": "2026-10-30", "title": "EWMA is a one-parameter volatility model that is hard to beat", "kind": "study", "week": 13, "phase": "Time series"}, {"day": 86, "date": "2026-10-31", "title": "What GARCH actually asserts, and what the coefficient sum means", "kind": "study", "week": 13, "phase": "Time series"}, {"day": 87, "date": "2026-11-01", "title": "Realised volatility, and the estimator that uses the intraday path", "kind": "study", "week": 13, "phase": "Time series"}, {"day": 88, "date": "2026-11-02", "title": "HAR: three lags beat a fitted GARCH most of the time", "kind": "study", "week": 13, "phase": "Time series"}, {"day": 89, "date": "2026-11-03", "title": "Evaluating a volatility forecast against the right loss", "kind": "study", "week": 13, "phase": "Time series"}, {"day": 90, "date": "2026-11-04", "title": "Volatility targeting, and what it does and does not improve", "kind": "study", "week": 13, "phase": "Time series"}, {"day": 91, "date": "2026-11-05", "title": "Volatility modelling, closed book", "kind": "catchup", "week": 13, "phase": "Time series"}, {"day": 92, "date": "2026-11-06", "title": "The Kalman filter in one sentence, then in one dimension", "kind": "study", "week": 14, "phase": "Time series"}, {"day": 93, "date": "2026-11-07", "title": "A hedge ratio that is allowed to move", "kind": "study", "week": 14, "phase": "Time series"}, {"day": 94, "date": "2026-11-08", "title": "Does the moving hedge ratio actually help, or just fit better", "kind": "study", "week": 14, "phase": "Time series"}, {"day": 95, "date": "2026-11-09", "title": "Regime switching, and the temptation it represents", "kind": "study", "week": 14, "phase": "Time series"}, {"day": 96, "date": "2026-11-10", "title": "The out-of-sample run, once, on a period you never looked at", "kind": "study", "week": 14, "phase": "Time series"}, {"day": 97, "date": "2026-11-11", "title": "Writing down what would have made you stop", "kind": "study", "week": 14, "phase": "Time series"}, {"day": 98, "date": "2026-11-12", "title": "Milestone: a pairs strategy, and what it survived", "kind": "milestone", "week": 14, "phase": "Time series"}, {"day": 99, "date": "2026-11-13", "title": "Markowitz is one convex problem and three bad inputs", "kind": "study", "week": 15, "phase": "Portfolios and risk"}, {"day": 100, "date": "2026-11-14", "title": "The unconstrained solution wants 400 percent gross exposure", "kind": "study", "week": 15, "phase": "Portfolios and risk"}, {"day": 101, "date": "2026-11-15", "title": "How much of the frontier is estimation error", "kind": "study", "week": 15, "phase": "Portfolios and risk"}, {"day": 102, "date": "2026-11-16", "title": "Constraints are shrinkage wearing a different hat", "kind": "study", "week": 15, "phase": "Portfolios and risk"}, {"day": 103, "date": "2026-11-17", "title": "The three benchmarks that beat you, and when they do not", "kind": "study", "week": 15, "phase": "Portfolios and risk"}, {"day": 104, "date": "2026-11-18", "title": "Black-Litterman is a prior on returns, said carefully", "kind": "study", "week": 15, "phase": "Portfolios and risk"}, {"day": 105, "date": "2026-11-19", "title": "Week 15, and the number of parameters you are estimating", "kind": "catchup", "week": 15, "phase": "Portfolios and risk"}, {"day": 106, "date": "2026-11-20", "title": "A sample covariance matrix with more assets than days", "kind": "study", "week": 16, "phase": "Portfolios and risk"}, {"day": 107, "date": "2026-11-21", "title": "Marchenko-Pastur says which eigenvalues are noise", "kind": "study", "week": 16, "phase": "Portfolios and risk"}, {"day": 108, "date": "2026-11-22", "title": "Cleaning a spectrum, and testing whether it helped", "kind": "study", "week": 16, "phase": "Portfolios and risk"}, {"day": 109, "date": "2026-11-23", "title": "Ledoit-Wolf, and the same problem in a different field", "kind": "study", "week": 16, "phase": "Portfolios and risk"}, {"day": 110, "date": "2026-11-24", "title": "One covariance interface, four estimators behind it", "kind": "study", "week": 16, "phase": "Portfolios and risk"}, {"day": 111, "date": "2026-11-25", "title": "A factor covariance is structure instead of shrinkage", "kind": "study", "week": 16, "phase": "Portfolios and risk"}, {"day": 112, "date": "2026-11-26", "title": "Covariance in high dimensions, closed book", "kind": "catchup", "week": 16, "phase": "Portfolios and risk"}, {"day": 113, "date": "2026-11-27", "title": "CAPM as a regression, and what beta estimates", "kind": "study", "week": 17, "phase": "Portfolios and risk"}, {"day": 114, "date": "2026-11-28", "title": "Where the three factors came from, procedurally", "kind": "study", "week": 17, "phase": "Portfolios and risk"}, {"day": 115, "date": "2026-11-29", "title": "Momentum, and the factors that stopped working", "kind": "study", "week": 17, "phase": "Portfolios and risk"}, {"day": 116, "date": "2026-11-30", "title": "A risk factor is something you hedge, an alpha factor is not", "kind": "study", "week": 17, "phase": "Portfolios and risk"}, {"day": 117, "date": "2026-12-01", "title": "Neutralising a portfolio, and what it costs you", "kind": "study", "week": 17, "phase": "Portfolios and risk"}, {"day": 118, "date": "2026-12-02", "title": "Fama-MacBeth, and the standard error it fixes", "kind": "study", "week": 17, "phase": "Portfolios and risk"}, {"day": 119, "date": "2026-12-03", "title": "Factor models, closed book", "kind": "catchup", "week": 17, "phase": "Portfolios and risk"}, {"day": 120, "date": "2026-12-04", "title": "Targeting a volatility at the portfolio level", "kind": "study", "week": 18, "phase": "Portfolios and risk"}, {"day": 121, "date": "2026-12-05", "title": "VaR says nothing about the day it is wrong", "kind": "study", "week": 18, "phase": "Portfolios and risk"}, {"day": 122, "date": "2026-12-06", "title": "Expected shortfall, and the property VaR lacks", "kind": "study", "week": 18, "phase": "Portfolios and risk"}, {"day": 123, "date": "2026-12-07", "title": "Backtesting a risk model: coverage and independence", "kind": "study", "week": 18, "phase": "Portfolios and risk"}, {"day": 124, "date": "2026-12-08", "title": "Stress testing, when the estimate is the problem", "kind": "study", "week": 18, "phase": "Portfolios and risk"}, {"day": 125, "date": "2026-12-09", "title": "The diversification that disappears when you need it", "kind": "study", "week": 18, "phase": "Portfolios and risk"}, {"day": 126, "date": "2026-12-10", "title": "Risk measurement, closed book", "kind": "catchup", "week": 18, "phase": "Portfolios and risk"}, {"day": 127, "date": "2026-12-11", "title": "Kelly, derived rather than quoted", "kind": "study", "week": 19, "phase": "Portfolios and risk"}, {"day": 128, "date": "2026-12-12", "title": "Continuous Kelly is your Sharpe ratio over your volatility", "kind": "study", "week": 19, "phase": "Portfolios and risk"}, {"day": 129, "date": "2026-12-13", "title": "Fractional Kelly, and the drawdown you are choosing", "kind": "study", "week": 19, "phase": "Portfolios and risk"}, {"day": 130, "date": "2026-12-14", "title": "Risk of ruin, and the constraint that is not statistical", "kind": "study", "week": 19, "phase": "Portfolios and risk"}, {"day": 131, "date": "2026-12-15", "title": "Sizing the actual book, with every number defended", "kind": "study", "week": 19, "phase": "Portfolios and risk"}, {"day": 132, "date": "2026-12-16", "title": "Did the risk model beat equal weighting, honestly", "kind": "study", "week": 19, "phase": "Portfolios and risk"}, {"day": 133, "date": "2026-12-17", "title": "Milestone: a factor risk model built by hand", "kind": "milestone", "week": 19, "phase": "Portfolios and risk"}, {"day": 134, "date": "2026-12-18", "title": "Eleven ways the future gets into a backtest", "kind": "study", "week": 20, "phase": "The research harness"}, {"day": 135, "date": "2026-12-19", "title": "Two timestamps per row, and the lag between them", "kind": "study", "week": 20, "phase": "The research harness"}, {"day": 136, "date": "2026-12-20", "title": "A universe that only contains what existed at the time", "kind": "study", "week": 20, "phase": "The research harness"}, {"day": 137, "date": "2026-12-21", "title": "Fundamentals are revised, and your backtest read the revision", "kind": "study", "week": 20, "phase": "The research harness"}, {"day": 138, "date": "2026-12-22", "title": "The delisting return your data does not have", "kind": "study", "week": 20, "phase": "The research harness"}, {"day": 139, "date": "2026-12-23", "title": "The rebuild, and the test that guards it", "kind": "study", "week": 20, "phase": "The research harness"}, {"day": 140, "date": "2026-12-24", "title": "What the point-in-time rebuild cost you", "kind": "catchup", "week": 20, "phase": "The research harness"}, {"day": 141, "date": "2026-12-25", "title": "Vectorized and event-driven lie about different things", "kind": "study", "week": 21, "phase": "The research harness"}, {"day": 142, "date": "2026-12-26", "title": "The event loop, and the order things happen in", "kind": "study", "week": 21, "phase": "The research harness"}, {"day": 143, "date": "2026-12-27", "title": "The fill model is where optimism hides", "kind": "study", "week": 21, "phase": "The research harness"}, {"day": 144, "date": "2026-12-28", "title": "Orders have a lifecycle, and positions are derived", "kind": "study", "week": 21, "phase": "The research harness"}, {"day": 145, "date": "2026-12-29", "title": "One result object, and everything downstream reads it", "kind": "study", "week": 21, "phase": "The research harness"}, {"day": 146, "date": "2026-12-30", "title": "Reading a production engine, and what it does differently", "kind": "study", "week": 21, "phase": "The research harness"}, {"day": 147, "date": "2026-12-31", "title": "The engine, exercised", "kind": "catchup", "week": 21, "phase": "The research harness"}, {"day": 148, "date": "2027-01-01", "title": "The spread you cross, measured across the liquidity range", "kind": "study", "week": 22, "phase": "The research harness"}, {"day": 149, "date": "2027-01-02", "title": "Impact goes as the square root, not linearly", "kind": "study", "week": 22, "phase": "The research harness"}, {"day": 150, "date": "2027-01-03", "title": "Borrow and financing, the costs with no price print", "kind": "study", "week": 22, "phase": "The research harness"}, {"day": 151, "date": "2027-01-04", "title": "Turnover is the variable that decides everything", "kind": "study", "week": 22, "phase": "The research harness"}, {"day": 152, "date": "2027-01-05", "title": "The chart that decides whether a strategy exists", "kind": "study", "week": 22, "phase": "The research harness"}, {"day": 153, "date": "2027-01-06", "title": "The cost model, with the components separated", "kind": "study", "week": 22, "phase": "The research harness"}, {"day": 154, "date": "2027-01-07", "title": "Costs, closed book", "kind": "catchup", "week": 22, "phase": "The research harness"}, {"day": 155, "date": "2027-01-08", "title": "Poison the future and assert nothing changes", "kind": "study", "week": 23, "phase": "The research harness"}, {"day": 156, "date": "2027-01-09", "title": "Synthetic data whose right answer you already know", "kind": "study", "week": 23, "phase": "The research harness"}, {"day": 157, "date": "2027-01-10", "title": "The null strategy test, and what your engine says about nothing", "kind": "study", "week": 23, "phase": "The research harness"}, {"day": 158, "date": "2027-01-11", "title": "Invariants that must hold for every strategy and every input", "kind": "study", "week": 23, "phase": "The research harness"}, {"day": 159, "date": "2027-01-12", "title": "One command, same number, six months later", "kind": "study", "week": 23, "phase": "The research harness"}, {"day": 160, "date": "2027-01-13", "title": "The list of lies your backtester still tells", "kind": "study", "week": 23, "phase": "The research harness"}, {"day": 161, "date": "2027-01-14", "title": "Milestone: the research platform", "kind": "milestone", "week": 23, "phase": "The research harness"}, {"day": 162, "date": "2027-01-15", "title": "A signal is a forecast with a scale you have to choose", "kind": "study", "week": 24, "phase": "Alpha"}, {"day": 163, "date": "2027-01-16", "title": "Cross-sectional and time-series signals bet on different things", "kind": "study", "week": 24, "phase": "Alpha"}, {"day": 164, "date": "2027-01-17", "title": "The transform is part of the bet, not a formatting step", "kind": "study", "week": 24, "phase": "Alpha"}, {"day": 165, "date": "2027-01-18", "title": "Neutralise the signal, not just the portfolio", "kind": "study", "week": 24, "phase": "Alpha"}, {"day": 166, "date": "2027-01-19", "title": "From scores to weights, the map you keep implicit", "kind": "study", "week": 24, "phase": "Alpha"}, {"day": 167, "date": "2027-01-20", "title": "The first three signals, built through the interface", "kind": "study", "week": 24, "phase": "Alpha"}, {"day": 168, "date": "2027-01-21", "title": "Week 24, and three signals that run", "kind": "catchup", "week": 24, "phase": "Alpha"}, {"day": 169, "date": "2027-01-22", "title": "The information coefficient is a Spearman correlation", "kind": "study", "week": 25, "phase": "Alpha"}, {"day": 170, "date": "2027-01-23", "title": "IC decay tells you the horizon to trade", "kind": "study", "week": 25, "phase": "Alpha"}, {"day": 171, "date": "2027-01-24", "title": "IC times the square root of breadth, and its four lies", "kind": "study", "week": 25, "phase": "Alpha"}, {"day": 172, "date": "2027-01-25", "title": "Quantile spreads, and the monotonicity nobody checks", "kind": "study", "week": 25, "phase": "Alpha"}, {"day": 173, "date": "2027-01-26", "title": "Turnover, capacity, and the size where a signal dies", "kind": "study", "week": 25, "phase": "Alpha"}, {"day": 174, "date": "2027-01-27", "title": "One page per signal, generated rather than written", "kind": "study", "week": 25, "phase": "Alpha"}, {"day": 175, "date": "2027-01-28", "title": "Signal evaluation, closed book", "kind": "catchup", "week": 25, "phase": "Alpha"}, {"day": 176, "date": "2027-01-29", "title": "Value, replicated with the reporting lag respected", "kind": "study", "week": 26, "phase": "Alpha"}, {"day": 177, "date": "2027-01-30", "title": "Momentum, and the crashes that pay for its Sharpe", "kind": "study", "week": 26, "phase": "Alpha"}, {"day": 178, "date": "2027-01-31", "title": "Quality, and the definition problem underneath it", "kind": "study", "week": 26, "phase": "Alpha"}, {"day": 179, "date": "2027-02-01", "title": "Low volatility wins, and the explanation is a constraint", "kind": "study", "week": 26, "phase": "Alpha"}, {"day": 180, "date": "2027-02-02", "title": "Short-term reversal is real, and mostly a liquidity payment", "kind": "study", "week": 26, "phase": "Alpha"}, {"day": 181, "date": "2027-02-03", "title": "Which of them still work, on your data, after costs", "kind": "study", "week": 26, "phase": "Alpha"}, {"day": 182, "date": "2027-02-04", "title": "The classic signals, closed book", "kind": "catchup", "week": 26, "phase": "Alpha"}, {"day": 183, "date": "2027-02-05", "title": "A continuous futures series is something you construct", "kind": "study", "week": 27, "phase": "Alpha"}, {"day": 184, "date": "2027-02-06", "title": "Time-series momentum, and where its diversification comes from", "kind": "study", "week": 27, "phase": "Alpha"}, {"day": 185, "date": "2027-02-07", "title": "Carry is one definition applied to four asset classes", "kind": "study", "week": 27, "phase": "Alpha"}, {"day": 186, "date": "2027-02-08", "title": "Seasonality is where you will fool yourself fastest", "kind": "study", "week": 27, "phase": "Alpha"}, {"day": 187, "date": "2027-02-09", "title": "Volatility as a signal, in level and in change", "kind": "study", "week": 27, "phase": "Alpha"}, {"day": 188, "date": "2027-02-10", "title": "Sizing a futures book when the contracts are not comparable", "kind": "study", "week": 27, "phase": "Alpha"}, {"day": 189, "date": "2027-02-11", "title": "Time-series signals, closed book", "kind": "catchup", "week": 27, "phase": "Alpha"}, {"day": 190, "date": "2027-02-12", "title": "Fundamentals at scale, from EDGAR rather than a vendor", "kind": "study", "week": 28, "phase": "Alpha"}, {"day": 191, "date": "2027-02-13", "title": "Accruals, and a signal that is about accounting rather than price", "kind": "study", "week": 28, "phase": "Alpha"}, {"day": 192, "date": "2027-02-14", "title": "Post-earnings drift, and the event study machinery", "kind": "study", "week": 28, "phase": "Alpha"}, {"day": 193, "date": "2027-02-15", "title": "Counting words in filings gets you further than it should", "kind": "study", "week": 28, "phase": "Alpha"}, {"day": 194, "date": "2027-02-16", "title": "The leak that only exists for pretrained models", "kind": "study", "week": 28, "phase": "Alpha"}, {"day": 195, "date": "2027-02-17", "title": "What data is worth paying for, at your size", "kind": "study", "week": 28, "phase": "Alpha"}, {"day": 196, "date": "2027-02-18", "title": "Data beyond price, closed book", "kind": "catchup", "week": 28, "phase": "Alpha"}, {"day": 197, "date": "2027-02-19", "title": "Your signals are more correlated than you think", "kind": "study", "week": 29, "phase": "Alpha"}, {"day": 198, "date": "2027-02-20", "title": "Orthogonalising, and what the residual actually forecasts", "kind": "study", "week": 29, "phase": "Alpha"}, {"day": 199, "date": "2027-02-21", "title": "Equal weights beat optimised weights more often than not", "kind": "study", "week": 29, "phase": "Alpha"}, {"day": 200, "date": "2027-02-22", "title": "Combining scores and combining portfolios are different trades", "kind": "study", "week": 29, "phase": "Alpha"}, {"day": 201, "date": "2027-02-23", "title": "The combined book, with every constraint applied", "kind": "study", "week": 29, "phase": "Alpha"}, {"day": 202, "date": "2027-02-24", "title": "Counting everything you tried in this phase", "kind": "study", "week": 29, "phase": "Alpha"}, {"day": 203, "date": "2027-02-25", "title": "Milestone: the alpha book", "kind": "milestone", "week": 29, "phase": "Alpha"}, {"day": 204, "date": "2027-02-26", "title": "The signal is two orders of magnitude weaker than you are used to", "kind": "study", "week": 30, "phase": "Machine learning"}, {"day": 205, "date": "2027-02-27", "title": "Overlapping labels break the assumption everything rests on", "kind": "study", "week": 30, "phase": "Machine learning"}, {"day": 206, "date": "2027-02-28", "title": "Purging and embargoing, and why they are two fixes", "kind": "study", "week": 30, "phase": "Machine learning"}, {"day": 207, "date": "2027-03-01", "title": "Walk-forward, and what it costs you in statistical power", "kind": "study", "week": 30, "phase": "Machine learning"}, {"day": 208, "date": "2027-03-02", "title": "The relationship you fitted may not be the same one", "kind": "study", "week": 30, "phase": "Machine learning"}, {"day": 209, "date": "2027-03-03", "title": "The dataset assembly, and the test that guards it", "kind": "study", "week": 30, "phase": "Machine learning"}, {"day": 210, "date": "2027-03-04", "title": "Validation, closed book", "kind": "catchup", "week": 30, "phase": "Machine learning"}, {"day": 211, "date": "2027-03-05", "title": "The label is a modelling decision, not a given", "kind": "study", "week": 31, "phase": "Machine learning"}, {"day": 212, "date": "2027-03-06", "title": "The triple barrier labels what a trade would have done", "kind": "study", "week": 31, "phase": "Machine learning"}, {"day": 213, "date": "2027-03-07", "title": "Sample uniqueness, and the effective size of your training set", "kind": "study", "week": 31, "phase": "Machine learning"}, {"day": 214, "date": "2027-03-08", "title": "Sample weights, and the three things they can encode", "kind": "study", "week": 31, "phase": "Machine learning"}, {"day": 215, "date": "2027-03-09", "title": "Meta-labelling separates when to trade from how much", "kind": "study", "week": 31, "phase": "Machine learning"}, {"day": 216, "date": "2027-03-10", "title": "Cross-sectional labels, and the demeaning that decides the bet", "kind": "study", "week": 31, "phase": "Machine learning"}, {"day": 217, "date": "2027-03-11", "title": "Labelling, closed book", "kind": "catchup", "week": 31, "phase": "Machine learning"}, {"day": 218, "date": "2027-03-12", "title": "The linear baseline, taken as seriously as the rival", "kind": "study", "week": 32, "phase": "Machine learning"}, {"day": 219, "date": "2027-03-13", "title": "Reading a regularization path as a feature ranking", "kind": "study", "week": 32, "phase": "Machine learning"}, {"day": 220, "date": "2027-03-14", "title": "Gradient boosting, and the interactions it is looking for", "kind": "study", "week": 32, "phase": "Machine learning"}, {"day": 221, "date": "2027-03-15", "title": "Bagging helps here for a reason specific to this problem", "kind": "study", "week": 32, "phase": "Machine learning"}, {"day": 222, "date": "2027-03-16", "title": "A hyperparameter search is a multiple testing problem", "kind": "study", "week": 32, "phase": "Machine learning"}, {"day": 223, "date": "2027-03-17", "title": "Feature importance that survives a permutation test", "kind": "study", "week": 32, "phase": "Machine learning"}, {"day": 224, "date": "2027-03-18", "title": "Models, closed book", "kind": "catchup", "week": 32, "phase": "Machine learning"}, {"day": 225, "date": "2027-03-19", "title": "A network on eight features is mostly a way to overfit", "kind": "study", "week": 33, "phase": "Machine learning"}, {"day": 226, "date": "2027-03-20", "title": "Sequence models, and the autocorrelation they are looking for", "kind": "study", "week": 33, "phase": "Machine learning"}, {"day": 227, "date": "2027-03-21", "title": "Seed variance is larger than the model differences", "kind": "study", "week": 33, "phase": "Machine learning"}, {"day": 228, "date": "2027-03-22", "title": "Language models are extractors here, not forecasters", "kind": "study", "week": 33, "phase": "Machine learning"}, {"day": 229, "date": "2027-03-23", "title": "What the published deep learning results actually claim", "kind": "study", "week": 33, "phase": "Machine learning"}, {"day": 230, "date": "2027-03-24", "title": "An external scoreboard where you cannot fool yourself", "kind": "study", "week": 33, "phase": "Machine learning"}, {"day": 231, "date": "2027-03-25", "title": "Neural networks on this data, closed book", "kind": "catchup", "week": 33, "phase": "Machine learning"}, {"day": 232, "date": "2027-03-26", "title": "Freezing everything before the comparison", "kind": "study", "week": 34, "phase": "Machine learning"}, {"day": 233, "date": "2027-03-27", "title": "The audit, run once", "kind": "study", "week": 34, "phase": "Machine learning"}, {"day": 234, "date": "2027-03-28", "title": "Which features are proxies for something you did not intend", "kind": "study", "week": 34, "phase": "Machine learning"}, {"day": 235, "date": "2027-03-29", "title": "The model that wins gross and loses net", "kind": "study", "week": 34, "phase": "Machine learning"}, {"day": 236, "date": "2027-03-30", "title": "When the flexible model wins, and when it does not", "kind": "study", "week": 34, "phase": "Machine learning"}, {"day": 237, "date": "2027-03-31", "title": "Writing a verdict that reads the same either way", "kind": "study", "week": 34, "phase": "Machine learning"}, {"day": 238, "date": "2027-04-01", "title": "Milestone: machine learning against the linear baseline", "kind": "milestone", "week": 34, "phase": "Machine learning"}, {"day": 239, "date": "2027-04-02", "title": "Brownian motion is a random walk you took a limit of", "kind": "study", "week": 35, "phase": "Derivatives"}, {"day": 240, "date": "2027-04-03", "title": "Quadratic variation is the entire difference from calculus", "kind": "study", "week": 35, "phase": "Derivatives"}, {"day": 241, "date": "2027-04-04", "title": "The Itô integral, and why the left endpoint is a choice", "kind": "study", "week": 35, "phase": "Derivatives"}, {"day": 242, "date": "2027-04-05", "title": "Itô's lemma is a Taylor expansion with one extra term", "kind": "study", "week": 35, "phase": "Derivatives"}, {"day": 243, "date": "2027-04-06", "title": "Three SDEs you will meet, and what each one enforces", "kind": "study", "week": 35, "phase": "Derivatives"}, {"day": 244, "date": "2027-04-07", "title": "Simulating an SDE, and measuring the discretisation error", "kind": "study", "week": 35, "phase": "Derivatives"}, {"day": 245, "date": "2027-04-08", "title": "Stochastic calculus, closed book", "kind": "catchup", "week": 35, "phase": "Derivatives"}, {"day": 246, "date": "2027-04-09", "title": "Geometric Brownian motion, and everything it leaves out", "kind": "study", "week": 36, "phase": "Derivatives"}, {"day": 247, "date": "2027-04-10", "title": "Replication, in one step, where the argument is visible", "kind": "study", "week": 36, "phase": "Derivatives"}, {"day": 248, "date": "2027-04-11", "title": "The Black-Scholes PDE, from the hedge that removes the risk", "kind": "study", "week": 36, "phase": "Derivatives"}, {"day": 249, "date": "2027-04-12", "title": "Risk-neutral is a change of measure, not a claim about people", "kind": "study", "week": 36, "phase": "Derivatives"}, {"day": 250, "date": "2027-04-13", "title": "The same formula from an integral, and the two agreeing", "kind": "study", "week": 36, "phase": "Derivatives"}, {"day": 251, "date": "2027-04-14", "title": "The pricer, tested against two independent implementations", "kind": "study", "week": 36, "phase": "Derivatives"}, {"day": 252, "date": "2027-04-15", "title": "Black-Scholes, closed book", "kind": "catchup", "week": 36, "phase": "Derivatives"}, {"day": 253, "date": "2027-04-16", "title": "The greeks, analytically and by finite difference", "kind": "study", "week": 37, "phase": "Derivatives"}, {"day": 254, "date": "2027-04-17", "title": "Delta hedging a short option, ten thousand times", "kind": "study", "week": 37, "phase": "Derivatives"}, {"day": 255, "date": "2027-04-18", "title": "The hedged option pays the gap between two variances", "kind": "study", "week": 37, "phase": "Derivatives"}, {"day": 256, "date": "2027-04-19", "title": "Gamma and theta are two sides of one equation", "kind": "study", "week": 37, "phase": "Derivatives"}, {"day": 257, "date": "2027-04-20", "title": "Discrete hedging error, and the rate it shrinks at", "kind": "study", "week": 37, "phase": "Derivatives"}, {"day": 258, "date": "2027-04-21", "title": "Hedging costs money, so you hedge less than you would like", "kind": "study", "week": 37, "phase": "Derivatives"}, {"day": 259, "date": "2027-04-22", "title": "The greeks and hedging, closed book", "kind": "catchup", "week": 37, "phase": "Derivatives"}, {"day": 260, "date": "2027-04-23", "title": "The smile is the market disagreeing with your model", "kind": "study", "week": 38, "phase": "Derivatives"}, {"day": 261, "date": "2027-04-24", "title": "Equity index skew, and two explanations that are not the same", "kind": "study", "week": 38, "phase": "Derivatives"}, {"day": 262, "date": "2027-04-25", "title": "The term structure, and the surface as one object", "kind": "study", "week": 38, "phase": "Derivatives"}, {"day": 263, "date": "2027-04-26", "title": "A surface that violates these conditions is a free lunch", "kind": "study", "week": 38, "phase": "Derivatives"}, {"day": 264, "date": "2027-04-27", "title": "SVI, and a parameterisation that can be kept arbitrage-free", "kind": "study", "week": 38, "phase": "Derivatives"}, {"day": 265, "date": "2027-04-28", "title": "Fitting the surface, weighted by what you can actually trade", "kind": "study", "week": 38, "phase": "Derivatives"}, {"day": 266, "date": "2027-04-29", "title": "The volatility surface, closed book", "kind": "catchup", "week": 38, "phase": "Derivatives"}, {"day": 267, "date": "2027-04-30", "title": "Local volatility fits today's surface exactly, and then what", "kind": "study", "week": 39, "phase": "Derivatives"}, {"day": 268, "date": "2027-05-01", "title": "Heston, and what a second source of randomness buys", "kind": "study", "week": 39, "phase": "Derivatives"}, {"day": 269, "date": "2027-05-02", "title": "Jumps, because a diffusion cannot smile at one week", "kind": "study", "week": 39, "phase": "Derivatives"}, {"day": 270, "date": "2027-05-03", "title": "Monte Carlo, and the variance reduction that pays for itself", "kind": "study", "week": 39, "phase": "Derivatives"}, {"day": 271, "date": "2027-05-04", "title": "Trees, because early exercise breaks the expectation", "kind": "study", "week": 39, "phase": "Derivatives"}, {"day": 272, "date": "2027-05-05", "title": "Two models that fit today and disagree about tomorrow", "kind": "study", "week": 39, "phase": "Derivatives"}, {"day": 273, "date": "2027-05-06", "title": "Beyond Black-Scholes, closed book", "kind": "catchup", "week": 39, "phase": "Derivatives"}, {"day": 274, "date": "2027-05-07", "title": "The variance risk premium, measured on twenty years", "kind": "study", "week": 40, "phase": "Derivatives"}, {"day": 275, "date": "2027-05-08", "title": "A variance swap is a strip of options, exactly", "kind": "study", "week": 40, "phase": "Derivatives"}, {"day": 276, "date": "2027-05-09", "title": "VIX is a variance swap rate wearing volatility units", "kind": "study", "week": 40, "phase": "Derivatives"}, {"day": 277, "date": "2027-05-10", "title": "Which volatility trades have an edge, and what February 2018 did", "kind": "study", "week": 40, "phase": "Derivatives"}, {"day": 278, "date": "2027-05-11", "title": "The variance premium as a signal, evaluated like any other", "kind": "study", "week": 40, "phase": "Derivatives"}, {"day": 279, "date": "2027-05-12", "title": "The pricer and the hedging study, assembled", "kind": "study", "week": 40, "phase": "Derivatives"}, {"day": 280, "date": "2027-05-13", "title": "Milestone: an option pricer and a delta-hedging study", "kind": "milestone", "week": 40, "phase": "Derivatives"}, {"day": 281, "date": "2027-05-14", "title": "Rebuilding a book from the messages that built it", "kind": "study", "week": 41, "phase": "Microstructure"}, {"day": 282, "date": "2027-05-15", "title": "The shape of the book, and how fast it refills", "kind": "study", "week": 41, "phase": "Microstructure"}, {"day": 283, "date": "2027-05-16", "title": "Queue position, and what it is worth in basis points", "kind": "study", "week": 41, "phase": "Microstructure"}, {"day": 284, "date": "2027-05-17", "title": "The spread splits into what the maker keeps and what they lose", "kind": "study", "week": 41, "phase": "Microstructure"}, {"day": 285, "date": "2027-05-18", "title": "Adverse selection, measured as the drift after your fill", "kind": "study", "week": 41, "phase": "Microstructure"}, {"day": 286, "date": "2027-05-19", "title": "Order flow predicts the next second, and not the next hour", "kind": "study", "week": 41, "phase": "Microstructure"}, {"day": 287, "date": "2027-05-20", "title": "The order book, closed book", "kind": "catchup", "week": 41, "phase": "Microstructure"}, {"day": 288, "date": "2027-05-21", "title": "Glosten-Milgrom: a spread from information alone", "kind": "study", "week": 42, "phase": "Microstructure"}, {"day": 289, "date": "2027-05-22", "title": "Kyle's lambda, and the equilibrium that produces linearity", "kind": "study", "week": 42, "phase": "Microstructure"}, {"day": 290, "date": "2027-05-23", "title": "Estimating lambda, and the endogeneity that ruins it", "kind": "study", "week": 42, "phase": "Microstructure"}, {"day": 291, "date": "2027-05-24", "title": "Temporary impact comes back, permanent impact does not", "kind": "study", "week": 42, "phase": "Microstructure"}, {"day": 292, "date": "2027-05-25", "title": "The square-root law, tested on your own data", "kind": "study", "week": 42, "phase": "Microstructure"}, {"day": 293, "date": "2027-05-26", "title": "Telling informed flow from uninformed, and the limits of it", "kind": "study", "week": 42, "phase": "Microstructure"}, {"day": 294, "date": "2027-05-27", "title": "The microstructure models, closed book", "kind": "catchup", "week": 42, "phase": "Microstructure"}, {"day": 295, "date": "2027-05-28", "title": "The execution problem, stated as a trade-off you choose", "kind": "study", "week": 43, "phase": "Microstructure"}, {"day": 296, "date": "2027-05-29", "title": "The efficient frontier of execution, and where to sit on it", "kind": "study", "week": 43, "phase": "Microstructure"}, {"day": 297, "date": "2027-05-30", "title": "TWAP, VWAP and participation, and what each one is for", "kind": "study", "week": 43, "phase": "Microstructure"}, {"day": 298, "date": "2027-05-31", "title": "Implementation shortfall counts the trade you missed", "kind": "study", "week": 43, "phase": "Microstructure"}, {"day": 299, "date": "2027-06-01", "title": "Measuring your own slippage, against your own decisions", "kind": "study", "week": 43, "phase": "Microstructure"}, {"day": 300, "date": "2027-06-02", "title": "Fitting an impact coefficient to a sample of forty fills", "kind": "study", "week": 43, "phase": "Microstructure"}, {"day": 301, "date": "2027-06-03", "title": "Execution, closed book", "kind": "catchup", "week": 43, "phase": "Microstructure"}, {"day": 302, "date": "2027-06-04", "title": "Capacity, recomputed with a fitted model", "kind": "study", "week": 44, "phase": "Microstructure"}, {"day": 303, "date": "2027-06-05", "title": "Which strategy dies first as the money grows", "kind": "study", "week": 44, "phase": "Microstructure"}, {"day": 304, "date": "2027-06-06", "title": "The latency hierarchy, in numbers rather than adjectives", "kind": "study", "week": 44, "phase": "Microstructure"}, {"day": 305, "date": "2027-06-07", "title": "What high-frequency firms actually do, stated precisely", "kind": "study", "week": 44, "phase": "Microstructure"}, {"day": 306, "date": "2027-06-08", "title": "Where a one-person operation actually competes", "kind": "study", "week": 44, "phase": "Microstructure"}, {"day": 307, "date": "2027-06-09", "title": "The results this phase revised, and by how much", "kind": "study", "week": 44, "phase": "Microstructure"}, {"day": 308, "date": "2027-06-10", "title": "Milestone: execution, impact and honest capacity", "kind": "milestone", "week": 44, "phase": "Microstructure"}, {"day": 309, "date": "2027-06-11", "title": "The SQL you keep rewriting in pandas, written once", "kind": "study", "week": 45, "phase": "Production"}, {"day": 310, "date": "2027-06-12", "title": "Schema design when every table has a time on it", "kind": "study", "week": 45, "phase": "Production"}, {"day": 311, "date": "2027-06-13", "title": "Parquet, partitioning, and only reading what you need", "kind": "study", "week": 45, "phase": "Production"}, {"day": 312, "date": "2027-06-14", "title": "Profile first, because your guess was wrong", "kind": "study", "week": 45, "phase": "Production"}, {"day": 313, "date": "2027-06-15", "title": "Polars, and being specific about where it wins", "kind": "study", "week": 45, "phase": "Production"}, {"day": 314, "date": "2027-06-16", "title": "Numba, for the loops that cannot be vectorised", "kind": "study", "week": 45, "phase": "Production"}, {"day": 315, "date": "2027-06-17", "title": "The data layer, closed book", "kind": "catchup", "week": 45, "phase": "Production"}, {"day": 316, "date": "2027-06-18", "title": "Enough C++ to read a codebase without guessing", "kind": "study", "week": 46, "phase": "Production"}, {"day": 317, "date": "2027-06-19", "title": "Memory layout, and why one loop is four times faster", "kind": "study", "week": 46, "phase": "Production"}, {"day": 318, "date": "2027-06-20", "title": "Containers, their complexity, and their constant factors", "kind": "study", "week": 46, "phase": "Production"}, {"day": 319, "date": "2027-06-21", "title": "Reading someone else's matching engine", "kind": "study", "week": 46, "phase": "Production"}, {"day": 320, "date": "2027-06-22", "title": "Writing a small order book that works", "kind": "study", "week": 46, "phase": "Production"}, {"day": 321, "date": "2027-06-23", "title": "The gap between the two, decomposed", "kind": "study", "week": 46, "phase": "Production"}, {"day": 322, "date": "2027-06-24", "title": "C++ literacy, closed book", "kind": "catchup", "week": 46, "phase": "Production"}, {"day": 323, "date": "2027-06-25", "title": "The daily run, as a sequence of steps that can each fail", "kind": "study", "week": 47, "phase": "Production"}, {"day": 324, "date": "2027-06-26", "title": "Logging for the questions you will ask in March", "kind": "study", "week": 47, "phase": "Production"}, {"day": 325, "date": "2027-06-27", "title": "Monitoring the four things that actually break", "kind": "study", "week": 47, "phase": "Production"}, {"day": 326, "date": "2027-06-28", "title": "Alerting, and the runbook written before you need it", "kind": "study", "week": 47, "phase": "Production"}, {"day": 327, "date": "2027-06-29", "title": "Reconciliation, and explaining every difference", "kind": "study", "week": 47, "phase": "Production"}, {"day": 328, "date": "2027-06-30", "title": "The first unattended run, and what it got wrong", "kind": "study", "week": 47, "phase": "Production"}, {"day": 329, "date": "2027-07-01", "title": "Milestone: the system in production", "kind": "milestone", "week": 47, "phase": "Production"}, {"day": 330, "date": "2027-07-02", "title": "Your own error log is the syllabus", "kind": "study", "week": 48, "phase": "The interview"}, {"day": 331, "date": "2027-07-03", "title": "Conditional probability, eight problems, forty minutes", "kind": "study", "week": 48, "phase": "The interview"}, {"day": 332, "date": "2027-07-04", "title": "Expectation by indicators, symmetry and conditioning", "kind": "study", "week": 48, "phase": "The interview"}, {"day": 333, "date": "2027-07-05", "title": "Martingales, and the stopping theorem's fine print", "kind": "study", "week": 48, "phase": "The interview"}, {"day": 334, "date": "2027-07-06", "title": "Random walks, ruin and first passage, under a clock", "kind": "study", "week": 48, "phase": "The interview"}, {"day": 335, "date": "2027-07-07", "title": "Order statistics, extremes, and the winner's curse", "kind": "study", "week": 48, "phase": "The interview"}, {"day": 336, "date": "2027-07-08", "title": "The canon, mixed and timed", "kind": "catchup", "week": 48, "phase": "The interview"}, {"day": 337, "date": "2027-07-09", "title": "A quote is a decision under two kinds of uncertainty", "kind": "study", "week": 49, "phase": "The interview"}, {"day": 338, "date": "2027-07-10", "title": "A trading game with real rounds and a scoreboard", "kind": "study", "week": 49, "phase": "The interview"}, {"day": 339, "date": "2027-07-11", "title": "The fact that they traded is information", "kind": "study", "week": 49, "phase": "The interview"}, {"day": 340, "date": "2027-07-12", "title": "Expected value under time pressure, and when not to play", "kind": "study", "week": 49, "phase": "The interview"}, {"day": 341, "date": "2027-07-13", "title": "Arithmetic at speed, trained rather than practised", "kind": "study", "week": 49, "phase": "The interview"}, {"day": 342, "date": "2027-07-14", "title": "A full session, continuous, with no pausing to think", "kind": "study", "week": 49, "phase": "The interview"}, {"day": 343, "date": "2027-07-15", "title": "Trading games, closed book", "kind": "catchup", "week": 49, "phase": "The interview"}, {"day": 344, "date": "2027-07-16", "title": "The statistics round, where you should be strongest", "kind": "study", "week": 50, "phase": "The interview"}, {"day": 345, "date": "2027-07-17", "title": "The machine learning round, answered in your own results", "kind": "study", "week": 50, "phase": "The interview"}, {"day": 346, "date": "2027-07-18", "title": "The coding round, under a clock and out loud", "kind": "study", "week": 50, "phase": "The interview"}, {"day": 347, "date": "2027-07-19", "title": "The research presentation, cut to what a stranger needs", "kind": "study", "week": 50, "phase": "The interview"}, {"day": 348, "date": "2027-07-20", "title": "The market intuition questions, answered as a researcher", "kind": "study", "week": 50, "phase": "The interview"}, {"day": 349, "date": "2027-07-21", "title": "The questions academics answer badly", "kind": "study", "week": 50, "phase": "The interview"}, {"day": 350, "date": "2027-07-22", "title": "The other rounds, closed book", "kind": "catchup", "week": 50, "phase": "The interview"}, {"day": 351, "date": "2027-07-23", "title": "The CV, rewritten without overclaiming or disowning", "kind": "study", "week": 51, "phase": "The interview"}, {"day": 352, "date": "2027-07-24", "title": "Three write-ups a stranger can read in ten minutes", "kind": "study", "week": 51, "phase": "The interview"}, {"day": 353, "date": "2027-07-25", "title": "The firm list, with a reason next to each name", "kind": "study", "week": 51, "phase": "The interview"}, {"day": 354, "date": "2027-07-26", "title": "Outreach that is worth the recipient's two minutes", "kind": "study", "week": 51, "phase": "The interview"}, {"day": 355, "date": "2027-07-27", "title": "A full mock, with the transitions included", "kind": "study", "week": 51, "phase": "The interview"}, {"day": 356, "date": "2027-07-28", "title": "How an offer is actually structured and what moves", "kind": "study", "week": 51, "phase": "The interview"}, {"day": 357, "date": "2027-07-29", "title": "Milestone: the interview dossier", "kind": "milestone", "week": 51, "phase": "The interview"}, {"day": 358, "date": "2027-07-30", "title": "The track record, reported without adjustment", "kind": "study", "week": 52, "phase": "Capstone"}, {"day": 359, "date": "2027-07-31", "title": "Where the live period disagreed with the backtest", "kind": "study", "week": 52, "phase": "Capstone"}, {"day": 360, "date": "2027-08-01", "title": "The research dossier, assembled from eleven documents", "kind": "study", "week": 52, "phase": "Capstone"}, {"day": 361, "date": "2027-08-02", "title": "What you would actually run, and at what size", "kind": "study", "week": 52, "phase": "Capstone"}, {"day": 362, "date": "2027-08-03", "title": "What you believed in September that turned out wrong", "kind": "study", "week": 52, "phase": "Capstone"}, {"day": 363, "date": "2027-08-04", "title": "The self-check, answered out loud and scored", "kind": "study", "week": 52, "phase": "Capstone"}, {"day": 364, "date": "2027-08-05", "title": "The last drill, and the trend across fifty-two of them", "kind": "catchup", "week": 52, "phase": "Capstone"}, {"day": 365, "date": "2027-08-06", "title": "Capstone", "kind": "capstone", "week": 52, "phase": "Capstone"}];
+// Task checkboxes persist to localStorage; the banner works out which day you are on.
+// This file is inlined into every page by scripts/build.py -- it must not contain a
+// literal closing script tag.
+(function () {
+  "use strict";
+  var KEY = "quant365:";
+
+  function pageKey() {
+    var m = location.pathname.match(/([^/]+)\.html?$/);
+    return m ? m[1] : "index";
+  }
+
+  function todayISO() {
+    var d = new Date();
+    function p(n) { return (n < 10 ? "0" : "") + n; }
+    return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate());
+  }
+
+  function currentDay() {
+    var today = todayISO();
+    var last = BOOTCAMP_DAYS[BOOTCAMP_DAYS.length - 1];
+    if (today < BOOTCAMP_START) return { state: "before", day: BOOTCAMP_DAYS[0] };
+    if (today > last.date) return { state: "after", day: last };
+    for (var i = 0; i < BOOTCAMP_DAYS.length; i++) {
+      if (BOOTCAMP_DAYS[i].date === today) return { state: "on", day: BOOTCAMP_DAYS[i] };
+      // The schedule can contain a pause. A date with no day of its own belongs to
+      // the break before the next scheduled day, not to the end of the year.
+      if (BOOTCAMP_DAYS[i].date > today) return { state: "break", day: BOOTCAMP_DAYS[i] };
+    }
+    return { state: "after", day: last };
+  }
+
+  function pad3(n) { return n < 10 ? "00" + n : n < 100 ? "0" + n : "" + n; }
+
+  function dayHref(day) {
+    var prefix = /\/days\//.test(location.pathname) ? "" : "days/";
+    return prefix + "day-" + pad3(day.day) + ".html";
+  }
+
+  function longDate(iso) {
+    var parts = iso.split("-");
+    var d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+    return d.toLocaleDateString(undefined, {
+      weekday: "long", day: "numeric", month: "long", year: "numeric"
+    });
+  }
+
+  // How many of the year's days are behind you, and how many tasks you have ticked
+  // across every day page. The second number is the only honest one.
+  function tickedDays() {
+    var done = 0;
+    for (var i = 0; i < BOOTCAMP_DAYS.length; i++) {
+      var page = "day-" + pad3(BOOTCAMP_DAYS[i].day);
+      var any = false, all = true, k = 0;
+      for (;;) {
+        var v = localStorage.getItem(KEY + page + ":" + k);
+        if (v === null) break;
+        if (v === "1") any = true; else all = false;
+        k++;
+      }
+      if (k > 0 && any && all) done++;
+    }
+    return done;
+  }
+
+  function renderBanner() {
+    var host = document.getElementById("today-banner");
+    if (!host) return;
+    var cur = currentDay();
+    var d = cur.day;
+    var link = '<a href="' + dayHref(d) + '">Day ' + d.day + " — " + d.title + "</a>";
+    if (cur.state === "before") {
+      var setupHref = (/\/days\//.test(location.pathname) ? "../" : "") + "setup.html";
+      host.innerHTML = "<strong>Starts " + longDate(BOOTCAMP_START) + ".</strong> First up: " + link +
+        '. Tonight is for <a href="' + setupHref + '">setup</a>.';
+    } else if (cur.state === "break") {
+      host.innerHTML = "<strong>Paused — back on " + longDate(d.date) + ".</strong> Next up: " + link + ".";
+    } else if (cur.state === "after") {
+      host.innerHTML = "<strong>Finished " + longDate(d.date) + ".</strong> Last day was " + link + ".";
+    } else {
+      var pct = Math.round((d.day / BOOTCAMP_DAYS.length) * 100);
+      var finished = tickedDays();
+      host.innerHTML = "<strong>Day " + d.day + " of " + BOOTCAMP_DAYS.length +
+        "</strong> · week " + d.week + " · " + d.phase + " · " + pct + "% through the calendar" +
+        (finished ? ", " + finished + " days fully ticked" : "") + "<br>" + link;
+    }
+    host.classList.add("live");
+  }
+
+  function markTimeline() {
+    var table = document.querySelector(".timeline");
+    if (!table) return;
+    var today = todayISO();
+    var rows = table.querySelectorAll("tr");
+    for (var i = 0; i < rows.length; i++) {
+      var a = rows[i].querySelector('a[href*="day-"]');
+      if (!a) continue;
+      var m = a.getAttribute("href").match(/day-(\d+)/);
+      if (!m) continue;
+      var num = Number(m[1]);
+      var rec = null;
+      for (var j = 0; j < BOOTCAMP_DAYS.length; j++) {
+        if (BOOTCAMP_DAYS[j].day === num) { rec = BOOTCAMP_DAYS[j]; break; }
+      }
+      if (!rec) continue;
+      if (rec.date < today) rows[i].classList.add("row-past");
+      else if (rec.date === today) rows[i].classList.add("row-today");
+    }
+  }
+
+  function wireTasks() {
+    var boxes = document.querySelectorAll("input.task-check");
+    if (!boxes.length) return;
+    var page = pageKey();
+
+    // The progress bar measures the day's main tasks only. The drill and the
+    // "Prepare for tomorrow" list still persist, but counting them here would
+    // report more tasks than the main list shows.
+    var counted = document.querySelectorAll(
+      ".task-list:not(.prep):not(.drill) input.task-check"
+    );
+
+    var bar = document.createElement("div");
+    bar.className = "task-progress";
+    bar.innerHTML = '<div class="task-progress-fill"></div><span class="task-progress-label"></span>';
+    var firstList = document.querySelector(".task-list");
+    firstList.parentNode.insertBefore(bar, firstList);
+    var fill = bar.querySelector(".task-progress-fill");
+    var label = bar.querySelector(".task-progress-label");
+
+    function refresh() {
+      var done = 0;
+      for (var i = 0; i < counted.length; i++) if (counted[i].checked) done++;
+      var pct = counted.length ? Math.round((done / counted.length) * 100) : 0;
+      fill.style.width = pct + "%";
+      label.textContent = done + " of " + counted.length + " done";
+      bar.classList.toggle("complete", counted.length > 0 && done === counted.length);
+    }
+
+    Array.prototype.forEach.call(boxes, function (box, i) {
+      var storeKey = KEY + page + ":" + i;
+      var wrap = box.closest(".task");
+      if (localStorage.getItem(storeKey) === "1") {
+        box.checked = true;
+        if (wrap) wrap.classList.add("done");
+      }
+      box.addEventListener("change", function () {
+        localStorage.setItem(storeKey, box.checked ? "1" : "0");
+        if (wrap) wrap.classList.toggle("done", box.checked);
+        refresh();
+      });
+    });
+
+    refresh();
+  }
+
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+
+  ready(function () {
+    try { renderBanner(); } catch (e) {}
+    try { markTimeline(); } catch (e) {}
+    try { wireTasks(); } catch (e) {}
+  });
+})();
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/sunami-lab\.github\.io\/quant-365-day-bootcamp\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>7 August 2026 – 6 August 2027</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Progress is stored in this browser only.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
